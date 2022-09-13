@@ -1,5 +1,6 @@
 # The OpenVoiceOS Project Documentation
-community maintained documentation
+
+![](https://github.com/OpenVoiceOS/ovos_assets/blob/master/Logo/ovos-logo-512.png?raw=true)
 
 the OVOS project documentation is written and maintained by users just like you! 
 
@@ -24,4 +25,25 @@ Historically OVOS has been used to refer to several things, the team, the github
 
 ### Where is your website
 
-https://openvoiceos.com
+- website - [openvoiceos.com](https://openvoiceos.com)
+- chat - [matrix](https://matrix.to/#/!XFpdtmgyCoPDxOMPpH:matrix.org?via=matrix.org)
+- forums - [github discussions](https://github.com/OpenVoiceOS/OpenVoiceOS/discussions)
+
+### Does OVOS have any default skills?
+
+We provide essential skills and those are bundled in all our reference images.
+
+ovos-core does not manage your skills, unlike mycroft it won't install or update anything by itself. if you installed ovos-core manually you also need to install skills manually
+
+### Does OVOS work offline?
+
+yes! by default ovos-core does not require internet.
+
+That said individual skills and plugins may require internet and most of the time you will want to use those
+
+### Does OVOS depend on any servers?
+
+no! you can integrate ovos-core with [selene](https://github.com/MycroftAI/selene-backend) or [personal backend](https://github.com/OpenVoiceOS/OVOS-local-backend) but that is **fully optional**
+
+we provide some microservices for some of our skills, but you can also use your own api keys
+
