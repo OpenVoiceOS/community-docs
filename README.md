@@ -5,7 +5,7 @@ the OVOS project documentation is written and maintained by users just like you!
 
 Think of these docs both as your starting point and also forever changing and incomplete
 
-Please open Issues and Pull Requests!
+Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-docs)!
 
 ## Glossary
 
