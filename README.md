@@ -8,6 +8,18 @@ Think of these docs both as your starting point and also forever changing and in
 
 Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-docs)!
 
+## Table of Contents
+
+* [Glossary](#glossary)
+* [FAQ](#faq)
+  + [What is OVOS?](#what-is-ovos-)
+  + [Where is your website](#where-is-your-website)
+  + [Does OVOS have any default skills?](#does-ovos-have-any-default-skills-)
+  + [Does OVOS work offline?](#does-ovos-work-offline-)
+  + [Does OVOS depend on any servers?](#does-ovos-depend-on-any-servers-)
+  + [How many voices does OVOS support?](#how-many-voices-does-ovos-support-)
+
+
 ## Glossary
 
 - The OpenVoiceOS Project - All the repositories under [OpenVoiceOS organization](https://github.com/OpenVoiceOS)
