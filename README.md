@@ -47,3 +47,9 @@ no! you can integrate ovos-core with [selene](https://github.com/MycroftAI/selen
 
 we provide some microservices for some of our skills, but you can also use your own api keys
 
+### How many voices does OVOS support?
+
+hundreds! nearly everything in OVOS is modular and configurable, that includes Text To Speech.
+
+Voices depend on language and the plugins you have installed, you can find a non-exhaustive list of plugins in [the ovos plugins awesome list](https://github.com/OpenVoiceOS/awesome-ovos-plugins#tts)
+
