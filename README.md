@@ -14,6 +14,7 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
 * [FAQ](#faq)
   + [What is OVOS?](#what-is-ovos)
   + [How did OVOS start?](#how-did-ovos-start)
+  + [Who is behind OVOS?](#who-is-behind-ovos)
   + [Where is your website](#where-is-your-website)
   + [Does OVOS have any default skills?](#does-ovos-have-any-default-skills)
   + [Does OVOS work offline?](#does-ovos-work-offline)
@@ -50,6 +51,19 @@ Over time more mycroft community members joined the project and it was renamed t
 Initially OVOS was focused on bundling mycroft-core and on creating only companion software, but due to contributions not being accepted upstream we now maintain an enhanced reference fork of mycroft-core with extra functionality, while keeping all companion software mycroft-core (dev branch) compatible
 
 You can think of OVOS as the unsanctioned "Mycroft Community Edition"
+
+### Who is behind OVOS?
+
+Everyone in the OVOS team is a long term mycroft community member and has experience working with the mycroft code base
+
+Meet the team:
+
+- [Peter Steenbergen](https://github.com/orgs/OpenVoiceOS/people/j1nx) - mycroft community developer since 2018, founder of MycroftOS project
+- [Casimiro Ferreira](https://github.com/orgs/OpenVoiceOS/people/JarbasAl) - mycroft community developer since 2017, co-founder of [HelloChatterbox](https://github.com/HelloChatterbox)
+- [Aditya Mehra](https://github.com/orgs/OpenVoiceOS/people/AIIX) - mycroft community developer since 2016, mycroft-gui lead developer
+- [Daniel McKnight](https://github.com/orgs/OpenVoiceOS/people/NeonDaniel) - community developer since 2017, [NeonGecko](https://github.com/NeonGeckoCom) lead developer since 2017
+- [Parker Seaman](https://github.com/orgs/OpenVoiceOS/people/5trongthany) - mycroft enthusiast since 2018
+
 
 ### Where is your website
 
