@@ -18,6 +18,7 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [Does OVOS work offline?](#does-ovos-work-offline)
   + [Does OVOS depend on any servers?](#does-ovos-depend-on-any-servers)
   + [How many voices does OVOS support?](#how-many-voices-does-ovos-support)
+  + [Can I change the wake word?](#can-i-change-the-wake-word)
   + [What is OPM?](#what-is-opm)
   + [Do OPM plugins work in mycroft-core?](#do-opm-plugins-work-in-mycroft-core)
   + [What is PHAL?](#what-is-phal)
@@ -67,6 +68,20 @@ we provide some microservices for some of our skills, but you can also use your 
 hundreds! nearly everything in OVOS is modular and configurable, that includes Text To Speech.
 
 Voices depend on language and the plugins you have installed, you can find a non-exhaustive list of plugins in [the ovos plugins awesome list](https://github.com/OpenVoiceOS/awesome-ovos-plugins#tts)
+
+### Can I change the wake word?
+
+yes, ovos-core supports several [wake word plugins](https://github.com/OpenVoiceOS/awesome-ovos-plugins#wakeword). 
+
+Additionally OVOS allows you to load any number of hot words in paralel and trigger different actions when they are detected
+
+each hotword can do one or more of the following:
+- trigger listening, also called a **wake_word**
+- play a sound
+- emit a bus event
+- take ovos-core out of sleep mode, also called a **wakeup_word** or **standup_word**
+- take ovos-core out of recording mode, also called a **stop_word**
+
 
 ### What is OPM?
 
