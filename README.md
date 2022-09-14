@@ -60,7 +60,7 @@ Everyone in the OVOS team is a long term mycroft community member and has experi
 Meet the team:
 
 - [Peter Steenbergen](https://github.com/j1nx) - mycroft community developer since 2018, founder of MycroftOS project
-- [Casimiro Ferreira](https://github.com/JarbasAl) - mycroft community developer since 2017, co-founder of [HelloChatterbox](https://github.com/HelloChatterbox)
+- [Casimiro Ferreira](https://github.com/JarbasAl) - mycroft community developer since 2017, co-founder of [HelloChatterbox](https://hellochatterbox.com/)
 - [Aditya Mehra](https://github.com/AIIX) - mycroft community developer since 2016, [mycroft-gui](https://github.com/MycroftAI/mycroft-gui) lead developer
 - [Daniel McKnight](https://github.com/NeonDaniel) - community developer since 2017, [NeonGecko](https://github.com/NeonGeckoCom) lead developer since 2017
 - [Parker Seaman](https://github.com/5trongthany) - mycroft enthusiast since 2018
