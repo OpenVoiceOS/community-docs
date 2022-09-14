@@ -20,6 +20,7 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [Does OVOS depend on any servers?](#does-ovos-depend-on-any-servers)
   + [How many voices does OVOS support?](#how-many-voices-does-ovos-support)
   + [Can I change the wake word?](#can-i-change-the-wake-word)
+  + [Can OVOS run without a wake word?](#can-ovos-run-without-a-wake-word)
   + [What is OPM?](#what-is-opm)
   + [Do OPM plugins work in mycroft-core?](#do-opm-plugins-work-in-mycroft-core)
   + [What is PHAL?](#what-is-phal)
@@ -92,6 +93,16 @@ each hotword can do one or more of the following:
 - emit a bus event
 - take ovos-core out of sleep mode, also called a **wakeup_word** or **standup_word**
 - take ovos-core out of recording mode, also called a **stop_word**
+
+### Can OVOS run without a wake word?
+
+mostly yes, depending on exactly what you mean by this question
+
+OVOS can run without any wake word configured, in this case you will only be able to interact via CLI or button press, best for privacy, not so great for a smart speaker
+
+ovos-core also provides a couple experimental settings, if you enable continuous listening then VAD will be used to detect speech and no wake word is needed, just speak to mycroft and it should answer! However this setting is experimental for a reason, you may find that mycroft answers your TV or even tries to answer itself if your hardware does not have AEC
+
+Another experimental setting is hybrid mode, with hybrid mode you can ask follow up questions up to 45 seconds after the last mycroft interaction, if you do not interact with mycroft it will go back to waiting for a wake word
 
 
 ### What is OPM?
