@@ -12,13 +12,14 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
 
 * [Glossary](#glossary)
 * [FAQ](#faq)
-  + [What is OVOS?](#what-is-ovos-)
+  + [What is OVOS?](#what-is-ovos)
   + [Where is your website](#where-is-your-website)
-  + [Does OVOS have any default skills?](#does-ovos-have-any-default-skills-)
-  + [Does OVOS work offline?](#does-ovos-work-offline-)
-  + [Does OVOS depend on any servers?](#does-ovos-depend-on-any-servers-)
-  + [How many voices does OVOS support?](#how-many-voices-does-ovos-support-)
-
+  + [Does OVOS have any default skills?](#does-ovos-have-any-default-skills)
+  + [Does OVOS work offline?](#does-ovos-work-offline)
+  + [Does OVOS depend on any servers?](#does-ovos-depend-on-any-servers)
+  + [How many voices does OVOS support?](#how-many-voices-does-ovos-support)
+  + [What is PHAL?](#what-is-phal)
+  + [Does PHAL work with mycroft-core?](#does-phal-work-with-mycroft-core)
 
 ## Glossary
 
@@ -65,3 +66,17 @@ hundreds! nearly everything in OVOS is modular and configurable, that includes T
 
 Voices depend on language and the plugins you have installed, you can find a non-exhaustive list of plugins in [the ovos plugins awesome list](https://github.com/OpenVoiceOS/awesome-ovos-plugins#tts)
 
+
+### What is PHAL?
+
+[PHAL](https://github.com/OpenVoiceOS/ovos_PHAL) is our Plugin-based Hardware Abstraction Layer, it completely replaces the concept of hardcoded "enclosure" from mycroft-core
+
+Any number of plugins providing functionality can be loaded and validated at runtime, plugins can be [system integrations](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system) to handle things like reboot and shutdown, or hardware drivers such as [mycroft mark2 plugin](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk2)
+
+PHAL plugins can perform actions such as hardware detection before loading, eg, the mark2 plugin will not load if it does not detect the sj201 hat. This makes plugins safe to install and bundle by default in our base images
+
+### Does PHAL work with mycroft-core?
+
+yes! PHAL is a standalone component, it only needs to connect to the mycroft messagebus. You can connect PHAL to vanilla mycroft-core and load any plugin. 
+
+Depending on the plugin this may make sense or not
