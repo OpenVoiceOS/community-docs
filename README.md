@@ -13,6 +13,7 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
 * [Glossary](#glossary)
 * [FAQ](#faq)
   + [What is OVOS?](#what-is-ovos)
+  + [How did OVOS start?](#how-did-ovos-start)
   + [Where is your website](#where-is-your-website)
   + [Does OVOS have any default skills?](#does-ovos-have-any-default-skills)
   + [Does OVOS work offline?](#does-ovos-work-offline)
@@ -35,9 +36,19 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
 
 ### What is OVOS?
 
-OVOS aims to be a full operating system that is free and open source. The Open Voice Operating System consists of OVOS packages (programs specifically released by the OVOS Project) as well as free software released by third parties such as skills and plugins. The development of OVOS makes it possible to voice enable technology without software that would trample your freedom.
+OVOS aims to be a full operating system that is free and open source. The Open Voice Operating System consists of OVOS packages (programs specifically released by the OVOS Project) as well as free software released by third parties such as skills and plugins. OVOS makes it possible to voice enable technology without software that would trample your freedom.
 
 Historically OVOS has been used to refer to several things, the team, the github organization and the reference buildroot implementation
+
+### How did OVOS start?
+
+OVOS started as MycroftOS, you can find the original mycroft forums thread [here](https://community.mycroft.ai/t/openvoiceos-a-bare-minimal-production-type-of-os-based-on-buildroot/4708).
+
+Over time more mycroft community members joined the project and it was renamed to OpenVoiceOS to avoid trademark issues.
+
+Initially OVOS was focused on bundling mycroft-core and on creating only companion software, but due to contributions not being accepted upstream we now maintain an enhanced reference fork of mycroft-core with extra functionality, while keeping all companion software mycroft-core (dev branch) compatible
+
+You can think of OVOS as the unsanctioned "Mycroft Community Edition"
 
 ### Where is your website
 
