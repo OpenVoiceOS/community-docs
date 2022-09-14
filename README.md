@@ -15,6 +15,7 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [What is OVOS?](#what-is-ovos)
   + [How did OVOS start?](#how-did-ovos-start)
   + [Who is behind OVOS?](#who-is-behind-ovos)
+  + [What is the relationship between OVOS and Mycroft?](#what-is-the-relationship-between-ovos-and-mycroft)
   + [How does OVOS make money?](#how-does-ovos-make-money)
   + [Where is your website?](#where-is-your-website)
   + [Does OVOS have any default skills?](#does-ovos-have-any-default-skills)
@@ -66,6 +67,10 @@ Meet the team:
 - [Parker Seaman](https://github.com/5trongthany) - mycroft enthusiast since 2018
 - [Chance](https://github.com/ChanceNCounter) - mycroft community developer since 2019, ex-maintainer of [lingua_franca](https://github.com/MycroftAI/lingua-franca) 
    - currently taking a break, he will be back!
+
+### What is the relationship between OVOS and Mycroft?
+
+Both projects are fully independent, initially OVOS was focused on wrapping mycroft-core with a minimal OS, but as both projects matured, ovos-core was created to include extra functionality and make OVOS development faster and more efficient. OVOS has been committed to keeping our components compatible with Mycroft and many of our changes are submitted to Mycroft to include in their projects at their discretion.
 
 ### How does OVOS make money?
 
