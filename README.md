@@ -15,7 +15,8 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [What is OVOS?](#what-is-ovos)
   + [How did OVOS start?](#how-did-ovos-start)
   + [Who is behind OVOS?](#who-is-behind-ovos)
-  + [Where is your website](#where-is-your-website)
+  + [How does OVOS make money?](#how-does-ovos-make-money)
+  + [Where is your website?](#where-is-your-website)
   + [Does OVOS have any default skills?](#does-ovos-have-any-default-skills)
   + [Does OVOS work offline?](#does-ovos-work-offline)
   + [Does OVOS depend on any servers?](#does-ovos-depend-on-any-servers)
@@ -66,7 +67,14 @@ Meet the team:
 - [Chance](https://github.com/ChanceNCounter) - mycroft community developer since 2019, ex-maintainer of [lingua_franca](https://github.com/MycroftAI/lingua-franca) 
    - currently taking a break, he will be back!
 
-### Where is your website
+### How does OVOS make money?
+
+We don't, OVOS is a volunteer project with no source of income or business model
+
+However we want to acknowledge [Blue Systems](https://blue-systems.com) and [NeonGeckoCom](https://neon.ai), a lot of the work in OVOS is done on paid company time from these projects
+
+
+### Where is your website?
 
 - website - [openvoiceos.com](https://openvoiceos.com)
 - chat - [matrix](https://matrix.to/#/!XFpdtmgyCoPDxOMPpH:matrix.org?via=matrix.org)
