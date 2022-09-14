@@ -18,6 +18,8 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [Does OVOS work offline?](#does-ovos-work-offline)
   + [Does OVOS depend on any servers?](#does-ovos-depend-on-any-servers)
   + [How many voices does OVOS support?](#how-many-voices-does-ovos-support)
+  + [What is OPM?](#what-is-opm)
+  + [Do OPM plugins work in mycroft-core?](#do-opm-plugins-work-in-mycroft-core)
   + [What is PHAL?](#what-is-phal)
   + [Does PHAL work with mycroft-core?](#does-phal-work-with-mycroft-core)
 
@@ -65,6 +67,23 @@ we provide some microservices for some of our skills, but you can also use your 
 hundreds! nearly everything in OVOS is modular and configurable, that includes Text To Speech.
 
 Voices depend on language and the plugins you have installed, you can find a non-exhaustive list of plugins in [the ovos plugins awesome list](https://github.com/OpenVoiceOS/awesome-ovos-plugins#tts)
+
+### What is OPM?
+
+OPM is the [OVOS Plugin Manager](https://github.com/OpenVoiceOS/OVOS-plugin-manager), this base package provides arbitrary plugins to the ovos ecosystem
+
+OPM plugins import their base classes from OPM making them portable and independent from core, plugins can be used in your standalone projects
+
+By using OPM you can ensure a standard interface to plugins and easily make them configurable in your project, plugin code and example configurations are mapped to a string via python entrypoints in setup.py
+
+Some projects using OPM are [ovos-core](https://github.com/OpenVoiceOS/ovos-core), [hivemind-voice-sat](https://github.com/JarbasHiveMind/HiveMind-voice-sat), [ovos-personal-backend](https://github.com/OpenVoiceOS/OVOS-local-backend), [ovos-stt-server](https://github.com/OpenVoiceOS/ovos-stt-http-server) and [ovos-tts-server](https://github.com/OpenVoiceOS/ovos-tts-server)
+
+
+### Do OPM plugins work in mycroft-core?
+
+yes! OPM provides new kinds of plugins not supported by mycroft-core, but STT, TTS, WakeWord and AudioService plugins will work in regular mycroft
+
+OPM base classes may contain improvements and new features, such as better caching and automatic viseme generation in TTS plugins, but we try very hard to ensure they remain compatible with mycroft-core dev branch
 
 
 ### What is PHAL?
