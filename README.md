@@ -16,6 +16,7 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [How did OVOS start?](#how-did-ovos-start)
   + [Who is behind OVOS?](#who-is-behind-ovos)
   + [What is the relationship between OVOS and Mycroft?](#what-is-the-relationship-between-ovos-and-mycroft)
+  + [How is OVOS licensed?](#how-is-ovos-licensed)
   + [How does OVOS make money?](#how-does-ovos-make-money)
   + [Where is your website?](#where-is-your-website)
   + [Does OVOS have any default skills?](#does-ovos-have-any-default-skills)
@@ -71,6 +72,18 @@ Meet the team:
 ### What is the relationship between OVOS and Mycroft?
 
 Both projects are fully independent, initially OVOS was focused on wrapping mycroft-core with a minimal OS, but as both projects matured, ovos-core was created to include extra functionality and make OVOS development faster and more efficient. OVOS has been committed to keeping our components compatible with Mycroft and many of our changes are submitted to Mycroft to include in their projects at their discretion.
+
+### How is OVOS licensed?
+
+we have a universal donor policy, our code should be able to be used anywhere by anyone, no ifs or conditions attached. 
+
+We go to great lengths to avoid GPL code for this reason, all our code is either Apache2 or BSD licensed
+
+Individual plugins or skills may have their own license, for example mimic3 is AGPL so we can not change the license of our plugin. 
+
+We are commited to maintain all core components fully free, any GPL code will live in an optional plugin and be flagged as such.
+
+This includes avoiding LGPL code for reasons explained [here](https://softwareengineering.stackexchange.com/questions/119436/what-does-gpl-with-classpath-exception-mean-in-practice/326325#326325). An example of this was the replacement of padatious to avoid libfann2
 
 ### How does OVOS make money?
 
