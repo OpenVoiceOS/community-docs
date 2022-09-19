@@ -30,6 +30,7 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [What is OCP?](#what-is-ocp)
   + [What is OVOS-shell?](#what-is-ovos-shell)
 * [Compatibility FAQ](#compatibility-faq)
+  + [Do OVOS images run on the mark2?](#do-ovos-images-run-on-the-mark2)
   + [Do OVOS skills work in mycroft-core?](#do-ovos-skills-work-in-mycroft-core)
   + [Do OPM plugins work in mycroft-core?](#do-opm-plugins-work-in-mycroft-core)
   + [Does PHAL work with mycroft-core?](#does-phal-work-with-mycroft-core)
@@ -221,6 +222,9 @@ Further reading:
 
 ## Compatibility FAQ
 
+### Do OVOS images run on the mark2?
+
+The [mark2 developer kit](https://www.instructables.com/Mycroft-Mark-II-Developer-Kit-Assembly) is one of the reference platforms we test and develop against, the [ovos-buildroot](https://github.com/OpenVoiceOS/ovos-buildroot) images can be used in a mark 2 device
 
 ### Do OVOS skills work in mycroft-core?
 
