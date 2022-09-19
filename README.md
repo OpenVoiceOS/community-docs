@@ -36,6 +36,7 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [Does PHAL work with mycroft-core?](#does-phal-work-with-mycroft-core)
   + [Known Incompatibilities](#known-incompatibilities)
 * [Further Reading](#further-reading)
+  + [Notable licensing exceptions](#notable-licensing-exceptions)
   + [plasma-bigscreen GUI clients](#plasma-bigscreen-gui-clients)
 
 
@@ -95,6 +96,10 @@ We are commited to maintain all core components fully free, any GPL code will li
 
 This includes avoiding LGPL code for reasons explained [here](https://softwareengineering.stackexchange.com/questions/119436/what-does-gpl-with-classpath-exception-mean-in-practice/326325#326325). An example of this was the replacement of padatious to avoid libfann2
 
+
+Further reading:
+  * [Notable licensing exceptions](#notable-licensing-exceptions)
+  
 ### How does OVOS make money?
 
 We don't, OVOS is a volunteer project with no source of income or business model
@@ -264,6 +269,16 @@ Here we present a list of know incompatibilites between ovos-core and mycroft-co
 ## Further Reading
 
 Extra info and side notes
+
+### Notable licensing exceptions
+
+The following repositories do not respect our [universal donor policy](#how-is-ovos-licensed), please ensure their licenses are compatible before you use them
+
+| Repository                                                  | License | Reason                         |
+|-------------------------------------------------------------|---------|--------------------------------|
+| [ovos-intent-plugin-padatious](https://github.com/OpenVoiceOS/ovos-intent-plugin-padatious) |         | depends on libfann2 (LGPL)     |
+| [ovos-tts-plugin-mimic3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic3)       | AGPL    | depends on mimic3 (AGPL)       |
+| [ovos-tts-plugin-SAM](https://github.com/OpenVoiceOS/ovos-tts-plugin-SAM)          | ?       | reverse engineered abandonware |
 
 ### plasma-bigscreen GUI clients
 
