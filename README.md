@@ -27,7 +27,8 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [Can OVOS run without a wake word?](#can-ovos-run-without-a-wake-word)
   + [What is OPM?](#what-is-opm)
   + [What is PHAL?](#what-is-phal)
-  + [How does OVOS GUI work?](#how-does-ovos-gui-work)
+  + [What is OCP?](#what-is-ocp)
+  + [What is OVOS-shell?](#what-is-ovos-shell)
 * [Compatibility FAQ](#compatibility-faq)
   + [Do OVOS skills work in mycroft-core?](#do-ovos-skills-work-in-mycroft-core)
   + [Do OPM plugins work in mycroft-core?](#do-opm-plugins-work-in-mycroft-core)
@@ -173,7 +174,26 @@ Any number of plugins providing functionality can be loaded and validated at run
 
 PHAL plugins can perform actions such as hardware detection before loading, eg, the mark2 plugin will not load if it does not detect the sj201 hat. This makes plugins safe to install and bundle by default in our base images
 
-### How does OVOS GUI work?
+### What is OCP?
+
+[OCP](https://github.com/OpenVoiceOS/ovos_PHAL) stands for OpenVoiceOS Common Play, it is a full fledged media player
+
+OCP is a OVOSAbstractAPP, this means it is a standalome but native OVOS applicatiom with full voice integration
+
+OCP differs from mycroft-core in several aspects:
+- OCP provides it's own intents as if it was a skill
+- OCP provides it's own GUI as if it was a skill
+- mycroft-core CommonPlay skill framework is disabled when OCP loads
+- OCP has it's own skill class
+- OCP skills act as media providers, they do not handle playback
+- mycroft-core CommonPlay skills have an imperfect compatibility layer and are given lower priority over OCP skills
+- OCP handles several kinds of playback, including video
+- AudioService becomes a subsystem for OCP
+- OCP also has AudioService plugin component introducing a compatibility layer for skills using "old style audioservice api"
+- OCP integrates with MPRIS, it can be controlled from external apps, eg KdeConnect in your phone
+- OCP manages external MPRIS enabled players, you can voice control 3rd party apps without writing a skill for it via OCP
+
+### What is OVOS-shell?
 
 The [gui service](https://github.com/OpenVoiceOS/ovos-core/tree/dev/mycroft/gui) in ovos-core will expose a websocket to the GUI client following the protocol outlined [here](https://github.com/MycroftAI/mycroft-gui/blob/master/transportProtocol.md)
 
