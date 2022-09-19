@@ -32,6 +32,11 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [Do OVOS skills work in mycroft-core?](#do-ovos-skills-work-in-mycroft-core)
   + [Do OPM plugins work in mycroft-core?](#do-opm-plugins-work-in-mycroft-core)
   + [Does PHAL work with mycroft-core?](#does-phal-work-with-mycroft-core)
+  + [Known Incompatibilities](#known-incompatibilities)
+* [Further Reading](#further-reading)
+  + [plasma-bigscreen GUI clients](#plasma-bigscreen-gui-clients)
+
+
 
 ## Glossary
 
@@ -174,8 +179,10 @@ The [gui service](https://github.com/OpenVoiceOS/ovos-core/tree/dev/mycroft/gui)
 
 The GUI library which implements the protocol lives in the [mycroft-gui](https://github.com/MycroftAI/mycroft-gui) repository, The repository also hosts a development client for skill developers wanting to develop on the desktop.
 
-[OVOS-shell](https://github.com/OpenVoiceOS/ovos-shell) is the OpenVoiceOS client implementation of the mycroft-gui library used in our embedded device images, other distributions may offer alternative implementations such as [plasma-bigscreen](http://invent.kde.org/plasma/plasma-bigscreen) or [mycroft mark2](https://github.com/MycroftAI/mycroft-gui-mark-2)
+[OVOS-shell](https://github.com/OpenVoiceOS/ovos-shell) is the OpenVoiceOS client implementation of the mycroft-gui library used in our embedded device images, other distributions may offer alternative implementations such as [plasma-bigscreen](http://invent.kde.org/plasma/plasma-bigscreen)* or [mycroft mark2](https://github.com/MycroftAI/mycroft-gui-mark-2)
 
+Further reading:
+  * [plasma-bigscreen GUI clients](#plasma-bigscreen-gui-clients)
 
 ## Compatibility FAQ
 
@@ -204,4 +211,21 @@ yes! PHAL is a standalone component, it only needs to connect to the mycroft mes
 
 Depending on the plugin this may make sense or not
 
+### Known Incompatibilities
+
+Here we present a list of know incompatibilites between ovos-core and mycroft-core
+
+| feature                              | consequence                                | reason                                            | workarounds                                |
+|--------------------------------------|--------------------------------------------|---------------------------------------------------|--------------------------------------------|
+| converse deactivated event           | skill won't know when its no longer active | mycroft-core does not emit bus event              |                                            |
+| access private skill property/method | skill will not load                        | syntax error                                      | port the feature to ovos_workshop          |
+| using "mycroft.gui.list.move"        | GUI may be messed up                       | mycroft-core does not implement full GUI protocol | run ovos-gui, do not run mycroft enclosure |
+
+## Further Reading
+
+Extra info and side notes
+
+### plasma-bigscreen GUI clients
+
+plasma-bigscreen uses two different clients, one inbuilt into plasma-shell for non voice apps: https://invent.kde.org/plasma/plasma-bigscreen/-/blob/master/containments/homescreen/package/contents/ui/MycroftWindow.qml and the other mycroft-gui client itself for voice apps
 
