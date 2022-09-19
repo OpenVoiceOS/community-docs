@@ -27,7 +27,9 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [Can OVOS run without a wake word?](#can-ovos-run-without-a-wake-word)
   + [What is OPM?](#what-is-opm)
   + [What is PHAL?](#what-is-phal)
+  + [How does OVOS GUI work?](#how-does-ovos-gui-work)
 * [Compatibility FAQ](#compatibility-faq)
+  + [Do OVOS skills work in mycroft-core?](#do-ovos-skills-work-in-mycroft-core)
   + [Do OPM plugins work in mycroft-core?](#do-opm-plugins-work-in-mycroft-core)
   + [Does PHAL work with mycroft-core?](#does-phal-work-with-mycroft-core)
 
@@ -166,8 +168,27 @@ Any number of plugins providing functionality can be loaded and validated at run
 
 PHAL plugins can perform actions such as hardware detection before loading, eg, the mark2 plugin will not load if it does not detect the sj201 hat. This makes plugins safe to install and bundle by default in our base images
 
+### How does OVOS GUI work?
+
+The [gui service](https://github.com/OpenVoiceOS/ovos-core/tree/dev/mycroft/gui) in ovos-core will expose a websocket to the GUI client following the protocol outlined [here](https://github.com/MycroftAI/mycroft-gui/blob/master/transportProtocol.md)
+
+The GUI library which implements the protocol lives in the [mycroft-gui](https://github.com/MycroftAI/mycroft-gui) repository, The repository also hosts a development client for skill developers wanting to develop on the desktop.
+
+[OVOS-shell]((https://github.com/OpenVoiceOS/ovos-shell)) is the OpenVoiceOS client implementation of the mycroft-gui library used in our embedded device images, other distributions may offer alternative implementations such as [plasma-bigscreen](http://invent.kde.org/plasma/plasma-bigscreen) or [mycroft mark2](https://github.com/MycroftAI/mycroft-gui-mark-2)
+
 
 ## Compatibility FAQ
+
+
+### Do OVOS skills work in mycroft-core?
+
+If you are a developer please subclass your skills from OVOSSkill provided in ovos-workshop package
+
+We implement all skill development tools under the ovos-workshop library, this allows most OVOS functionality to be used in mycroft-core without problems.
+
+However some skills may decide to depend on features exclusive to ovos-core, or be missing bug fixes in mycroft-core, therefore we can not ensure 100% compatibility.
+
+When we introduce new functionality in ovos-core that if used in a skill would cause incompatibilities with mycroft we always make the methods private, as long as a skill does not access any property that starts with an underscore, eg. `self._resources`, it should work in mycroft-core
 
 
 ### Do OPM plugins work in mycroft-core?
@@ -182,4 +203,5 @@ OPM base classes may contain improvements and new features, such as better cachi
 yes! PHAL is a standalone component, it only needs to connect to the mycroft messagebus. You can connect PHAL to vanilla mycroft-core and load any plugin. 
 
 Depending on the plugin this may make sense or not
+
 
