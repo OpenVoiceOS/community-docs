@@ -176,7 +176,7 @@ PHAL plugins can perform actions such as hardware detection before loading, eg, 
 
 ### What is OCP?
 
-[OCP]([https://github.com/OpenVoiceOS/ovos_PHAL](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin)) stands for OpenVoiceOS Common Play, it is a full fledged media player
+[OCP](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin) stands for OpenVoiceOS Common Play, it is a full fledged media player
 
 OCP is a [OVOSAbstractApplication](https://github.com/OpenVoiceOS/OVOS-workshop/blob/dev/ovos_workshop/app.py#L47), this means it is a standalome but native OVOS applicatiom with full voice integration
 
