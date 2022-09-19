@@ -176,18 +176,20 @@ PHAL plugins can perform actions such as hardware detection before loading, eg, 
 
 ### What is OCP?
 
-[OCP](https://github.com/OpenVoiceOS/ovos_PHAL) stands for OpenVoiceOS Common Play, it is a full fledged media player
+[OCP]([https://github.com/OpenVoiceOS/ovos_PHAL](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin)) stands for OpenVoiceOS Common Play, it is a full fledged media player
 
-OCP is a OVOSAbstractAPP, this means it is a standalome but native OVOS applicatiom with full voice integration
+OCP is a [OVOSAbstractApplication](https://github.com/OpenVoiceOS/OVOS-workshop/blob/dev/ovos_workshop/app.py#L47), this means it is a standalome but native OVOS applicatiom with full voice integration
 
 OCP differs from mycroft-core in several aspects:
+- Can run standalone, only needs a bus connection
 - OCP provides it's own intents as if it was a skill
 - OCP provides it's own GUI as if it was a skill
 - mycroft-core CommonPlay skill framework is disabled when OCP loads
 - OCP has it's own skill class
-- OCP skills act as media providers, they do not handle playback
+- OCP skills act as media providers, they do not (usually) handle playback
 - mycroft-core CommonPlay skills have an imperfect compatibility layer and are given lower priority over OCP skills
 - OCP handles several kinds of playback, including video
+- OCP has a sub-intent parser for matching requested media types
 - AudioService becomes a subsystem for OCP
 - OCP also has AudioService plugin component introducing a compatibility layer for skills using "old style audioservice api"
 - OCP integrates with MPRIS, it can be controlled from external apps, eg KdeConnect in your phone
