@@ -174,7 +174,7 @@ The [gui service](https://github.com/OpenVoiceOS/ovos-core/tree/dev/mycroft/gui)
 
 The GUI library which implements the protocol lives in the [mycroft-gui](https://github.com/MycroftAI/mycroft-gui) repository, The repository also hosts a development client for skill developers wanting to develop on the desktop.
 
-[OVOS-shell]((https://github.com/OpenVoiceOS/ovos-shell)) is the OpenVoiceOS client implementation of the mycroft-gui library used in our embedded device images, other distributions may offer alternative implementations such as [plasma-bigscreen](http://invent.kde.org/plasma/plasma-bigscreen) or [mycroft mark2](https://github.com/MycroftAI/mycroft-gui-mark-2)
+[OVOS-shell](https://github.com/OpenVoiceOS/ovos-shell) is the OpenVoiceOS client implementation of the mycroft-gui library used in our embedded device images, other distributions may offer alternative implementations such as [plasma-bigscreen](http://invent.kde.org/plasma/plasma-bigscreen) or [mycroft mark2](https://github.com/MycroftAI/mycroft-gui-mark-2)
 
 
 ## Compatibility FAQ
@@ -182,11 +182,11 @@ The GUI library which implements the protocol lives in the [mycroft-gui](https:/
 
 ### Do OVOS skills work in mycroft-core?
 
-If you are a developer please subclass your skills from OVOSSkill provided in ovos-workshop package
+If you are a developer please subclass your skills from [OVOSSkill](https://github.com/OpenVoiceOS/OVOS-workshop/blob/dev/ovos_workshop/skills/ovos.py) provided in ovos-workshop package
 
-We implement all skill development tools under the ovos-workshop library, this allows most OVOS functionality to be used in mycroft-core without problems.
+We implement all skill development tools under the ovos-workshop library, this allows most OVOS functionality to be used in mycroft-core without problems. This includes [intent_layers](https://github.com/OpenVoiceOS/OVOS-workshop/blob/dev/ovos_workshop/skills/layers.py), [decorators](https://github.com/OpenVoiceOS/OVOS-workshop/tree/dev/ovos_workshop/decorators) and [killable_events](https://github.com/OpenVoiceOS/skill-abort-test)
 
-However some skills may decide to depend on features exclusive to ovos-core, or be missing bug fixes in mycroft-core, therefore we can not ensure 100% compatibility.
+However some skills may decide to depend on features exclusive to ovos-core, or be missing bug fixes in mycroft-core, therefore we can not ensure 100% compatibility. eg, if a skill depends on the [converse deactivated](https://github.com/OpenVoiceOS/ovos-core/blob/V0.0.5a8/mycroft/skills/mycroft_skill/mycroft_skill.py#L613) event it may misbehave under mycroft-core because that event is only sent in ovos-core
 
 When we introduce new functionality in ovos-core that if used in a skill would cause incompatibilities with mycroft we always make the methods private, as long as a skill does not access any property that starts with an underscore, eg. `self._resources`, it should work in mycroft-core
 
