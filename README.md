@@ -197,6 +197,7 @@ However some skills may decide to depend on features exclusive to ovos-core, or 
 
 When we introduce new functionality in ovos-core that if used in a skill would cause incompatibilities with mycroft we always make the methods private, as long as a skill does not access any property that starts with an underscore, eg. `self._resources`, it should work in mycroft-core
 
+See the table of [Known Incompatibilities](#known-incompatibilities)
 
 ### Do OPM plugins work in mycroft-core?
 
@@ -217,9 +218,9 @@ Here we present a list of know incompatibilites between ovos-core and mycroft-co
 
 | feature                              | consequence                                | reason                                            | workarounds                                |
 |--------------------------------------|--------------------------------------------|---------------------------------------------------|--------------------------------------------|
-| converse deactivated event           | skill won't know when its no longer active | mycroft-core does not emit bus event              |                                            |
+| [converse deactivated](https://github.com/OpenVoiceOS/ovos-core/blob/V0.0.5a8/mycroft/skills/mycroft_skill/mycroft_skill.py#L613) event           | skill won't know when its no longer active | mycroft-core does not emit bus event              |                                            |
 | access private skill property/method | skill will not load                        | syntax error                                      | port the feature to ovos_workshop          |
-| using "mycroft.gui.list.move"        | GUI may be messed up                       | mycroft-core does not implement full GUI protocol | run ovos-gui, do not run mycroft enclosure |
+| using "mycroft.gui.list.move"        | GUI may be messed up                       | mycroft-core does not implement full [GUI protocol](https://github.com/MycroftAI/mycroft-gui/blob/master/transportProtocol.md) | run ovos-gui, do not run mycroft enclosure |
 
 ## Further Reading
 
