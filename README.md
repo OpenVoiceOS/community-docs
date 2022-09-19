@@ -26,8 +26,9 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [Can I change the wake word?](#can-i-change-the-wake-word)
   + [Can OVOS run without a wake word?](#can-ovos-run-without-a-wake-word)
   + [What is OPM?](#what-is-opm)
-  + [Do OPM plugins work in mycroft-core?](#do-opm-plugins-work-in-mycroft-core)
   + [What is PHAL?](#what-is-phal)
+* [Compatibility FAQ](#compatibility-faq)
+  + [Do OPM plugins work in mycroft-core?](#do-opm-plugins-work-in-mycroft-core)
   + [Does PHAL work with mycroft-core?](#does-phal-work-with-mycroft-core)
 
 ## Glossary
@@ -157,13 +158,6 @@ By using OPM you can ensure a standard interface to plugins and easily make them
 Some projects using OPM are [ovos-core](https://github.com/OpenVoiceOS/ovos-core), [hivemind-voice-sat](https://github.com/JarbasHiveMind/HiveMind-voice-sat), [ovos-personal-backend](https://github.com/OpenVoiceOS/OVOS-local-backend), [ovos-stt-server](https://github.com/OpenVoiceOS/ovos-stt-http-server) and [ovos-tts-server](https://github.com/OpenVoiceOS/ovos-tts-server)
 
 
-### Do OPM plugins work in mycroft-core?
-
-yes! OPM provides new kinds of plugins not supported by mycroft-core, but STT, TTS, WakeWord and AudioService plugins will work in regular mycroft
-
-OPM base classes may contain improvements and new features, such as better caching and automatic viseme generation in TTS plugins, but we try very hard to ensure they remain compatible with mycroft-core dev branch
-
-
 ### What is PHAL?
 
 [PHAL](https://github.com/OpenVoiceOS/ovos_PHAL) is our Plugin-based Hardware Abstraction Layer, it completely replaces the concept of hardcoded "enclosure" from mycroft-core
@@ -172,8 +166,20 @@ Any number of plugins providing functionality can be loaded and validated at run
 
 PHAL plugins can perform actions such as hardware detection before loading, eg, the mark2 plugin will not load if it does not detect the sj201 hat. This makes plugins safe to install and bundle by default in our base images
 
+
+## Compatibility FAQ
+
+
+### Do OPM plugins work in mycroft-core?
+
+yes! OPM provides new kinds of plugins not supported by mycroft-core, but STT, TTS, WakeWord and AudioService plugins will work in regular mycroft
+
+OPM base classes may contain improvements and new features, such as better caching and automatic viseme generation in TTS plugins, but we try very hard to ensure they remain compatible with mycroft-core dev branch
+
+
 ### Does PHAL work with mycroft-core?
 
 yes! PHAL is a standalone component, it only needs to connect to the mycroft messagebus. You can connect PHAL to vanilla mycroft-core and load any plugin. 
 
 Depending on the plugin this may make sense or not
+
