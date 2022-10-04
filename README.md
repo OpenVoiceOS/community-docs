@@ -29,6 +29,8 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
   + [What is PHAL?](#what-is-phal)
   + [What is OCP?](#what-is-ocp)
   + [What is OVOS-shell?](#what-is-ovos-shell)
+* [Developer FAQ](#developer-faq)
+  + [How do I use OAuth in a skill?](#how-do-i-use-oauth-in-a-skill)
 * [Compatibility FAQ](#compatibility-faq)
   + [Do OVOS images run on the mark2?](#do-ovos-images-run-on-the-mark2)
   + [Do OVOS skills work in mycroft-core?](#do-ovos-skills-work-in-mycroft-core)
@@ -230,6 +232,22 @@ OVOS-shell is tightly coupled to [PHAL](#what-is-phal), the following companion 
 
 Further reading:
   * [plasma-bigscreen GUI clients](#plasma-bigscreen-gui-clients)
+
+## Developer FAQ
+
+### How do I use OAuth in a skill?
+
+First you need to authorize the application, this can be done with [ovos-backend-manager](https://github.com/OpenVoiceOS/ovos-backend-manager) if running offline or using personal backend
+
+If using selene please refer to mycroft-core documentation
+
+```python
+from ovos_backend_client.api import OAuthApi, BackendType
+
+# api = OAuthApi()  # determine oauth backend from mycroft.conf
+api = OAuthApi(backend_type=BackendType.OFFLINE)  # explicitly use ovos-backend-manager oauth
+token_json = api.get_oauth_token("spotify")
+```
 
 ## Compatibility FAQ
 
