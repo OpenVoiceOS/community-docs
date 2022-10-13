@@ -16,6 +16,7 @@
 + [What is PHAL?](#what-is-phal)
 + [What is OCP?](#what-is-ocp)
 + [What is OVOS-shell?](#what-is-ovos-shell)
++ [How do I run OVOS behind a proxy?](#how-do-i-run-ovos-behind-a-proxy)
 
 ### What is OVOS?
 
@@ -220,3 +221,32 @@ using ovos-shell
 Further reading:
 
 * [plasma-bigscreen GUI clients](#plasma-bigscreen-gui-clients)
+
+
+### How do I run OVOS behind a proxy?
+
+Many schools, universities and workplaces run a `proxy` on their network. If you need to type in a username and password to access the external internet, then you are likely behind a `proxy`.
+
+If you plan to use OVOS behind a proxy, then you will need to do an additional configuration step.
+
+_NOTE: In order to complete this step, you will need to know the `hostname` and `port` for the proxy server. Your network administrator will be able to provide these details. Your network administrator may want information on what type of traffic OVOS will be using. We use `https` traffic on port `443`, primarily for accessing ReST-based APIs._
+
+#### Using OVOS behind a proxy without authentication
+
+If you are using OVOS behind a proxy without authentication, add the following environment variables, changing the `proxy_hostname.com` and `proxy_port` for the values for your network. These commands are executed from the Linux command line interface (CLI).
+
+```bash
+$ export http_proxy=http://proxy_hostname.com:proxy_port
+$ export https_port=http://proxy_hostname.com:proxy_port
+$ export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com,0.0.0.0,::1"
+```
+
+#### Using OVOS behind an authenticated proxy
+
+If you are behind a proxy which requires authentication, add the following environment variables, changing the `proxy_hostname.com` and `proxy_port` for the values for your network. These commands are executed from the Linux command line interface (CLI).
+
+```bash
+$ export http_proxy=http://user:password@proxy_hostname.com:proxy_port
+$ export https_port=http://user:password@proxy_hostname.com:proxy_port
+$ export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com,0.0.0.0,::1"
+```

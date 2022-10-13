@@ -103,6 +103,10 @@ order:
 - /etc/xdg/neon/neon.yaml
 - `XDG_CONFIG_HOME` (default ~/.config) + /neon/neon.yaml
 
+When the configuration loader starts, it looks in these locations in this order, and loads ALL configurations. Keys that
+exist in multiple configuration files will be overridden by the last file to contain the value. This process results in
+a minimal amount being written for a specific device and user, without modifying default distribution files.
+
 ## Configuring Configuration
 
 There are a couple of special configuration keys that change the way the configuration stack loads.

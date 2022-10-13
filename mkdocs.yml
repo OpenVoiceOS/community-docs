@@ -2,7 +2,8 @@ site_name: Documentation
 site_url: https://openvoiceos.github.io/community-docs
 nav:
     - Home:
-        - Glossary: index.md
+        - Introduction: index.md
+        - Glossary: glossary.md
         - License: license.md
     - Overview:
         - F.A.Q.: faq.md
