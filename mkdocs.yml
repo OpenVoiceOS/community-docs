@@ -8,6 +8,7 @@ nav:
         - F.A.Q.: faq.md
         - Developers: dev.md
         - Backend Services: backend.md
+        - Configuration: config.md
     - Mycroft:
         - Compatibility: compat.md
         - Comparison: mycroft.md
