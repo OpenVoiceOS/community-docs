@@ -2,8 +2,8 @@
 
 * [Supported Backends](#supported-backends)
 * [STT Plugin](#stt-plugin)
+* [Offline Backend](#offline.backend)
 * [Selene](#selene)
-* [Offline](#offline)
 * [Personal Backend](#personal-backend)
     + [Backend Manager](#backend-manager)
     + [Admin Api](#admin-api)
@@ -42,18 +42,32 @@ Developers do not need to worry about backend details in their applications and 
 
 a companion stt plugin is available to use a backend as remote STT provider
 
-`pip install ovos-stt-plugin-selene`
-
-edit your configuration to use it
-
+edit your configuration to use ovos-stt-plugin-selene
 ```json
+{
   "stt": {
-"module": "ovos-stt-plugin-selene"
+    "module": "ovos-stt-plugin-selene"
+  }
 }
-
 ```
 
 [source code](https://github.com/OpenVoiceOS/ovos-stt-plugin-selene)
+
+## Offline Backend
+
+OVOS by default runs without a backend, in this case you will need to configure api keys manually
+
+This can be done with [OCA](https://github.com/OpenVoiceOS/ovos-config-assistant) or by editing mycroft.conf
+
+edit your configuration to use the offline backend
+```json
+{
+  "server": {
+     "backend_type": "offline"
+  }
+}
+```
+
 
 ## Selene
 
@@ -63,14 +77,23 @@ servers.
 This backend is not considered optional by MycroftAI but is not used by OVOS unless explicitly enabled
 
 Selene is AGPL licensed:
-- [backend source code](https://github.com/MycroftAI/selene-backend)
-- [frontend source code](https://github.com/MycroftAI/selene-ui)
+    - [backend source code](https://github.com/MycroftAI/selene-backend)
+    - [frontend source code](https://github.com/MycroftAI/selene-ui)
 
-## Offline
 
-OVOS by default runs without a backend, in this case you will need to configure api keys manually
-
-This can be done with [OCA](https://github.com/OpenVoiceOS/ovos-config-assistant) or by editing mycroft.conf
+edit your configuration to use the selene backend
+```json
+{
+  "server": {
+     "backend_type": "selene",
+     "url": "https://api.mycroft.ai",
+     "version": "v1",
+     "update": true,
+     "metrics": true,
+     "sync_skill_settings": true
+  }
+}
+```
 
 ## Personal Backend
 
@@ -81,6 +104,20 @@ It provides the same functionality for devices and packs some extra options
 It is not intended to serve different users or thousands of devices, there are no user accounts!
 
 This is currently the only way to run a vanilla mycroft-core device offline
+
+edit your configuration to use your own personal backend instance
+```json
+{
+  "server": {
+     "backend_type": "personal",
+     "url": "http://0.0.0.0:6712",
+     "version": "v1",
+     "update": true,
+     "metrics": true,
+     "sync_skill_settings": true
+  }
+}
+```
 
 [source code](https://github.com/OpenVoiceOS/ovos-personal-backend)
 
@@ -162,5 +199,15 @@ OVOS Api Service is not a full backend, it is a set of free proxy services hoste
 skills
 
 device management functionality and user accounts do not exist, offline mode will be used for these apis
+
+edit your configuration to use the OVOS backend
+```json
+{
+  "server": {
+     "backend_type": "ovos",
+     "url": "https://api.openvoiceos.com"
+  }
+}
+```
 
 [source code](https://github.com/OpenVoiceOS/ovos_api_service)
