@@ -7,14 +7,17 @@
 * [How do I use Weather backend services?](#how-do-i-use-weather-backend-services-)
 * [How do I use WolframAlpha backend services?](#how-do-i-use-wolframalpha-backend-services-)
 
-
 ## How do I use OAuth in a skill?
 
-Retrieving the tokens in a skill does not depend on the selected backend, the mechanism to register a token is backend specific
+Retrieving the tokens in a skill does not depend on the selected backend, the mechanism to register a token is backend
+specific
 
-First you need to authorize the application, this can be done with [ovos-backend-manager](https://github.com/OpenVoiceOS/ovos-backend-manager) if running offline or using personal backend
+First you need to authorize the application, this can be done
+with [ovos-config-assistant](https://github.com/OpenVoiceOS/ovos-config-assistant) if running offline
+or [ovos-backend-manager](https://github.com/OpenVoiceOS/ovos-backend-manager) if using personal backend
 
-If using selene there is no automated process to add a token, [you need to contact](https://chat.mycroft.ai/community/pl/ynftpfuwo3gubxmta5qqronpch) support@mycroft.ai
+If using selene there is no automated process to add a
+token, [you need to contact](https://chat.mycroft.ai/community/pl/ynftpfuwo3gubxmta5qqronpch) support@mycroft.ai
 
 ```python
 from ovos_backend_client.api import OAuthApi, BackendType
@@ -77,7 +80,6 @@ data = cloud.get_entry("test")
 ![](https://matrix-client.matrix.org/_matrix/media/r0/download/matrix.org/SrqxZnxzRNSqJaydKGRQCFKo)
 
 ## How do I use Geolocation backend services?
-
 
 ```python
 from ovos_backend_client.api import GeolocationApi

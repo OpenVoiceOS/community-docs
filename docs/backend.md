@@ -43,6 +43,7 @@ Developers do not need to worry about backend details in their applications and 
 a companion stt plugin is available to use a backend as remote STT provider
 
 edit your configuration to use ovos-stt-plugin-selene
+
 ```json
 {
   "stt": {
@@ -60,37 +61,37 @@ OVOS by default runs without a backend, in this case you will need to configure 
 This can be done with [OCA](https://github.com/OpenVoiceOS/ovos-config-assistant) or by editing mycroft.conf
 
 edit your configuration to use the offline backend
+
 ```json
 {
   "server": {
-     "backend_type": "offline"
+    "backend_type": "offline"
   }
 }
 ```
 
-
 ## Selene
 
 The official mycroft home backend is called selene, users need to create an account and pair devices with the mycroft
-servers. 
+servers.
 
 This backend is not considered optional by MycroftAI but is not used by OVOS unless explicitly enabled
 
 Selene is AGPL licensed:
-    - [backend source code](https://github.com/MycroftAI/selene-backend)
-    - [frontend source code](https://github.com/MycroftAI/selene-ui)
-
+- [backend source code](https://github.com/MycroftAI/selene-backend)
+- [frontend source code](https://github.com/MycroftAI/selene-ui)
 
 edit your configuration to use the selene backend
+
 ```json
 {
   "server": {
-     "backend_type": "selene",
-     "url": "https://api.mycroft.ai",
-     "version": "v1",
-     "update": true,
-     "metrics": true,
-     "sync_skill_settings": true
+    "backend_type": "selene",
+    "url": "https://api.mycroft.ai",
+    "version": "v1",
+    "update": true,
+    "metrics": true,
+    "sync_skill_settings": true
   }
 }
 ```
@@ -106,15 +107,16 @@ It is not intended to serve different users or thousands of devices, there are n
 This is currently the only way to run a vanilla mycroft-core device offline
 
 edit your configuration to use your own personal backend instance
+
 ```json
 {
   "server": {
-     "backend_type": "personal",
-     "url": "http://0.0.0.0:6712",
-     "version": "v1",
-     "update": true,
-     "metrics": true,
-     "sync_skill_settings": true
+    "backend_type": "personal",
+    "url": "http://0.0.0.0:6712",
+    "version": "v1",
+    "update": true,
+    "metrics": true,
+    "sync_skill_settings": true
   }
 }
 ```
@@ -201,11 +203,12 @@ skills
 device management functionality and user accounts do not exist, offline mode will be used for these apis
 
 edit your configuration to use the OVOS backend
+
 ```json
 {
   "server": {
-     "backend_type": "ovos",
-     "url": "https://api.openvoiceos.com"
+    "backend_type": "ovos",
+    "url": "https://api.openvoiceos.com"
   }
 }
 ```
