@@ -1,8 +1,8 @@
-## Developer FAQ
+# Developer FAQ
 
 + [How do I use OAuth in a skill?](#how-do-i-use-oauth-in-a-skill)
 
-### How do I use OAuth in a skill?
+## How do I use OAuth in a skill?
 
 Retrieving the tokens in a skill does not depend on the selected backend, the mechanism to register a token is backend specific
 
