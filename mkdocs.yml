@@ -1,5 +1,5 @@
 site_name: Documentation
-site_url: https://openvoiceos.github.io/community-docs/
+site_url: https://openvoiceos.github.io/community-docs
 nav:
     - Home: index.md
     - Overview:
@@ -8,6 +8,5 @@ nav:
     - Mycroft:
         - Compatibility: compat.md
         - Comparison: mycroft.md
-
 
 theme: readthedocs
