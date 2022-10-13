@@ -10,12 +10,7 @@ ovos-core supports multiple backends under a single unified interface
 Developers do not need to worry about backend details in their applications and skills
 
 * [Overview](#backend-overview)
-* [Remote Settings](#remote-settings)
-* [Selene Cloud](#selene-cloud)
 * [STT](#stt)
-* [Geolocation](#geolocation)
-* [OpenWeatherMap Proxy](#openweathermap-proxy)
-* [Wolfram Alpha proxy](#wolfram-alpha-proxy)
 * [Admin Api (personal backend only!)](#admin-api--personal-backend-only--)
 
 
@@ -39,93 +34,17 @@ Developers do not need to worry about backend details in their applications and 
     [3] needs additional configuration (eg. credentials)
     [4] uses offline_backend functionality
 
-## Remote Settings
+## Backend Manager
 
-To interact with skill settings via DeviceApi
+A web UI is provided to manage a personal backend instance
 
-```python
-from ovos_backend_client.settings import RemoteSkillSettings
+![](https://github.com/OpenVoiceOS/ovos-backend-manager/raw/dev/screenshots/demo.gif)
 
-# in ovos-core skill_id is deterministic and safe
-s = RemoteSkillSettings("skill.author")
-# in mycroft-core please ensure a valid remote_id
-# in MycroftSkill class you can use
-# remote_id = self.settings_meta.skill_gid
-# s = RemoteSkillSettings("skill.author", remote_id="@|whatever_msm_decided")
-s.download()
-
-s.settings["existing_value"] = True
-s.settings["new_value"] = "will NOT show up in UI"
-s.upload()
-
-# auto generate new settings meta for all new values before uploading
-s.settings["new_value"] = "will show up in UI"
-s.generate_meta()  # now "new_value" is in meta
-s.upload()
-
-
-```
-
-## Selene Cloud
-
-by hijacking skill settings we allow storing arbitrary data via DeviceApi and use it across devices and skills
-
-```python
-from ovos_backend_client.cloud import SeleneCloud
-
-cloud = SeleneCloud()
-cloud.add_entry("test", {"secret": "NOT ENCRYPTED MAN"})
-data = cloud.get_entry("test")
-```
-
-an encrypted version is also supported if you don't trust the backend!
-
-```python
-from ovos_backend_client.cloud import SecretSeleneCloud
-
-k = "D8fmXEP5VqzVw2HE"  # you need this to read back the data
-cloud = SecretSeleneCloud(k)
-cloud.add_entry("test", {"secret": "secret data, selene cant read this"})
-data = cloud.get_entry("test")
-```
-
-![](https://matrix-client.matrix.org/_matrix/media/r0/download/matrix.org/SrqxZnxzRNSqJaydKGRQCFKo)
+source code: https://github.com/OpenVoiceOS/ovos-backend-manager
 
 ## STT
 
 a companion stt plugin is available - [ovos-stt-plugin-selene](https://github.com/OpenVoiceOS/ovos-stt-plugin-selene)
-
-## Geolocation
-
-```python
-from ovos_backend_client.api import GeolocationApi
-
-geo = GeolocationApi()
-data = geo.get_geolocation("Lisbon Portugal")
-```
-
-## OpenWeatherMap Proxy
-
-```python
-from ovos_backend_client.api import OpenWeatherMapApi
-
-owm = OpenWeatherMapApi()
-data = owm.get_weather()
-# dict - see api docs from owm onecall api
-```
-
-## Wolfram Alpha proxy
-
-```python
-from ovos_backend_client.api import WolframAlphaApi
-
-wolf = WolframAlphaApi()
-answer = wolf.spoken("what is the speed of light")
-# The speed of light has a value of about 300 million meters per second
-
-data = wolf.full_results("2+2")
-# dict - see api docs from wolfram
-```
 
 ## Admin Api (personal backend only!)
 
