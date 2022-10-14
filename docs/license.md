@@ -91,7 +91,7 @@ Since permissive licenses do not come with the legal complexity of the GPL licen
 In contrast to the GPL, which is designed to prevent the proprietary commercialization of Open Source code, permissive licenses place minimal restrictions on future behavior. This allows code to remain Open Source or become integrated into commercial solutions, as a project’s or company’s needs change. In other words, permissive licenses do not become a legal time-bomb at any point in the development process.
 
 If a product is licensed with a permissive license, derivative works can be licensed under the GPL, this is what makes a license GPL compatible, but in this case the original product can not take the improvements the GPL version made, because GPL itself is not {permissive-license} compatible.
-This relationship between GPL downstream <-> Permissive upstream is parasitic in nature, in practice, using GPL usually ends up hindering free sharing and reuse of code and ideas rather than encouraging it.
+In practice, using GPL usually ends up hindering free sharing and reuse of code and ideas rather than encouraging it.
 
 We don't believe that you can encourage freedom and sharing by enforcing nonfreedom, it is a double standard no matter how you look at it.
 
