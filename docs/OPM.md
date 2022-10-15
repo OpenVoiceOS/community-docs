@@ -17,9 +17,23 @@ code and example configurations are mapped to a string via python entrypoints in
 
 STT plugins are responsible for converting spoken audio into text
 
-#### Template
+#### List of STT plugins
 
-`plugin_package_name/__init__.py`
+| Plugin                                                                                                             | Offline | Type              | 
+|--------------------------------------------------------------------------------------------------------------------|---------|-------------------|
+| [ovos-stt-plugin-vosk](https://github.com/OpenVoiceOS/ovos-stt-plugin-vosk)                                        | yes     | FOSS              |
+| [ovos-stt-plugin-chromium](https://github.com/OpenVoiceOS/ovos-stt-plugin-chromium)                                | no      | API (free)        |
+| [neon-stt-plugin-google_cloud_streaming](https://github.com/NeonGeckoCom/neon-stt-plugin-google_cloud_streaming)   | no      | API (key)         |
+| [neon-stt-plugin-scribosermo](https://github.com/NeonGeckoCom/neon-stt-plugin-scribosermo)                         | yes     | FOSS              |  
+| [neon-stt-plugin-silero](https://github.com/NeonGeckoCom/neon-stt-plugin-silero)                                   | yes     | FOSS              | 
+| [neon-stt-plugin-polyglot](https://github.com/NeonGeckoCom/neon-stt-plugin-polyglot)                               | yes     | FOSS              | 
+| [neon-stt-plugin-deepspeech_stream_local](https://github.com/NeonGeckoCom/neon-stt-plugin-deepspeech_stream_local) | yes     | FOSS              | 
+| [ovos-stt-plugin-selene](https://github.com/OpenVoiceOS/ovos-stt-plugin-selene)                                    | no      | API (free)        |
+| [ovos-stt-plugin-http-server](https://github.com/OpenVoiceOS/ovos-stt-plugin-http-server)                          | no      | API (self hosted) |
+| [ovos-stt-plugin-pocketsphinx](https://github.com/OpenVoiceOS/ovos-stt-plugin-pocketsphinx)                        | yes     | FOSS              |
+
+
+#### Template
 
 ```python
 from ovos_plugin_manager.templates.stt import STT
@@ -50,47 +64,6 @@ MySTTConfig = {
 }
 ```
 
-`setup.py`
-
-```python
-from setuptools import setup
-
-### replace this data with your plugin specific info
-PLUGIN_NAME = "ovos-stt-plugin-name"
-PLUGIN_PKG = PLUGIN_NAME.replace("-", "_")
-PLUGIN_CLAZZ = "MySTTPlugin"
-PLUGIN_CONFIGS = "MySTTConfig"
-###
-
-PLUGIN_ENTRY_POINT = f'{PLUGIN_NAME} = {PLUGIN_PKG}:{PLUGIN_CLAZZ}'
-CONFIG_ENTRY_POINT = f'{PLUGIN_NAME}.config = {PLUGIN_PKG}:{PLUGIN_CONFIGS}'
-
-# update below as needed
-setup(
-    name=PLUGIN_NAME,
-    version='0.1.0',
-    packages=[PLUGIN_PKG],
-    install_requires=["speechrecognition>=3.8.1",
-                      "ovos-plugin-manager>=0.0.1"],
-    keywords='mycroft ovos plugin stt',
-    entry_points={'mycroft.plugin.stt': PLUGIN_ENTRY_POINT,
-                  'mycroft.plugin.stt.config': CONFIG_ENTRY_POINT}
-)
-```
-
-#### List of STT plugins
-
-| Plugin                                                                                                             | Offline | Type       | 
-|--------------------------------------------------------------------------------------------------------------------|---------|------------|
-| [ovos-stt-plugin-vosk](https://github.com/OpenVoiceOS/ovos-stt-plugin-vosk)                                        | yes     | FOSS       |
-| [ovos-stt-plugin-chromium](https://github.com/OpenVoiceOS/ovos-stt-plugin-chromium)                                | no      | API (free) |
-| [neon-stt-plugin-google_cloud_streaming](https://github.com/NeonGeckoCom/neon-stt-plugin-google_cloud_streaming)   | no      | API (key)  |
-| [neon-stt-plugin-scribosermo](https://github.com/NeonGeckoCom/neon-stt-plugin-scribosermo)                         | yes     | FOSS       |  
-| [neon-stt-plugin-silero](https://github.com/NeonGeckoCom/neon-stt-plugin-silero)                                   | yes     | FOSS       | 
-| [neon-stt-plugin-polyglot](https://github.com/NeonGeckoCom/neon-stt-plugin-polyglot)                               | yes     | FOSS       | 
-| [neon-stt-plugin-deepspeech_stream_local](https://github.com/NeonGeckoCom/neon-stt-plugin-deepspeech_stream_local) | yes     | FOSS       | 
-| [ovos-stt-plugin-pocketsphinx](https://github.com/OpenVoiceOS/ovos-stt-plugin-pocketsphinx)                        | yes     | FOSS       |
-
 ### TTS
 
 TTS plugins are responsible for converting text into audio for playback
@@ -101,12 +74,13 @@ TTS plugins are responsible for converting text into audio for playback
 |---------------------------------------------------------------------------------------------------|---------|-------------------|
 | [ovos-tts-plugin-mimic](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic)                     | yes     | FOSS              |
 | [ovos-tts-plugin-mimic2](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic2)                   | no      | API (free)        |
+| [ovos-tts-plugin-mimic3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic3)                   | yes     | FOSS              |
+| [ovos-tts-plugin-marytts](https://github.com/OpenVoiceOS/ovos-tts-plugin-marytts)                 | no      | API (self hosted) |
 | [neon-tts-plugin-larynx_server](https://github.com/NeonGeckoCom/neon-tts-plugin-larynx_server)    | no      | API (self hosted) |
 | [ovos-tts-server-plugin](https://github.com/OpenVoiceOS/ovos-tts-server-plugin)                   | no      | API (self hosted) |
 | [ovos-tts-plugin-pico](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico)                       | yes     | FOSS              |
 | [neon-tts-plugin-glados](https://github.com/NeonGeckoCom/neon-tts-plugin-glados)                  | yes     | FOSS              |
 | [neon-tts-plugin-mozilla_local](https://github.com/NeonGeckoCom/neon-tts-plugin-mozilla_local)    | yes     | FOSS              |
-| [ovos-tts-plugin-cotovia](https://github.com/OpenVoiceOS/ovos-tts-plugin-cotovia)                 | yes     | FOSS              |
 | [neon-tts-plugin-polly](https://github.com/NeonGeckoCom/neon-tts-plugin-polly)                    | no      | API (key)         |
 | [ovos-tts-plugin-voicerss](https://github.com/OpenVoiceOS/ovos-tts-plugin-voicerss)               | no      | API (key)         |
 | [ovos-tts-plugin-google-TX](https://github.com/OpenVoiceOS/ovos-tts-plugin-google-TX)             | no      | API (free)        |
@@ -114,7 +88,11 @@ TTS plugins are responsible for converting text into audio for playback
 | [neon-tts-plugin-mozilla_remote](https://github.com/NeonGeckoCom/neon-tts-plugin-mozilla_remote)  | no      | API (self hosted) |
 | [neon-tts-plugin-tacotron2](https://github.com/NeonGeckoCom/neon-tts-plugin-tacotron2)            | yes     | FOSS              |
 | [ovos-tts-plugin-espeakNG](https://github.com/OpenVoiceOS/ovos-tts-plugin-espeakNG)               | yes     | FOSS              |
+| [ovos-tts-plugin-cotovia](https://github.com/OpenVoiceOS/ovos-tts-plugin-cotovia)                 | yes     | FOSS              |
+| [ovos-tts-plugin-catotron](https://github.com/OpenVoiceOS/ovos-tts-plugin-catotron)               | no      | API (self hosted) |
+| [ovos-tts-plugin-softcatala](https://github.com/OpenVoiceOS/ovos-tts-plugin-softcatala)           | no      | API (self hosted) |
 | [ovos-tts-plugin-SAM](https://github.com/OpenVoiceOS/ovos-tts-plugin-SAM)                         | yes     | Abandonware       |
+| [ovos-tts-plugin-beepspeak](https://github.com/OpenVoiceOS/ovos-tts-plugin-beepspeak)             | yes     | Fun               |
 
 ### WakeWord
 
@@ -218,6 +196,37 @@ If mycroft-gui is available these plugins will rarely be used unless ovos is exp
 | [ovos-ocp-audio-plugin](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin)       | framework + compatibility layer |
 | [ovos-audio-plugin-simple](https://github.com/OpenVoiceOS/ovos-audio-plugin-simple) | sox / aplay / paplay / mpg123   |
 | [ovos-vlc-plugin](https://github.com/OpenVoiceOS/ovos-vlc-plugin)                   | vlc audio backend               |
+
+## Packaging
+
+To package a plugin you need a `setup.py` as follows
+
+```python
+from setuptools import setup
+
+### replace this data with your plugin specific info
+PLUGIN_TYPE = "mycroft.plugin.stt"  
+PLUGIN_NAME = "ovos-stt-plugin-name"
+PLUGIN_PKG = PLUGIN_NAME.replace("-", "_")
+PLUGIN_CLAZZ = "MyPlugin"
+PLUGIN_CONFIGS = "MyPluginConfig"
+###
+
+PLUGIN_ENTRY_POINT = f'{PLUGIN_NAME} = {PLUGIN_PKG}:{PLUGIN_CLAZZ}'
+CONFIG_ENTRY_POINT = f'{PLUGIN_NAME}.config = {PLUGIN_PKG}:{PLUGIN_CONFIGS}'
+
+# add version, author, license, description....
+setup(
+    name=PLUGIN_NAME,
+    version='0.1.0',
+    packages=[PLUGIN_PKG],
+    install_requires=["speechrecognition>=3.8.1",
+                      "ovos-plugin-manager>=0.0.1"],
+    keywords='mycroft ovos plugin',
+    entry_points={PLUGIN_TYPE: PLUGIN_ENTRY_POINT,
+                  f'{PLUGIN_TYPE}.config': CONFIG_ENTRY_POINT}
+)
+```
 
 ## Projects using OPM
 
