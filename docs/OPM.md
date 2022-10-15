@@ -17,6 +17,27 @@ code and example configurations are mapped to a string via python entrypoints in
 
 STT plugins are responsible for converting spoken audio into text
 
+#### Public API
+
+STT plugins can be used as follows
+
+```python
+from speech_recognition import Recognizer, AudioFile
+
+plug = STTPlug()
+
+# verify lang is supported
+lang = "en-us"
+assert lang in plug.available_languages
+
+# read file
+with AudioFile("test.wav") as source:
+    audio = Recognizer().record(source)
+
+# transcribe AudioData object
+transcript = plug.execute(audio, lang)
+```
+
 #### List of STT plugins
 
 | Plugin                                                                                                             | Offline | Type              | 
