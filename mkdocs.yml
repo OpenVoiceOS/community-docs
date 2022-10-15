@@ -10,6 +10,16 @@ nav:
         - Developers: dev.md
         - Backend Services: backend.md
         - Configuration: config.md
+    - Technologies:
+        - OVOS-core: core.md
+        - Platform/Hardware Abstraction Layer: PHAL.md
+        - Plugin Manager: OPM.md
+        - Shell: shell.md
+        - Common Play: OCP.md
+        - Config Assistant: OCA.md
+    - Images:
+        - Buildroot: buildroot.md
+        - Manjaro: manjaro.md
     - Mycroft:
         - Compatibility: compat.md
         - Comparison: mycroft.md
