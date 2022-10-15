@@ -134,14 +134,27 @@ Platform/Hardware specific integrations are loaded by PHAL, these plugins can ha
 
 #### List of PHAL plugins
 
-| Plugin                                                                                      | Description                       |
-|---------------------------------------------------------------------------------------------|-----------------------------------|
-| [ovos-PHAL-plugin-alsa](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-alsa)               | volume control                    |
-| [ovos-PHAL-plugin-system](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system)           | reboot / shutdown / factory reset |
-| [ovos-PHAL-plugin-mk1](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk1)                 | mycroft mark1 integration         |
-| [ovos-PHAL-plugin-mk2](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk2)                 | mycroft mark2 integration         |
-| [ovos-PHAL-plugin-balena-wifi](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-balena-wifi) | wifi setup (hotspot)              |
-| [ovos-PHAL-plugin-dashboard](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-dashboard)     | dashboard control                 |
+| Plugin                                                                                                            | Description                          |
+|-------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+| [ovos-PHAL-plugin-alsa](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-alsa)                                     | volume control                       |
+| [ovos-PHAL-plugin-system](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system)                                 | reboot / shutdown / factory reset    |
+| [ovos-PHAL-plugin-mk1](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk1)                                       | mycroft mark1 integration            |
+| [ovos-PHAL-plugin-mk2](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk2)                                       | mycroft mark2 integration            |
+| [ovos-PHAL-plugin-respeaker-2mic](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-respeaker-2mic)                 | respeaker 2mic hat integration       |
+| [ovos-PHAL-plugin-respeaker-4mic](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-respeaker-4mic)                 | respeaker 4mic hat integration       |
+| [ovos-PHAL-plugin-wifi-setup](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-wifi-setup)                         | wifi setup (central plugin)          |
+| [ovos-PHAL-plugin-gui-network-client](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-gui-network-client)         | wifi setup (GUI interface)           |
+| [ovos-PHAL-plugin-balena-wifi](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-balena-wifi)                       | wifi setup (hotspot)                 |
+| [ovos-PHAL-plugin-network-manager](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-network-manager)               | wifi setup (network manager)         |
+| [ovos-PHAL-plugin-brightness-control-rpi](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-brightness-control-rpi) | brightness control                   |
+| [ovos-PHAL-plugin-ipgeo](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-ipgeo)                                   | automatic geolocation  (IP address)  |
+| [ovos-PHAL-plugin-gpsd](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-gpsd)                                     | automatic geolocation  (GPS)         |
+| [ovos-PHAL-plugin-dashboard](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-dashboard)                           | dashboard control (ovos-shell)       |
+| [ovos-PHAL-plugin-notification-widgets](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-notification-widgets)     | system notifications (ovos-shell)    |
+| [ovos-PHAL-plugin-color-scheme-manager](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-color-scheme-manager)     | GUI color schemes (ovos-shell)       |
+| [ovos-PHAL-plugin-configuration-provider](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-configuration-provider) | UI to edit mycroft.conf (ovos-shell) |
+| [ovos-PHAL-plugin-analog-media-devices](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-analog-media-devices)     | video/audio capture devices (OCP)    |
+
 
 ### Language Detection / Translation
 
@@ -196,6 +209,7 @@ If mycroft-gui is available these plugins will rarely be used unless ovos is exp
 | [ovos-ocp-audio-plugin](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin)       | framework + compatibility layer |
 | [ovos-audio-plugin-simple](https://github.com/OpenVoiceOS/ovos-audio-plugin-simple) | sox / aplay / paplay / mpg123   |
 | [ovos-vlc-plugin](https://github.com/OpenVoiceOS/ovos-vlc-plugin)                   | vlc audio backend               |
+| [ovos-mplayer-plugin](https://github.com/OpenVoiceOS/ovos-mplayer-plugin)           | mplayer audio backend           |
 
 ## Packaging
 
