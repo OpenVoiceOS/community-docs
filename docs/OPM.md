@@ -153,6 +153,47 @@ VAD plugins classify audio and report if it contains speech or not
 
 Platform/Hardware specific integrations are loaded by PHAL, these plugins can handle all sorts of system activities
 
+#### Template
+
+PHAL plugins do not follow a strict template, they are usually event listeners that perform certain actions and integrate with other components
+
+In mycroft-core these would usually be shipped as skills or hardcoded, if in doubt whether you should make a skill or PHAL plugin:
+
+- does it need a voice interface? if not -> PHAL
+- can the underlying functionality be replaced while keeping the voice/gui interface? if yes -> PHAL + skill
+- mainly exposes a voice interface, or underlying functionality is not replaceable -> skill
+
+```python
+from mycroft_bus_client import Message
+from ovos_plugin_manager.phal import PHALPlugin
+
+class MyPHALPluginValidator:
+    @staticmethod
+    def validate(config=None):
+        """ this method is called before loading the plugin.
+        If it returns False the plugin is not loaded.
+        This allows a plugin to run platform checks"""
+        return True
+
+
+class MyPHALPlugin(PHALPlugin):
+    validator = MyPHALPluginValidator
+
+    def __init__(self, bus=None, config=None):
+        super().__init__(bus=bus, name="ovos-PHAL-plugin-NAME", config=config)
+        # register events for plugin
+        self.bus.on("my.event", self.handle_event)
+
+    def handle_event(self, message):
+        # TODO plugin stuff
+        self.bus.emit(Message("my.event.response"))
+
+    def shutdown(self):
+        # cleanly remove any event listeners and perform shutdown actions
+        self.bus.remove("my.event", self.handle_event)
+        super().shutdown()
+```
+
 #### List of PHAL plugins
 
 | Plugin                                                                                                            | Description                          |
