@@ -14,6 +14,7 @@ nav:
         - OVOS-core: core.md
         - Platform/Hardware Abstraction Layer: PHAL.md
         - Plugin Manager: OPM.md
+        - Personal Backend: personal_backend.md
         - Shell: shell.md
         - Common Play: OCP.md
         - Config Assistant: OCA.md
