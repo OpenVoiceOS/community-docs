@@ -9,7 +9,9 @@ All Mycroft Skills and Plugins should work normally with OVOS-core.
 OVOS-core is fully modular. Furthermore, common components have been repackaged as plugins. That means it isn't just a great assistant on its own, but also a pretty small library!
 
 
-## Installing ovos-core
+## Getting Started
+
+### Installing ovos-core
 
 (NOTE: at this early stage, required system libs are presumed, and your distribution might be a question mark.)
 
@@ -17,8 +19,7 @@ We suggest you do this in a virtualenv:
 
 `pip install ovos-core[all]`
 
-
-## Running ovos-core
+### Running ovos-core
 
 `start-mycroft.sh` is available to perform common tasks.
 
@@ -37,10 +38,4 @@ interface. Later you can bring up the CLI using `./start-mycroft.sh cli`.
 The background services can be stopped as a group with:
 
 - `./stop-mycroft.sh`
-
-## Skills
-
-Mycroft is nothing without skills. There are a handful of default skills, but most need to be installed explicitly.  
-See the [Skill Repo](https://github.com/MycroftAI/mycroft-skills#welcome) to discover skills made by others.  
-Please share your own interesting work!
 

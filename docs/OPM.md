@@ -54,37 +54,6 @@ transcript = plug.execute(audio, lang)
 | [ovos-stt-plugin-pocketsphinx](https://github.com/OpenVoiceOS/ovos-stt-plugin-pocketsphinx)                        | yes     | FOSS              |
 
 
-#### Template
-
-```python
-from ovos_plugin_manager.templates.stt import STT
-
-
-# base plugin class
-class MySTTPlugin(STT):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        # read config settings for your plugin
-        lm = self.config.get("language-model")
-        hmm = self.config.get("acoustic-model")
-
-    def execute(self, audio, language=None):
-        # TODO - convert audio into text and return string
-        transcript = "You said this"
-        return transcript
-
-
-# sample valid configurations per language
-# "display_name" and "offline" provide metadata for UI
-# all other keys represent an example valid config for the plugin 
-MySTTConfig = {
-    lang: [{"lang": lang,
-            "display_name": f"MySTT ({lang}",
-            "offline": True}]
-    for lang in ["en-us", "es-es"]
-}
-```
-
 ### TTS
 
 TTS plugins are responsible for converting text into audio for playback
@@ -148,74 +117,6 @@ VAD plugins classify audio and report if it contains speech or not
 |----------------------------------------------------------------------------------------|-------|
 | [ovos-vad-plugin-silero](https://github.com/OpenVoiceOS/ovos-vad-plugin-silero)        | model |
 | [ovos-vad-plugin-webrtcvad](https://github.com/OpenVoiceOS/ovos-vad-plugin-webrtcvad)  | model |
-
-### PHAL
-
-Platform/Hardware specific integrations are loaded by PHAL, these plugins can handle all sorts of system activities
-
-#### List of PHAL plugins
-
-| Plugin                                                                                                            | Description                          |
-|-------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| [ovos-PHAL-plugin-alsa](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-alsa)                                     | volume control                       |
-| [ovos-PHAL-plugin-system](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system)                                 | reboot / shutdown / factory reset    |
-| [ovos-PHAL-plugin-mk1](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk1)                                       | mycroft mark1 integration            |
-| [ovos-PHAL-plugin-mk2](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk2)                                       | mycroft mark2 integration            |
-| [ovos-PHAL-plugin-respeaker-2mic](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-respeaker-2mic)                 | respeaker 2mic hat integration       |
-| [ovos-PHAL-plugin-respeaker-4mic](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-respeaker-4mic)                 | respeaker 4mic hat integration       |
-| [ovos-PHAL-plugin-wifi-setup](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-wifi-setup)                         | wifi setup (central plugin)          |
-| [ovos-PHAL-plugin-gui-network-client](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-gui-network-client)         | wifi setup (GUI interface)           |
-| [ovos-PHAL-plugin-balena-wifi](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-balena-wifi)                       | wifi setup (hotspot)                 |
-| [ovos-PHAL-plugin-network-manager](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-network-manager)               | wifi setup (network manager)         |
-| [ovos-PHAL-plugin-brightness-control-rpi](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-brightness-control-rpi) | brightness control                   |
-| [ovos-PHAL-plugin-ipgeo](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-ipgeo)                                   | automatic geolocation  (IP address)  |
-| [ovos-PHAL-plugin-gpsd](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-gpsd)                                     | automatic geolocation  (GPS)         |
-| [ovos-PHAL-plugin-dashboard](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-dashboard)                           | dashboard control (ovos-shell)       |
-| [ovos-PHAL-plugin-notification-widgets](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-notification-widgets)     | system notifications (ovos-shell)    |
-| [ovos-PHAL-plugin-color-scheme-manager](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-color-scheme-manager)     | GUI color schemes (ovos-shell)       |
-| [ovos-PHAL-plugin-configuration-provider](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-configuration-provider) | UI to edit mycroft.conf (ovos-shell) |
-| [ovos-PHAL-plugin-analog-media-devices](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-analog-media-devices)     | video/audio capture devices (OCP)    |
-
-#### Template
-
-PHAL plugins do not follow a strict template, they are usually event listeners that perform certain actions and integrate with other components
-
-In mycroft-core these would usually be shipped as skills or hardcoded, if in doubt whether you should make a skill or PHAL plugin:
-
-- does it need a voice interface? if not -> PHAL
-- can the underlying functionality be replaced while keeping the voice/gui interface? if yes -> PHAL + skill
-- mainly exposes a voice interface, or underlying functionality is not replaceable -> skill
-
-```python
-from mycroft_bus_client import Message
-from ovos_plugin_manager.phal import PHALPlugin
-
-class MyPHALPluginValidator:
-    @staticmethod
-    def validate(config=None):
-        """ this method is called before loading the plugin.
-        If it returns False the plugin is not loaded.
-        This allows a plugin to run platform checks"""
-        return True
-
-
-class MyPHALPlugin(PHALPlugin):
-    validator = MyPHALPluginValidator
-
-    def __init__(self, bus=None, config=None):
-        super().__init__(bus=bus, name="ovos-PHAL-plugin-NAME", config=config)
-        # register events for plugin
-        self.bus.on("my.event", self.handle_event)
-
-    def handle_event(self, message):
-        # TODO plugin stuff
-        self.bus.emit(Message("my.event.response"))
-
-    def shutdown(self):
-        # cleanly remove any event listeners and perform shutdown actions
-        self.bus.remove("my.event", self.handle_event)
-        super().shutdown()
-```
 
 
 ### Language Detection / Translation
@@ -299,61 +200,6 @@ assert visemes == [('0', 0.0775), ('0', 0.155), ('3', 0.2325), ('2', 0.31), ('2'
 | [neon-g2p-espeak-plugin](https://github.com/NeonJarbas/g2p-espeak-plugin)                     | IPA  |
 | [neon-g2p-gruut-plugin](https://github.com/NeonGeckoCom/g2p-gruut-plugin)                     | IPA  |
 
-#### ARPA Template
-
-```python
-from ovos_plugin_manager.templates.g2p import Grapheme2PhonemePlugin
-from ovos_utils.lang.visimes import VISIMES
-
-# base plugin class
-class MyARPAG2PPlugin(Grapheme2PhonemePlugin):
-    def __init__(self, config=None):
-        self.config = config or {}
-
-    def get_arpa(self, word, lang, ignore_oov=False):
-        phones = []  # TODO implement
-        return phones
-    
-    def get_durations(self, utterance, lang="en", default_dur=0.4):
-        words = utterance.split()
-        phones = [self.get_arpa(w, lang) for w in utterance.split()]
-        dur = default_dur  # TODO this is plugin specific
-        return [(pho, dur) for pho in phones]
-    
-    def utterance2visemes(self, utterance, lang="en", default_dur=0.4):
-        phonemes = self.get_durations(utterance, lang, default_dur)
-        return [(VISIMES.get(pho[0].lower(), '4'), float(pho[1]))
-                for pho in phonemes]
-
-```
-
-#### IPA Template
-
-```python
-from ovos_plugin_manager.templates.g2p import Grapheme2PhonemePlugin
-from ovos_utils.lang.visimes import VISIMES
-
-# base plugin class
-class MyIPAG2PPlugin(Grapheme2PhonemePlugin):
-    def __init__(self, config=None):
-        self.config = config or {}
-
-    def get_ipa(self, word, lang, ignore_oov=False):
-        phones = []  # TODO implement
-        return phones
-    
-    def get_durations(self, utterance, lang="en", default_dur=0.4):
-        # auto converted to arpa if ipa is implemented
-        phones = [self.get_arpa(w, lang) for w in utterance.split()]
-        dur = default_dur  # TODO this is plugin specific
-        return [(pho, dur) for pho in phones]
-    
-    def utterance2visemes(self, utterance, lang="en", default_dur=0.4):
-        phonemes = self.get_durations(utterance, lang, default_dur)
-        return [(VISIMES.get(pho[0].lower(), '4'), float(pho[1]))
-                for pho in phonemes]
-
-```
 
 ### AudioService
 
@@ -370,7 +216,10 @@ If mycroft-gui is available these plugins will rarely be used unless ovos is exp
 | [ovos-vlc-plugin](https://github.com/OpenVoiceOS/ovos-vlc-plugin)                   | vlc audio backend               |
 | [ovos-mplayer-plugin](https://github.com/OpenVoiceOS/ovos-mplayer-plugin)           | mplayer audio backend           |
 
-## Packaging
+
+## Developers
+
+### Packaging
 
 To package a plugin you need a `setup.py` as follows
 
@@ -400,6 +249,97 @@ setup(
                   f'{PLUGIN_TYPE}.config': CONFIG_ENTRY_POINT}
 )
 ```
+
+### STT Template
+
+```python
+from ovos_plugin_manager.templates.stt import STT
+
+
+# base plugin class
+class MySTTPlugin(STT):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # read config settings for your plugin
+        lm = self.config.get("language-model")
+        hmm = self.config.get("acoustic-model")
+
+    def execute(self, audio, language=None):
+        # TODO - convert audio into text and return string
+        transcript = "You said this"
+        return transcript
+
+
+# sample valid configurations per language
+# "display_name" and "offline" provide metadata for UI
+# all other keys represent an example valid config for the plugin 
+MySTTConfig = {
+    lang: [{"lang": lang,
+            "display_name": f"MySTT ({lang}",
+            "offline": True}]
+    for lang in ["en-us", "es-es"]
+}
+```
+
+
+### Phonemes Template
+
+```python
+from ovos_plugin_manager.templates.g2p import Grapheme2PhonemePlugin
+from ovos_utils.lang.visimes import VISIMES
+
+# base plugin class
+class MyARPAG2PPlugin(Grapheme2PhonemePlugin):
+    def __init__(self, config=None):
+        self.config = config or {}
+
+    def get_arpa(self, word, lang, ignore_oov=False):
+        phones = []  # TODO implement
+        return phones
+    
+    def get_durations(self, utterance, lang="en", default_dur=0.4):
+        words = utterance.split()
+        phones = [self.get_arpa(w, lang) for w in utterance.split()]
+        dur = default_dur  # TODO this is plugin specific
+        return [(pho, dur) for pho in phones]
+    
+    def utterance2visemes(self, utterance, lang="en", default_dur=0.4):
+        phonemes = self.get_durations(utterance, lang, default_dur)
+        return [(VISIMES.get(pho[0].lower(), '4'), float(pho[1]))
+                for pho in phonemes]
+
+```
+
+If your plugin uses IPA instead of ARPA simply replace `get_arpa` with `get_ipa`
+
+```python
+from ovos_plugin_manager.templates.g2p import Grapheme2PhonemePlugin
+from ovos_utils.lang.visimes import VISIMES
+
+# base plugin class
+class MyIPAG2PPlugin(Grapheme2PhonemePlugin):
+    def __init__(self, config=None):
+        self.config = config or {}
+
+    def get_ipa(self, word, lang, ignore_oov=False):
+        phones = []  # TODO implement
+        return phones
+    
+    def get_durations(self, utterance, lang="en", default_dur=0.4):
+        # auto converted to arpa if ipa is implemented
+        phones = [self.get_arpa(w, lang) for w in utterance.split()]
+        dur = default_dur  # TODO this is plugin specific
+        return [(pho, dur) for pho in phones]
+    
+    def utterance2visemes(self, utterance, lang="en", default_dur=0.4):
+        phonemes = self.get_durations(utterance, lang, default_dur)
+        return [(VISIMES.get(pho[0].lower(), '4'), float(pho[1]))
+                for pho in phonemes]
+
+```
+
+
+
 
 ## Projects using OPM
 
