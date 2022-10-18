@@ -90,58 +90,11 @@ WakeWord plugins classify audio and report if a certain word or sound is present
 
 These plugins usually correspond to the name of the voice assistant, "hey mycroft", but can also be used for other purposes
 
+![ww](https://github.com/secretsauceai/secret_sauce_ai/raw/main/SSAI_wakeword_scene_compressed.png?raw=true)
+
 #### Standalone Usage
 
-***new style*** plugins
-
-
-New style plugins expect to receive live audio, they may keep their own cyclic buffers internally
-
-```python
-import pyaudio
-
-# pyaudio params
-FORMAT = pyaudio.paInt16
-CHANNELS = 1
-RATE = 16000
-CHUNK = 1024
-MAX_RECORD_SECONDS = 20
-SAMPLE_WIDTH = pyaudio.get_sample_size(FORMAT)
-audio = pyaudio.PyAudio()
-
-# Wake word initialization
-config = {"model": "path/to/hey_computer.model"}
-plug = MyHotWord("hey computer", config=config)
-
-# start Recording
-stream = audio.open(channels=CHANNELS, format=FORMAT,
-    rate=RATE, frames_per_buffer=CHUNK, input=True)
-
-found = False
-print("Waiting for wake word")
-for i in range(0, int(RATE / CHUNK * MAX_RECORD_SECONDS)):
-    data = stream.read(CHUNK)
-    # feed data directly to streaming prediction engines
-    plug.update(data)
-    # streaming engines return result here
-    found = plug.found_wake_word(data)
-    if found:
-        break
-if found:
-    print("Found wake word!")
-else:
-    print("No wake word found")
-    
-# stop everything
-plug.stop()
-stream.stop_stream()
-stream.close()
-audio.terminate()
-```
-
-***old style*** plugins (DEPRECATED)
-
-Old style plugins expect to receive ~3 seconds of audio data at once
+first lets get some boilerplate ouf of the way for the microphone handling logic
 
 ```python
 import pyaudio
@@ -203,29 +156,22 @@ MAX_RECORD_SECONDS = 20
 SAMPLE_WIDTH = pyaudio.get_sample_size(FORMAT)
 audio = pyaudio.PyAudio()
 
-# Wake word initialization
-config = {"model": "path/to/hey_computer.model"}
-plug = MyHotWord("hey computer", config=config)
-
-# used for old style non-streaming wakeword (deprecated)
-audio_buffer = CyclicAudioBuffer(plug.expected_duration,
-                                 sample_rate=RATE, sample_width=SAMPLE_WIDTH)
-
 # start Recording
 stream = audio.open(channels=CHANNELS, format=FORMAT,
     rate=RATE, frames_per_buffer=CHUNK, input=True)
 
-found = False
-print("Waiting for wake word")
-for i in range(0, int(RATE / CHUNK * MAX_RECORD_SECONDS)):
-    data = stream.read(CHUNK)
-    # add data to rolling buffer, used by non-streaming engines
-    audio_buffer.append(data)
-    # non streaming engines check the byte_data in audio_buffer
-    audio_data = audio_buffer.get()
-    found = plug.found_wake_word(audio_data)
-    if found:
-        break
+
+def load_plugin():
+    # Wake word initialization
+    config = {"model": "path/to/hey_computer.model"}
+    return MyHotWord("hey computer", config=config)
+
+def listen_for_ww(plug):
+    # TODO - see examples below
+    return False
+
+plug = load_plugin()
+found = listen_for_ww(plug)
         
 if found:
     print("Found wake word!")
@@ -239,6 +185,72 @@ stream.close()
 audio.terminate()
 ```
 
+***new style*** plugins
+
+New style plugins expect to receive live audio, they may keep their own cyclic buffers internally
+
+```python
+
+def listen_for_ww(plug):
+    found = False
+    print("Waiting for wake word")
+    for i in range(0, int(RATE / CHUNK * MAX_RECORD_SECONDS)):
+        data = stream.read(CHUNK)
+        # feed data directly to streaming prediction engines
+        plug.update(data)
+        # streaming engines return result here
+        found = plug.found_wake_word(data)
+        if found:
+            break
+    return found
+```
+
+***old style*** plugins (DEPRECATED)
+
+Old style plugins expect to receive ~3 seconds of audio data at once
+
+```python
+def listen_for_ww(plug):
+    found = False
+    # used for old style non-streaming wakeword (deprecated)
+    audio_buffer = CyclicAudioBuffer(plug.expected_duration,
+                                     sample_rate=RATE, sample_width=SAMPLE_WIDTH)
+    print("Waiting for wake word")
+    for i in range(0, int(RATE / CHUNK * MAX_RECORD_SECONDS)):
+        data = stream.read(CHUNK)
+        # add data to rolling buffer, used by non-streaming engines
+        audio_buffer.append(data)
+        # non streaming engines check the byte_data in audio_buffer
+        audio_data = audio_buffer.get()
+        found = plug.found_wake_word(audio_data)
+        if found:
+            break
+    return found
+```
+
+***new + old style*** plugins (backwards compatibility)
+
+if you are unsure what kind of plugin you will be used you can be compatible with both approaches like ovos-core
+
+```python
+def listen_for_ww(plug):
+    found = False
+    # used for old style non-streaming wakeword (deprecated)
+    audio_buffer = CyclicAudioBuffer(plug.expected_duration,
+                                     sample_rate=RATE, sample_width=SAMPLE_WIDTH)
+    print("Waiting for wake word")
+    for i in range(0, int(RATE / CHUNK * MAX_RECORD_SECONDS)):
+        data = stream.read(CHUNK)
+        # old style engines will ignore the update
+        plug.update(data)
+        audio_buffer.append(data)
+        # streaming engines will ignore the byte_data
+        audio_data = audio_buffer.get()
+        found = plug.found_wake_word(audio_data)
+        if found:
+            break
+    return found
+```
 
 #### List of Wake Word plugins
 
@@ -520,7 +532,7 @@ MyTTSConfig = {
 }
 ```
 
-### HotWord Template
+### WakeWord Template
 
 ```python
 from ovos_plugin_manager.templates.hotwords import HotWordEngine
