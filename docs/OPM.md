@@ -323,6 +323,7 @@ MySTTConfig = {
 
 ### TTS Template
 
+
 ```python
 from ovos_plugin_manager.templates.tts import TTS
 
@@ -367,6 +368,62 @@ MyTTSConfig = {
             "offline": True}]
     for lang in ["en-us", "es-es"]
 }
+```
+
+### HotWord Template
+
+```python
+from ovos_plugin_manager.templates.hotwords import HotWordEngine
+from threading import Event
+
+
+class MyWWPlugin(HotWordEngine):
+    def __init__(self, key_phrase="hey mycroft", config=None, lang="en-us"):
+        super().__init__(key_phrase, config, lang)
+        self.detection = Event()
+        # read config settings for your plugin
+        self.sensitivity = self.config.get("sensitivity", 0.5)
+        # TODO - plugin stuff
+        # how does your plugin work? phonemes? text? models?
+        self.engine = MyWW(key_phrase) 
+
+    def found_wake_word(self, frame_data):
+        """Check if wake word has been found.
+
+        Checks if the wake word has been found. Should reset any internal
+        tracking of the wake word state.
+
+        Arguments:
+            frame_data (binary data): Deprecated. Audio data for large chunk
+                                      of audio to be processed. This should not
+                                      be used to detect audio data instead
+                                      use update() to incrementally update audio
+        Returns:
+            bool: True if a wake word was detected, else False
+        """
+        detected = self.detection.is_set()
+        if detected:
+            self.detection.clear()
+        return detected
+
+    def update(self, chunk):
+        """Updates the hotword engine with new audio data.
+
+        The engine should process the data and update internal trigger state.
+
+        Arguments:
+            chunk (bytes): Chunk of audio data to process
+        """
+        if self.engine.found_it(chunk): # TODO - check for wake word
+            self.detection.set()
+
+    def stop(self):
+        """Perform any actions needed to shut down the wake word engine.
+
+        This may include things such as unloading data or shutdown
+        external processess.
+        """
+        self.engine.bye()  # TODO - plugin specific shutdown
 ```
 
 
