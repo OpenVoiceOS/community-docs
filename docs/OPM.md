@@ -221,13 +221,39 @@ If mycroft-gui is available these plugins will rarely be used unless ovos is exp
 
 ### Packaging
 
-To package a plugin you need a `setup.py` as follows
+Plugins need to define one entrypoint with their plugin type and plugin class
 
+```python
+# OPM recognized plugin types
+class PluginTypes(str, Enum):
+    PHAL = "ovos.plugin.phal"
+    SKILL = "ovos.plugin.skill"
+    VAD = "ovos.plugin.VAD"
+    PHONEME = "ovos.plugin.g2p"
+    AUDIO = 'mycroft.plugin.audioservice'
+    STT = 'mycroft.plugin.stt'
+    TTS = 'mycroft.plugin.tts'
+    WAKEWORD = 'mycroft.plugin.wake_word'
+    TRANSLATE = "neon.plugin.lang.translate"
+    LANG_DETECT = "neon.plugin.lang.detect"
+    UTTERANCE_TRANSFORMER = "neon.plugin.text"
+    METADATA_TRANSFORMER = "neon.plugin.metadata"
+    AUDIO_TRANSFORMER = "neon.plugin.audio"
+    QUESTION_SOLVER = "neon.plugin.solver"
+    COREFERENCE_SOLVER = "intentbox.coreference"
+    KEYWORD_EXTRACTION = "intentbox.keywords"
+    UTTERANCE_SEGMENTATION = "intentbox.segmentation"
+    TOKENIZATION = "intentbox.tokenization"
+    POSTAG = "intentbox.postag"
+```
+plugins can also optionally provide metadata about language support and sample configs via the `{plugin_type}.config` entrypoint
+
+A typical `setup.py` for a plugin looks like this
 ```python
 from setuptools import setup
 
 ### replace this data with your plugin specific info
-PLUGIN_TYPE = "mycroft.plugin.stt"  
+PLUGIN_TYPE = "mycroft.plugin.stt"  # see Enum above
 PLUGIN_NAME = "ovos-stt-plugin-name"
 PLUGIN_PKG = PLUGIN_NAME.replace("-", "_")
 PLUGIN_CLAZZ = "MyPlugin"
