@@ -637,7 +637,7 @@ class MyIPAG2PPlugin(Grapheme2PhonemePlugin):
 
 ## Projects using OPM
 
-OPM plugins are know to be compatible with the following projects (non-exhaustive list)
+OPM plugins are know to be natively supported by the following projects (non-exhaustive list)
 
 - [ovos-core](https://github.com/OpenVoiceOS/ovos-core)
 - [ovos-local-backend](https://github.com/OpenVoiceOS/ovos-local-backend)
@@ -646,3 +646,5 @@ OPM plugins are know to be compatible with the following projects (non-exhaustiv
 - [ovos-translate-server](https://github.com/OpenVoiceOS/ovos-translate-server)
 - [neon-core](https://github.com/NeonGeckoCom/NeonCore)
 - [HiveMind voice satellite](https://github.com/JarbasHiveMind/HiveMind-voice-sat)
+
+Additionally, some plugins (AudioService, WakeWord, TTS and STT) are also backwards compatible with mycroft-core
