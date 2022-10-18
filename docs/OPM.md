@@ -17,9 +17,9 @@ code and example configurations are mapped to a string via python entrypoints in
 
 STT plugins are responsible for converting spoken audio into text
 
-#### Public API
+#### Standalone Usage
 
-STT plugins can be used as follows
+STT plugins can be used in your projects as follows
 
 ```python
 from speech_recognition import Recognizer, AudioFile
@@ -90,6 +90,156 @@ WakeWord plugins classify audio and report if a certain word or sound is present
 
 These plugins usually correspond to the name of the voice assistant, "hey mycroft", but can also be used for other purposes
 
+#### Standalone Usage
+
+***new style*** plugins
+
+
+New style plugins expect to receive live audio, they may keep their own cyclic buffers internally
+
+```python
+import pyaudio
+
+# pyaudio params
+FORMAT = pyaudio.paInt16
+CHANNELS = 1
+RATE = 16000
+CHUNK = 1024
+MAX_RECORD_SECONDS = 20
+SAMPLE_WIDTH = pyaudio.get_sample_size(FORMAT)
+audio = pyaudio.PyAudio()
+
+# Wake word initialization
+config = {"model": "path/to/hey_computer.model"}
+plug = MyHotWord("hey computer", config=config)
+
+# start Recording
+stream = audio.open(channels=CHANNELS, format=FORMAT,
+    rate=RATE, frames_per_buffer=CHUNK, input=True)
+
+found = False
+print("Waiting for wake word")
+for i in range(0, int(RATE / CHUNK * MAX_RECORD_SECONDS)):
+    data = stream.read(CHUNK)
+    # feed data directly to streaming prediction engines
+    plug.update(data)
+    # streaming engines return result here
+    found = plug.found_wake_word(data)
+    if found:
+        break
+if found:
+    print("Found wake word!")
+else:
+    print("No wake word found")
+    
+# stop everything
+plug.stop()
+stream.stop_stream()
+stream.close()
+audio.terminate()
+```
+
+***old style*** plugins (DEPRECATED)
+
+Old style plugins expect to receive ~3 seconds of audio data at once
+
+```python
+import pyaudio
+
+# helper class
+class CyclicAudioBuffer:
+    """A Cyclic audio buffer for storing binary data.
+    Arguments:
+        size (int): size in bytes
+        initial_data (bytes): initial buffer data
+    """
+
+    def __init__(self, duration=0.98, initial_data=None,
+                 sample_rate=16000, sample_width=2):
+        self.size = self.duration_to_bytes(duration, sample_rate, sample_width)
+        initial_data = initial_data or self.get_silence(self.size)
+        # Get at most size bytes from the end of the initial data
+        self._buffer = initial_data[-self.size:]
+
+    @staticmethod
+    def duration_to_bytes(duration, sample_rate=16000, sample_width=2):
+        return int(duration * sample_rate) * sample_width
+
+    @staticmethod
+    def get_silence(num_bytes):
+        return b'\0' * num_bytes
+
+    def append(self, data):
+        """Add new data to the buffer, and slide out data if the buffer is full
+        Arguments:
+            data (bytes): binary data to append to the buffer. If buffer size
+                          is exceeded the oldest data will be dropped.
+        """
+        buff = self._buffer + data
+        if len(buff) > self.size:
+            buff = buff[-self.size:]
+        self._buffer = buff
+
+    def get(self):
+        """Get the binary data."""
+        return self._buffer
+
+    def get_last(self, size):
+        """Get the last entries of the buffer."""
+        return self._buffer[-size:]
+
+    def __getitem__(self, key):
+        return self._buffer[key]
+
+    def __len__(self):
+        return len(self._buffer)
+
+# pyaudio params
+FORMAT = pyaudio.paInt16
+CHANNELS = 1
+RATE = 16000
+CHUNK = 1024
+MAX_RECORD_SECONDS = 20
+SAMPLE_WIDTH = pyaudio.get_sample_size(FORMAT)
+audio = pyaudio.PyAudio()
+
+# Wake word initialization
+config = {"model": "path/to/hey_computer.model"}
+plug = MyHotWord("hey computer", config=config)
+
+# used for old style non-streaming wakeword (deprecated)
+audio_buffer = CyclicAudioBuffer(plug.expected_duration,
+                                 sample_rate=RATE, sample_width=SAMPLE_WIDTH)
+
+# start Recording
+stream = audio.open(channels=CHANNELS, format=FORMAT,
+    rate=RATE, frames_per_buffer=CHUNK, input=True)
+
+found = False
+print("Waiting for wake word")
+for i in range(0, int(RATE / CHUNK * MAX_RECORD_SECONDS)):
+    data = stream.read(CHUNK)
+    # add data to rolling buffer, used by non-streaming engines
+    audio_buffer.append(data)
+    # non streaming engines check the byte_data in audio_buffer
+    audio_data = audio_buffer.get()
+    found = plug.found_wake_word(audio_data)
+    if found:
+        break
+        
+if found:
+    print("Found wake word!")
+else:
+    print("No wake word found")
+
+# stop everything
+plug.stop()
+stream.stop_stream()
+stream.close()
+audio.terminate()
+```
+
+
 #### List of Wake Word plugins
 
 | Plugin                                                                                        | Type         |
@@ -158,7 +308,7 @@ Visemes are predefined mouth positions, timing per phonemes will default to 0.4 
 
 Mapping based on [Jeffers phoneme to viseme map, seen in table 1](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.221.6377&rep=rep1&type=pdf), partially based on the "12 mouth shapes visuals seen [here](https://wolfpaulus.com/journal/software/lipsynchronization/)
 
-#### Public API
+#### Standalone Usage
 
 All G2P plugins can be used as follows
 
