@@ -18,6 +18,7 @@ nav:
         - Shell: shell.md
         - Common Play: OCP.md
         - Config Assistant: OCA.md
+        - Open Linguistika: linguistika.md 
     - Images:
         - Buildroot: buildroot.md
         - Manjaro: manjaro.md
