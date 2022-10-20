@@ -18,10 +18,7 @@ You find the website [here](https://plasma-bigscreen.org) and the source code [h
 
 ## <img src='https://neon.ai/sites/default/files/neon-ai-artificial-intelligence_1.png' card_color='#FEE255' width='50' height='50' style='vertical-align:bottom'/> NeonGecko
 
-Neon was one the first projects ever to adopt ovos-core as a library to build their own voice assistant, 
-Neon works closely together with OVOS and both projects are mostly intercompatible
-
-You find the website [here](https://neon.ai) and the source code [here](https://github.com/NeonGeckoCom)
+[Neon AI](https://neon.ai/annualupdate) is a long-time partner to both OVOS and Mycroft AI. [NeonCore](https://github.com/NeonGeckoCom/NeonCore) was the first project to adopt and extend [ovos-core](https://github.com/OpenVoiceOS/ovos-core) and continues to work closely with OVOS.
 
 ## <img src='https://mycroft.ai/wp-content/uploads/2017/02/Mycroft-Twitter-Profile.jpg' card_color='#FEE255' width='50' height='50' style='vertical-align:bottom'/> Mycroft
 
