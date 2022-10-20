@@ -4,9 +4,13 @@ OpenVoiceOS is part of a larger ecosystem of FOSS voice technology, we work clos
 
 ## HiveMind
 
+![hm](https://github.com/JarbasHiveMind/HiveMind-assets/raw/master/logo/hivemind-512.png)
+
 You find the website [here](https://jarbashivemind.github.io/HiveMind-community-docs) and the source code [here](https://github.com/JarbasHiveMind)
 
 ## Plasma Bigscreen
+
+![plasmalogo](https://plasma-bigscreen.org/img/logo.png)
 
 Plasma Bigscreen integrates and uses OpenVoiceOS as voice framework stack to serve voice queries and voice
 applications (skills with a homescreen), one can easily enable mycroft / ovos integration in the bigscreen launcher by
@@ -14,9 +18,11 @@ installing ovos core and required services and enabling the integration switch i
 
 You find the website [here](https://plasma-bigscreen.org) and the source code [here](https://invent.kde.org/plasma/plasma-bigscreen)
 
+![plasma](https://plasma-bigscreen.org/img/screenshot-1.png)
+
 ## NeonGecko
 
-![neon](https://neon.ai/sites/default/files/neon-ai-artificial-intelligence_1.png)
+![neon](https://mycroft.ai/wp-content/uploads/2019/05/Neongecko-01.svg)
 
 Neon was one the first projects ever to adopt ovos-core as a library to build their own voice assistant, 
 Neon works closely together with OVOS and both projects are mostly intercompatible
@@ -24,6 +30,8 @@ Neon works closely together with OVOS and both projects are mostly intercompatib
 You find the website [here](https://neon.ai) and the source code [here](https://github.com/NeonGeckoCom)
 
 ## Mycroft
+
+![mycroft](https://mycroft.ai/wp-content/uploads/2019/01/Mycroft-AI-Type-Logo-Two-Tone-03.png)
 
 Mycroft AI started it all, it was one of the first ever FOSS voice assistants and is the project OVOS descends from. 
 
