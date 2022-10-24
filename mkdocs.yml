@@ -12,6 +12,7 @@ nav:
         - Configuration: config.md
     - Technologies:
         - OVOS-core: core.md
+        - Skills Manager: osm.md
         - Platform/Hardware Abstraction Layer: PHAL.md
         - Plugin Manager: OPM.md
         - Personal Backend: personal_backend.md
