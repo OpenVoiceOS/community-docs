@@ -1,5 +1,9 @@
 # Welcome To OpenVoice OS Getting Started Guide
 
+If you are using any of our images when your device first boots our [setup skill](https://github.com/OpenVoiceOS/skill-ovos-setup) will help you get started 
+
+You can find a pdf version of this document [here](https://github.com/OpenVoiceOS/ovos_assets/raw/master/printables/device-getting-started-guide.pdf)
+
 ### Some information to get you started
 We will take you through a series of setup steps to get your device going, Before we get started we would like to help you understand some of the key terms you will see during setup
 
