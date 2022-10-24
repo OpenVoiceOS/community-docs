@@ -87,11 +87,11 @@ Be it acknowledged:
     only requires an approving review from a code owner. Code reviews may suggest alternate implementation methods or make other
     suggestions, but non-breaking changes should be welcomed contributions.
 
-12) The phrase "BDFL" is short for "Benevolent Dictator for Life," a term familiar to many in the fields of
+13) The phrase "BDFL" is short for "Benevolent Dictator for Life," a term familiar to many in the fields of
     computer programming and software design, and is metaphorical. The Cabal's BDFLs, as described above, have
     extremely limited discretion in terms of unilateral decisionmaking.
 
-13) Rules for "governance" shall not generally apply to routine tasks relating to infrastructure, repository
+14) Rules for "governance" shall not generally apply to routine tasks relating to infrastructure, repository
     management, or any other administrative duties, with respect to which a given member's permissions are a
     matter of understanding and common sense.
 
