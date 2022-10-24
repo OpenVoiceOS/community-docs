@@ -19,11 +19,11 @@ Be it acknowledged:
     derive from, or implement the Mycroft personal voice assistant. Namely, with handles familiar to
     the aforementioned Mycroft project and associated communities:
 
-    Aditya Mehra, KDE contributor, developer; makes things pretty, usually (handles: aix, AIIX)
-    Daniel McKnight, NeonGecko developer; makes things go upstream, if they want (handles: NeonDaniel, daniel-neon)
-    Casimiro Ferreira, omnipresent Mycroft implementer; makes things, sometimes incl. docs (handles: Jarbas, JarbasAl)
-    Chance Rosenthal, indie dev; extends things, makes happen the talky explainage (handles: ChanceNCounter, chance)
-    Peter Steenbergen, indie dev; makes things for things to run on so we can run things (handle: j1nx)
+    - Aditya Mehra, KDE contributor, developer; makes things pretty, usually (handles: aix, AIIX)
+    - Daniel McKnight, NeonGecko developer; makes things go upstream, if they want (handles: NeonDaniel, daniel-neon)
+    - Casimiro Ferreira, omnipresent Mycroft implementer; makes things, sometimes incl. docs (handles: Jarbas, JarbasAl)
+    - Chance Rosenthal, indie dev; extends things, makes happen the talky explainage (handles: ChanceNCounter, chance)
+    - Peter Steenbergen, indie dev; makes things for things to run on so we can run things (handle: j1nx)
 
 2)  That the Cabal arose organically, as an agreeable development team materialized around two major projects,
     being OpenVoiceOS, created by j1nx (henceforth 'OVOS', formerly 'MycroftOS') and HiveMind, created
