@@ -5,6 +5,7 @@ for the benefit of its members, the Community Collaborator Cabal Community, Comm
 Community Collaborator Cabal's code, and Co.
 
 Drafted May 04-07 2021
+Updated Oct 24 2022
 
 Fourth Draft
 
@@ -26,11 +27,11 @@ Be it acknowledged:
     - Peter Steenbergen, indie dev; makes things for things to run on so we can run things (handle: j1nx)
 
 2)  That the Cabal arose organically, as an agreeable development team materialized around two major projects,
-    being OpenVoiceOS, created by j1nx (henceforth 'OVOS', formerly 'MycroftOS') and HiveMind, created
+    being OpenVoiceOS, created by j1nx (henceforth 'OVOS Buildroot', formerly 'MycroftOS') and HiveMind, created
     by Jarbas, both of which significantly predate the Cabal.
 
 3)  That, although several of the Cabal's members are also members of organizations whose products implement
-    or derive from Mycroft, the Cabal is not presently affiliated with or endorsed by any particular
+    or derive from Mycroft, the Cabal is not governed or managed by any particular
     organization or group.
 
 4)  That, the above notwithstanding, thanks and credit are due to Mycroft, BlueSystems and NeonGecko for making available
@@ -48,8 +49,7 @@ Be it acknowledged:
     though we must take pains to ensure our code is always license-compatible and compliant.
 
 6)  That the Cabal reserves the right to replace itself with a formal, legally incorporated entity, should the
-    need arise, or to replace this document with a more formal charter, should other organizations wish
-    to become directly involved whose own policies require it.
+    need arise, or to replace this document with a more formal charter at our discretion.
 
 7)  That the Cabal explicitly acknowledges its members' entitlement and, in some cases, desire, to:
 
@@ -82,6 +82,10 @@ Be it acknowledged:
 
 11) Members pledge to strive for consensus, and avoid situations in which the BDFL would need to invoke
     their rank in the first place, or where a vote is necessary.
+
+12) Items 8-11 apply to significant changes or contentious changes. In general, adoption of contributions is encouraged and
+    only requires an approving review from a code owner. Code reviews may suggest alternate implementation methods or make other
+    suggestions, but non-breaking changes should be welcomed contributions.
 
 12) The phrase "BDFL" is short for "Benevolent Dictator for Life," a term familiar to many in the fields of
     computer programming and software design, and is metaphorical. The Cabal's BDFLs, as described above, have
