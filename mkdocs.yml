@@ -18,7 +18,10 @@ nav:
         - Shell: shell.md
         - Common Play: OCP.md
         - Config Assistant: OCA.md
-        - Open Linguistika: linguistika.md 
+        - Open Linguistika: linguistika.md
+        - STT Server: stt_server.md
+        - TTS Server: tts_server.md
+        - Translate Server: translate_server.md
     - Images:
         - Buildroot: buildroot.md
         - Manjaro: manjaro.md
