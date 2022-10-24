@@ -5,6 +5,7 @@ nav:
         - Introduction: index.md
         - Glossary: glossary.md
         - License: license.md
+        - Governance: governance.md
     - Overview:
         - F.A.Q.: faq.md
         - Developers: dev.md
