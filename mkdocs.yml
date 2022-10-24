@@ -11,6 +11,7 @@ nav:
         - Developers: dev.md
         - Backend Services: backend.md
         - Configuration: config.md
+        - Friends: friends.md
     - Technologies:
         - OVOS-core: core.md
         - Skills Manager: osm.md
