@@ -1,11 +1,28 @@
 # Welcome To OpenVoice OS Getting Started Guide
 
-If you are using any of our images when your device first boots our [setup skill](https://github.com/OpenVoiceOS/skill-ovos-setup) will help you get started 
-
 You can find a pdf version of this document [here](https://github.com/OpenVoiceOS/ovos_assets/raw/master/printables/device-getting-started-guide.pdf)
 
+### Where to get OVOS?
+
+OVOS is in early stages, we publish our raspberry pi images for download but expect new bugs and new fixes on every release, we are not yet stable!
+
+These images are development images in alpha stage, bugs and incomplete features are guaranteed
+
+Download Images:
+
+- [buildroot](https://drive.google.com/drive/folders/113-zmx6ncoeLNsayseNxoaTlaAk1AfU2)
+- [manjaro](http://downloads.openvoiceos.com/images/)
+
+Build images from scratch:
+
+- [buildroot](https://openvoiceos.github.io/community-docs/buildroot/)
+- [manjaro](https://openvoiceos.github.io/community-docs/manjaro/)
+
 ### Some information to get you started
-We will take you through a series of setup steps to get your device going, Before we get started we would like to help you understand some of the key terms you will see during setup
+
+If you are using any of our images when your device first boots our [setup skill](https://github.com/OpenVoiceOS/skill-ovos-setup) will help you get started 
+
+The skill will take you through a series of setup steps to get your device going, Before we get started we would like to help you understand some of the key terms you will see during setup
 
 ![Welcome Scree](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/welcome-screen.png)
 
