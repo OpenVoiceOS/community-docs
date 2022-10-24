@@ -24,6 +24,7 @@ nav:
         - TTS Server: tts_server.md
         - Translate Server: translate_server.md
     - Images:
+        - Getting Started: setup_getting_started.md
         - Buildroot: buildroot.md
         - Manjaro: manjaro.md
     - Mycroft:
