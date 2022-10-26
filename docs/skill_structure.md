@@ -10,8 +10,6 @@ For example, Brazilian Portugues is 'pt-br', German is 'de-de', and Australian E
 `dialog` and `vocab` have been deprecated, they are still supported but we strongly recommend you use `locale` for new
 skills
 
-#### Locale Directory
-
 inside the `locale` folder you will find subfolders for each language (eg. `en-us`), often all you need to do in order
 to translate a skill is adding a new folder for your language here
 
@@ -53,14 +51,14 @@ class HelloWorldSkill(OVOSSkill):
 
 The class should be named logically, for example "TimeSkill", "WeatherSkill", "NewsSkill", "IPaddressSkill". If you
 would like guidance on what to call your Skill, please join
-the [\~skills Channel on OVOS Chat](https://matrix.to/#/#openvoiceos-skills:matrix.org).
+the [~skills Channel on OVOS Chat](https://matrix.to/#/#openvoiceos-skills:matrix.org).
 
 Inside the class, methods are then defined.
 
 #### \_\_init\_\_()
 
 This method is the _constructor_. It is called when the Skill is first constructed. It is often used to declare state
-variables or perform setup actions, however it cannot utilise MycroftSkill methods as the class does not yet exist. You
+variables or perform setup actions, however it cannot utilise OVOSSkill methods as the class does not yet exist. You
 don't have to include the constructor.
 
 An example `__init__` method might be:
@@ -84,7 +82,7 @@ def initialize(self):
     my_setting = self.settings.get('my_setting')
 ```
 
-#### Intent handlers
+#### @intent_handler
 
 We can use the `initialize` function to manually register intents, however the `@intent_handler` decorator is a
 cleaner way to achieve this. We will learn all about the different [Intents](../intends.md) shortly. 
@@ -147,7 +145,7 @@ In the following example we cancel a scheduled event and call a method in our Sk
 ```
 
 
-#### create\_skill()
+#### create_skill()
 
 The final code block in our Skill is the `create_skill` function that returns our new Skill:
 
