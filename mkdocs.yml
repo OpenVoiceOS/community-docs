@@ -8,10 +8,13 @@ nav:
         - License: license.md
     - Overview:
         - F.A.Q.: faq.md
-        - Developers: dev.md
         - Backend Services: backend.md
         - Configuration: config.md
         - Friends: friends.md
+    - Skills:
+        - Introduction: skills.md
+        - Design Guidelines: guidelines.md
+        - F.A.Q.: dev.md
     - Technologies:
         - OVOS-core: core.md
         - Skills Manager: osm.md
