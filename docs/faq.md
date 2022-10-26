@@ -12,6 +12,7 @@
 + [How many voices does OVOS support?](#how-many-voices-does-ovos-support)
 + [Can I change the wake word?](#can-i-change-the-wake-word)
 + [Can OVOS run without a wake word?](#can-ovos-run-without-a-wake-word)
++ [How fast can OVOS respond?](#how-fast-can-ovos-respond)
 + [What is OPM?](#what-is-opm)
 + [What is PHAL?](#what-is-phal)
 + [What is OCP?](#what-is-ocp)
@@ -134,6 +135,28 @@ does not have AEC
 
 Another experimental setting is hybrid mode, with hybrid mode you can ask follow up questions up to 45 seconds after the
 last mycroft interaction, if you do not interact with mycroft it will go back to waiting for a wake word
+
+### How fast can OVOS respond?
+
+By default, to answer a request:
+
+1. Detects the wake word 
+2. Records 3 - 10 seconds of audio 
+3. Transcribes the audio and returns the text transcription , either locally or remotely, depending on the speech-to-text \(STT\) engine in use 
+4. Parses the text to understand the intent 
+5. Sends the text to the intent handler with the highest confidence 
+6. Allows the Skill to perform some action and provide the text to be spoken 
+7. Synthesizes audio from the given text, either locally or remotely, depending on the text-to-speech \(TTS\) engine in use 
+8. Plays the synthesized spoken audio.
+
+Through this process there are a number of factors that can affect the perceived speed of responses:
+
+* System resources - more processing power and memory never hurts!
+* Network latency - depending on configured plugins, network latency and connection speed can play a significant role in slowing down response times.
+* Streaming STT - we have been experimenting with the use of streaming services. This transcribes audio as it's received rather than waiting for the entire utterance to be finished and sending the resulting audio file to a server to be processed in its entirety. It is possible to switch to a streaming STT service. See [STT Plugins](../OPM/#list-of-stt-plugins) for a list of options available.
+* Dialog structure - a long sentence will always take more time to synthesize than a short one. Skill developers can help provide quicker response times by considering the structure of their dialog and breaking that dialog up.
+* TTS Caching - synthesized audio is cached meaning common recently generated phrases don't need to be generated, they can be returned immediately.
+
 
 ### What is OPM?
 
