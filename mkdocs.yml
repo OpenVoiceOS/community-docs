@@ -16,7 +16,8 @@ nav:
         - Design Guidelines: guidelines.md
         - Anatomy: skill_structure.md
         - Filesystem: skill_filesystem.md
-        - SkillApi: skill_api.md
+        - Skill Settings: skill_settings.md
+        - Skill API: skill_api.md
         - F.A.Q.: dev.md
     - Technologies:
         - OVOS-core: core.md
