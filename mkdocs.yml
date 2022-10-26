@@ -15,8 +15,14 @@ nav:
         - Introduction: skills.md
         - Design Guidelines: guidelines.md
         - Anatomy: skill_structure.md
+        - Dialog: statements.md
+        - Prompts: prompts.md
+        - Intents: intents.md
+        - Context: context.md
+        - Converse: converse.md
         - Filesystem: skill_filesystem.md
         - Skill Settings: skill_settings.md
+        - Skill GUI: skill_gui.md
         - Skill API: skill_api.md
         - F.A.Q.: dev.md
     - Technologies:
