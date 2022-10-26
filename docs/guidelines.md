@@ -3,45 +3,10 @@
 Through these guidelines you will learn how to use principles of Voice User Interface Design to build more effective
 skills. These tools will help define and validate the features of the skill before diving deep into development.
 
-This guide will cover what a Skill can do, the Design process we recommend, some Voice Interaction definitions, and best
-practices. We will also cover some methods to use that can help plan, prototype and test your skill during the early
-design stages.
+This guide will cover some methods to use that can help plan, prototype and test your skill during the early design stages.
 
-## Design Process
+The full original guide can be found over at [the mycroft documentation](https://mycroft-ai.gitbook.io/docs/skill-development/voice-user-interface-design-guidelines)
 
-The basic Design Thinking process is:
-
-1. Empathize
-2. Design
-3. Ideate
-4. Prototype
-5. Test
-6. Then rinse and repeat until your product adequately meets the user's needs.
-
-You can learn more about the Design Thinking process
-at [interaction-design](https://www.interaction-design.org/literature/article/5-stages-in-the-design-thinking-process).
-Don't be intimidated by Prototyping and Testing. The great thing about Voice Interactions is that the prototypes can be
-very low-fidelity with no programming necessary. All you need to do is find a few willing participants to act out the
-interaction of your skill. You can read more about prototype testing later in this guide.
-
-Once you have decided what problem you want to address with your skill it's best to start thinking about the user's jobs
-to be done. Jobs Stories are similar to User Stories, but we find them to be a little more streamlined. The basic
-problem is defined in three parts, The Situation, The Motivation and Goal, and the Intended Outcome. They can be written
-like this:
-
-> When \_\_\_\_, I want to \_\_\_\_, so I can \_\_\_\_.
-
-Throughout the Voice User Interface Design Guidelines we will be taking a look at example work from a Moon Phase Skill
-that is designed to give the user information about the Moon phase. Below is an example Job Story from the Moon Phase
-Skill.
-
-> When I'm thinking about taking moon photography, I want to know what day the next full moon will be, so I can plan on
-> taking photos of the moon that night.
-
-The great part about Job Stories is that they do not dictate a solution. For example this job story could be resolved
-with a traditional mobile app. However, using a voice interaction is probably quicker than launching an app. Thinking
-about your user's needs in terms of Job Stories helps you determine whether or not a voice interaction is the best
-solution.
 
 ## Interactions
 
@@ -122,8 +87,7 @@ Skill, they will likely say a number in their first interaction.
 Determining whether or not to respond to the user with a statement or a prompt can be a bit tricky. When the user is
 somewhat vague it is tempting to assume the user’s intent in order to speed along the interaction. Sometimes this is the
 right approach and sometimes it is not. If you are very confident in the user’s input then it is alright to assume, and
-respond with a statement. For example in the Wikipedia Skill the Wikipedia API is
-used to confidently select the best response.
+respond with a statement. For example in the Wikipedia Skill the Wikipedia API is used to confidently select the best response.
 
 **Wikipedia Skill**
 
@@ -172,24 +136,24 @@ situations. For example Mycroft’s Timer Skill uses implicit confirmation when 
 
 **Timer Skill**
 
-| Speaker |  |
-| :--- | :--- |
-| **User** | _Hey Mycroft set a timer for 5 minutes_ |
+| Speaker     |                                          |
+|:------------|:-----------------------------------------|
+| **User**    | _Hey Mycroft set a timer for 5 minutes_  |
 | **Mycroft** | _Alright, I’m starting a 5 minute timer_ |
 
 **Avoid**
 
-| Speaker |  |
-| :--- | :--- |
-| **User** | _Hey Mycroft, add bananas to my shopping list_ |
-| **Mycroft** | _done_ |
+| Speaker     |                                                |
+|:------------|:-----------------------------------------------|
+| **User**    | _Hey Mycroft, add bananas to my shopping list_ |
+| **Mycroft** | _done_                                         |
 
 **Better**
 
-| Speaker |  |
-| :--- | :--- |
-| **User** | _Hey Mycroft, add bananas to my shopping list_ |
-| **Mycroft** | _Adding bananas_ |
+| Speaker     |                                                |
+|:------------|:-----------------------------------------------|
+| **User**    | _Hey Mycroft, add bananas to my shopping list_ |
+| **Mycroft** | _Adding bananas_                               |
 
 #### Explicit Confirmation
 
@@ -252,7 +216,9 @@ misinterpreted and the meeting was cancelled unintentionally.
 
 ## Conversations
 
-Any time the user needs to input a lot of information or the user needs to sort through a variety of options a conversation will be needed. Users may be used to systems that require them to separate input into different chunks. For example, many personal navigation devices \(GPS units\) require users to input the street number, street name, city, and state separately, like this:
+Any time the user needs to input a lot of information or the user needs to sort through a variety of options a conversation will be needed.
+Users may be used to systems that require them to separate input into different chunks. 
+For example, many personal navigation devices \(GPS units\) require users to input the street number, street name, city, and state separately, like this:
 
 | Speaker               |                             |
 |:----------------------|:----------------------------|
@@ -304,8 +270,6 @@ Conversational context is a given when speaking to another person, but not alway
 | **Mycroft** | _2011_                                                                                                                                                                                                                                   |
 
 
-
-
 ## Error Handling
 
 Inevitably, the user will say something that your skill can’t handle. It’s best not to think of these as errors on the part of the user, remember there aren’t really errors in conversations. Conversations are naturally cooperative with both parties seeking to continue to a successful outcome. Keeping that in mind you should do your best to avoid Error Handling that is a dead-end.
@@ -326,39 +290,3 @@ Inevitably, the user will say something that your skill can’t handle. It’s b
 | **User**    | _5 minutes_             |
 
 In the first example OVOS does not give the user any options to finish the job they set out to do. Try to avoid situations where the user has to start the conversation over.
-
-### Help, Cancel, and Stop
-
-When designing your skill it's best to think about the universal utterances, help, cancel and stop. 
-At any point while interacting with the user should be able to say “help” to get assistance using the skill. 
-Even if the help is quite simple. In practice 
-
-
-
-## Prototyping
-
-As the skill designer you will act as the Voice Assistant and respond to the user's input with pre-written example interations that you have created. 
-You can think of it like a table read for a screenplay except the user is ad-libbing. 
-Make sure you ask your participants if it is alright to record the sessions so that you can take better notes after the test is complete. 
-
-As the part of the Voice Assistant you want to stick to the script, but you are actually hoping the tester says something that you haven't thought of yet. 
-The goal of these tests isn't to just validate your assumptions, the goal is to observe interactions that did not occur to you at first.
-
-To begin the test give the user a task. For example, with the Moon Phase skill
-
-**Task Example:**
-
-> _You're thinking about taking some photos of the moon tonight, and you want to know what phase the moon will be in. What would you ask OVOS to help you plan your photo session?_
-
-The first off the cuff responses from your test are generally the best, but it's always good to ask your testers if they can provide any variations on the way they might ask the question.
-
-Be considerate of your tester's time. 
-A usability test should never exceed 90 minutes, after that [the test subject will likely get tired](https://www.nngroup.com/articles/time-budgets-for-usability-sessions/). 
-We think you can get valuable feedback in a 30 to 45 minute session.
-
-If you are creating a Skill as a hobby or as an individual you may not have the resources to provide an incentive to your testers. 
-In that case you might be limited to friends and family for testing. 
-If you are creating a skill for a larger organisation make sure that you think about possible incentives and check 
-if your organisation requires a legal waiver for user testing.
-
- 

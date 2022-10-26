@@ -13,6 +13,7 @@ nav:
         - Friends: friends.md
     - Skills:
         - Introduction: skills.md
+        - Structure: skill_structure.md
         - Design Guidelines: guidelines.md
         - F.A.Q.: dev.md
     - Technologies:
