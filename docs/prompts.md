@@ -36,11 +36,6 @@ The `get_response()` method also takes the following optional arguments:
 * `on_fail` (function) - returns a string that will be spoken if the validator returns False
 * `num_retries` (int) - number of times the system should repeat the question to get a successful result
 
-#### See it in action:
-
-{% embed url="https://www.youtube.com/watch?v=Ke7mRl-Qo-U" %}
-Video Tutorial: Asking a question
-{% endembed %}
 
 ## Yes / No Questions
 
@@ -74,11 +69,6 @@ def create_skill():
 
 In this example we have asked the User if they like ice cream. We then speak different dialog whether they respond yes or no. We also speak some error dialog if neither yes or no are returned.
 
-#### See it in action:
-
-{% embed url="https://www.youtube.com/watch?v=vzQX8RocODs" %}
-Video Tutorial: Asking a yes/no question
-{% endembed %}
 
 ## Providing a list of options
 
@@ -116,11 +106,6 @@ There are two optional arguments for this method.
 
 `min_conf` (float) defines the minimum confidence level for fuzzy matching the Users response against the list of options. `numeric` (bool) if set to True will speak the options as a numbered list eg "One, vanilla. Two, chocolate. Or three, mint"
 
-#### See it in action:
-
-{% embed url="https://youtu.be/TNezYhqcX_4" %}
-Video Tutorial: Asking the user to choose an option
-{% endembed %}
 
 ## Returning responses to the intent parser
 
