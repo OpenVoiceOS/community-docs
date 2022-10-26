@@ -1,4 +1,4 @@
-## Skill Structure
+## Anatomy of a Skill
 
 ### `vocab`, `dialog`, and `locale` directories
 
@@ -23,12 +23,9 @@ You will find several unfamiliar file extensions in this folder, but these are s
 * `.voc` files define keywords primarily used in Adapt Intents
 * `.entity` files define a named entity primarily used in Padatious Intents
 
-### \_\_init\_\_.py
+### __init__.py
 
-The `__init__.py` file is where most of the Skill is defined using Python code. We will learn more about the contents of
-this file in the next section.
-
-Let's take a look:
+The `__init__.py` file is where most of the Skill is defined using Python code. 
 
 #### Importing libraries
 
@@ -51,15 +48,15 @@ class HelloWorldSkill(OVOSSkill):
 
 The class should be named logically, for example "TimeSkill", "WeatherSkill", "NewsSkill", "IPaddressSkill". If you
 would like guidance on what to call your Skill, please join
-the [~skills Channel on OVOS Chat](https://matrix.to/#/#openvoiceos-skills:matrix.org).
+the [skills Channel on OVOS Chat](https://matrix.to/#/#openvoiceos-skills:matrix.org).
 
 Inside the class, methods are then defined.
 
-#### \_\_init\_\_()
+#### __init__()
 
 This method is the _constructor_. It is called when the Skill is first constructed. It is often used to declare state
-variables or perform setup actions, however it cannot utilise OVOSSkill methods as the class does not yet exist. You
-don't have to include the constructor.
+variables or perform setup actions, however it cannot utilise OVOSSkill methods as the class does not yet exist. 
+You usually don't have to include the constructor.
 
 An example `__init__` method might be:
 
@@ -85,7 +82,7 @@ def initialize(self):
 #### @intent_handler
 
 We can use the `initialize` function to manually register intents, however the `@intent_handler` decorator is a
-cleaner way to achieve this. We will learn all about the different [Intents](../intends.md) shortly. 
+cleaner way to achieve this. We will learn all about the different [Intents](../intents.md) shortly. 
 
 You may also see the `@intent_file_handler` decorator used in Skills. This has been deprecated and you can now
 replace any instance of this with the simpler `@intent_handler` decorator.

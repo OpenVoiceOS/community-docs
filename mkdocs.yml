@@ -13,8 +13,10 @@ nav:
         - Friends: friends.md
     - Skills:
         - Introduction: skills.md
-        - Structure: skill_structure.md
         - Design Guidelines: guidelines.md
+        - Anatomy: skill_structure.md
+        - Filesystem: skill_filesystem.md
+        - SkillApi: skill_api.md
         - F.A.Q.: dev.md
     - Technologies:
         - OVOS-core: core.md
