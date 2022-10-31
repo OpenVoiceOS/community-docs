@@ -1,6 +1,6 @@
 # Developer FAQ
 
-* [How do I know what is currently happening in the GUI?](#how-do-i-know-what-is-currently-happening in-the-gui)
+* [How do I know what is currently happening in the GUI?](#how-do-i-know-what-is-currently-happening-in-the-gui)
 * [How do I stop an intent mid execution?](#how-do-i-stop-an-intent-mid-execution)
 * [How do I send files over the bus?](#how-do-i-send-files-over-the-bus)
 * [How do I use OAuth in a skill?](#how-do-i-use-oauth-in-a-skill)
@@ -54,9 +54,9 @@ class MySkill(OVOSSkill):
     
     @intent_handler("gui.status.intent")
     def handle_status_intent(self, message):
-        print("device has screen:", g.can_display())
-        print("mycroft-gui installed:", g.is_gui_installed())
-        print("gui connected:", g.is_gui_connected())
+        print("device has screen:", self.tracker.can_display())
+        print("mycroft-gui installed:", self.tracker.is_gui_installed())
+        print("gui connected:", self.tracker.is_gui_connected())
         # TODO - speak or something
             
     @intent_handler("list.idle.screens.intent")
