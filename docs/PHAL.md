@@ -81,3 +81,60 @@ class MyPHALPlugin(PHALPlugin):
         super().shutdown()
 ```
 
+
+
+## Admin PHAL
+
+AdminPHAL performs the exact same function as PHAL, but plugins it loads will have `root` privileges. 
+
+This service is intended for handling any OS-level interactions requiring escalation of privileges. Be very careful when installing Admin plugins and scrutinize them closely
+
+NOTE: Because this service runs as root, plugins it loads are responsible for not writing
+configuration changes which would result in breaking config file permissions.
+
+### Service
+
+to use AdminPHAL create a launcher `/usr/libexec/mycroft-systemd-admin-phal`
+
+```python
+import sdnotify
+from ovos_PHAL.admin import main
+
+n = sdnotify.SystemdNotifier()
+
+def notify_ready():
+    n.notify('READY=1')
+    print('Startup of Admin service complete')
+
+def notify_stopping():
+    n.notify('STOPPING=1')
+    print('Stopping Admin service')
+
+main(ready_hook=notify_ready, stopping_hook=notify_stopping)
+```
+
+and system service `/usr/lib/systemd/user/mycroft-admin-phal.service`
+
+```
+[Unit]
+Description=Admin PHAL
+PartOf=mycroft.service
+After=mycroft-messagebus.service
+
+[Service]
+Type=notify
+TimeoutStopSec=30
+Restart=always
+User=root
+ExecStart=/usr/libexec/mycroft-systemd-admin-phal
+
+[Install]
+WantedBy=mycroft.service
+```
+### Plugins
+
+AdminPlugins are just like regular PHAL plugins that run with `root` privileges
+
+A plugin needs to identify itself as a admin plugin via it's entry point, PHAL will not load Admin plugins and AdminPHAL will not load regular plugins
+
+Admin plugins will only load if their configuration contains `"enabled": true`, all admin plugins need to be explicitly enabled
