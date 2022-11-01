@@ -39,7 +39,7 @@ In this example:
 
 1. A User might request an ice cream which is handled by `handle_request_icecream()`&#x20;
 2. The Skill would be added to the system Active Skill list for up to 5 minutes.
-3. Any utterance received by Mycroft would trigger this Skills converse system whilst it is considered active.
+3. Any utterance received by OVOS would trigger this Skills converse system whilst it is considered active.
 4. If the User followed up with a pleasantry such as "Hey Mycroft, thanks" - the converse method would match this vocab against the `Thankyou.voc` file in the Skill and speak the contents of the `you-are-welcome.dialog` file. The method would return `True` and the utterance would be consumed meaning the intent parsing service would never be triggered.
 5. Any utterance that did not match would be silently ignored and allowed to continue on to other converse methods and finally to the intent parsing service.
 

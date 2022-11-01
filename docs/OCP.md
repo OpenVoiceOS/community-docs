@@ -16,7 +16,7 @@ OCP differs from mycroft-core in several aspects:
 - OCP provides it's own intents as if it was a skill
 - OCP provides it's own GUI as if it was a skill
 - mycroft-core CommonPlay skill framework is disabled when OCP loads
-- OCP skills have a dedicated MycroftSkill class and decorators in ovos-workshop
+- OCP skills have a dedicated MycroftSkill subclass and decorators in ovos-workshop
 - OCP skills act as media providers, they do not (usually) handle playback
 - mycroft-core CommonPlay skills have an imperfect compatibility layer and are given lower priority over OCP skills
 - OCP handles several kinds of playback, including video

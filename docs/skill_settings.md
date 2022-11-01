@@ -93,7 +93,7 @@ Once settings have been defined using a `settingsmeta` file, they will be presen
 
 ### Example settingsmeta file
 
-To see it in action, lets look at a simple example from the [Mycroft Date-Time Skill](https://github.com/MycroftAI/skill-date-time). First using the JSON syntax as a `settingsmeta.json` file:
+To see it in action, lets look at a simple example from the [Date-Time Skill](https://github.com/MycroftAI/skill-date-time). First using the JSON syntax as a `settingsmeta.json` file:
 
 ```javascript
 {
@@ -128,7 +128,7 @@ skillMetadata:
             value: "true"
 ```
 
-Notice that the value of `false` is surrounded by "quotation marks". This is because Mycroft expects a string of `"true"` or `"false"` rather than a Boolean.
+Notice that the value of `false` is surrounded by "quotation marks". This is because OVOS expects a string of `"true"` or `"false"` rather than a Boolean.
 
 Both of these files would result in the same settings block.
 

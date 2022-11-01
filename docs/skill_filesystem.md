@@ -1,6 +1,6 @@
 # Filesystem access
 
-Many Skills may want access to parts of the filesystem. To account for the many different platforms that can run Mycroft there are three locations that a Skill can utilize.
+Many Skills may want access to parts of the filesystem. To account for the many different platforms that can run OVOS there are three locations that a Skill can utilize.
 
 * Persistent filesystem
 * Temporary cache

@@ -13,7 +13,7 @@ _Example_: Julie wants to know about today's weather in her current location, wh
 > "hey mycroft, weather"
 
 Even though these are three different expressions, for most of us they probably have roughly the same meaning. In each
-case we would assume the user expects Mycroft to respond with today's weather for their current location. The role of an
+case we would assume the user expects OVOS to respond with today's weather for their current location. The role of an
 intent parser is to determine what this intent is.
 
 In the example above, we might extract data elements like:
@@ -28,32 +28,34 @@ In the example above, we might extract data elements like:
   to give Julie yesterday's weather, particularly as Melbourne is renowned for having changeable weather.
 
 
-OVOS is moving towards a plugin system for intent engines, currently the default MycroftAI intent parsers are still used
+OVOS has two separate Intent parsing engines each with their own strengths. 
+Each of these can be used in most situations, however they will process the utterance in different ways.
 
-Mycroft has two separate Intent parsing engines each with their own strengths. Each of these can be used in most
-situations, however they will process the utterance in different ways.
-
-**Padatious** is a light-weight neural network that is trained on whole
-phrases. Padatious intents are generally more accurate however require you to include sample phrases that cover the
+**Example based** intents are trained on whole phrases. These intents are generally more accurate however require you to include sample phrases that cover the
 breadth of ways that a User may ask about something.
 
-**Adapt** is a keyword based parser. It is more flexible, as it detects the
-presence of one or more keywords in an utterance, however this can result in false matches.
+**Keyword / Rule based ** these intents look for specific required keywords. They are more flexible, but since these are essentially rule based this can result in a lot of false matches.
+A badly designed intent may totally throw the intent parser off guard. The main advantage of keyword based intents is the integration with [conversational context](../context), they facilitate continuous dialogs
 
-We will now look at each in more detail, including how to use them in a Mycroft Skill.
+OVOS is moving towards a plugin system for intent engines, currently only the default MycroftAI intent parsers are supported
 
-## Adapt Intents
+- **Padatious** is a light-weight neural network that is trained on whole phrases. You can find the official documentation [here](https://mycroft-ai.gitbook.io/docs/mycroft-technologies/padatious)
+- **Adapt** is a keyword based parser. You can find the official documentation [here](https://mycroft-ai.gitbook.io/docs/mycroft-technologies/adapt)
 
-Adapt is a keyword based intent parser. It determines user intent based on a list of keywords or entities contained within a users utterance.
+We will now look at each in more detail, including how to use them in a Skill.
 
+## Keyword Intents
+
+Keyword based intent parsers determine user intent based on a list of keywords or entities contained within a users utterance.
 
 ### Defining keywords and entities
 
 #### Vocab (.voc) Files
 
-Vocab files define keywords that Adapt will look for in a Users utterance to determine their intent.
+Vocab files define keywords that the intent parser will look for in a Users utterance to determine their intent.
 
-These files can be located in either the `vocab/lang-code/` or `locale/lang-code/` directories of a Skill. They can have one or more lines to list synonyms or terms that have the same meaning in the context of this Skill. Mycroft will match _any_ of these keywords with the Intent.
+These files can be located in either the `vocab/lang-code/` or `locale/lang-code/` directories of a Skill. They can have one or more lines to list synonyms or terms that have the same meaning in the context of this Skill. 
+OVOS will match _any_ of these keywords with the Intent.
 
 Consider a simple `Potato.voc`. Within this file we might include:
 
@@ -75,7 +77,7 @@ or
 
 > spud
 
-Mycroft will match this to any Adapt Intents that are using the `Potato` keyword.
+OVOS will match this to any Keyword Intents that are using the `Potato` keyword.
 
 #### Regular Expression (.rx) Files
 
@@ -83,9 +85,9 @@ Regular expressions (or regex) allow us to capture entities based on the structu
 
 We strongly recommend you avoid using regex, it is very hard to make portable across languages, hard to translate and the reported confidence of the intents is not great.
 
-We suggest using padatious instead if you find yourself needing regex
+We suggest using example based intents instead if you find yourself needing regex
 
-These files can be located in either the `regex/lang-code/` or `locale/lang-code/` directories of a Skill. They can have one or more lines to provide different ways that an entity may be referenced. Mycroft will execute these lines in the order they appear and return the first result as an entity to the Intent Handler.
+These files can be located in either the `regex/lang-code/` or `locale/lang-code/` directories of a Skill. They can have one or more lines to provide different ways that an entity may be referenced. OVOS will execute these lines in the order they appear and return the first result as an entity to the Intent Handler.
 
 Let's consider a `type.rx` file to extract the type of potato we are interested in. Within this file we might include:
 
@@ -122,7 +124,7 @@ This `Type` will be available to use in your Skill's Intent Handler on the `mess
 message.data.get('Type')
 ```
 
-### Using Adapt in a Skill
+### Using Keyword Intents in a Skill
 
 Now that we have a Vocab and Regular Expression defined, let's look at how to use these in a simple Skill.
 
@@ -139,7 +141,7 @@ We will also add some new `.voc` files:
 
 #### Creating the Intent Handler
 
-To construct an Adapt Intent, we use the intent_handler() \_decorator_ and pass in the Adapt IntentBuilder.
+To construct a Keyword Intent, we use the intent_handler() \_decorator_ and pass in the IntentBuilder helper class.
 
 [Learn more about _decorators_ in Python](https://en.wikipedia.org/wiki/Python\_syntax\_and\_semantics#Decorators).
 
@@ -209,7 +211,7 @@ def create_skill():
     return PotatoSkill()
 ```
 
-You can [download this entire Potato Skill from Github](https://github.com/krisgesling/dev-ex-adapt-intents-skill/blob/master/\_\_init\_\_.py), or see another Adapt intent handler example in the [Hello World Skill](https://github.com/MycroftAI/skill-hello-world/blob/f3eb89be6d80e1834637a64566c707d05fb8e3fa/\_\_init\_\_.py#L37)
+You can [download this entire Potato Skill from Github](https://github.com/krisgesling/dev-ex-adapt-intents-skill/blob/master/\_\_init\_\_.py), or see another Keyword Intent handler example in the [Hello World Skill](https://github.com/MycroftAI/skill-hello-world/blob/f3eb89be6d80e1834637a64566c707d05fb8e3fa/\_\_init\_\_.py#L37)
 
 
 ### Common Problems
@@ -220,7 +222,7 @@ One of the most common mistakes when getting started with Skills is that the voc
 
 #### I have added new phrases in the .voc file, but Mycroft isn't recognizing them
 
-1. Compound words like "don't", "won't", "shouldn't" etc. are normalized by Mycroft - so they become "do not", "will not", "should not". You should use the normalized words in your `.voc` files. Similarly, definite articles like the word "the" are removed in the normalization process, so avoid using them in your `.voc` or `.rx` files as well.
+1. Compound words like "don't", "won't", "shouldn't" etc. are normalized by OVOS - so they become "do not", "will not", "should not". You should use the normalized words in your `.voc` files. Similarly, definite articles like the word "the" are removed in the normalization process, so avoid using them in your `.voc` or `.rx` files as well.
 2. Tab != 4 Spaces, sometimes your text editor or IDE automatically replaces tabs with spaces or vice versa. This may lead to an indentation error. So make sure there's no extra tabs and that your editor doesn't replace your spaces!
 3. Wrong order of files directories is a very common mistake. You have to make a language sub-folder inside the dialog, vocab or locale folders such as `skill-dir/locale/en-us/somefile.dialog`. So make sure that your `.voc` files and `.dialog` files inside a language subfolder.
 
@@ -237,21 +239,18 @@ The utterance string received from the speech-to-text engine is received all low
 ```
 
 
-## Padatious Intents
+## Example based Intents
 
-Padatious is a [machine-learning](https://en.wikipedia.org/wiki/Machine_learning), [neural-network](https://en.wikipedia.org/wiki/Artificial_neural_network) based _intent parser_. Unlike Adapt, which uses small groups of unique words, Padatious is trained on the sentence as a whole.
+Example based parsers have a number of key benefits over other intent parsing technologies.
 
-Padatious has a number of key benefits over other intent parsing technologies.
-
-* With Padatious, Intents are easy to create
-* The machine learning model in Padatious requires a relatively small amount of data
-* Machine learning models need to be _trained_. The model used by Padatious is quick and easy to train.
-* Intents run independently of each other. This allows quickly installing new skills without retraining all other skill intents.
-* With Padatious, you can easily extract entities and then use these in Skills. For example, "Find the nearest gas station" -&gt; `{ "place":"gas station"}`
+* Intents are easy to create
+* You can easily extract entities and then use these in Skills. For example, "Find the nearest gas station" -&gt; `{ "place":"gas station"}`
+* Disambiguation between intents is easier
+* Harder to create a bad intent that throws the intent parser off
 
 ### Creating Intents
 
-Padatious uses a series of example sentences to train a machine learning model to identify an intent.
+Most example based intent parsers use a series of example sentences to train a machine learning model to identify an intent. Regex can also be used behind the scenes for example to extract entities
 
 The examples are stored in a Skill's `vocab/lang` or `local/lang` directory, in files ending in the file extension `.intent`. For example, if you were to create a _tomato_ Skill to respond to questions about a _tomato_, you would create the file
 
@@ -266,7 +265,7 @@ describe a tomato
 what defines a tomato
 ```
 
-These sample phrases do not require punctuation like a question mark. We can also leave out contractions such as "what's", as this will be automatically expanded to "what is" by Mycroft before the utterance is parsed.
+These sample phrases do not require punctuation like a question mark. We can also leave out contractions such as "what's", as this will be automatically expanded to "what is" by OVOS before the utterance is parsed.
 
 Each file should contain at least 4 examples for good modeling.
 
@@ -274,7 +273,7 @@ The above example allows us to map many phrases to a single intent, however ofte
 
 #### Defining entities
 
-Let's now find out Mycroft's opinion on different types of tomatoes. To do this we will create a new intent file: `vocab/en-us/do.you.like.intent`
+Let's now find out OVOS's opinion on different types of tomatoes. To do this we will create a new intent file: `vocab/en-us/do.you.like.intent`
 
 with examples of questions about mycroft's opinion about tomatoes:
 
@@ -418,7 +417,7 @@ There is no performance benefit to using parentheses expansion. When used approp
 
 ### Using it in a Skill
 
-The `intent_handler()` _decorator_ can be used to create a Padatious intent handler by passing in the filename of the `.intent` file as a string.
+The `intent_handler()` _decorator_ can be used to create a examples based intent handler by passing in the filename of the `.intent` file as a string.
 
 You may also see the `@intent_file_handler` decorator used in Skills. This has been deprecated and you can now replace any instance of this with the simpler `@intent_handler` decorator.
 

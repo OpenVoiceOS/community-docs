@@ -35,7 +35,7 @@ User: Where is John Cleese from?
 Mycroft: He's from England
 ```
 
-To get a more natural response the functions can be changed to let Mycroft know which `PythonPerson` we're talking about by using the `self.set_context()` method to give context:
+To get a more natural response the functions can be changed to let OVOS know which `PythonPerson` we're talking about by using the `self.set_context()` method to give context:
 
 ```python
     @intent_handler(IntentBuilder().require('PythonPerson').require('Length'))
@@ -53,21 +53,21 @@ To get a more natural response the functions can be changed to let Mycroft know 
         self.set_context('PythonPerson', python)
 ```
 
-When either of the methods are called the `PythonPerson` keyword is added to Mycroft's context, which means that if there is a match with `Length` but `PythonPerson` is missing Mycroft will assume the last mention of that keyword. The interaction can now become the one described at the top of the page.
+When either of the methods are called the `PythonPerson` keyword is added to OVOS's context, which means that if there is a match with `Length` but `PythonPerson` is missing OVOS will assume the last mention of that keyword. The interaction can now become the one described at the top of the page.
 
 > User: How tall is John Cleese?
 
-Mycroft detects the `Length` keyword and the `PythonPerson` keyword
+OVOS detects the `Length` keyword and the `PythonPerson` keyword
 
-> Mycroft: 196 centimeters
+> OVOS: 196 centimeters
 
 John Cleese is added to the current context
 
 > User: Where's he from?
 
-Mycroft detects the `WhereFrom` keyword but not any `PythonPerson` keyword. The Context Manager is activated and returns the latest entry of `PythonPerson` which is _John Cleese_
+OVOS detects the `WhereFrom` keyword but not any `PythonPerson` keyword. The Context Manager is activated and returns the latest entry of `PythonPerson` which is _John Cleese_
 
-> Mycroft: He's from England
+> OVOS: He's from England
 
 The context isn't limited by the keywords provided by the current **Skill**. For example
 

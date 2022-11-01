@@ -134,4 +134,4 @@ def create_skill():
     return IceCreamSkill()
 ```
 
-Here we have added a new dialog after confirming the Users selection. We may use it to tell the User other things they can do with their Mycroft device while they enjoy their delicious ice cream.
+Here we have added a new dialog after confirming the Users selection. We may use it to tell the User other things they can do with their OVOS device while they enjoy their delicious ice cream.
