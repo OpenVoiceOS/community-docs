@@ -81,7 +81,7 @@ class MyPHALPlugin(PHALPlugin):
         super().shutdown()
 ```
 
-
+You can find plugin packaging documentation [here](https://openvoiceos.github.io/community-docs/OPM/#packaging)
 
 ## Admin PHAL
 
@@ -131,10 +131,13 @@ ExecStart=/usr/libexec/mycroft-systemd-admin-phal
 [Install]
 WantedBy=mycroft.service
 ```
+
 ### Plugins
 
 AdminPlugins are just like regular PHAL plugins that run with `root` privileges
 
 A plugin needs to identify itself as a admin plugin via it's entry point, PHAL will not load Admin plugins and AdminPHAL will not load regular plugins
 
-Admin plugins will only load if their configuration contains `"enabled": true`, all admin plugins need to be explicitly enabled
+Admin plugins will only load if their configuration contains `"enabled": true`. All admin plugins need to be explicitly enabled
+
+You can find plugin packaging documentation [here](https://openvoiceos.github.io/community-docs/OPM/#packaging)

@@ -367,6 +367,7 @@ Plugins need to define one entrypoint with their plugin type and plugin class
 # OPM recognized plugin types
 class PluginTypes(str, Enum):
     PHAL = "ovos.plugin.phal"
+    ADMIN = "ovos.plugin.phal.admin"
     SKILL = "ovos.plugin.skill"
     VAD = "ovos.plugin.VAD"
     PHONEME = "ovos.plugin.g2p"
