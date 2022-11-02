@@ -1,44 +1,12 @@
-## GUI Framework
+# GUI Framework
 
 Mycroft-GUI is an open source visual and display framework for Mycroft running on top of KDE Plasma Technology and built using Kirigami a lightweight user interface framework for convergent applications which are empowered by Qt.
 
 OVOS uses the standard mycroft-gui framework, you can find the official documentation [here](https://mycroft-ai.gitbook.io/docs/skill-development/displaying-information/mycroft-gui)
 
-OVOS images are powered by [ovos-shell](https://openvoiceos.github.io/community-docs/shell/), the client side implementation of the gui protocol
-
-## GUI Extensions
-OVOS Core supports a GUI Extension framework which allows the GUI service to incorporate additional behaviour for a specific platform. GUI Extensions currently supported:
-
-##### Smartspeaker Extension: 
-This extension is responsible for managing the smartspeaker GUI interface behaviour, it supports homescreens and homescreen management. Enabling the smartspeaker GUI extension: 
-```
-  "gui": {
-    "extension": "smartspeaker",
-    "idle_display_skill": "skill-ovos-homescreen.openvoiceos"
-  }
-```
-
-##### Bigscreen Extension: 
-This extension is responsible for managing the plasma bigscreen GUI interface behaviour, it supports window management and window behaviour control on specific window managers like Kwin. Enabling the Bigscreen GUI extension:
-```
-  "gui": {
-    "extension": "bigscreen"
-  }
-```
-
-##### Mobile Extension:  
-This extension is responsible for managing the mobile GUI interface behaviour, it supports homescreens and additionally adds support for global page back navigation. Enabling the Mobile GUI extension:
-```
-  "gui": {
-    "extension": "smartspeaker",
-    "idle_display_skill": "skill-android-homescreen.openvoiceos"
-  }
-```
-
-##### Generic Extension: 
-This extension provides generic behaviour for the GUI interface and does not add any additional bheaviour, it optionally supports homescreens and which is required by the platform or user to manually enable it, if required. This extension is enabled by default when no other extension is specified.
-
 ## Show Simple Content
+
+Skills can use `self.gui`  to interact with the GUI service, any ovos component may provide a similar interface via `GUIInterface` class provided by `ovos_utils`
 
 ### Text
 
@@ -144,33 +112,48 @@ Arguments:
   * True: Disables showing all platform skill animations.
   * False: 'Default' always show animations.
 
-## Advanced QML Code and Design Guidelines
-Mycroft-GUI frameworks provides you with some base delegates you should use when desiging your QML GUI. The base delegates provide you with a basic presentation layer for your skill with some property assignments that can help you setup background images, background dim to give you the control you need for rendereing an experience. 
+
+## QML Design Guidelines
+
+An introduction to QML and additional documentation are available [here](https://mycroft-ai.gitbook.io/docs/skill-development/displaying-information/mycroft-gui)
+
+Mycroft-GUI frameworks provides you with some base delegates you should use when designing your QML GUI. 
+The base delegates provide you with a basic presentation layer for your skill with some property assignments that can help you setup background images, background dim to give you the control you need for rendering an experience. 
 
 Before we dive deeper into the Design Guidelines, lets look at some concepts that a GUI developer should learn about:
 
 ### Units & Themeing
-##### Units: 
+
+#### Units: 
 Mycroft.Units.GridUnit is the fundamental unit of space that should be used for all sizing inside the QML UI, expressed in pixels. Each GridUnit is predefined as 16 pixels
 ```
 // Usage in QML Components example
 width: Mycroft.Units.gridUnit * 2 // 32px Wide
 height: Mycroft.Units.gridUnit // 16px Tall
 ```
-##### Themeing:
+
+#### Themeing:
+
 OVOS Shell uses a custom Kirigami Platform Theme plugin to provide global themeing to all our skills and user interfaces, which also allows our GUI's to be fully compatibile with the system themes on platforms that are not running the OVOS Shell.
 
 Kirigami Theme and Color Scheme guide is extensive and can be found [here](https://develop.kde.org/docs/use/kirigami/style-colors/)
 
 OVOS GUI's developed to follow the color scheme depend on only a subset of available colors, mainly:
+
 1. Kirigami.Theme.backgroundColor = Primary Color (Background Color: This will always be a dark palette or light palette depending on the dark or light choosen color scheme)
+
 2. Kirigami.Theme.highlightColor = Secondary Color (Accent Color: This will always be a standout palette that defines the themes dominating color and can be used for buttons, cards, borders, highlighted text etc)
+
 3. Kirigami.Theme.textColor = Text Color (This will always be an opposite palette to the selected primary color)
 
-#### QML Delegate Design Best Practise
+
+### QML Delegate Design Best Practise
+
 __Let's look at this image and qml example below, this is a represntation of the Mycroft Delegate:__
 ![](https://mycroft.blue-systems.com/display-1.png)
+
 1. When designing your first QML file, it is important to note the red triangles in the above image, these triangles represent the margin from the screen edge the GUI needs to be designed within, these margins ensure your GUI content does not overlap with features like edge lighting and menus in the platforms that support it like OVOS-Shell
+
 2. The content items and components all utilize the selected color scheme, where black is the primary background color, red is our accent color and white is our contrasting text color
 
 __Let's look at this in QML:__
@@ -214,7 +197,8 @@ Mycroft.Delegate {
 }
 ```
 
-#### QML Delegate Multi Platform and Screen Guidelines
+### QML Delegate Multi Platform and Screen Guidelines
+
 OVOS Skill GUI's are designed to be mutli platform and screen friendly, to support this we always try to support both Horizontal and Vertical display's. Let's look at an example and a general approach to writing multi resolution friendly UI's
 
 __Let's look at these images below that represent a Delegate as seen in a Horizontal screen:__
@@ -271,3 +255,6 @@ Mycroft.Delegate {
     }
 }
 ```
+
+
+

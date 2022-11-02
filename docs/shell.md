@@ -2,13 +2,6 @@
 
 [OVOS-shell](https://github.com/OpenVoiceOS/ovos-shell) is the OpenVoiceOS client implementation of the mycroft-gui library used in our embedded device images
 
-## Protocol
-
-The [gui service](https://github.com/OpenVoiceOS/ovos-core/tree/dev/mycroft/gui) in ovos-core will expose a websocket to
-the GUI clients following the protocol outlined [here](https://github.com/MycroftAI/mycroft-gui/blob/master/transportProtocol.md)
-
-The GUI library which implements the protocol lives in the [mycroft-gui](https://github.com/MycroftAI/mycroft-gui) repository.
-
 ## Plugins
 
 OVOS-shell is tightly coupled to [PHAL](#what-is-phal), the following companion plugins should be installed if you are using ovos-shell

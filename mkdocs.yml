@@ -11,6 +11,13 @@ nav:
         - Backend Services: backend.md
         - Configuration: config.md
         - Friends: friends.md
+    - OVOS-core:
+        - Introduction: core.md
+        - Bus: bus_service.md
+        - Skills: skills_service.md
+        - Speech: speech_service.md
+        - Audio: audio_service.md
+        - GUI: gui_service.md
     - Skills:
         - Introduction: skills.md
         - Design Guidelines: guidelines.md
@@ -26,7 +33,6 @@ nav:
         - Skill API: skill_api.md
         - F.A.Q.: dev.md
     - Technologies:
-        - OVOS-core: core.md
         - Skills Manager: osm.md
         - Platform/Hardware Abstraction Layer: PHAL.md
         - Plugin Manager: OPM.md
