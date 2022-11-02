@@ -110,7 +110,7 @@ in [the ovos plugins awesome list](https://github.com/OpenVoiceOS/awesome-ovos-p
 
 yes, ovos-core supports several [wake word plugins](https://github.com/OpenVoiceOS/awesome-ovos-plugins#wakeword).
 
-Additionally OVOS allows you to load any number of hot words in paralel and trigger different actions when they are
+Additionally, OVOS allows you to load any number of hot words in parallel and trigger different actions when they are
 detected
 
 each hotword can do one or more of the following:
