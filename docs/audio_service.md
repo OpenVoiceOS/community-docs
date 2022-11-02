@@ -37,8 +37,13 @@ This allows you to have a lower quality offline voice as fallback to account for
 
 ## Audio
 
-You can enable additional Audio plugins, you can also define native sources here
+You can enable additional Audio plugins and define the native sources described above under the `"Audio"` section of `mycroft.conf`
 
+ovos-core uses OCP natively for media playback, you can learn more about OCP [here](https://openvoiceos.github.io/community-docs/OCP)
+
+OCP will decide when to call the Audio service and what plugin to use, the main use case is for headless setups without a GUI
+
+NOTE: mycroft-core has a `"default-backend"` config option, in ovos-core this option has been deprecated and is always OCP.
 
 ```javascript
 "Audio": {
