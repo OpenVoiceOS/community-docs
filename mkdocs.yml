@@ -32,15 +32,23 @@ nav:
         - Skill GUI: skill_gui.md
         - Skill API: skill_api.md
         - F.A.Q.: dev.md
-    - Technologies:
-        - Skills Manager: osm.md
-        - Platform/Hardware Abstraction Layer: PHAL.md
+    - Plugins:
         - Plugin Manager: OPM.md
+        - Speech To Text: stt_plugins.md
+        - Text To Speech: tts_plugins.md
+        - Wake Word: ww_plugins.md
+        - Voice Activity Detection: vad_plugins.md
+        - Grapheme to Phoneme: g2p_plugins.md
+        - Audio Playback: audio_plugins.md
+        - Language Detection/Translation: lang_plugins.md
+        - Platform/Hardware Abstraction Layer: PHAL.md
+    - Technologies:
+        - Common Play: OCP.md
         - Personal Backend: personal_backend.md
         - Shell: shell.md
-        - Common Play: OCP.md
-        - Config Assistant: OCA.md
+        - Skills Manager: osm.md
         - Open Linguistika: linguistika.md
+        - Config Assistant: OCA.md
         - STT Server: stt_server.md
         - TTS Server: tts_server.md
         - Translate Server: translate_server.md
