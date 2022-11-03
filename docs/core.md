@@ -17,7 +17,7 @@ by default ovos-core only installs the minimum components common to all services
 
 if you want to finetune the components please replace `[all]` in commands below with the subset of desired extras, eg `[skills,bus]`
 
-### Installing ovos-core
+## Installing ovos-core
 
 ovos-core can be installed from pypi or from source
 
@@ -30,24 +30,24 @@ sudo apt install build-essential python3-dev swig libssl-dev libfann-dev portaud
 **Note**: MycroftAI's `dev_setup.sh` does not exist in OVOS-core.
 
 
-#### from source
+### from source
 
 We suggest you do this in a virtualenv:
 
 `pip install git+https://github.com/OpenVoiceOS/ovos-core[all]`
 
-#### from pypi
+### from pypi
 
 `pip install ovos-core[all]`
 
-### Running ovos-core
+## Running ovos-core
 
-#### Developer launcher script
+### Developer launcher script
 
 `start-mycroft.sh` is available to perform common tasks.
 
 
-Assuming you installed mycroft-core in your home directory, run:
+Assuming you installed ovos-core in your home directory, run:
 
 - `cd ~/ovos-core`
 - `./start-mycroft.sh debug`
@@ -62,7 +62,7 @@ The background services can be stopped as a group with:
 - `./stop-mycroft.sh`
 
 
-#### Automatically on boot
+### Automatically on boot
 
 We recommend you create system services to manage ovos instead of depending on the launcher script above
 
