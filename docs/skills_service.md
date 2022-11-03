@@ -41,13 +41,13 @@ All user queries are handled by the skills service, you can think of it as OVOS'
 ```
 
 
-### Converse
+## Converse
 
 A malicious or badly designed skill using the converse method can potentially hijack the whole conversation loop and render the skills service unusable
 
 Some settings are exposed to add some limitations to which skills can be activated and under what circumstances
 
-The concept of "converse priority" is under active development, work on a "converse session" mechanism is also underway [#ovos-core/pull/160](https://github.com/OpenVoiceOS/ovos-core/pull/160)
+The concept of "converse priority" is under active development, work on a "converse session" mechanism is also underway [@ovos-core/pull/160](https://github.com/OpenVoiceOS/ovos-core/pull/160)
 
 ```javascript
 "skills": {
@@ -113,7 +113,7 @@ The concept of "converse priority" is under active development, work on a "conve
 },
 ```
 
-### Fallback Skills
+## Fallback Skills
 
 Just like with converse a badly designed or malicious skill can hijack the fallback skill loop, while this is not as serious as with converse some protections are also provided
 
@@ -139,5 +139,28 @@ Since priority is defined by developers sometimes the default value is not appro
         "fallback_whitelist": [],
         "fallback_blacklist": []
     }
+},
+```
+
+## Intent Engines
+
+ovos-core currently supports the same intent parsers as mycroft, a plugin solution is being actively developed [@ovos-plugin-manager/pull/47](https://github.com/OpenVoiceOS/ovos-plugin-manager/pull/47)
+
+While plugin support is not implemented we provide a drop in replacement alternative to padatious that is lightweight and performs similarly.
+
+This was done to avoid the non-python dependency on libfann2 which made core hard to package in some systems
+
+NOTE: fann2 is LGPL licensed, it is one of the exceptions to our [licensing policy](../license)
+
+[Padacioso](https://github.com/OpenJarbas/padacioso) will be used if padatious is not installed or if explicitly enabled in `mycroft.conf`
+
+```javascript
+"padatious": {
+    "intent_cache": "~/.local/share/mycroft/intent_cache",
+    "train_delay": 4,
+    "single_thread": false,
+    // fallback settings for padacioso (pure regex)
+    "regex_only": false,
+    "fuzz": true
 },
 ```
