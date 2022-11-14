@@ -6,6 +6,9 @@ source code: https://github.com/OpenVoiceOS/ovos-buildroot
 
 ## Getting started.
 
+
+## Development.
+
 At this moment development is in very early stages and focussed on the Raspberry Pi 3B & 4. As soon as an initial first workable version
 is created, other hardware might be added.
 
