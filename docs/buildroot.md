@@ -6,13 +6,28 @@ This release is to be considered the reference distribution that have all the di
 
 ### Download and flashing
 
+
 ### First run
 
 ### Specific features
 
+The OpenVoiceOS buildroot image comes with specific smartspeaker functionality that someone could expect to be present on a voice controlled smartspeaker. The following chapters will describe those specific features. What they are, how they work and how you can configure them.
+Some of the features still require manual configuration although later on in time we will aim to have those configuration steps integrated within the whole ovos-core software stack.
+
 #### Auto detection and configuration of HAT's
 
-#### KDEConnect
+#### KDE Connect
+
+KDE Connect is a multi-platform application developed by KDE, which facilitates wireless communications and data transfer between devices over local networks and is installed and configured by default on the Buildroot based image.
+
+A couple of features of KDE Connect are;
+- Shared clipboard: copy and paste between your phone, computer and/or OpenVoiceOS device.
+- Share files and URLs instantly from one device to another including your OpenVoiceOS device.
+- Multimedia remote control: Use your phone, tablet or computer as a remote for what is playing on your OpenVoiceOS device.
+- Auto mute your OpenVoiceOS device when your mobile phone rings.
+- Virtual touchpad / keyboard: Use your phone/tablet screen as your OpenVoiceOS device its mouse and keyboard.
+
+
 
 #### Airplay
 
