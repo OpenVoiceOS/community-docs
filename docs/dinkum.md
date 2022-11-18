@@ -24,12 +24,12 @@ mark2/latest brought some changes to mycroft-core, not all of them backwards com
 within the community.
 
 - VAD - VAD has been added to the mark-ii, but it is hardcoded to silero, this feature has been adopted via OPM, it is an important part of ovos-core listening modes introduced in version 0.0.5
-- self.resource - resource file loading was overhauled, this feature has been
+- self.resources - resource file loading was overhauled, this feature has been
   improved ([ovos-core/pull/130](https://github.com/OpenVoiceOS/ovos-core/pull/130) + [ovos-core/pull/131](https://github.com/OpenVoiceOS/ovos-core/pull/131) + [ovos-core/pull/135](https://github.com/OpenVoiceOS/ovos-core/pull/135) + [ovos-core/pull/170](https://github.com/OpenVoiceOS/ovos-core/pull/170))
   and ported to OVOS and is also available in OVOSkill class ([OVOS-workshop/pull/30](https://github.com/OpenVoiceOS/OVOS-workshop/pull/30)) for usage in classic core
 - audio hal - audio playback was rewritten from scratch, audio plugin support has been removed, OVOS will not adopt this new approach but keep improving the previous one
 - skill states - converse method introduced skill states, this changed some core assumptions behind converse method and
-  active skills, OVOS did not adopt skill states, see community discussion
+  active skills, OVOS will not adopt skill states, see community discussion
   here [mycroft-core/pull/2901](https://github.com/MycroftAI/mycroft-core/pull/2901) + [mycroft-core/pull/2906](https://github.com/MycroftAI/mycroft-core/pull/2906)
 
 dinkum contains all changes above and also brought further changes to the table
