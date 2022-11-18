@@ -36,3 +36,29 @@ dinkum contains all changes above and also brought further changes to the table
 
 - session - in dinkum session handling is done by skills, it completely ignores the message.context mechanism and existing session_id, in ovos we believe session should come in the message and handled by the clients (eg, a chat user or a hivemind client....), in ovos we are expanding the original session concept  [ovos-core/pull/160](https://github.com/OpenVoiceOS/ovos-core/pull/160)
 - hal - a dbus service specific to the mk2 has been introduced, in ovos we have a generic PHAL service and companion plugins to interface with mk2 hardware instead, this component is mark2 specific and should be ignored in the ovos ecosystem
+
+## FAQ
+
+### Do OVOS skills run in dinkum?
+
+No, not even classic core skills run in dinkum. We have no plans to support this
+
+### Do Dinkum skills run in ovos?
+
+No, dinkum is designed in a very incompatible way, the `mycroft` module is not always mycroft-core and the `MycroftSkill` class is not always a MycroftSkill, we have no intention of transparently loading dinkum skills in ovos-core
+
+We have a small proof of concept tool to convert a dinkum skill into a ovos/classic core compatible skill, see https://github.com/OpenVoiceOS/undinkumfier
+
+### Does OCP work in dinkum?
+
+No, Audio plugin support has been removed, you can run OCP standalone but will be missing the compatibility layers and can't load OCP skills anyway
+
+It could be made to work but this is not in the roadmap, PRs will be accepted and reviewed
+
+### Does PHAL work in dinkum?
+
+It should! We don't explicitly target or test it with dinkum, but it is a fairly standalone component
+
+### Does OPM work in dinkum?
+
+STT , TTS and WW plugins should work, We don't explicitly target or test compatibility, PRs will be accepted and reviewed
