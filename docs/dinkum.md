@@ -23,19 +23,24 @@ you can find mycroft's guide to porting skills to dinkum here https://mycroft-ai
 mark2/latest brought some changes to mycroft-core, not all of them backwards compatible and some that were contentious
 within the community.
 
-- skill states - converse method introduced skill states, this changed some core assumptions behind converse method and
-  active skills, OVOS did not adopt skill states, see community discussion
-  here [mycroft-core/pull/2901](https://github.com/MycroftAI/mycroft-core/pull/2901) + [mycroft-core/pull/2906](https://github.com/MycroftAI/mycroft-core/pull/2906)
+- VAD - VAD has been added to the mark-ii, but it is hardcoded to silero, this feature has been adopted via OPM, it is an important part of ovos-core listening modes introduced in version 0.0.5
 - self.resource - resource file loading was overhauled, this feature has been
   improved ([ovos-core/pull/130](https://github.com/OpenVoiceOS/ovos-core/pull/130) + [ovos-core/pull/131](https://github.com/OpenVoiceOS/ovos-core/pull/131) + [ovos-core/pull/135](https://github.com/OpenVoiceOS/ovos-core/pull/135) + [ovos-core/pull/170](https://github.com/OpenVoiceOS/ovos-core/pull/170))
   and ported to OVOS and is also available in OVOSkill class ([OVOS-workshop/pull/30](https://github.com/OpenVoiceOS/OVOS-workshop/pull/30)) for usage in classic core
 - audio hal - audio playback was rewritten from scratch, audio plugin support has been removed, OVOS will not adopt this new approach but keep improving the previous one
-- activities - an activity is just a set of bus messages to indicate something started and ended, it is a reimplementation of an already existing feature, in ovos this is a native part of the self.add_event methods, we did not adopt the new api, a compatibility layer may be added later
+- skill states - converse method introduced skill states, this changed some core assumptions behind converse method and
+  active skills, OVOS did not adopt skill states, see community discussion
+  here [mycroft-core/pull/2901](https://github.com/MycroftAI/mycroft-core/pull/2901) + [mycroft-core/pull/2906](https://github.com/MycroftAI/mycroft-core/pull/2906)
 
 dinkum contains all changes above and also brought further changes to the table
 
-- session - in dinkum session handling is done by skills, it completely ignores the message.context mechanism and existing session_id, in ovos we believe session should come in the message and handled by the clients (eg, a chat user or a hivemind client....), in ovos we are expanding the original session concept  [ovos-core/pull/160](https://github.com/OpenVoiceOS/ovos-core/pull/160)
-- hal - a dbus service specific to the mk2 has been introduced, in ovos we have a generic PHAL service and companion plugins to interface with mk2 hardware instead, this component is mark2 specific and should be ignored in the ovos ecosystem
+- [sessions](https://mycroft-ai.gitbook.io/mark-ii/differences-to-classic-core/sessions) - in dinkum session handling is done by skills, it completely ignores the message.context mechanism and existing session_id, in ovos we believe session should come in the message and handled by the clients (eg, a chat user or a hivemind client....), in ovos we are expanding the original session concept  [ovos-core/pull/160](https://github.com/OpenVoiceOS/ovos-core/pull/160)
+- [dbus-hal](https://github.com/MycroftAI/mark-ii-sandbox/tree/master/dbus-hal) - a dbus service specific to the mk2 has been introduced, in ovos we have a generic PHAL service and companion plugins to interface with mk2 hardware instead, this component is mark2 specific and should be ignored in the ovos ecosystem
+
+other changes
+
+- [activities](https://github.com/OpenVoiceOS/ovos-core/issues/43) - an activity is just a set of bus messages to indicate something started and ended, it is a reimplementation of an already existing feature, in ovos this is a native part of the self.add_event methods, this is present in the mark-ii/qa branch but seems to also have been dropped by MycroftAi
+
 
 ## FAQ
 
