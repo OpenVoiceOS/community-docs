@@ -8,13 +8,15 @@ incompatible
 mycroft-core is now referred to as "Classic Core" by MycroftAI
 
 MycroftAI now provides what they call sandbox images, to add to the confusing those only work in the mark 2 and "Classic
-Core" means the mark2/latest branch of mycroft-core, this is the branch that was used in the dev kits and is also
-backwards incompatible, the majority of changes in this branch were not done via PRs and had no review or community input
+Core" means the [mark-ii/latest](https://github.com/MycroftAI/mycroft-core/tree/mark-ii/latest) branch of mycroft-core, this is a derivative version of the branch that was used in the dev kits ([mark-ii/qa](https://github.com/MycroftAI/mycroft-core/tree/mark-ii/qa)) and is also
+backwards incompatible, changes in this branch were not done via PRs and had no review or community input
 
-- mark 2 docs - https://mycroft-ai.gitbook.io/mark-ii/
-- dinkum source code - https://github.com/MycroftAI/mycroft-dinkum
-- sandbox images - https://mycroft-ai.gitbook.io/mark-ii/advanced/sandbox-images
-- mark2/latest - https://github.com/MycroftAI/mycroft-core/tree/mark-ii/latest
+Mark2 useful links:
+- [mark 2 docs](https://mycroft-ai.gitbook.io/mark-ii/) 
+- [dinkum source code](https://github.com/MycroftAI/mycroft-dinkum) 
+- [sandbox images](https://mycroft-ai.gitbook.io/mark-ii/advanced/sandbox-images)
+- [mark2/latest](https://github.com/MycroftAI/mycroft-core/tree/mark-ii/latest) (core for sandbox images) 
+- [mark2/qa](https://github.com/MycroftAI/mycroft-core/tree/mark-ii/qa) (core for dev kit image) 
 
 ## Dinkum vs ovos-core
 
@@ -37,7 +39,7 @@ dinkum contains all changes above and also brought further changes to the table
 - [sessions](https://mycroft-ai.gitbook.io/mark-ii/differences-to-classic-core/sessions) - in dinkum session handling is done by skills, it completely ignores the message.context mechanism and existing session_id, in ovos we believe session should come in the message and handled by the clients (eg, a chat user or a hivemind client....), in ovos we are expanding the original session concept  [ovos-core/pull/160](https://github.com/OpenVoiceOS/ovos-core/pull/160)
 - [dbus-hal](https://github.com/MycroftAI/mark-ii-sandbox/tree/master/dbus-hal) - a dbus service specific to the mk2 has been introduced, in ovos we have a generic PHAL service and companion plugins to interface with mk2 hardware instead, this component is mark2 specific and should be ignored in the ovos ecosystem
 
-other changes
+dev kit only changes
 
 - [activities](https://github.com/OpenVoiceOS/ovos-core/issues/43) - an activity is just a set of bus messages to indicate something started and ended, it is a reimplementation of an already existing feature, in ovos this is a native part of the self.add_event methods, this is present in the mark-ii/qa branch but seems to also have been dropped by MycroftAi
 
