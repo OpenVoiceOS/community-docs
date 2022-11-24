@@ -12,11 +12,13 @@ Core" means the [mark-ii/latest](https://github.com/MycroftAI/mycroft-core/tree/
 backwards incompatible, changes in this branch were not done via PRs and had no review or community input
 
 Mark2 useful links:
-- [mark 2 docs](https://mycroft-ai.gitbook.io/mark-ii/) 
+
+- [mark 2 docs](https://mycroft-ai.gitbook.io/mark-ii/)
 - [dinkum source code](https://github.com/MycroftAI/mycroft-dinkum) 
 - [sandbox images](https://mycroft-ai.gitbook.io/mark-ii/advanced/sandbox-images)
 - [mark2/latest](https://github.com/MycroftAI/mycroft-core/tree/mark-ii/latest) (core for sandbox images) 
 - [mark2/qa](https://github.com/MycroftAI/mycroft-core/tree/mark-ii/qa) (core for dev kit image) 
+
 
 ## Dinkum vs ovos-core
 
