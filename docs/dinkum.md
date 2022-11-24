@@ -35,6 +35,8 @@ within the community.
 - skill states - converse method introduced skill states, this changed some core assumptions behind converse method and
   active skills, OVOS will not adopt skill states, see community discussion
   here [mycroft-core/pull/2901](https://github.com/MycroftAI/mycroft-core/pull/2901) + [mycroft-core/pull/2906](https://github.com/MycroftAI/mycroft-core/pull/2906)
+- pure regex intents - pure regex intents have been introduced, we strongly recommend you use padatious instead if this is desired, regex makes language support really hard, let the intent engines do their jobs
+- adapt fork - a fork of adapt is used in the mark2, it introduces the `exactly` and `excludes` methods. `excludes` will be added upstream in [adapt/pull/156](https://github.com/MycroftAI/adapt/pull/156). Any skill using these new methods will be incompatible with most core versions
 
 dinkum contains all changes above and also brought further changes to the table
 
@@ -45,6 +47,7 @@ dev kit only changes
 
 - [activities](https://github.com/OpenVoiceOS/ovos-core/issues/43) - an activity is just a set of bus messages to indicate something started and ended, it is a reimplementation of an already existing feature, in ovos this is a native part of the self.add_event methods, this is present in the mark-ii/qa branch but seems to also have been dropped by MycroftAi
 
+Any skills using these new "features" will not work outside the mark2
 
 ## FAQ
 
