@@ -24,7 +24,7 @@ Mark2 useful links:
 
 you can find mycroft's guide to porting skills to dinkum here https://mycroft-ai.gitbook.io/mark-ii/differences-to-classic-core/porting-classic-core-skills
 
-mark2/latest brought some changes to mycroft-core, not all of them backwards compatible and some that were contentious
+mark2/qa brought some changes to mycroft-core, not all of them backwards compatible and some that were contentious
 within the community.
 
 - VAD - VAD has been added to the mark-ii, but it is hardcoded to silero, this feature has been adopted via OPM, it is an important part of ovos-core listening modes introduced in version 0.0.5
@@ -37,15 +37,13 @@ within the community.
   here [mycroft-core/pull/2901](https://github.com/MycroftAI/mycroft-core/pull/2901) + [mycroft-core/pull/2906](https://github.com/MycroftAI/mycroft-core/pull/2906)
 - pure regex intents - pure regex intents have been introduced, we strongly recommend you use padatious instead if this is desired, regex makes language support really hard, let the intent engines do their jobs
 - adapt fork - a fork of adapt is used in the mark2, it introduces the `exactly` and `excludes` methods. `excludes` will be added upstream in [adapt/pull/156](https://github.com/MycroftAI/adapt/pull/156). Any skill using these new methods will be incompatible with most core versions
+- [activities](https://github.com/OpenVoiceOS/ovos-core/issues/43) - an activity is just a set of bus messages to indicate something started and ended, it is a reimplementation of an already existing feature, in ovos we use the native events from the self.add_event skill method
 
 dinkum contains all changes above and also brought further changes to the table
 
 - [sessions](https://mycroft-ai.gitbook.io/mark-ii/differences-to-classic-core/sessions) - in dinkum session handling is done by skills, it completely ignores the message.context mechanism and existing session_id, in ovos we believe session should come in the message and handled by the clients (eg, a chat user or a hivemind client....), in ovos we are expanding the original session concept  [ovos-core/pull/160](https://github.com/OpenVoiceOS/ovos-core/pull/160)
 - [dbus-hal](https://github.com/MycroftAI/mark-ii-sandbox/tree/master/dbus-hal) - a dbus service specific to the mk2 has been introduced, in ovos we have a generic PHAL service and companion plugins to interface with mk2 hardware instead, this component is mark2 specific and should be ignored in the ovos ecosystem
 
-dev kit only changes
-
-- [activities](https://github.com/OpenVoiceOS/ovos-core/issues/43) - an activity is just a set of bus messages to indicate something started and ended, it is a reimplementation of an already existing feature, in ovos this is a native part of the self.add_event methods, this is present in the mark-ii/qa branch but seems to also have been dropped by MycroftAi
 
 Any skills using these new "features" will not work outside the mark2
 
