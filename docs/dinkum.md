@@ -7,7 +7,7 @@ incompatible
 
 mycroft-core is now referred to as "Classic Core" by MycroftAI
 
-MycroftAI now provides what they call sandbox images, to add to the confusing those only work in the mark 2 and "Classic
+MycroftAI now provides what they call sandbox images, to add to the confusion those only work in the mark 2 and "Classic
 Core" means the [mark-ii/latest](https://github.com/MycroftAI/mycroft-core/tree/mark-ii/latest) branch of mycroft-core, this is a derivative version of the branch that was used in the dev kits ([mark-ii/qa](https://github.com/MycroftAI/mycroft-core/tree/mark-ii/qa)) and is also
 backwards incompatible, changes in this branch were not done via PRs and had no review or community input
 
