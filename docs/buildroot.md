@@ -1,13 +1,65 @@
 # <img src='https://camo.githubusercontent.com/48b782bbddb51b97cf2971fda5817080075f7799/68747470733a2f2f7261772e6769746861636b2e636f6d2f466f7274417765736f6d652f466f6e742d417765736f6d652f6d61737465722f737667732f736f6c69642f636f67732e737667' width='50' height='50' style='vertical-align:bottom'/> Open Voice Operating System - Buildroot Edition
-A minimalistic Linux OS bringing the open source voice assistant [ovos-core](https://github.com/OpenVoiceOS/ovos-core) to embbeded, low-spec headless and/or small (touch)screen devices.
-
-source code: https://github.com/OpenVoiceOS/ovos-buildroot
-
 
 ## Getting started.
+The buildroot based OpenVoiceOS image is a minimalistic Linux OS bringing the open source voice assistant [ovos-core](https://github.com/OpenVoiceOS/ovos-core) to embbeded, low-spec headless and/or small (touch)screen devices.
+This release is to be considered the reference distribution that have all the different building blocks of the OVOS software stack to be merged into one image with the focus on usability. See it as the retail version of OpenVoiceOS.
+
+### Download and flashing
+
+
+### First run
+
+### Specific features
+
+The OpenVoiceOS buildroot image comes with specific smartspeaker functionality that someone could expect to be present on a voice controlled smartspeaker. The following chapters will describe those specific features. What they are, how they work and how you can configure them.
+Some of the features still require manual configuration although later on in time we will aim to have those configuration steps integrated within the whole ovos-core software stack.
+
+#### Auto detection and configuration of HAT's
+
+#### KDE Connect
+
+KDE Connect is a multi-platform application developed by KDE, which facilitates wireless communications and data transfer between devices over local networks and is installed and configured by default on the Buildroot based image.
+
+A couple of features of KDE Connect are;
+- Shared clipboard: copy and paste between your phone, computer and/or OpenVoiceOS device.
+- Share files and URLs instantly from one device to another including your OpenVoiceOS device.
+- Multimedia remote control: Use your phone, tablet or computer as a remote for what is playing on your OpenVoiceOS device.
+- Auto mute your OpenVoiceOS device when your mobile phone rings.
+- Virtual touchpad / keyboard: Use your phone/tablet screen as your OpenVoiceOS device its mouse and keyboard.
+
+
+
+#### Airplay
+
+TODO - write docs
+
+#### Spotifyd
+
+TODO - write docs
+
+#### Bluetooth speaker
+
+TODO - write docs
+
+#### Snapcast Client & Server
+
+TODO - write docs
+
+#### Remote shared folder access (SMB - Windows)
+
+TODO - write docs
+
+#### Remote shared folder access (NFS - Linux) 
+
+TODO - write docs
+
+
+## Development.
 
 At this moment development is in very early stages and focussed on the Raspberry Pi 3B & 4. As soon as an initial first workable version
 is created, other hardware might be added.
+
+Source code: https://github.com/OpenVoiceOS/ovos-buildroot
 
 ### Build Environment
 
