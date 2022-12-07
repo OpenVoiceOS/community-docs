@@ -10,7 +10,7 @@ Mycroft-GUI is an open source visual and display framework for Mycroft running o
 
 ## Introduction to QML
 
-QML user interface markup language is a declarative language built on top of Qt's existing strengths designed to describe the user interface of a program: both what it looks like, and how it behaves. QML provides modules that consist of sophisticated set of graphical and behavioral building elements. In the example below we will showcase how to create a QML interface for your skill including how it interacts with your voice skill.
+QML user interface markup language is a declarative language built on top of Qt's existing strengths designed to describe the user interface of a program: both what it looks like, and how it behaves. QML provides modules that consist of sophisticated set of graphical and behavioral building elements.
 
 A collection of resources to familiarize you with QML and Kirigami Framework.
 
