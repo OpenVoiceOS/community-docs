@@ -34,6 +34,7 @@ nav:
         - F.A.Q.: dev.md
     - GUI:
         - Introduction: gui_intro.md
+        - Homescreen: homescreen.md
         - QML Design Guidelines: qml_guidelines.md
         - Shell: shell.md
         - Protocol: gui_protocol.md
