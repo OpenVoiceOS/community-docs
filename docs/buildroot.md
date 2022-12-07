@@ -16,11 +16,14 @@ Some of the features still require manual configuration although later on in tim
 
 #### Auto detection and configuration of HAT's
 
+TODO - write docs
+
 #### KDE Connect
 
 KDE Connect is a multi-platform application developed by KDE, which facilitates wireless communications and data transfer between devices over local networks and is installed and configured by default on the Buildroot based image.
 
-A couple of features of KDE Connect are;
+A couple of features of KDE Connect are:
+
 - Shared clipboard: copy and paste between your phone, computer and/or OpenVoiceOS device.
 - Share files and URLs instantly from one device to another including your OpenVoiceOS device.
 - Multimedia remote control: Use your phone, tablet or computer as a remote for what is playing on your OpenVoiceOS device.
