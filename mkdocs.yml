@@ -32,6 +32,13 @@ nav:
         - Skill GUI: skill_gui.md
         - Skill API: skill_api.md
         - F.A.Q.: dev.md
+    - GUI:
+        - Introduction: gui_intro.md
+        - Homescreen: homescreen.md
+        - QML Design Guidelines: qml_guidelines.md
+        - Shell: shell.md
+        - Protocol: gui_protocol.md
+        - Extensions: gui_extensions.md
     - Plugins:
         - Plugin Manager: OPM.md
         - Speech To Text: stt_plugins.md
@@ -45,7 +52,6 @@ nav:
     - Technologies:
         - Common Play: OCP.md
         - Personal Backend: personal_backend.md
-        - Shell: shell.md
         - Skills Manager: osm.md
         - Open Linguistika: linguistika.md
         - Config Assistant: OCA.md
