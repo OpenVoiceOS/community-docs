@@ -33,7 +33,7 @@ adds support for global page back navigation. Enabling the Mobile GUI extension:
 
 ```javascript
 "gui": {
-    "extension": "smartspeaker",
+    "extension": "mobile",
     "idle_display_skill": "skill-android-homescreen.openvoiceos",
 }
 ```
