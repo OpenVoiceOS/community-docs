@@ -31,15 +31,27 @@ A couple of features of KDE Connect are;
 
 #### Airplay
 
+TODO - write docs
+
 #### Spotifyd
+
+TODO - write docs
 
 #### Bluetooth speaker
 
+TODO - write docs
+
 #### Snapcast Client & Server
+
+TODO - write docs
 
 #### Remote shared folder access (SMB - Windows)
 
+TODO - write docs
+
 #### Remote shared folder access (NFS - Linux) 
+
+TODO - write docs
 
 
 ## Development.
