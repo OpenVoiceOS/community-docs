@@ -37,6 +37,7 @@ nav:
         - Introduction: gui_intro.md
         - Homescreen: homescreen.md
         - QML Design Guidelines: qml_guidelines.md
+        - Open Linguistika: linguistika.md
         - Shell: shell.md
         - Protocol: gui_protocol.md
         - Extensions: gui_extensions.md
@@ -54,7 +55,6 @@ nav:
         - Common Play: OCP.md
         - Personal Backend: personal_backend.md
         - Skills Manager: osm.md
-        - Open Linguistika: linguistika.md
         - Config Assistant: OCA.md
         - STT Server: stt_server.md
         - TTS Server: tts_server.md
