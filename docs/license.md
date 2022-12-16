@@ -13,9 +13,9 @@ This includes avoiding LGPL code for reasons explained [here](https://softwareen
 Our license policy has the following properties:
 
 -  It gives you, the user of the software, complete and unrestrained access to the software, such that you may inspect, modify, and redistribute your changes
-  - Inspection - Anyone may inspect the software for security vulnerabilities
-  - Modification - Anyone may modify the software to fix issues or add features
-  - Redistribution - Anyone may redistribute the software on their terms
+    - Inspection - Anyone may inspect the software for security vulnerabilities
+    - Modification - Anyone may modify the software to fix issues or add features
+    - Redistribution - Anyone may redistribute the software on their terms
 - It is compatible with GPL licenses - Projects licensed as GPL can be distributed with OVOS
 - It allows for the incorporation of GPL-incompatible free software, such as software that is CDDL licensed
 

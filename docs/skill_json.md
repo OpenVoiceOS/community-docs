@@ -37,6 +37,7 @@ This file contains metadata about the skill and is all you need to submit a skil
 # Spec
 
 On the JSON file:
+
 * `name` is a human-readable name for the skill to be used in store listings, UI, etc.
 * `description` is a human-readable short description of the skill. This should be limited to one or two sentences max
 * `branch` refers to the git tag mentioned above, and can be omitted if the tag is in the URL.
