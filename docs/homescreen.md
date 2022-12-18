@@ -60,7 +60,7 @@ The homescreen has several customizations available.  This is sample `settings.c
 ```
 {
     "__mycroft_skill_firstrun": false,  # This is set on first load of the skill
-    "weather_skill": "skill-weather.openvoiceos",  # DEPRECIATED has no effect - PR pending
+    "weather_skill": "skill-weather.openvoiceos",  # DEPRECIATED has no effect - PR #62 pending
     "datetime_skill": "skill-date-time.mycroftai",  # Allows you to use a custom
                     skill to display the date and time.  When NOT set defaults
                     to "skill-ovos-date-time.openvoiceos"
