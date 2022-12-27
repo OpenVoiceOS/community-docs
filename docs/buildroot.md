@@ -38,7 +38,7 @@ TODO - write docs
 
 #### Spotifyd
 
-TODO - write docs
+To make your ovos device show up as a spotify player uncomment and setup the username and password variables within `~/.config/spotifyd/spotifyd.conf` and reboot
 
 #### Bluetooth speaker
 
