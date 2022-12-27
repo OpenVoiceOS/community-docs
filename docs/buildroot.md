@@ -6,19 +6,23 @@ This release is to be considered the reference distribution that have all the di
 
 ### Download and flashing
 
+TODO - write docs
 
 ### First run
 
-### Specific features
+TODO - write docs
+
+
+## Features
 
 The OpenVoiceOS buildroot image comes with specific smartspeaker functionality that someone could expect to be present on a voice controlled smartspeaker. The following chapters will describe those specific features. What they are, how they work and how you can configure them.
 Some of the features still require manual configuration although later on in time we will aim to have those configuration steps integrated within the whole ovos-core software stack.
 
-#### Auto detection and configuration of HAT's
+### Auto detection and configuration of HAT's
 
 TODO - write docs
 
-#### KDE Connect
+### KDE Connect
 
 KDE Connect is a multi-platform application developed by KDE, which facilitates wireless communications and data transfer between devices over local networks and is installed and configured by default on the Buildroot based image.
 
@@ -32,27 +36,27 @@ A couple of features of KDE Connect are:
 
 
 
-#### Airplay
+### Airplay
 
 TODO - write docs
 
-#### Spotifyd
+### Spotifyd
 
 To make your ovos device show up as a spotify player uncomment and setup the username and password variables within `~/.config/spotifyd/spotifyd.conf` and reboot
 
-#### Bluetooth speaker
+### Bluetooth speaker
 
 TODO - write docs
 
-#### Snapcast Client & Server
+### Snapcast Client & Server
 
 TODO - write docs
 
-#### Remote shared folder access (SMB - Windows)
+### Remote shared folder access (SMB - Windows)
 
 TODO - write docs
 
-#### Remote shared folder access (NFS - Linux) 
+### Remote shared folder access (NFS - Linux) 
 
 TODO - write docs
 
