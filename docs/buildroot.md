@@ -45,7 +45,7 @@ A couple of features of KDE Connect are:
 For the sake of simplicity the below screen shots are made using the iPhone KDE Connect client, however as it is not yet fully feature complete and / or stable, it is recommended to use the Android and / or Linux client. Especially if you would like to have full MPRIS control of your OpenVoiceOS device.
 
 On your mobile device, open the KDE Connect app and it will see the advertised OpenVoiceOS KDE Connect device automatically.
-![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20KDEconnect%20devices.PNG)
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20KDEconnect%20devices.PNG =100x)
 Click / Tap on the "OpenVoiceOS-*" to start the pairing process.
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20KDEconnect%20initiate%20pairing.PNG)
 By clicking / tapping the pair button a similar pop up will appear on the screen of the OpenVoiceOS device. Also click / tap on the pair button finalises the pairing proces allowing your Mobile device to automatically connect with your OpenVoiceOS device and make use of all the extra functionality of what KDE Connect brings.
