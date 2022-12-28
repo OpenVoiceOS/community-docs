@@ -1,4 +1,5 @@
 |  | **:OpenVoiceOS<br>(Buildroot):** | **:OpenVoiceOS<br>(Manjaro):** | **:Neon AI:** | **:Mark II<br>(Dinkum):** | **:Mycroft A.I.<br>(PiCroft):**  |
+|:-:	|:-:	|:-:	|:-:	|:-:	|:-:	|
 | **:Hardware - Compatibility:** |
 | **Raspberry Pi** | :3/3b/3b/4:| :4: | :4: | :Mark II<br>(only): | :3/3b/3b/4: |
 | **X86_64** | :*planned*: | :No: | :Unknown: | :No: | :No: |
