@@ -5,10 +5,14 @@
 | X86_64 | *planned* | No | Unknown | No | No |
 | Virtual Appliance | *planned* | No | Unknown | No | No |
 | Docker | No<br>*possibly in future* | Yes | Yes | No | No |
+| Mark-1 | Yes<br>*WIP* | No | No | No | No |
+| Mark-2 | Yes<br>*Dev-Kit<br>Retail (WIP)* | No | Yes<br>*Dev-Kit<br>Retail* | Yes<br>*Retail ONLY* | No |
 | **Hardware - Peripherals** |
-| ReSpeaker | 2-mic<br>4-mic squared<br>4-mic lineair<br>6-mic | Unknown | Unknown | No | Yes<br>*manual installation* |
+| ReSpeaker | 2-mic<br>4-mic squared<br>4-mic lineair<br>6-mic | Unknown | Unknown | No | Yes<br>*manual installation?* |
 | USB | Yes | Yes | Unknown | No | Yes<br>*manual installation* |
 | SJ-201 | Yes | Unknown | Yes | Yes | No<br>*sandbox image maybe* |
+| Google AIY v1 | Yes<br>*manual configuration* | Unknown | Unknown | No | No<br>*manual installation?* |
+| Google AIY v2 | No<br>*perhaps in the future* | Unknown | Unknown | No | No<br>*manual installation?* |
 | **Screen - GUI** |
 | GUI supported<br>*Showing a GUI if a screen is attached* | Yes | Yes | Yes | Yes | No |
 | **Network Setup - Options** |
@@ -23,4 +27,18 @@
 | API Acces w/o pairing | Yes | Yes | Yes | No | No |
 | On-Device configuration | Yes | Yes | WIP | No | No |
 | Online configuration | Dashboard<br>*wip*  | Dashboard<br>*wip* | No | Yes | Yes |
-|   |   |   |   |   |   |
+| **Custimization** |
+| Open Build System | Yes | Yes | Yes | Partial<br>*build tools are not public* | Yes |
+| Package manager | No<br>*No buildtools available.<br>Perhaps opkg in the future* | Yes | Yes | Yes<br>*limited bacuase of read-only filesystem | Yes |
+| **Updating** |
+| Update mechanism(s) | pip<br>*In the future:<br>Firmware updates. On-device and Over The Air* | pip<br>package manager | pip<br>package manager | OTA<br>*controlled by Mycroft* | pip<br>package manager |
+| **Voice Assistant - Functionality** |
+| STT - On device | Yes<br>*Kaldi/Vosk-API<br>WhisperCPP (WIP)<br>Whisper TFlite (WIP)* | Unknown | Yes<br>*?* | No | No |
+| STT - On premises | Yes<br>*Ovos Server Proxy<br>More...?* | Unknown | Yes<br>*?* | No | No |
+| STT - Cloud | Yes<br>*Ovos Server Proxy<br>Google<br>More...?* | Unknown | Yes<br>*?* | No | No |
+| TTS - On device | Yes<br>*Mimic 1<br>More...?* | Yes<br>*Mimic 1<br>More...?* | Yes<br>*Mimic 1<br>Mimic 3<br>More...?* | Yes<br>*Mimic 3* | Yes<br>*Mimic 1* |
+| TTS - On premises | Yes<br>*?* | Unknown | Yes<br>*?* | No | No |
+| TTS - Cloud | Yes<br>*Google<br>Mimic 2<br>Mimic 3<br>More...?* | Unknown | Yes<br>*?* | No | No |
+| **Smart Speaker - Functionality** |
+| Music player connectivity<br>*The use of external application on other devices to connect to your device.* | Yes<br>*Airplay<br>Spotifyd<br>Bluetooth<br>Snapcast<br>KDE Connect* | Unknown | Unknown | Yes<br>*MPD<br>Local Files* | No<br>*manual installation?* |
+| Music player sync | Yes<br>*OCP<br>MPRIS* | Yes<br>*OCP<br>MPRIS* | Yes<br>*OCP<br>MPRIS* | No | No |
