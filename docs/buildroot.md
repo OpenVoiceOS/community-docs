@@ -13,14 +13,22 @@ TODO - write docs
 TODO - write docs
 
 
-## Features
+## Smartspeaker functionality and features
 
 The OpenVoiceOS buildroot image comes with specific smartspeaker functionality that someone could expect to be present on a voice controlled smartspeaker. The following chapters will describe those specific features. What they are, how they work and how you can configure them.
 Some of the features still require manual configuration although later on in time we will aim to have those configuration steps integrated within the whole ovos-core software stack.
 
 ### Auto detection and configuration of HAT's
 
-TODO - write docs
+The buildroot OpenVoiceOS editions is considered to be consumer friendly type of device, or as Mycroft A.I. would like to call, a retail version. However as we so not target a specific hardware platform and would like to support custom made systems we are implementing a smart way to detect and configure different type of Raspberry Pi HAT's.
+
+At boot the system scan the I2C bus for known and suppiorted HAT's and if found configures the underlying linux sound system. At the moment this is still very much in development, however the below HAT's are or should soon be supported by this system;
+- ReSpeaker 2-mic HAT
+- ReSpeaker 4-mic Square HAT
+- ReSpeaker 4-mic lineair / 6-mic HAT
+- USB devices such as the PS EYE-2
+- SJ-201 Dev Kits
+- SJ-201 Mark2 retail device
 
 ### KDE Connect
 
@@ -34,19 +42,55 @@ A couple of features of KDE Connect are:
 - Auto mute your OpenVoiceOS device when your mobile phone rings.
 - Virtual touchpad / keyboard: Use your phone/tablet screen as your OpenVoiceOS device its mouse and keyboard.
 
+For the sake of simplicity the below screen shots are made using the iPhone KDE Connect client, however as it is not yet fully feature complete and / or stable, it is recommended to use the Android and / or Linux client. Especially if you would like to have full MPRIS control of your OpenVoiceOS device.
 
+On your mobile device, open the KDE Connect app and it will see the advertised OpenVoiceOS KDE Connect device automatically.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20KDEconnect%20devices.PNG)
+Click / Tap on the "OpenVoiceOS-*" to start the pairing process.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20KDEconnect%20initiate%20pairing.PNG)
+By clicking / tapping the pair button a similar pop up will appear on the screen of the OpenVoiceOS device. Also click / tap on the pair button finalises the pairing proces allowing your Mobile device to automatically connect with your OpenVoiceOS device and make use of all the extra functionality of what KDE Connect brings.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20KDEconnect%20paired.PNG)
 
-### Airplay
+### YouTube Music
 
-TODO - write docs
+A voiceassistant with smartspeaker functionality should be able to play music straight out of the box. For that reason the buildroot edition of OpenVoiceOS comes with the Youtube Music OCP Skill pre-installed. Just ask it to play something will start playback from Youtube assuming the asked sonmg is present on Youtube ofcourse.
+
+Asking "Hey Mycroft, play disturbed sound of silence" should just start playing utilizing OCP as shown below. More information about the full functionality of OCP can be found at it's own chapter.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20OCP%20Playing%201.png)
 
 ### Spotifyd
 
-To make your ovos device show up as a spotify player uncomment and setup the username and password variables within `~/.config/spotifyd/spotifyd.conf` and reboot
+Spotifyd is able to advertise itself on the network without credentials and using zeroconf authentication from Spotify Connect on your mobiles device. This is the default configuration shipped with the buildroot image. If for whatever reason zeroconf is not properly working on your network or you want spotifyd to log in itself you can configure your username and password combination within it's configuration file by uncommenting and configuring the username and password variables within `~/.config/spotifyd/spotifyd.conf` and reboot the device or run `systemctl --user restart spotifyd`.
+
+Open spotify on you mobile device and go to the Devices menu within the Settings or tap the devices menu icon on the left bottom of the now playing screen. An OpenVoiceOS "speaker" device will be present which you can select as output device.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20Spotify%20device%20selection.PNG)
+
+When you play something on Spotify the music will come from your OpenVoiceOS device which will be indicated by the "OPENVOICEOS" indicator on the device menu icon on the top bottom of the now playing screen on your mobile device.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20Spotify%20playing%20on%20OpenVoiceOS.PNG)
+
+As Spotifyd has full MPRIS support including audio player controls, the the full OCP now playing screen will be shown on your OpenVoiceOS device as shown below, just like playing something from Youtube as shown above.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20OCP%20Spotify.png)
+
+### Airplay
+
+By default your OpenVoiceOS device is advertising itself as Airplay (v1 - currently) device on your network. This can be used from either the iOS Airplay selection screen if you play some local files, like shown below;
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20Local%20playback.PNG)
+Tap / Click the bottom middle Airplay icon on your music player which opens the Airplay devices menu. It should pick up your OpenVoiceOS device automatically from the network.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20Local%20playback%20Airplay%20menu.PNG)
+Select the OpenVoiceOS device to re-route your sound output to your OpenVoiceOS device.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20Local%20playback%20Airplay%20selected.PNG)
+
+The Airplay selection menu is also available within other music clients such as the Spotify app.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20Airplay%20selection.PNG)
+And if that client also supports metadata over MPRIS your OpenVoiceOS device will show it on it's screen as well.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20OCP%20Airplay.png)
 
 ### Bluetooth speaker
 
-TODO - write docs
+The buildroot edition of OpenVoiceOS by default also acts as a bluetooth speaker. You can find it from any (mobile) device as discoverable within the bluetooth pairing menu.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20Bluetooth%20menu.PNG)
+You can pair with it and use your OpenVoiceOS as any other Bluetooth speaker you might own.
+(NOTE: At the moment, pairing is broken but will be fixed as soon as we get to it)
 
 ### Snapcast Client & Server
 
@@ -54,11 +98,17 @@ TODO - write docs
 
 ### Remote shared folder access (SMB - Windows)
 
-TODO - write docs
+Your OpenVoiceOS device is accesable over the network from your Windows computer. This is still a work in process, but you can open a file explorer and navigate to you OpenVoiceOS device.
+![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/SMB%20shares.png)
+At the moment the following directories within the user's home directory are shared over the network.
+- Documents
+- Music
+- Pictures
+These folders are also used by KDE Connect file transfer plugins and for instance the Camera skill (Hey Mycroft, take a selfie) and / or Homescreen Skill (Hey Mycroft, take a screenshot)
 
 ### Remote shared folder access (NFS - Linux) 
 
-TODO - write docs
+In the near future the above Windows network shares are also made available over NFS for Linux clients. This is still a Work In Progress / To Do item.
 
 
 ## Development.
