@@ -15,8 +15,6 @@ nav:
             - Configuration: setup_ovos.md
         - Features and skills:
             - Standard skills: standard_skills.md
-            - Timers, Alarm and reminders: alerts_skill.md
-            - Weather: weather_skill.
             - Playing music: playing_music.md
             - Playing video: playing_video.md
         - Graphical Interface:
