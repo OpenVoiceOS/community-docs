@@ -59,12 +59,13 @@ nav:
         - STT Server: stt_server.md
         - TTS Server: tts_server.md
         - Translate Server: translate_server.md
-    - Images:
-        - Buildroot: buildroot.md
-        - Manjaro: manjaro.md
     - Mycroft:
         - Dinkum: dinkum.md
         - Compatibility: compat.md
-        - Comparison: mycroft.md
+        - OVOS vs MyCroft: mycroft.md
+    - Images:
+        - Buildroot: buildroot.md
+        - Manjaro: manjaro.md
+        - Compared: comparison.md
 
 theme: readthedocs
