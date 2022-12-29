@@ -8,8 +8,27 @@ nav:
         - Friends: friends.md
         - F.A.Q.: faq.md
     - User Guide:
-        - Getting Started:
-            - Downloading an image: setup_getting_started.md
+        - Getting Started Guide:
+            - Downloading an image: getting_image.md
+            - First boot: first_boot.md
+            - Network setup: setup_network.md
+            - Configuration: setup_ovos.md
+        - Features and skills:
+            - Standard skills: standard_skills.md
+            - Timers, Alarm and reminders: alerts_skill.md
+            - Weather: weather_skill.
+            - Playing music: playing_music.md
+            - Playing video: playing_video.md
+        - Graphical Interface:
+            - Changing your theme: change_theme.md
+        - Smartspeaker functionality:
+            - Airplay: airplay.md
+            - Spotify connect: spotifyd.md
+            - Bluetooth speaker: btspealer.md
+            - KDE Connect: kdeconnect.md
+        - Advanced and CLI tools:
+            - ovos-cli-client: ovos-cli-client.md
+            - PulseAudio controls: ncpamixer.md
     - Development Guide:
         - Backend Services: backend.md
         - Configuration: config.md
