@@ -52,3 +52,5 @@ OpenVoiceOS ready to use images come in two flavours; The buildroot version, bei
 | **Smart Speaker - Functionality** |
 | Music player connectivity<br>*The use of external application on other devices to connect to your device.* | Yes<br>*Airplay<br>Spotifyd<br>Bluetooth<br>Snapcast<br>KDE Connect* | Unknown | Unknown | Yes<br>*MPD<br>Local Files* | No<br>*manual installation?* |
 | Music player sync | Yes<br>*OCP<br>MPRIS* | Yes<br>*OCP<br>MPRIS* | Yes<br>*OCP<br>MPRIS* | No | No |
+| HomeAssistant integration | unknown | Yes<br>*HomeAssistant<br>PHAL Plugin* | unknown | unknown | unknown |
+| Camera support | Yes | *wip* | Yes | unknown | unknown |
