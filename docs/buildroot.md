@@ -51,13 +51,6 @@ Click / Tap on the "OpenVoiceOS-*" to start the pairing process.
 By clicking / tapping the pair button a similar pop up will appear on the screen of the OpenVoiceOS device. Also click / tap on the pair button finalises the pairing proces allowing your Mobile device to automatically connect with your OpenVoiceOS device and make use of all the extra functionality of what KDE Connect brings.
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20KDEconnect%20paired.PNG)
 
-### YouTube Music
-
-A voiceassistant with smartspeaker functionality should be able to play music straight out of the box. For that reason the buildroot edition of OpenVoiceOS comes with the Youtube Music OCP Skill pre-installed. Just ask it to play something will start playback from Youtube assuming the asked sonmg is present on Youtube ofcourse.
-
-Asking "Hey Mycroft, play disturbed sound of silence" should just start playing utilizing OCP as shown below. More information about the full functionality of OCP can be found at it's own chapter.
-![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20OCP%20Playing%201.png)
-
 ### Spotifyd
 
 Spotifyd is able to advertise itself on the network without credentials and using zeroconf authentication from Spotify Connect on your mobiles device. This is the default configuration shipped with the buildroot image. If for whatever reason zeroconf is not properly working on your network or you want spotifyd to log in itself you can configure your username and password combination within it's configuration file by uncommenting and configuring the username and password variables within `~/.config/spotifyd/spotifyd.conf` and reboot the device or run `systemctl --user restart spotifyd`.
