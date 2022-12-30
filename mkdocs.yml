@@ -22,7 +22,7 @@ nav:
         - Smartspeaker functionality:
             - Airplay: airplay.md
             - Spotify connect: spotifyd.md
-            - Bluetooth speaker: btspealer.md
+            - Bluetooth speaker: btspeaker.md
             - KDE Connect: kdeconnect.md
         - Advanced and CLI tools:
             - ovos-cli-client: ovos-cli-client.md
