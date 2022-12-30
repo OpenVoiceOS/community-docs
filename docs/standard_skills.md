@@ -7,9 +7,11 @@ Your OpenVoiceOS device comes with certain skills pre-installed for basic functi
 You can ask your device what time or date it is just in case you lost your watch.
 
 > Hey Mycroft, what time is it?
+
 ![Time](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Time.png)
 
 > Hey Mycroft, what is the date?
+
 ![Date](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Date.png)
 
 ## Setting an alarm
@@ -17,6 +19,7 @@ You can ask your device what time or date it is just in case you lost your watch
 Having your OpenVoiceOS device knowing and showing the time is great but it is even better to be woken up in the morning by your device.
 
 > Hey Mycroft, set an alarm for 8 AM.
+
 ![Alarm](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Date.png)
 
 ## Setting of timers
@@ -24,11 +27,13 @@ Having your OpenVoiceOS device knowing and showing the time is great but it is e
 Sometimes you are just busy but want to be alerted after a certain time. For that you can use timers.
 
 > Hey Mycroft, set a timer for 5 minutes.
+
 ![Timer](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%205%20minutes%20timer.png)
 
 You can alway set more timers and even name them so you know which timers is for what.
 
 > Hey, Mycroft, set another timer called rice cooking for 7 minutes.
+
 ![Timers](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Two%20timers.png)
 
 ## Asking the weather
@@ -36,6 +41,7 @@ You can alway set more timers and even name them so you know which timers is for
 You can ask your device what the weather is or would be at any given time or place.
 
 > Hey Mycroft, what is the weatehr like today?
+
 ![Weather 1](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Weather%201.png)
 
 The weather skill actually uses multiple pages indicated by the small dots at the bottom of the screen.
