@@ -20,7 +20,7 @@ Having your OpenVoiceOS device knowing and showing the time is great but it is e
 
 > Hey Mycroft, set an alarm for 8 AM.
 
-![Alarm](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Date.png)
+![Alarm](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Alarm.png)
 
 ## Setting of timers
 
