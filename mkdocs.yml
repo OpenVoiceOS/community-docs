@@ -5,6 +5,7 @@ nav:
         - Introduction: index.md
         - Glossary: glossary.md
         - Getting Started: setup_getting_started.md
+        - Contributing: contributing.md
         - License: license.md
     - Overview:
         - F.A.Q.: faq.md
