@@ -1,52 +1,27 @@
-# Welcome To OpenVoice OS Getting Started Guide
+# Setting up your device at first run.
 
-You can find a pdf version of this document [here](https://github.com/OpenVoiceOS/ovos_assets/raw/master/printables/device-getting-started-guide.pdf)
+At first run of your OpenVoiceOS device a first run setup wizard is started that guides you through the process of setting up your device.
 
-### Where to get OVOS?
+![Welcome Screen](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/welcome-screen.png)
 
-OVOS is in early stages, we publish our raspberry pi images for download but expect new bugs and new fixes on every release, we are not yet stable!
+## Selecting Your Backend
 
-These images are development images in alpha stage, bugs and incomplete features are guaranteed
-
-Download Images:
-
-- [buildroot](https://drive.google.com/drive/folders/113-zmx6ncoeLNsayseNxoaTlaAk1AfU2)
-  - SSH Details: Username: mycroft | password: mycroft
-- [manjaro](http://downloads.openvoiceos.com/images/)
-  - SSH Details for Respeaker Image: Username: mycroft | password: 12345
-  - SSH Details for Mark-2/DevKit Image: Username: ovos | password: ovos
-
-Build images from scratch:
-
-- [buildroot](https://openvoiceos.github.io/community-docs/buildroot/)
-- [manjaro](https://openvoiceos.github.io/community-docs/manjaro/)
-
-### Some information to get you started
-
-If you are using any of our images when your device first boots our [setup skill](https://github.com/OpenVoiceOS/skill-ovos-setup) will help you get started 
-
-The skill will take you through a series of setup steps to get your device going, Before we get started we would like to help you understand some of the key terms you will see during setup
-
-![Welcome Scree](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/welcome-screen.png)
-
-### Selecting Your Backend
-
-#### What is a backend ?
+### What is a backend ?
 A backend is a service that provides your device with additional tools to function, these could range from managing your skill settings to configuring certain aspects of your device OpenVoiceOS is all about choice,  We currently supports 3 backend types
 
 ![Select Backend](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/select-backend.png)
 
-#### Selene Backend
+### Selene Backend
 The mycroft backend connects your device to mycroft servers and allows you to use their web interface to manage your device, this requires paring and all your Speech to text queiries are processed via this backend
 
-#### Personal Backend
+### Personal Backend
 The personal backend is a choice for users who would like to self host their own backend on the device or in their personal home network, this backend requires additional setup but also provides a cool web interface to configure your device and manage your settings
 
-#### No Backend
+### No Backend
 Open Voice OS by default comes with no backend, we do not really believe you need a backend to do anything, this is the best choice for
 your device if you wish to run completely locally, we provide you with a whole list of Speech to text and Text to speech online and offline options to choose from, All communication to the outside world happens from your own device without data sharing
 
-## SELENE BACKEND SELECTED ##
+## Mycroft A.I. - Selene Backend
 
 The Pairing Process
 
@@ -59,7 +34,7 @@ The GUI will now show you a Pairing Code, This pairing code needs to be entered 
 - Enter the pairing code, a unique device name, and location settings
 - Click next on the web interface, your device should now be paired
 
-## NO BACKEND SELECTED ##
+## No backend - No calling home
 
 Select A Text To Speech (TTS) Engine: A text-to-speech (TTS) system converts normal language text into speech, select an engine from the list
 
@@ -69,7 +44,7 @@ Select A Speech To Text (STT) Engine: A speech-to-text (STT) sustem converts hum
 
 ![STT](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/stt.png)
 
-## PERSONAL BACKEND SELECTED ##
+## Personal backend - Host your own
 
 ![Personal Backend](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/personal-backend.png)
 
