@@ -7,79 +7,78 @@ nav:
         - License: license.md
         - Friends: friends.md
         - F.A.Q.: faq.md
-    - User Guide:
-        - Getting Started Guide:
-            - Downloading an image: getting_image.md
-            - First boot: first_boot.md
-            - Network setup: setup_network.md
-            - Configuration: setup_ovos.md
-        - Features and skills:
-            - Standard skills: standard_skills.md
-            - Playing music: playing_music.md
-            - Playing video: playing_video.md
-        - Smartspeaker functionality:
-            - Airplay: airplay.md
-            - Spotify connect: spotifyd.md
-            - Bluetooth speaker: btspeaker.md
-            - KDE Connect: kdeconnect.md
-    - Development Guide:
+    - Getting Started Guide:
+        - Downloading an image: getting_image.md
+        - First boot: first_boot.md
+        - Network setup: setup_network.md
+        - Configuration: setup_ovos.md
+    - Features and skills:
+        - Standard skills: standard_skills.md
+        - Playing music: playing_music.md
+        - Playing video: playing_video.md
+    - Smartspeaker functionality:
+        - Airplay: airplay.md
+        - Spotify connect: spotifyd.md
+        - Bluetooth speaker: btspeaker.md
+        - KDE Connect: kdeconnect.md
+    - Advanced Usage:
         - Backend Services: backend.md
         - Configuration: config.md
-        - OVOS-core:
-            - Introduction: core.md
-            - Bus: bus_service.md
-            - Skills: skills_service.md
-            - Speech: speech_service.md
-            - Audio: audio_service.md
-            - GUI: gui_service.md
-        - Skills:
-            - Introduction: skills.md
-            - Design Guidelines: guidelines.md
-            - Anatomy: skill_structure.md
-            - Dialog: statements.md
-            - Prompts: prompts.md
-            - Intents: intents.md
-            - Context: context.md
-            - Converse: converse.md
-            - Filesystem: skill_filesystem.md
-            - Skill Settings: skill_settings.md
-            - Skill GUI: skill_gui.md
-            - Skill API: skill_api.md
-            - Skill Json: skill_json.md
-            - F.A.Q.: dev.md
-        - GUI:
-            - Introduction: gui_intro.md
-            - Homescreen: homescreen.md
-            - QML Design Guidelines: qml_guidelines.md
-            - Open Linguistika: linguistika.md
-            - Shell: shell.md
-            - Protocol: gui_protocol.md
-            - Extensions: gui_extensions.md
-        - Plugins:
-            - Plugin Manager: OPM.md
-            - Speech To Text: stt_plugins.md
-            - Text To Speech: tts_plugins.md
-            - Wake Word: ww_plugins.md
-            - Voice Activity Detection: vad_plugins.md
-            - Grapheme to Phoneme: g2p_plugins.md
-            - Audio Playback: audio_plugins.md
-            - Language Detection/Translation: lang_plugins.md
-            - Platform/Hardware Abstraction Layer: PHAL.md
-        - Technologies:
-            - Common Play: OCP.md
-            - Personal Backend: personal_backend.md
-            - Skills Manager: osm.md
-            - Config Assistant: OCA.md
-            - STT Server: stt_server.md
-            - TTS Server: tts_server.md
-            - Translate Server: translate_server.md
-        - Mycroft:
-            - Dinkum: dinkum.md
-            - Compatibility: compat.md
-            - OVOS vs MyCroft: mycroft.md
-        - Images:
-            - Buildroot: buildroot.md
-            - Manjaro: manjaro.md
-            - Compared: comparison.md
+    - OVOS-core:
+        - Introduction: core.md
+        - Bus: bus_service.md
+        - Skills: skills_service.md
+        - Speech: speech_service.md
+        - Audio: audio_service.md
+        - GUI: gui_service.md
+    - Skills:
+        - Introduction: skills.md
+        - Design Guidelines: guidelines.md
+        - Anatomy: skill_structure.md
+        - Dialog: statements.md
+        - Prompts: prompts.md
+        - Intents: intents.md
+        - Context: context.md
+        - Converse: converse.md
+        - Filesystem: skill_filesystem.md
+        - Skill Settings: skill_settings.md
+        - Skill GUI: skill_gui.md
+        - Skill API: skill_api.md
+        - Skill Json: skill_json.md
+        - F.A.Q.: dev.md
+    - GUI:
+        - Introduction: gui_intro.md
+        - Homescreen: homescreen.md
+        - QML Design Guidelines: qml_guidelines.md
+        - Open Linguistika: linguistika.md
+        - Shell: shell.md
+        - Protocol: gui_protocol.md
+        - Extensions: gui_extensions.md
+    - Plugins:
+        - Plugin Manager: OPM.md
+        - Speech To Text: stt_plugins.md
+        - Text To Speech: tts_plugins.md
+        - Wake Word: ww_plugins.md
+        - Voice Activity Detection: vad_plugins.md
+        - Grapheme to Phoneme: g2p_plugins.md
+        - Audio Playback: audio_plugins.md
+        - Language Detection/Translation: lang_plugins.md
+        - Platform/Hardware Abstraction Layer: PHAL.md
+    - Technologies:
+        - Common Play: OCP.md
+        - Personal Backend: personal_backend.md
+        - Skills Manager: osm.md
+        - Config Assistant: OCA.md
+        - STT Server: stt_server.md
+        - TTS Server: tts_server.md
+        - Translate Server: translate_server.md
+    - Mycroft:
+        - Dinkum: dinkum.md
+        - Compatibility: compat.md
+        - OVOS vs MyCroft: mycroft.md
+    - Images:
+        - Buildroot: buildroot.md
+        - Manjaro: manjaro.md
+        - Compared: comparison.md
 
 theme: readthedocs
