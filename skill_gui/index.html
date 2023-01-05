@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/skill_gui/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Skill GUI - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Skill GUI";
+        var mkdocs_page_input_path = "skill_gui.md";
+        var mkdocs_page_url = "/community-docs/skill_gui/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Skill GUI</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#show-simple-content">Show Simple Content</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#text">Text</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#static-image">Static Image</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#animated-image">Animated Image</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#html-page">HTML Page</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remote-url">Remote URL</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-qml">Advanced QML</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Skills &raquo;</li>
+      <li>Skill GUI</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="gui-framework">GUI Framework</h1>
+<p>Mycroft-GUI is an open source visual and display framework for Mycroft running on top of KDE Plasma Technology and built using Kirigami a lightweight user interface framework for convergent applications which are empowered by Qt.</p>
+<p>OVOS uses the standard mycroft-gui framework, you can find the official documentation <a href="https://mycroft-ai.gitbook.io/docs/skill-development/displaying-information/mycroft-gui">here</a></p>
+<h2 id="show-simple-content">Show Simple Content</h2>
+<p>Skills can use <code>self.gui</code>  to interact with the GUI service, any ovos component may provide a similar interface via <code>GUIInterface</code> class provided by <code>ovos_utils</code></p>
+<h3 id="text">Text</h3>
+<p>Display simple strings of text.</p>
+<pre><code class="language-python">self.gui.show_text(self, text, title=None, override_idle=None, override_animations=False)
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>text (str): Main text content.  It will auto-paginate</li>
+<li>title (str): A title to display above the text content.</li>
+<li>override_idle (boolean, int):</li>
+<li>True: Takes over the resting page indefinitely</li>
+<li>(int): Delays resting page for the specified number of seconds.</li>
+<li>override_animations (boolean):</li>
+<li>True: Disables showing all platform skill animations.</li>
+<li>False: 'Default' always show animations.</li>
+</ul>
+<h3 id="static-image">Static Image</h3>
+<p>Display a static image such as a jpeg or png.</p>
+<pre><code class="language-python">self.gui.show_image(self, url, caption=None, title=None, fill=None, override_idle=None, override_animations=False)
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>url (str): Pointer to the image</li>
+<li>caption (str): A caption to show under the image</li>
+<li>title (str): A title to display above the image content</li>
+<li>fill (str): Fill type - supports: </li>
+<li>'PreserveAspectFit',</li>
+<li>'PreserveAspectCrop', </li>
+<li>'Stretch'</li>
+<li>override_idle (boolean, int):</li>
+<li>True: Takes over the resting page indefinitely</li>
+<li>(int): Delays resting page for the specified number of seconds.</li>
+<li>override_animations (boolean):</li>
+<li>True: Disables showing all platform skill animations.</li>
+<li>False: 'Default' always show animations.</li>
+</ul>
+<h3 id="animated-image">Animated Image</h3>
+<p>Display an animated image such as a gif.</p>
+<pre><code class="language-python">self.gui.show_animated_image(self, url, caption=None, title=None, fill=None, override_idle=None, override_animations=False)
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>url (str): Pointer to the .gif image</li>
+<li>caption (str): A caption to show under the image</li>
+<li>title (str): A title to display above the image content</li>
+<li>fill (str): Fill type - supports: </li>
+<li>'PreserveAspectFit',</li>
+<li>'PreserveAspectCrop', </li>
+<li>'Stretch'</li>
+<li>override_idle (boolean, int):</li>
+<li>True: Takes over the resting page indefinitely</li>
+<li>(int): Delays resting page for the specified number of seconds.</li>
+<li>override_animations (boolean):</li>
+<li>True: Disables showing all platform skill animations.</li>
+<li>False: 'Default' always show animations.</li>
+</ul>
+<h3 id="html-page">HTML Page</h3>
+<p>Display a local HTML page.</p>
+<pre><code class="language-python">self.gui.show_html(self, html, resource_url=None, override_idle=None, override_animations=False)
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>html (str): HTML text to display</li>
+<li>resource_url (str): Pointer to HTML resources</li>
+<li>override_idle (boolean, int):</li>
+<li>True: Takes over the resting page indefinitely</li>
+<li>(int): Delays resting page for the specified number of seconds.</li>
+<li>override_animations (boolean):</li>
+<li>True: Disables showing all platform skill animations.</li>
+<li>False: 'Default' always show animations.</li>
+</ul>
+<h3 id="remote-url">Remote URL</h3>
+<p>Display a webpage.</p>
+<pre><code class="language-python">self.gui.show_url(self, url, override_idle=None, override_animations=False)
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>url (str): URL to render</li>
+<li>override_idle (boolean, int):</li>
+<li>True: Takes over the resting page indefinitely</li>
+<li>(int): Delays resting page for the specified number of seconds.</li>
+<li>override_animations (boolean):</li>
+<li>True: Disables showing all platform skill animations.</li>
+<li>False: 'Default' always show animations.</li>
+</ul>
+<h2 id="advanced-qml">Advanced QML</h2>
+<p>You can take full advantage of QML directly, you can find mycroft official docs <a href="https://mycroft-ai.gitbook.io/docs/skill-development/displaying-information/mycroft-gui#in-depth-qml-based-audio-and-visual-interaction-skills">here</a></p>
+<p>We have <a href="../qml_guidelines/">additional design guidelines</a> under our dedicated GUI documentation</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../skill_settings/" class="btn btn-neutral float-left" title="Skill Settings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../skill_api/" class="btn btn-neutral float-right" title="Skill API">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../skill_settings/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../skill_api/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/lang_plugins/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Language Detection/Translation - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Language Detection/Translation";
+        var mkdocs_page_input_path = "lang_plugins.md";
+        var mkdocs_page_url = "/community-docs/lang_plugins/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Language Detection/Translation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#list-of-language-plugins">List of Language plugins</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Plugins &raquo;</li>
+      <li>Language Detection/Translation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="language-detectiontranslation-plugins">Language Detection/Translation Plugins</h1>
+<p>These plugins can be used to detect the language of text and to translate it</p>
+<p>They are not used internally by ovos-core but are integrated with external tools</p>
+<p>neon-core also makes heavy use of OPM language plugins</p>
+<h2 id="list-of-language-plugins">List of Language plugins</h2>
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Detect</th>
+<th>Tx</th>
+<th>Offline</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/neon-lang-plugin-cld2">neon-lang-plugin-cld2</a></td>
+<td>yes</td>
+<td>no</td>
+<td>yes</td>
+<td>FOSS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/neon-lang-plugin-cld3">neon-lang-plugin-cld3</a></td>
+<td>yes</td>
+<td>no</td>
+<td>yes</td>
+<td>FOSS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/neon-lang-plugin-langdetect">neon-lang-plugin-langdetect</a></td>
+<td>yes</td>
+<td>no</td>
+<td>yes</td>
+<td>FOSS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/neon-lang-plugin-fastlang">neon-lang-plugin-fastlang</a></td>
+<td>yes</td>
+<td>no</td>
+<td>yes</td>
+<td>FOSS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/neon-lang-plugin-lingua_podre">neon-lang-plugin-lingua_podre</a></td>
+<td>yes</td>
+<td>no</td>
+<td>yes</td>
+<td>FOSS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/neon-lang-plugin-libretranslate">neon-lang-plugin-libretranslate</a></td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+<td>API (self hosted)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/neon-lang-plugin-apertium">neon-lang-plugin-apertium</a></td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+<td>API (self hosted)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/neon-lang-plugin-amazon_translate">neon-lang-plugin-amazon_translate</a></td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+<td>API (key)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/neon-lang-plugin-google_translate">neon-lang-plugin-google_translate</a></td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+<td>API (key)</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../audio_plugins/" class="btn btn-neutral float-left" title="Audio Playback"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../PHAL/" class="btn btn-neutral float-right" title="Platform/Hardware Abstraction Layer">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../audio_plugins/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../PHAL/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

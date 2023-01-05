@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/skill_structure/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Anatomy - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Anatomy";
+        var mkdocs_page_input_path = "skill_structure.md";
+        var mkdocs_page_url = "/community-docs/skill_structure/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Anatomy</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#vocab-dialog-and-locale-directories">vocab, dialog, and locale directories</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#initpy">init.py</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#importing-libraries">Importing libraries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#class-definition">Class definition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#init">init()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialize">initialize()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#intent_handler">@intent_handler</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stop">stop()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shutdown">shutdown()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create_skill">create_skill()</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#settingsmetayaml">settingsmeta.yaml</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setuppy">setup.py</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Skills &raquo;</li>
+      <li>Anatomy</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="anatomy-of-a-skill">Anatomy of a Skill</h2>
+<h3 id="vocab-dialog-and-locale-directories"><code>vocab</code>, <code>dialog</code>, and <code>locale</code> directories</h3>
+<p>The <code>dialog</code>, <code>vocab</code>, and <code>locale</code> directories contain subdirectories for each spoken language the skill supports.
+The subdirectories are named using the <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a> for the
+language.
+For example, Brazilian Portugues is 'pt-br', German is 'de-de', and Australian English is 'en-au'.</p>
+<p><code>dialog</code> and <code>vocab</code> have been deprecated, they are still supported but we strongly recommend you use <code>locale</code> for new
+skills</p>
+<p>inside the <code>locale</code> folder you will find subfolders for each language (eg. <code>en-us</code>), often all you need to do in order
+to translate a skill is adding a new folder for your language here</p>
+<p>each language folder can have the structure it wants, you may see files grouped by type in subfolder or all in the base
+folder</p>
+<p>You will find several unfamiliar file extensions in this folder, but these are simple text files</p>
+<ul>
+<li><code>.dialog</code> files used for defining speech responses</li>
+<li><code>.intent</code> files used for defining Padatious Intents</li>
+<li><code>.voc</code> files define keywords primarily used in Adapt Intents</li>
+<li><code>.entity</code> files define a named entity primarily used in Padatious Intents</li>
+</ul>
+<h3 id="initpy"><strong>init</strong>.py</h3>
+<p>The <code>__init__.py</code> file is where most of the Skill is defined using Python code. </p>
+<h4 id="importing-libraries">Importing libraries</h4>
+<pre><code class="language-python">from adapt.intent import IntentBuilder
+from mycroft import intent_handler
+from ovos_workshop.skills import OVOSSkill
+</code></pre>
+<p>This section of code imports the required <em>libraries</em>. Some libraries will be required on every Skill, and your skill
+may need to import additional libraries.</p>
+<h4 id="class-definition">Class definition</h4>
+<p>The <code>class</code> definition extends the <code>OVOSSkill</code> class:</p>
+<pre><code class="language-python">class HelloWorldSkill(OVOSSkill):
+</code></pre>
+<p>The class should be named logically, for example "TimeSkill", "WeatherSkill", "NewsSkill", "IPaddressSkill". If you
+would like guidance on what to call your Skill, please join
+the <a href="https://matrix.to/#/#openvoiceos-skills:matrix.org">skills Channel on OVOS Chat</a>.</p>
+<p>Inside the class, methods are then defined.</p>
+<h4 id="init"><strong>init</strong>()</h4>
+<p>This method is the <em>constructor</em>. It is called when the Skill is first constructed. It is often used to declare state
+variables or perform setup actions, however it cannot utilise OVOSSkill methods as the class does not yet exist. 
+You usually don't have to include the constructor.</p>
+<p>An example <code>__init__</code> method might be:</p>
+<pre><code class="language-python">def __init__(self):
+    super().__init__()
+    self.already_said_hello = False
+    self.be_friendly = True
+</code></pre>
+<h4 id="initialize">initialize()</h4>
+<p>Perform any final setup needed for the skill here. This function is invoked after the skill is fully constructed and
+registered with the system. Intents will be registered and Skill settings will be available.</p>
+<p>If you need to access <code>self.skill_id</code>, <code>self.bus</code>, <code>self.settings</code> or <code>self.filesystem</code> you must do it here instead of <code>__init__</code></p>
+<pre><code class="language-python">def initialize(self):
+    my_setting = self.settings.get('my_setting')
+</code></pre>
+<h4 id="intent_handler">@intent_handler</h4>
+<p>We can use the <code>initialize</code> function to manually register intents, however the <code>@intent_handler</code> decorator is a
+cleaner way to achieve this. We will learn all about the different <a href="../intents.md">Intents</a> shortly. </p>
+<p>You may also see the <code>@intent_file_handler</code> decorator used in Skills. This has been deprecated and you can now
+replace any instance of this with the simpler <code>@intent_handler</code> decorator.</p>
+<p>In skills we can see two different intent styles.</p>
+<ol>
+<li>An Adapt handler, triggered by a keyword defined in a <code>ThankYouKeyword.voc</code> file.</li>
+</ol>
+<pre><code class="language-python">   @intent_handler(IntentBuilder('ThankYouIntent').require('ThankYouKeyword'))
+   def handle_thank_you_intent(self, message):
+       self.speak_dialog(&quot;welcome&quot;)
+</code></pre>
+<ol>
+<li>A Padatious intent handler, triggered using a list of sample phrases.</li>
+</ol>
+<pre><code class="language-python">   @intent_handler('HowAreYou.intent')
+   def handle_how_are_you_intent(self, message):
+       self.speak_dialog(&quot;how.are.you&quot;)
+</code></pre>
+<p>In both cases, the function receives two <em>parameters</em>:</p>
+<ul>
+<li><code>self</code> - a reference to the HelloWorldSkill object itself</li>
+<li><code>message</code> - an incoming message from the <code>messagebus</code>.</li>
+</ul>
+<p>Both intents call the <code>self.speak_dialog()</code> method, passing the name of a dialog file to it. In this
+case <code>welcome.dialog</code> and <code>how.are.you.dialog</code>.</p>
+<h4 id="stop">stop()</h4>
+<p>You will usually also have a <code>stop()</code> method.</p>
+<p>The <code>stop</code> method is called anytime a User says "Stop" or a similar command. It is useful for stopping any output or process that a User might want to end without needing to issue a Skill specific utterance such as media playback or an expired alarm notification.</p>
+<p>In the following example, we call a method <code>stop_beeping</code> to end a notification that our Skill has created.</p>
+<pre><code class="language-python">    def stop(self):
+        self.stop_beeping()
+</code></pre>
+<p>If a Skill has any active functionality, the stop() method should terminate the functionality, leaving the Skill in a known good state.</p>
+<h4 id="shutdown">shutdown()</h4>
+<p>The <code>shutdown</code> method is called during the Skill process termination. 
+It is used to perform any final actions to ensure all processes and operations in execution are stopped safely. 
+This might be particularly useful for Skills that have scheduled future events, may be writing to a file or database, or that have initiated new processes.</p>
+<p>In the following example we cancel a scheduled event and call a method in our Skill to stop a subprocess we initiated.</p>
+<pre><code class="language-python">    def shutdown(self):
+        self.cancel_scheduled_event('my_event')
+        self.stop_my_subprocess()
+</code></pre>
+<h4 id="create_skill">create_skill()</h4>
+<p>The final code block in our Skill is the <code>create_skill</code> function that returns our new Skill:</p>
+<pre><code class="language-python">def create_skill():
+    return HelloWorldSkill()
+</code></pre>
+<p>This is required by OVOS and is responsible for actually creating an instance of your Skill that OVOS can load.</p>
+<p><em>Please note that this function is not scoped within your Skills class. It should not be indented to the same level as
+the methods discussed above.</em></p>
+<h3 id="settingsmetayaml">settingsmeta.yaml</h3>
+<p>This file defines the settings UI that will be available to a User through a backend or companion app</p>
+<p>Jump to <a href="skill-settings.md">Skill Settings</a> for more information on this file and handling of Skill settings.</p>
+<h3 id="setuppy">setup.py</h3>
+<p>This file allows a skill to be installed just like any other python package. This means you can publish your skill on pypi or favorite package manager and use it as a dependency</p>
+<p>A typical setup.py file looks like this</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+from setuptools import setup
+import os
+from os import walk, path
+
+
+# update this!
+URL = &quot;https://github.com/OpenVoiceOS/skill-awesome-stuff&quot;
+SKILL_CLAZZ = &quot;AwesomeSkill&quot;  # needs to match __init__.py class name
+PYPI_NAME = &quot;skill-awesome-stuff&quot;  # pip install PYPI_NAME
+
+
+# below derived from github url to ensure standard skill_id
+SKILL_AUTHOR, SKILL_NAME = URL.split(&quot;.com/&quot;)[-1].split(&quot;/&quot;)
+SKILL_PKG = SKILL_NAME.lower().replace('-', '_')
+PLUGIN_ENTRY_POINT = f'{SKILL_NAME.lower()}.{SKILL_AUTHOR.lower()}={SKILL_PKG}:{SKILL_CLAZZ}'
+# skill_id=package_name:SkillClass
+
+
+def get_requirements(requirements_filename: str):
+    requirements_file = path.join(path.abspath(path.dirname(__file__)),
+                                  requirements_filename)
+    with open(requirements_file, 'r', encoding='utf-8') as r:
+        requirements = r.readlines()
+    requirements = [r.strip() for r in requirements if r.strip()
+                    and not r.strip().startswith(&quot;#&quot;)]
+    if 'MYCROFT_LOOSE_REQUIREMENTS' in os.environ:
+        print('USING LOOSE REQUIREMENTS!')
+        requirements = [r.replace('==', '&gt;=').replace('~=', '&gt;=') for r in requirements]
+    return requirements
+
+
+def find_resource_files():
+    # add any folder with files your skill uses here! 
+    resource_base_dirs = (&quot;locale&quot;, &quot;ui&quot;, &quot;vocab&quot;, &quot;dialog&quot;, &quot;regex&quot;, &quot;skill&quot;)
+    base_dir = path.dirname(__file__)
+    package_data = [&quot;*.json&quot;]
+    for res in resource_base_dirs:
+        if path.isdir(path.join(base_dir, res)):
+            for (directory, _, files) in walk(path.join(base_dir, res)):
+                if files:
+                    package_data.append(
+                        path.join(directory.replace(base_dir, &quot;&quot;).lstrip('/'),
+                                  '*'))
+    return package_data
+
+
+# TODO - add description, author, email, license, etc
+setup(
+    # this is the package name that goes on pip
+    name=PYPI_NAME,
+    version=&quot;0.0.0&quot;,
+    url=URL,
+    license='Apache-2.0',
+    package_dir={SKILL_PKG: &quot;&quot;},
+    package_data={SKILL_PKG: find_resource_files()},
+    packages=[SKILL_PKG],
+    include_package_data=True,
+    install_requires=get_requirements(&quot;requirements.txt&quot;),
+    keywords='ovos skill plugin',
+    entry_points={'ovos.plugin.skill': PLUGIN_ENTRY_POINT}
+)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../guidelines/" class="btn btn-neutral float-left" title="Design Guidelines"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../statements/" class="btn btn-neutral float-right" title="Dialog">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../guidelines/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../statements/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

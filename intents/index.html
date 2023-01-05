@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/intents/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Intents - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Intents";
+        var mkdocs_page_input_path = "intents.md";
+        var mkdocs_page_url = "/community-docs/intents/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Intents</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#keyword-intents">Keyword Intents</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#defining-keywords-and-entities">Defining keywords and entities</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#vocab-voc-files">Vocab (.voc) Files</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#regular-expression-rx-files">Regular Expression (.rx) Files</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#using-keyword-intents-in-a-skill">Using Keyword Intents in a Skill</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#creating-the-intent-handler">Creating the Intent Handler</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#including-it-in-a-skill">Including it in a Skill</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#common-problems">Common Problems</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#more-vocab">More vocab!</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#i-have-added-new-phrases-in-the-voc-file-but-mycroft-isnt-recognizing-them">I have added new phrases in the .voc file, but Mycroft isn't recognizing them</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#i-am-unable-to-match-against-the-utterance-string">I am unable to match against the utterance string</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-based-intents">Example based Intents</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-intents">Creating Intents</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#defining-entities">Defining entities</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#specific-entities">Specific Entities</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#number-matching">Number matching</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#entities-with-unknown-tokens">Entities with unknown tokens</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parentheses-expansion">Parentheses Expansion</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#using-it-in-a-skill">Using it in a Skill</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#common-problems_1">Common Problems</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#i-am-unable-to-match-against-the-utterance-string_1">I am unable to match against the utterance string</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Skills &raquo;</li>
+      <li>Intents</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="intents">Intents</h1>
+<p>A user can accomplish the same task by expressing their intent in multiple ways. The role of the intent parser is to
+extract from the user's speech key data elements that specify their intent in more detail. This data can then be passed
+to other services, such as Skills to help the user accomplish their intended task.</p>
+<p><em>Example</em>: Julie wants to know about today's weather in her current location, which is Melbourne, Australia.</p>
+<blockquote>
+<p>"hey mycroft, what's today's weather like?"</p>
+<p>"hey mycroft, what's the weather like in Melbourne?"</p>
+<p>"hey mycroft, weather"</p>
+</blockquote>
+<p>Even though these are three different expressions, for most of us they probably have roughly the same meaning. In each
+case we would assume the user expects OVOS to respond with today's weather for their current location. The role of an
+intent parser is to determine what this intent is.</p>
+<p>In the example above, we might extract data elements like:</p>
+<ul>
+<li><strong>weather</strong> - we know that Julie wants to know about the weather, but she has not been specific about the type of
+  weather, such as <em>wind</em>, <em>precipitation</em>, <em>snowfall</em> or the risk of <em>fire danger</em> from bushfires. Melbourne, Australia
+  rarely experiences snowfall, but falls under bushfire risk every summer.</li>
+<li><strong>location</strong> - Julie has stipulated her location as Melbourne, but she does not state that she means Melbourne,
+  Australia. How do we distinguish this from Melbourne, Florida, United States?</li>
+<li><strong>date</strong> - Julie has been specific about the <em>timeframe</em> she wants weather data for - today. But how do we know what
+  today means in Julie's timezone. Melbourne, Australia is between 14-18 hours ahead of the United States. We don't want
+  to give Julie yesterday's weather, particularly as Melbourne is renowned for having changeable weather.</li>
+</ul>
+<p>OVOS has two separate Intent parsing engines each with their own strengths. 
+Each of these can be used in most situations, however they will process the utterance in different ways.</p>
+<p><strong>Example based</strong> intents are trained on whole phrases. These intents are generally more accurate however require you to include sample phrases that cover the
+breadth of ways that a User may ask about something.</p>
+<p><strong>Keyword / Rule based </strong> these intents look for specific required keywords. They are more flexible, but since these are essentially rule based this can result in a lot of false matches.
+A badly designed intent may totally throw the intent parser off guard. The main advantage of keyword based intents is the integration with <a href="../context">conversational context</a>, they facilitate continuous dialogs</p>
+<p>OVOS is moving towards a plugin system for intent engines, currently only the default MycroftAI intent parsers are supported</p>
+<ul>
+<li><strong>Padatious</strong> is a light-weight neural network that is trained on whole phrases. You can find the official documentation <a href="https://mycroft-ai.gitbook.io/docs/mycroft-technologies/padatious">here</a></li>
+<li><strong>Adapt</strong> is a keyword based parser. You can find the official documentation <a href="https://mycroft-ai.gitbook.io/docs/mycroft-technologies/adapt">here</a></li>
+</ul>
+<p>We will now look at each in more detail, including how to use them in a Skill.</p>
+<h2 id="keyword-intents">Keyword Intents</h2>
+<p>Keyword based intent parsers determine user intent based on a list of keywords or entities contained within a users utterance.</p>
+<h3 id="defining-keywords-and-entities">Defining keywords and entities</h3>
+<h4 id="vocab-voc-files">Vocab (.voc) Files</h4>
+<p>Vocab files define keywords that the intent parser will look for in a Users utterance to determine their intent.</p>
+<p>These files can be located in either the <code>vocab/lang-code/</code> or <code>locale/lang-code/</code> directories of a Skill. They can have one or more lines to list synonyms or terms that have the same meaning in the context of this Skill. 
+OVOS will match <em>any</em> of these keywords with the Intent.</p>
+<p>Consider a simple <code>Potato.voc</code>. Within this file we might include:</p>
+<pre><code>potato
+potatoes
+spud
+</code></pre>
+<p>If the User speaks <em>either</em>:</p>
+<blockquote>
+<p>potato</p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>potatoes</p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>spud</p>
+</blockquote>
+<p>OVOS will match this to any Keyword Intents that are using the <code>Potato</code> keyword.</p>
+<h4 id="regular-expression-rx-files">Regular Expression (.rx) Files</h4>
+<p>Regular expressions (or regex) allow us to capture entities based on the structure of an utterance.</p>
+<p>We strongly recommend you avoid using regex, it is very hard to make portable across languages, hard to translate and the reported confidence of the intents is not great.</p>
+<p>We suggest using example based intents instead if you find yourself needing regex</p>
+<p>These files can be located in either the <code>regex/lang-code/</code> or <code>locale/lang-code/</code> directories of a Skill. They can have one or more lines to provide different ways that an entity may be referenced. OVOS will execute these lines in the order they appear and return the first result as an entity to the Intent Handler.</p>
+<p>Let's consider a <code>type.rx</code> file to extract the type of potato we are interested in. Within this file we might include:</p>
+<pre><code>.* about (?P&lt;Type&gt;.*) potatoes
+.* (make|like) (?P&lt;Type&gt;.*) potato
+</code></pre>
+<p><strong>What is this regex doing?</strong> <code>.*</code> matches zero, one or more of any single character. <code>(?P&lt;Type&gt;.*)</code> is known as a Named Capturing Group. The variable name is defined between the , and what is captured is defined after this name. In this case we use <code>.*</code> to capture anything.</p>
+<p><a href="https://github.com/ziishaned/learn-regex/blob/master/README.md">Learn more about Regular Expressions</a>.</p>
+<p>So our first line would match an utterance such as:</p>
+<blockquote>
+<p>Tell me about <em>sweet potatoes</em></p>
+</blockquote>
+<p>Whilst the second line will match either:</p>
+<blockquote>
+<p>Do you like <em>deep fried potato</em></p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>How do I make <em>mashed potato</em></p>
+</blockquote>
+<p>From these three utterances, what will the extracted <code>Type</code> be:\
+1. <code>sweet</code>\
+2. <code>deep fried</code>\
+3. <code>mashed</code></p>
+<p>This <code>Type</code> will be available to use in your Skill's Intent Handler on the <code>message</code> object. We can access this using:</p>
+<pre><code>message.data.get('Type')
+</code></pre>
+<h3 id="using-keyword-intents-in-a-skill">Using Keyword Intents in a Skill</h3>
+<p>Now that we have a Vocab and Regular Expression defined, let's look at how to use these in a simple Skill.</p>
+<p>For the following example we will use the two files we outlined above:</p>
+<ul>
+<li><code>Potato.voc</code></li>
+<li><code>Type.rx</code></li>
+</ul>
+<p>We will also add some new <code>.voc</code> files:</p>
+<ul>
+<li><code>Like.voc</code> - containing a single line "like"</li>
+<li><code>You.voc</code> - containing a single line "you"</li>
+<li><code>I.voc</code> - containing a single line "I"</li>
+</ul>
+<h4 id="creating-the-intent-handler">Creating the Intent Handler</h4>
+<p>To construct a Keyword Intent, we use the intent_handler() _decorator_ and pass in the IntentBuilder helper class.</p>
+<p><a href="https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators">Learn more about <em>decorators</em> in Python</a>.</p>
+<p>Both of these must be imported before we can use them:</p>
+<pre><code class="language-python">from adapt.intent import IntentBuilder
+from mycroft import intent_handler
+</code></pre>
+<p>The IntentBuilder is then passed the name of the Intent as a string, followed by one or more parameters that correspond with one of our <code>.voc</code> or <code>.rx</code> files.</p>
+<pre><code class="language-python">@intent_handler(IntentBuilder('IntentName')
+                              .require('Potato')
+                              .require('Like')
+                              .optionally('Type')
+                              .one_of('You', 'I'))
+</code></pre>
+<p>In this example:</p>
+<ul>
+<li>the <code>Potato</code> and <code>Like</code> keywords are required. It must be present for the intent to match.</li>
+<li>the <code>Type</code> entity is optional. A stronger match will be made if this is found, but it is not required.</li>
+<li>we require at least one of the <code>You</code> or <code>I</code> keywords.</li>
+</ul>
+<p>What are some utterances that would match this intent?</p>
+<blockquote>
+<p>Do you like potato? Do you like fried potato? Will I like mashed potato? Do you think I would like potato?</p>
+</blockquote>
+<p>What are some utterances that would <em>not</em> match the intent?</p>
+<blockquote>
+<p>How do I make mashed potato?</p>
+</blockquote>
+<p><em>The required <code>Like</code> keyword is not found.</em></p>
+<blockquote>
+<p>Is it like a potato?</p>
+</blockquote>
+<p><em>Neither the <code>You</code> nor <code>I</code> keyword is found.</em></p>
+<h4 id="including-it-in-a-skill">Including it in a Skill</h4>
+<p>Now we can create our Potato Skill:</p>
+<pre><code class="language-python">from adapt.intent import IntentBuilder
+from mycroft import intent_handler
+
+class PotatoSkill(MycroftSkill):
+
+    @intent_handler(IntentBuilder('WhatIsPotato').require('What')
+                    .require('Potato'))
+    def handle_what_is(self, message):
+        self.speak_dialog('potato.description')
+
+    @intent_handler(IntentBuilder('DoYouLikePotato').require('Potato')
+                    .require('Like').optionally('Type').one_of('You', 'I'))
+    def handle_do_you_like(self, message):
+        potato_type = message.data.get('Type')
+        if potato_type is not None:
+            self.speak_dialog('like.potato.type',
+                              {'type': potato_type})
+        else:
+            self.speak_dialog('like.potato.generic')
+
+def create_skill():
+    return PotatoSkill()
+</code></pre>
+<p>You can <a href="https://github.com/krisgesling/dev-ex-adapt-intents-skill/blob/master/__init__.py">download this entire Potato Skill from Github</a>, or see another Keyword Intent handler example in the <a href="https://github.com/MycroftAI/skill-hello-world/blob/f3eb89be6d80e1834637a64566c707d05fb8e3fa/__init__.py#L37">Hello World Skill</a></p>
+<h3 id="common-problems">Common Problems</h3>
+<h4 id="more-vocab">More vocab!</h4>
+<p>One of the most common mistakes when getting started with Skills is that the vocab file doesn't include all of the keywords or terms that a User might use to trigger the intent. It is important to map out your Skill and test the interactions with others to see how they might ask questions differently.</p>
+<h4 id="i-have-added-new-phrases-in-the-voc-file-but-mycroft-isnt-recognizing-them">I have added new phrases in the .voc file, but Mycroft isn't recognizing them</h4>
+<ol>
+<li>Compound words like "don't", "won't", "shouldn't" etc. are normalized by OVOS - so they become "do not", "will not", "should not". You should use the normalized words in your <code>.voc</code> files. Similarly, definite articles like the word "the" are removed in the normalization process, so avoid using them in your <code>.voc</code> or <code>.rx</code> files as well.</li>
+<li>Tab != 4 Spaces, sometimes your text editor or IDE automatically replaces tabs with spaces or vice versa. This may lead to an indentation error. So make sure there's no extra tabs and that your editor doesn't replace your spaces!</li>
+<li>Wrong order of files directories is a very common mistake. You have to make a language sub-folder inside the dialog, vocab or locale folders such as <code>skill-dir/locale/en-us/somefile.dialog</code>. So make sure that your <code>.voc</code> files and <code>.dialog</code> files inside a language subfolder.</li>
+</ol>
+<h4 id="i-am-unable-to-match-against-the-utterance-string">I am unable to match against the utterance string</h4>
+<p>The utterance string received from the speech-to-text engine is received all lowercase. As such any string matching you are trying to do should also be converted to lowercase. For example:</p>
+<pre><code class="language-python">    @intent_handler(IntentBuilder('Example').require('Example').require('Intent'))
+    def handle_example(self, message):
+        utterance = message.data.get('utterance')
+        if 'Proper Noun'.lower() in utterance:
+            self.speak('Found it')
+</code></pre>
+<h2 id="example-based-intents">Example based Intents</h2>
+<p>Example based parsers have a number of key benefits over other intent parsing technologies.</p>
+<ul>
+<li>Intents are easy to create</li>
+<li>You can easily extract entities and then use these in Skills. For example, "Find the nearest gas station" -&gt; <code>{ "place":"gas station"}</code></li>
+<li>Disambiguation between intents is easier</li>
+<li>Harder to create a bad intent that throws the intent parser off</li>
+</ul>
+<h3 id="creating-intents">Creating Intents</h3>
+<p>Most example based intent parsers use a series of example sentences to train a machine learning model to identify an intent. Regex can also be used behind the scenes for example to extract entities</p>
+<p>The examples are stored in a Skill's <code>vocab/lang</code> or <code>local/lang</code> directory, in files ending in the file extension <code>.intent</code>. For example, if you were to create a <em>tomato</em> Skill to respond to questions about a <em>tomato</em>, you would create the file</p>
+<p><code>vocab/en-us/what.is.a.tomato.intent</code></p>
+<p>This file would contain examples of questions asking what a <em>tomato</em> is.</p>
+<pre><code class="language-text">what would you say a tomato is
+what is a tomato
+describe a tomato
+what defines a tomato
+</code></pre>
+<p>These sample phrases do not require punctuation like a question mark. We can also leave out contractions such as "what's", as this will be automatically expanded to "what is" by OVOS before the utterance is parsed.</p>
+<p>Each file should contain at least 4 examples for good modeling.</p>
+<p>The above example allows us to map many phrases to a single intent, however often we need to extract specific data from an utterance. This might be a date, location, category, or some other <code>entity</code>.</p>
+<h4 id="defining-entities">Defining entities</h4>
+<p>Let's now find out OVOS's opinion on different types of tomatoes. To do this we will create a new intent file: <code>vocab/en-us/do.you.like.intent</code></p>
+<p>with examples of questions about mycroft's opinion about tomatoes:</p>
+<pre><code class="language-text">are you fond of tomatoes
+do you like tomatoes
+what are your thoughts on tomatoes
+are you fond of {type} tomatoes
+do you like {type} tomatoes
+what are your thoughts on {type} tomatoes
+</code></pre>
+<p>Note the <code>{type}</code> in the above examples. These are wild-cards where matching content is forwarded to the skill's intent handler.</p>
+<h4 id="specific-entities">Specific Entities</h4>
+<p>In the above example, <code>{type}</code> will match anything. While this makes the intent flexible, it will also match if we say something like Do you like eating tomatoes?. It would think the type of tomato is <code>"eating"</code> which doesn't make much sense. Instead, we can specify what type of things the {type} of tomato should be. We do this by defining the type entity file here:</p>
+<p><code>vocab/en-us/type.entity</code></p>
+<p>which might contain something like:</p>
+<pre><code class="language-text">red
+reddish
+green
+greenish
+yellow
+yellowish
+ripe
+unripe
+pale
+</code></pre>
+<p>This must be registered in the Skill before use - most commonly in the <code>initialize()</code> method:</p>
+<pre><code class="language-python">from mycroft import MycroftSkill, intent_handler
+
+class TomatoSkill(MycroftSkill):
+    def initialize(self):
+        self.register_entity_file('type.entity')
+</code></pre>
+<p>Now, we can say things like "do you like greenish tomatoes?" and it will tag type as: <code>"greenish"</code>. However if we say "do you like eating tomatoes?" - the phrase will not match as <code>"eating"</code> is not included in our <code>type.entity</code> file.</p>
+<h4 id="number-matching">Number matching</h4>
+<p>Let's say you are writing an Intent to call a phone number. You can make it only match specific formats of numbers by writing out possible arrangements using <code>#</code> where a number would go. For example, with the following intent:</p>
+<pre><code class="language-text">Call {number}.
+Call the phone number {number}.
+</code></pre>
+<p>the number.entity could be written as:</p>
+<pre><code class="language-text">+### (###) ###-####
++## (###) ###-####
++# (###) ###-####
+(###) ###-####
+###-####
+###-###-####
+###.###.####
+### ### ####
+##########
+</code></pre>
+<h4 id="entities-with-unknown-tokens">Entities with unknown tokens</h4>
+<p>Let's say you wanted to create an intent to match places:</p>
+<pre><code class="language-text">Directions to {place}.
+Navigate me to {place}.
+Open maps to {place}.
+Show me how to get to {place}.
+How do I get to {place}?
+</code></pre>
+<p>This alone will work, but it will still get a high confidence with a phrase like "How do I get to the boss in my game?". We can try creating a <code>.entity</code> file with things like:</p>
+<pre><code class="language-text">New York City
+#### Georgia Street
+San Francisco
+</code></pre>
+<p>The problem is, now anything that is not specifically a mix of New York City, San Francisco, or something on Georgia Street won't match. Instead, we can specify an unknown word with :0. This would would be written as:</p>
+<pre><code class="language-text">:0 :0 City
+#### :0 Street
+:0 :0
+</code></pre>
+<p>Now, while this will still match quite a lot, it will match things like "Directions to Baldwin City" more than "How do I get to the boss in my game?"</p>
+<p><em>NOTE: Currently, the number of :0 words is not fully taken into consideration so the above might match quite liberally, but this will change in the future.</em></p>
+<h4 id="parentheses-expansion">Parentheses Expansion</h4>
+<p>Sometimes you might find yourself writing a lot of variations of the same thing. For example, to write a skill that orders food, you might write the following intent:</p>
+<pre><code class="language-text">Order some {food}.
+Order some {food} from {place}.
+Grab some {food}.
+Grab some {food} from {place}.
+</code></pre>
+<p>Rather than writing out all combinations of possibilities, you can embed them into one or more lines by writing each possible option inside parentheses with | in between each part. For example, that same intent above could be written as:</p>
+<pre><code class="language-text">(Order | Grab) some {food}
+(Order | Grab) some {food} from {place}
+</code></pre>
+<p>or even on a single-line:</p>
+<pre><code class="language-text">(Order | Grab) some {food} (from {place} | )
+</code></pre>
+<p>Nested parentheses are supported to create even more complex combinations, such as the following:</p>
+<pre><code class="language-text">(Look (at | for) | Find) {object}.
+</code></pre>
+<p>Which would expand to:</p>
+<pre><code class="language-text">Look at {object}
+Look for {object}
+Find {object}
+</code></pre>
+<p>There is no performance benefit to using parentheses expansion. When used appropriately, this syntax can be much clearer to read. However more complex structures should be broken down into multiple lines to aid readability and reduce false utterances being included in the model. Overuse can even result in the model training timing out, rendering the Skill unusable.</p>
+<h3 id="using-it-in-a-skill">Using it in a Skill</h3>
+<p>The <code>intent_handler()</code> <em>decorator</em> can be used to create a examples based intent handler by passing in the filename of the <code>.intent</code> file as a string.</p>
+<p>You may also see the <code>@intent_file_handler</code> decorator used in Skills. This has been deprecated and you can now replace any instance of this with the simpler <code>@intent_handler</code> decorator.</p>
+<p>From our first example above, we created a file <code>vocab/en-us/what.is.a.tomato.intent</code>. To register an intent using this file we can use:</p>
+<pre><code class="language-python">@intent_handler('what.is.a.tomato.intent')
+</code></pre>
+<p>This <em>decorator</em> must be imported before it is used:</p>
+<pre><code class="language-python">from mycroft import intent_handler
+</code></pre>
+<p><a href="https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators">Learn more about <em>decorators</em> in Python</a>.</p>
+<p>Now we can create our Tomato Skill:</p>
+<pre><code class="language-python">from mycroft import MycroftSkill, intent_handler
+
+class TomatoSkill(MycroftSkill):
+
+    def initialize(self):
+        self.register_entity_file('type.entity')
+
+    @intent_handler('what.is.a.tomato.intent')
+    def handle_what_is(self, message):
+        self.speak_dialog('tomato.description')
+
+    @intent_handler('do.you.like.intent')
+    def handle_do_you_like(self, message):
+        tomato_type = message.data.get('type')
+        if tomato_type is not None:
+            self.speak_dialog('like.tomato.type',
+                              {'type': tomato_type})
+        else:
+            self.speak_dialog('like.tomato.generic')
+
+    def stop(self):
+        pass
+
+def create_skill():
+    return TomatoSkill()
+</code></pre>
+<p>See a Padatious intent handler example in the <a href="https://github.com/MycroftAI/skill-hello-world/blob/67a972792a07da7e3406bf7f94acd54aa2674829/__init__.py#L42">Hello World Skill</a></p>
+<h3 id="common-problems_1">Common Problems</h3>
+<h4 id="i-am-unable-to-match-against-the-utterance-string_1">I am unable to match against the utterance string</h4>
+<p>The utterance string received from the speech-to-text engine is received all lowercase. As such any string matching you are trying to do should also be converted to lowercase. For example:</p>
+<pre><code class="language-python">    @intent_handler('example.intent')
+    def handle_example(self, message):
+        utterance = message.data.get('utterance')
+        if 'Proper Noun'.lower() in utterance:
+            self.speak('Found it')
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prompts/" class="btn btn-neutral float-left" title="Prompts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../context/" class="btn btn-neutral float-right" title="Context">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prompts/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../context/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

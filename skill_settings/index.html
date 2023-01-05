@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/skill_settings/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Skill Settings - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Skill Settings";
+        var mkdocs_page_input_path = "skill_settings.md";
+        var mkdocs_page_url = "/community-docs/skill_settings/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Skill Settings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#using-settings-in-your-skill">Using settings in your Skill</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#reading-settings">Reading settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#handling-settings-changes">Handling settings changes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#writing-to-settings">Writing to settings</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#define-settings-ui-for-a-skill">Define settings UI for a Skill</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-settingsmeta-file">Example settingsmeta file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#structure-of-the-settingsmeta-file">Structure of the settingsmeta file</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#sections">Sections</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#settingsmeta-examples">SettingsMeta Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#label-field">Label Field</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#text-field">Text Field</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#email">Email</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checkbox">Checkbox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#number">Number</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#password">Password</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select">Select</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Skills &raquo;</li>
+      <li>Skill Settings</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="skill-settings">Skill Settings</h1>
+<p>Skill settings provide the ability for users to configure a Skill using the command line or a web-based interface. </p>
+<p>This is often used to:</p>
+<ul>
+<li>Change default behaviors - such as the sound used for users alarms.</li>
+<li>Authenticate with external services - such as Spotify</li>
+<li>Enter longer data as text rather than by voice - such as the IP address of the users Home Assistant server.</li>
+</ul>
+<p>Skill settings are completely optional.</p>
+<h2 id="using-settings-in-your-skill">Using settings in your Skill</h2>
+<p>Settings can be managed via command line, shipped by images or managed via a backend if ovos-core us configured to use one</p>
+<p>When settings are fetched from the backend server, they are saved into a <code>settings.json</code> file. 
+This file is automatically created when a Skill is loaded even if the Skill does not have any settings. 
+Your Skill then accesses the settings from this file. 
+Nowadays the file is located in the Skill's XDG_CONFIG_DIR (usually <code>~/config/mycroft/skills/&lt;skillname&gt;</code>), however if a <code>settings.json</code> file already exists in the Skill's root directory (the deprecated location) that location is used for compatibility.</p>
+<h3 id="reading-settings">Reading settings</h3>
+<p>Skill settings are available on the MycroftSkill class and inherit from a Python Dict. This means that you can use it just like you would any other Python dictionary.</p>
+<p>To access the <code>show_time</code> variable from our example above we would use the <code>Dict.get</code> method:</p>
+<pre><code class="language-python">self.settings.get('show_time')
+</code></pre>
+<p>If the setting we are trying to access is not available, the <code>get</code> method will return <code>None</code>. Instead of assigning this to a variable and then testing for <code>None</code>, we can provide a default value as the second argument to the <code>get</code> method.</p>
+<pre><code class="language-python">self.settings.get('show_time', False)
+</code></pre>
+<p>In this example, if the settings have not been received, or the <code>show_time</code> setting has not been assigned, it will return the default value <code>False</code>.</p>
+<p><strong>A few warnings</strong></p>
+<p>We recommend using the <code>Dict.get</code> method above rather than accessing the setting directly with:</p>
+<pre><code class="language-python">self.settings['show_time']
+</code></pre>
+<p>Directly referencing the value may throw a KeyError if the setting has not yet been fetched from the server.</p>
+<p>It is also important to note that the <code>settings</code> dictionary will not be available in your Skills <code>__init__</code> method as this is setting up your Skills Class. 
+You should instead use an <code>initialize</code> method which is called after the Skill is fully constructed and registered with the system.</p>
+<h3 id="handling-settings-changes">Handling settings changes</h3>
+<p>OVOS will check for updates to a users settings regularly, both locally and on the configured backend. </p>
+<p>To perform some action when settings are updated, you can register a callback function in your Skill.</p>
+<pre><code class="language-python">def initialize(self):
+  self.settings_change_callback = self.on_settings_changed
+  self.on_settings_changed()
+
+def on_settings_changed(self):
+  show_time = self.settings.get('show_time', False)
+  self.trigger_time_display(show_time)
+</code></pre>
+<p>In the example above, we have registered the <code>on_settings_changed</code> method to be our callback function. 
+We have then immediately called the method to perform the relevant actions when the Skill is being initialized even though the Skills settings have not changed.</p>
+<p>In the <code>on_settings_changed</code> method we have assigned the value of the <code>show_time</code> setting to a local variable. Then we have passed it as an argument to another method in our Skill that will trigger the display of the time based on its value.</p>
+<h3 id="writing-to-settings">Writing to settings</h3>
+<p>Your Skill can reassign a setting locally. To do this we assign a value like you would with any other dictionary key.</p>
+<pre><code class="language-python">self.settings['show_time'] = True
+</code></pre>
+<p>The new value for the <code>show_time</code> setting will persist until a new setting is assigned locally by the Skill, or remotely if the user configured a backend</p>
+<h2 id="define-settings-ui-for-a-skill">Define settings UI for a Skill</h2>
+<p>To define our Skills settings UI we use a <code>settingsmeta.json</code> or <code>settingsmeta.yaml</code> file. 
+This file must be in the root directory of the Skill and must follow a specific structure.</p>
+<p>Once settings have been defined using a <code>settingsmeta</code> file, they will be presented to the user in the configured backend or helper application</p>
+<h3 id="example-settingsmeta-file">Example settingsmeta file</h3>
+<p>To see it in action, lets look at a simple example from the <a href="https://github.com/MycroftAI/skill-date-time">Date-Time Skill</a>. First using the JSON syntax as a <code>settingsmeta.json</code> file:</p>
+<pre><code class="language-javascript">{
+    &quot;skillMetadata&quot;: {
+        &quot;sections&quot;: [
+            {
+                &quot;name&quot;: &quot;Display&quot;,
+                &quot;fields&quot;: [
+                    {
+                        &quot;name&quot;: &quot;show_time&quot;,
+                        &quot;type&quot;: &quot;checkbox&quot;,
+                        &quot;label&quot;: &quot;Show digital clock when idle&quot;,
+                        &quot;value&quot;: &quot;true&quot;
+                    }
+                ]
+            }
+        ]
+    }
+}
+</code></pre>
+<p>Now, here is the same settings, as it would be defined with YAML in a <code>settingsmeta.yaml</code> file:</p>
+<pre><code class="language-yaml">skillMetadata:
+   sections:
+      - name: Display
+        fields:
+          - name: show_time
+            type: checkbox
+            label: Show digital clock when idle
+            value: &quot;true&quot;
+</code></pre>
+<p>Notice that the value of <code>false</code> is surrounded by "quotation marks". This is because OVOS expects a string of <code>"true"</code> or <code>"false"</code> rather than a Boolean.</p>
+<p>Both of these files would result in the same settings block.</p>
+<p><img alt="" src="https://3867939753-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LocrEaSe-b3SJ4H87SC%2Fsync%2F1535fed57a285e48b63090cb9e6c82591f3aacc0.png?generation=1599008778025054&amp;alt=media" /></p>
+<p>It is up to your personal preference which syntax you choose.</p>
+<h3 id="structure-of-the-settingsmeta-file">Structure of the settingsmeta file</h3>
+<p>Whilst the syntax differs, the structure of these two filetypes is the same. This starts at the top level of the file by defining a <code>skillMetadata</code> object. This object must contain one or more <code>sections</code> elements.</p>
+<h4 id="sections">Sections</h4>
+<p>Each section represents a group of settings that logically sit together. This enables us to display the settings more clearly in the web interface for users.</p>
+<p>In the simple example above we have just one section. However the <a href="https://github.com/forslund/spotify-skill/blob/19.08/settingsmeta.json">Spotify Skill settings</a> contains two sections. The first is for Spotify Account authentication, and the second section contains settings to define your default playback device.</p>
+<p>Each section must contain a <code>name</code> attribute that is used as the heading for that section, and an Array of <code>fields</code>.</p>
+<h4 id="fields">Fields</h4>
+<p>Each section has one or more <code>fields</code>. Each field is a setting available to the user. Each field takes four properties:</p>
+<ul>
+<li>
+<p><code>name</code> (String)</p>
+<p>The <code>name</code> of the <code>field</code> is used by the Skill to get and set the value of the <code>field</code>. It will not usually be displayed to the user, unless the <code>label</code> property has not been set.
+*   <code>type</code> (Enum)</p>
+<p>The data type of this field. The supported types are:</p>
+<ul>
+<li><code>text</code>: any kind of text</li>
+<li><code>email</code>: text validated as an email address</li>
+<li><code>checkbox</code>: boolean, True or False</li>
+<li><code>number</code>: text validated as a number</li>
+<li><code>password</code>: text hidden from view by default</li>
+<li><code>select</code>: a drop-down menu of options</li>
+<li><code>label</code>: special field to display text for information purposes only. No name or value is required for a <code>label</code> field.</li>
+<li><code>label</code> (String)</li>
+</ul>
+<p>The text to be displayed above the setting field.
+*   <code>value</code> (String)</p>
+<p>The initial value of the field.</p>
+</li>
+</ul>
+<p>Examples for each type of field are provided in JSON and YAML at the end of this page.</p>
+<h2 id="settingsmeta-examples">SettingsMeta Examples</h2>
+<h3 id="label-field">Label Field</h3>
+<pre><code class="language-yaml">skillMetadata:
+   sections:
+      - name: Label Field Example
+        fields:
+          - type: label
+            label: This is descriptive text.
+</code></pre>
+<h3 id="text-field">Text Field</h3>
+<pre><code class="language-yaml">skillMetadata:
+   sections:
+      - name: Text Field Example
+        fields:
+          - name: my_string
+            type: text
+            label: Enter any text
+            value:
+</code></pre>
+<h3 id="email">Email</h3>
+<pre><code class="language-yaml">skillMetadata:
+   sections:
+      - name: Email Field Example
+        fields:
+          - name: my_email_address
+            type: email
+            label: Enter your email address
+            value:
+</code></pre>
+<h3 id="checkbox">Checkbox</h3>
+<pre><code class="language-yaml">skillMetadata:
+   sections:
+      - name: Checkbox Field Example
+        fields:
+          - name: my_boolean
+            type: checkbox
+            label: This is an example checkbox. It creates a Boolean value.
+            value: &quot;false&quot;
+</code></pre>
+<h3 id="number">Number</h3>
+<pre><code class="language-yaml">skillMetadata:
+   sections:
+      - name: Number Field Example
+        fields:
+          - name: my_number
+            type: number
+            label: Enter any number
+            value: 7
+</code></pre>
+<h3 id="password">Password</h3>
+<pre><code class="language-yaml">skillMetadata:
+   sections:
+      - name: Password Field Example
+        fields:
+          - name: my_password
+            type: password
+            label: Enter your password
+            value:
+</code></pre>
+<h3 id="select">Select</h3>
+<pre><code class="language-yaml">skillMetadata:
+   sections:
+      - name: Select Field Example
+        fields:
+          - name: my_selected_option
+            type: select
+            label: Select an option
+            options: Option 1|option_one;Option 2|option_two;Option 3|option_three
+            value: option_one
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../skill_filesystem/" class="btn btn-neutral float-left" title="Filesystem"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../skill_gui/" class="btn btn-neutral float-right" title="Skill GUI">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../skill_filesystem/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../skill_gui/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

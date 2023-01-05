@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/dev/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>F.A.Q. - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "F.A.Q.";
+        var mkdocs_page_input_path = "dev.md";
+        var mkdocs_page_url = "/community-docs/dev/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">F.A.Q.</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-know-what-is-currently-happening-in-the-gui">How do I know what is currently happening in the GUI?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-stop-an-intent-mid-execution">How do I stop an intent mid execution?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-send-files-over-the-bus">How do I send files over the bus?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-use-oauth-in-a-skill">How do I use OAuth in a skill?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-manage-remote-skill-settings">How do I manage remote skill settings?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-share-data-between-devices">How do I share data between devices?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-use-geolocation-backend-services">How do I use Geolocation backend services?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-use-weather-backend-services">How do I use Weather backend services?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-use-wolframalpha-backend-services">How do I use WolframAlpha backend services?</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Skills &raquo;</li>
+      <li>F.A.Q.</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="developer-faq">Developer FAQ</h1>
+<ul>
+<li><a href="#how-do-i-know-what-is-currently-happening-in-the-gui">How do I know what is currently happening in the GUI?</a></li>
+<li><a href="#how-do-i-stop-an-intent-mid-execution">How do I stop an intent mid execution?</a></li>
+<li><a href="#how-do-i-send-files-over-the-bus">How do I send files over the bus?</a></li>
+<li><a href="#how-do-i-use-oauth-in-a-skill">How do I use OAuth in a skill?</a></li>
+<li><a href="#how-do-i-manage-remote-skill-settings-">How do I manage remote skill settings?</a></li>
+<li><a href="#how-do-i-share-data-between-devices-">How do I share data between devices?</a></li>
+<li><a href="#how-do-i-use-geolocation-backend-services-">How do I use Geolocation backend services?</a></li>
+<li><a href="#how-do-i-use-weather-backend-services-">How do I use Weather backend services?</a></li>
+<li><a href="#how-do-i-use-wolframalpha-backend-services-">How do I use WolframAlpha backend services?</a></li>
+</ul>
+<h2 id="how-do-i-know-what-is-currently-happening-in-the-gui">How do I know what is currently happening in the GUI?</h2>
+<pre><code class="language-python">from ovos_utils.gui import GUITracker
+from ovos_workshop.skills import OVOSSkill
+from mycroft import intent_handler
+
+
+class MyGUIEventTracker(GUITracker):
+    # GUI event handlers
+    # skill can/should subclass this
+
+    def on_idle(self, namespace):
+        print(&quot;IDLE&quot;, namespace)
+        timestamp = self.idle_ts
+
+    def on_active(self, namespace):
+        # NOTE: page has not been loaded yet
+        # event will fire right after this one
+        print(&quot;ACTIVE&quot;, namespace)
+        # check namespace values, they should all be set before this event
+        values = self.gui_values[namespace]
+
+    def on_new_page(self, page, namespace, index):
+        print(&quot;NEW PAGE&quot;, namespace, index, namespace)
+        # check all loaded pages
+        for n in self.gui_pages:  # list of named tuples
+            nspace = n.name  # namespace / skill_id
+            pages = n.pages  # ordered list of page uris
+
+    def on_gui_value(self, namespace, key, value):
+        # WARNING this will pollute logs quite a lot, and you will get
+        # duplicates, better to check values on a different event,
+        # demonstrated in on_active
+        print(&quot;VALUE&quot;, namespace, key, value)
+
+
+class MySkill(OVOSSkill): 
+    def initialize(self):
+        self.tracker = MyGUIEventTracker(bus=self.bus)
+
+    @intent_handler(&quot;gui.status.intent&quot;)
+    def handle_status_intent(self, message):
+        print(&quot;device has screen:&quot;, self.tracker.can_display())
+        print(&quot;mycroft-gui installed:&quot;, self.tracker.is_gui_installed())
+        print(&quot;gui connected:&quot;, self.tracker.is_gui_connected())
+        # TODO - speak or something
+
+    @intent_handler(&quot;list.idle.screens.intent&quot;)
+    def handle_idle_screens_intent(self, message):
+        # check registered idle screens
+        print(&quot;Registered idle screens:&quot;)
+        for name in self.tracker.idle_screens:
+            skill_id = self.tracker.idle_screens[name]
+            print(&quot;   - &quot;, name, &quot;:&quot;, skill_id)
+            # TODO - speak or something
+</code></pre>
+<h2 id="how-do-i-stop-an-intent-mid-execution">How do I stop an intent mid execution?</h2>
+<p>Sometimes you want to abort a running intent immediately, the stop method may not be enough in some circumstances
+we provide a <code>killable_intent</code> decorator in <code>ovos_workshop</code> that can be used to abort a running intent immediately</p>
+<p>a common use case is for GUI interfaces where the same action may be done by voice or clicking buttons, in this case you may need to abort a running <code>get_response</code> loop</p>
+<pre><code class="language-python">from ovos_workshop.skills import OVOSSkill
+from ovos_workshop.decorators import killable_intent
+from mycroft import intent_handler
+from time import sleep
+
+
+class Test(OVOSSkill):
+    &quot;&quot;&quot;
+    send &quot;mycroft.skills.abort_question&quot; and confirm only get_response is aborted
+    send &quot;mycroft.skills.abort_execution&quot; and confirm the full intent is aborted, except intent3
+    send &quot;my.own.abort.msg&quot; and confirm intent3 is aborted
+    say &quot;stop&quot; and confirm all intents are aborted
+    &quot;&quot;&quot;
+    def __init__(self):
+        super(Test, self).__init__(&quot;KillableSkill&quot;)
+        self.my_special_var = &quot;default&quot;
+
+    def handle_intent_aborted(self):
+        self.speak(&quot;I am dead&quot;)
+        # handle any cleanup the skill might need, since intent was killed
+        # at an arbitrary place of code execution some variables etc. might
+        # end up in unexpected states
+        self.my_special_var = &quot;default&quot;
+
+    @killable_intent(callback=handle_intent_aborted)
+    @intent_handler(&quot;test.intent&quot;)
+    def handle_test_abort_intent(self, message):
+        self.my_special_var = &quot;changed&quot;
+        while True:
+            sleep(1)
+            self.speak(&quot;still here&quot;)
+
+    @intent_handler(&quot;test2.intent&quot;)
+    @killable_intent(callback=handle_intent_aborted)
+    def handle_test_get_response_intent(self, message):
+        self.my_special_var = &quot;CHANGED&quot;
+        ans = self.get_response(&quot;question&quot;, num_retries=99999)
+        self.log.debug(&quot;get_response returned: &quot; + str(ans))
+        if ans is None:
+            self.speak(&quot;question aborted&quot;)
+
+    @killable_intent(msg=&quot;my.own.abort.msg&quot;, callback=handle_intent_aborted)
+    @intent_handler(&quot;test3.intent&quot;)
+    def handle_test_msg_intent(self, message):
+        if self.my_special_var != &quot;default&quot;:
+            self.speak(&quot;someone forgot to cleanup&quot;)
+        while True:
+            sleep(1)
+            self.speak(&quot;you can't abort me&quot;)
+</code></pre>
+<h2 id="how-do-i-send-files-over-the-bus">How do I send files over the bus?</h2>
+<p>Sometimes you may want to send files or binary data over the messagebus, <code>ovos_utils</code> provides some tools to make this easy</p>
+<p>Sending a file</p>
+<pre><code class="language-python">from ovos_utils.messagebus import send_binary_file_message, decode_binary_message
+from ovos_workshop.skills import OVOSSkill
+
+
+class MySkill(OVOSSkill): 
+    def initialize(self):
+        self.add_event(&quot;mycroft.binary.file&quot;, self.receive_file)
+
+    def receive_file(self, message):
+        print(&quot;Receiving file&quot;)
+        path = message.data[&quot;path&quot;]  # file path, extract filename if needed
+        binary_data = decode_binary_message(message)
+        # TODO process data somehow
+
+    def send_file(self, my_file_path):
+        send_binary_file_message(my_file_path)
+</code></pre>
+<p>Sending binary data directly</p>
+<pre><code class="language-python">from ovos_utils.messagebus import send_binary_data_message, decode_binary_message
+from ovos_workshop.skills import OVOSSkill
+
+
+class MySkill(OVOSSkill):
+    def initialize(self):
+        self.add_event(&quot;mycroft.binary.data&quot;, self.receive_binary)
+
+    def send_data(self, binary_data):
+        send_binary_data_message(binary_data)
+
+    def receive_binary(self, message):
+        print(&quot;Receiving binary data&quot;)
+        binary_data = decode_binary_message(message)
+         # TODO process data somehow
+</code></pre>
+<h2 id="how-do-i-use-oauth-in-a-skill">How do I use OAuth in a skill?</h2>
+<p>Retrieving the tokens in a skill does not depend on the selected backend, the mechanism to register a token is backend
+specific</p>
+<p>First you need to authorize the application, this can be done
+with <a href="https://github.com/OpenVoiceOS/ovos-config-assistant">ovos-config-assistant</a> if running offline
+or <a href="https://github.com/OpenVoiceOS/ovos-backend-manager">ovos-backend-manager</a> if using personal backend</p>
+<p>If using selene there is no automated process to add a
+token, <a href="https://chat.mycroft.ai/community/pl/ynftpfuwo3gubxmta5qqronpch">you need to contact</a> support@mycroft.ai</p>
+<pre><code class="language-python">from ovos_backend_client.api import OAuthApi, BackendType
+
+# api = OAuthApi()  # determine oauth backend from mycroft.conf
+api = OAuthApi(backend_type=BackendType.OFFLINE)  # explicitly use ovos-backend-manager oauth
+token_json = api.get_oauth_token(&quot;spotify&quot;)
+</code></pre>
+<h2 id="how-do-i-manage-remote-skill-settings">How do I manage remote skill settings?</h2>
+<p>To interact with skill settings via DeviceApi</p>
+<pre><code class="language-python">from ovos_backend_client.settings import RemoteSkillSettings
+
+# in ovos-core skill_id is deterministic and safe
+s = RemoteSkillSettings(&quot;skill.author&quot;)
+# in mycroft-core please ensure a valid remote_id
+# in MycroftSkill class you can use
+# remote_id = self.settings_meta.skill_gid
+# s = RemoteSkillSettings(&quot;skill.author&quot;, remote_id=&quot;@|whatever_msm_decided&quot;)
+s.download()
+
+s.settings[&quot;existing_value&quot;] = True
+s.settings[&quot;new_value&quot;] = &quot;will NOT show up in UI&quot;
+s.upload()
+
+# auto generate new settings meta for all new values before uploading
+s.settings[&quot;new_value&quot;] = &quot;will show up in UI&quot;
+s.generate_meta()  # now &quot;new_value&quot; is in meta
+s.upload()
+
+
+</code></pre>
+<h2 id="how-do-i-share-data-between-devices">How do I share data between devices?</h2>
+<p>by hijacking skill settings we allow storing arbitrary data via DeviceApi and use it across devices and skills</p>
+<pre><code class="language-python">from ovos_backend_client.cloud import SeleneCloud
+
+cloud = SeleneCloud()
+cloud.add_entry(&quot;test&quot;, {&quot;secret&quot;: &quot;NOT ENCRYPTED MAN&quot;})
+data = cloud.get_entry(&quot;test&quot;)
+</code></pre>
+<p>an encrypted version is also supported if you don't trust the backend!</p>
+<pre><code class="language-python">from ovos_backend_client.cloud import SecretSeleneCloud
+
+k = &quot;D8fmXEP5VqzVw2HE&quot;  # you need this to read back the data
+cloud = SecretSeleneCloud(k)
+cloud.add_entry(&quot;test&quot;, {&quot;secret&quot;: &quot;secret data, selene cant read this&quot;})
+data = cloud.get_entry(&quot;test&quot;)
+</code></pre>
+<p><img alt="" src="https://matrix-client.matrix.org/_matrix/media/r0/download/matrix.org/SrqxZnxzRNSqJaydKGRQCFKo" /></p>
+<h2 id="how-do-i-use-geolocation-backend-services">How do I use Geolocation backend services?</h2>
+<pre><code class="language-python">from ovos_backend_client.api import GeolocationApi
+
+geo = GeolocationApi()
+data = geo.get_geolocation(&quot;Lisbon Portugal&quot;)
+</code></pre>
+<h2 id="how-do-i-use-weather-backend-services">How do I use Weather backend services?</h2>
+<pre><code class="language-python">from ovos_backend_client.api import OpenWeatherMapApi
+
+owm = OpenWeatherMapApi()
+data = owm.get_weather()
+# dict - see api docs from owm onecall api
+</code></pre>
+<h2 id="how-do-i-use-wolframalpha-backend-services">How do I use WolframAlpha backend services?</h2>
+<pre><code class="language-python">from ovos_backend_client.api import WolframAlphaApi
+
+wolf = WolframAlphaApi()
+answer = wolf.spoken(&quot;what is the speed of light&quot;)
+# The speed of light has a value of about 300 million meters per second
+
+data = wolf.full_results(&quot;2+2&quot;)
+# dict - see api docs from wolfram
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../skill_json/" class="btn btn-neutral float-left" title="Skill Json"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../gui_intro/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../skill_json/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../gui_intro/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

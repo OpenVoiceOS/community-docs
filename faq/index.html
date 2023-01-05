@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/faq/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>F.A.Q. - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "F.A.Q.";
+        var mkdocs_page_input_path = "faq.md";
+        var mkdocs_page_url = "/community-docs/faq/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">F.A.Q.</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-ovos">What is OVOS?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-did-ovos-start">How did OVOS start?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#who-is-behind-ovos">Who is behind OVOS?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-the-relationship-between-ovos-and-mycroft">What is the relationship between OVOS and Mycroft?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-does-ovos-make-money">How does OVOS make money?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#where-is-your-website">Where is your website?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#does-ovos-have-any-default-skills">Does OVOS have any default skills?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#does-ovos-work-offline">Does OVOS work offline?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#does-ovos-depend-on-any-servers">Does OVOS depend on any servers?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-many-voices-does-ovos-support">How many voices does OVOS support?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#can-i-change-the-wake-word">Can I change the wake word?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#can-ovos-run-without-a-wake-word">Can OVOS run without a wake word?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-fast-can-ovos-respond">How fast can OVOS respond?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-opm">What is OPM?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-phal">What is PHAL?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-ocp">What is OCP?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-ovos-shell">What is OVOS-shell?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-run-ovos-behind-a-proxy">How do I run OVOS behind a proxy?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#using-ovos-behind-a-proxy-without-authentication">Using OVOS behind a proxy without authentication</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#using-ovos-behind-an-authenticated-proxy">Using OVOS behind an authenticated proxy</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Home &raquo;</li>
+      <li>F.A.Q.</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<ul>
+<li><a href="#what-is-ovos">What is OVOS?</a></li>
+<li><a href="#how-did-ovos-start">How did OVOS start?</a></li>
+<li><a href="#who-is-behind-ovos">Who is behind OVOS?</a></li>
+<li><a href="#what-is-the-relationship-between-ovos-and-mycroft">What is the relationship between OVOS and Mycroft?</a></li>
+<li><a href="#how-does-ovos-make-money">How does OVOS make money?</a></li>
+<li><a href="#where-is-your-website">Where is your website?</a></li>
+<li><a href="#does-ovos-have-any-default-skills">Does OVOS have any default skills?</a></li>
+<li><a href="#does-ovos-work-offline">Does OVOS work offline?</a></li>
+<li><a href="#does-ovos-depend-on-any-servers">Does OVOS depend on any servers?</a></li>
+<li><a href="#how-many-voices-does-ovos-support">How many voices does OVOS support?</a></li>
+<li><a href="#can-i-change-the-wake-word">Can I change the wake word?</a></li>
+<li><a href="#can-ovos-run-without-a-wake-word">Can OVOS run without a wake word?</a></li>
+<li><a href="#how-fast-can-ovos-respond">How fast can OVOS respond?</a></li>
+<li><a href="#what-is-opm">What is OPM?</a></li>
+<li><a href="#what-is-phal">What is PHAL?</a></li>
+<li><a href="#what-is-ocp">What is OCP?</a></li>
+<li><a href="#what-is-ovos-shell">What is OVOS-shell?</a></li>
+<li><a href="#how-do-i-run-ovos-behind-a-proxy">How do I run OVOS behind a proxy?</a></li>
+</ul>
+<h3 id="what-is-ovos">What is OVOS?</h3>
+<p>OVOS aims to be a full operating system that is free and open source. The Open Voice Operating System consists of OVOS
+packages (programs specifically released by the OVOS Project) as well as free software released by third parties such as
+skills and plugins. OVOS makes it possible to voice enable technology without software that would trample your freedom.</p>
+<p>Historically OVOS has been used to refer to several things, the team, the github organization and the reference
+buildroot implementation</p>
+<h3 id="how-did-ovos-start">How did OVOS start?</h3>
+<p>OVOS started as MycroftOS, you can find the original mycroft forums
+thread <a href="https://community.mycroft.ai/t/openvoiceos-a-bare-minimal-production-type-of-os-based-on-buildroot/4708">here</a>.</p>
+<p>Over time more mycroft community members joined the project and it was renamed to OpenVoiceOS to avoid trademark issues.</p>
+<p>Initially OVOS was focused on bundling mycroft-core and on creating only companion software, but due to contributions
+not being accepted upstream we now maintain an enhanced reference fork of mycroft-core with extra functionality, while
+keeping all companion software mycroft-core (dev branch) compatible</p>
+<p>You can think of OVOS as the unsanctioned "Mycroft Community Edition"</p>
+<h3 id="who-is-behind-ovos">Who is behind OVOS?</h3>
+<p>Everyone in the OVOS team is a long term mycroft community member and has experience working with the mycroft code base</p>
+<p>Meet the team:</p>
+<ul>
+<li><a href="https://github.com/j1nx">Peter Steenbergen</a> - mycroft community developer since 2018, founder of MycroftOS project</li>
+<li><a href="https://github.com/JarbasAl">Casimiro Ferreira</a> - mycroft community developer since 2017, co-founder
+  of <a href="https://hellochatterbox.com/">HelloChatterbox</a></li>
+<li><a href="https://github.com/AIIX">Aditya Mehra</a> - mycroft community developer since
+  2016, <a href="https://github.com/MycroftAI/mycroft-gui">mycroft-gui</a> lead developer</li>
+<li><a href="https://github.com/NeonDaniel">Daniel McKnight</a> - community developer since
+  2017, <a href="https://github.com/NeonGeckoCom">NeonGecko</a> lead developer</li>
+<li><a href="https://github.com/5trongthany">Parker Seaman</a> - mycroft enthusiast since 2018</li>
+<li><a href="https://github.com/ChanceNCounter">Chance</a> - mycroft community developer since 2019, ex-maintainer
+  of <a href="https://github.com/MycroftAI/lingua-franca">lingua_franca</a><ul>
+<li>currently taking a break, he will be back!</li>
+</ul>
+</li>
+</ul>
+<h3 id="what-is-the-relationship-between-ovos-and-mycroft">What is the relationship between OVOS and Mycroft?</h3>
+<p>Both projects are fully independent, initially OVOS was focused on wrapping mycroft-core with a minimal OS, but as both
+projects matured, ovos-core was created to include extra functionality and make OVOS development faster and more
+efficient. OVOS has been committed to keeping our components compatible with Mycroft and many of our changes are
+submitted to Mycroft to include in their projects at their discretion.</p>
+<h3 id="how-does-ovos-make-money">How does OVOS make money?</h3>
+<p>We don't, OVOS is a volunteer project with no source of income or business model</p>
+<p>However we want to acknowledge <a href="https://blue-systems.com">Blue Systems</a> and <a href="https://neon.ai">NeonGeckoCom</a>, a lot of
+the work in OVOS is done on paid company time from these projects</p>
+<h3 id="where-is-your-website">Where is your website?</h3>
+<ul>
+<li>website - <a href="https://openvoiceos.com">openvoiceos.com</a></li>
+<li>chat - <a href="https://matrix.to/#/!XFpdtmgyCoPDxOMPpH:matrix.org?via=matrix.org">matrix</a></li>
+<li>forums - <a href="https://github.com/OpenVoiceOS/OpenVoiceOS/discussions">github discussions</a></li>
+</ul>
+<h3 id="does-ovos-have-any-default-skills">Does OVOS have any default skills?</h3>
+<p>We provide essential skills and those are bundled in all our reference images.</p>
+<p>ovos-core does not manage your skills, unlike mycroft it won't install or update anything by itself. if you installed
+ovos-core manually you also need to install skills manually</p>
+<h3 id="does-ovos-work-offline">Does OVOS work offline?</h3>
+<p>yes! by default ovos-core does not require internet.</p>
+<p>That said individual skills and plugins may require internet and most of the time you will want to use those</p>
+<h3 id="does-ovos-depend-on-any-servers">Does OVOS depend on any servers?</h3>
+<p>no! you can integrate ovos-core with <a href="https://github.com/MycroftAI/selene-backend">selene</a>
+or <a href="https://github.com/OpenVoiceOS/OVOS-local-backend">personal backend</a> but that is <strong>fully optional</strong></p>
+<p>we provide some microservices for some of our skills, but you can also use your own api keys</p>
+<h3 id="how-many-voices-does-ovos-support">How many voices does OVOS support?</h3>
+<p>hundreds! nearly everything in OVOS is modular and configurable, that includes Text To Speech.</p>
+<p>Voices depend on language and the plugins you have installed, you can find a non-exhaustive list of plugins
+in <a href="https://github.com/OpenVoiceOS/awesome-ovos-plugins#tts">the ovos plugins awesome list</a></p>
+<h3 id="can-i-change-the-wake-word">Can I change the wake word?</h3>
+<p>yes, ovos-core supports several <a href="https://github.com/OpenVoiceOS/awesome-ovos-plugins#wakeword">wake word plugins</a>.</p>
+<p>Additionally, OVOS allows you to load any number of hot words in parallel and trigger different actions when they are
+detected</p>
+<p>each hotword can do one or more of the following:</p>
+<ul>
+<li>trigger listening, also called a <strong>wake_word</strong></li>
+<li>play a sound</li>
+<li>emit a bus event</li>
+<li>take ovos-core out of sleep mode, also called a <strong>wakeup_word</strong> or <strong>standup_word</strong></li>
+<li>take ovos-core out of recording mode, also called a <strong>stop_word</strong></li>
+</ul>
+<h3 id="can-ovos-run-without-a-wake-word">Can OVOS run without a wake word?</h3>
+<p>mostly yes, depending on exactly what you mean by this question</p>
+<p>OVOS can run without any wake word configured, in this case you will only be able to interact via CLI or button press,
+best for privacy, not so great for a smart speaker</p>
+<p>ovos-core also provides a couple experimental settings, if you enable continuous listening then VAD will be used to
+detect speech and no wake word is needed, just speak to mycroft and it should answer! However this setting is
+experimental for a reason, you may find that mycroft answers your TV or even tries to answer itself if your hardware
+does not have AEC</p>
+<p>Another experimental setting is hybrid mode, with hybrid mode you can ask follow up questions up to 45 seconds after the
+last mycroft interaction, if you do not interact with mycroft it will go back to waiting for a wake word</p>
+<h3 id="how-fast-can-ovos-respond">How fast can OVOS respond?</h3>
+<p>By default, to answer a request:</p>
+<ol>
+<li>Detects the wake word </li>
+<li>Records 3 - 10 seconds of audio </li>
+<li>Transcribes the audio and returns the text transcription , either locally or remotely, depending on the speech-to-text (STT) engine in use </li>
+<li>Parses the text to understand the intent </li>
+<li>Sends the text to the intent handler with the highest confidence </li>
+<li>Allows the Skill to perform some action and provide the text to be spoken </li>
+<li>Synthesizes audio from the given text, either locally or remotely, depending on the text-to-speech (TTS) engine in use </li>
+<li>Plays the synthesized spoken audio.</li>
+</ol>
+<p>Through this process there are a number of factors that can affect the perceived speed of responses:</p>
+<ul>
+<li>System resources - more processing power and memory never hurts!</li>
+<li>Network latency - depending on configured plugins, network latency and connection speed can play a significant role in slowing down response times.</li>
+<li>Streaming STT - we have been experimenting with the use of streaming services. This transcribes audio as it's received rather than waiting for the entire utterance to be finished and sending the resulting audio file to a server to be processed in its entirety. It is possible to switch to a streaming STT service. See <a href="../OPM/#list-of-stt-plugins">STT Plugins</a> for a list of options available.</li>
+<li>Dialog structure - a long sentence will always take more time to synthesize than a short one. Skill developers can help provide quicker response times by considering the structure of their dialog and breaking that dialog up.</li>
+<li>TTS Caching - synthesized audio is cached meaning common recently generated phrases don't need to be generated, they can be returned immediately.</li>
+</ul>
+<h3 id="what-is-opm">What is OPM?</h3>
+<p>OPM is the <a href="https://github.com/OpenVoiceOS/OVOS-plugin-manager">OVOS Plugin Manager</a>, this base package provides
+arbitrary plugins to the ovos ecosystem</p>
+<p>OPM plugins import their base classes from OPM making them portable and independent from core, plugins can be used in
+your standalone projects</p>
+<p>By using OPM you can ensure a standard interface to plugins and easily make them configurable in your project, plugin
+code and example configurations are mapped to a string via python entrypoints in setup.py</p>
+<p>Some projects using OPM are <a href="https://github.com/OpenVoiceOS/ovos-core">ovos-core</a>
+, <a href="https://github.com/JarbasHiveMind/HiveMind-voice-sat">hivemind-voice-sat</a>
+, <a href="https://github.com/OpenVoiceOS/OVOS-local-backend">ovos-personal-backend</a>
+, <a href="https://github.com/OpenVoiceOS/ovos-stt-http-server">ovos-stt-server</a>
+and <a href="https://github.com/OpenVoiceOS/ovos-tts-server">ovos-tts-server</a></p>
+<h3 id="what-is-phal">What is PHAL?</h3>
+<p><a href="https://github.com/OpenVoiceOS/ovos_PHAL">PHAL</a> is our Platform/Hardware Abstraction Layer, it completely replaces the
+concept of hardcoded "enclosure" from mycroft-core</p>
+<p>Any number of plugins providing functionality can be loaded and validated at runtime, plugins can
+be <a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system">system integrations</a> to handle things like reboot and
+shutdown, or hardware drivers such as <a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk2">mycroft mark2 plugin</a></p>
+<p>PHAL plugins can perform actions such as hardware detection before loading, eg, the mark2 plugin will not load if it
+does not detect the sj201 hat. This makes plugins safe to install and bundle by default in our base images</p>
+<h3 id="what-is-ocp">What is OCP?</h3>
+<p><a href="https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin">OCP</a> stands for OpenVoiceOS Common Play, it is a full fledged
+media player</p>
+<p>OCP is a <a href="https://github.com/OpenVoiceOS/OVOS-workshop/blob/dev/ovos_workshop/app.py#L47">OVOSAbstractApplication</a>, this
+means it is a standalome but native OVOS applicatiom with full voice integration</p>
+<p>OCP differs from mycroft-core in several aspects:</p>
+<ul>
+<li>Can run standalone, only needs a bus connection</li>
+<li>OCP provides it's own intents as if it was a skill</li>
+<li>OCP provides it's own GUI as if it was a skill</li>
+<li>mycroft-core CommonPlay skill framework is disabled when OCP loads</li>
+<li>OCP skills have a dedicated MycroftSkill class and decorators in ovos-workshop</li>
+<li>OCP skills act as media providers, they do not (usually) handle playback</li>
+<li>mycroft-core CommonPlay skills have an imperfect compatibility layer and are given lower priority over OCP skills</li>
+<li>OCP handles several kinds of playback, including video</li>
+<li>OCP has a sub-intent parser for matching requested media types</li>
+<li>AudioService becomes a subsystem for OCP</li>
+<li>OCP also has AudioService plugin component introducing a compatibility layer for skills using "old style audioservice
+  api"</li>
+<li>OCP integrates with MPRIS, it can be controlled from external apps, eg KdeConnect in your phone</li>
+<li>OCP manages external MPRIS enabled players, you can voice control 3rd party apps without writing a skill for it via
+  OCP</li>
+</ul>
+<h3 id="what-is-ovos-shell">What is OVOS-shell?</h3>
+<p>The <a href="https://github.com/OpenVoiceOS/ovos-core/tree/dev/mycroft/gui">gui service</a> in ovos-core will expose a websocket to
+the GUI client following the protocol
+outlined <a href="https://github.com/MycroftAI/mycroft-gui/blob/master/transportProtocol.md">here</a></p>
+<p>The GUI library which implements the protocol lives in the <a href="https://github.com/MycroftAI/mycroft-gui">mycroft-gui</a>
+repository, The repository also hosts a development client for skill developers wanting to develop on the desktop.</p>
+<p><a href="https://github.com/OpenVoiceOS/ovos-shell">OVOS-shell</a> is the OpenVoiceOS client implementation of the mycroft-gui
+library used in our embedded device images, other distributions may offer alternative implementations such
+as <a href="http://invent.kde.org/plasma/plasma-bigscreen">plasma-bigscreen</a>*
+or <a href="https://github.com/MycroftAI/mycroft-gui-mark-2">mycroft mark2</a></p>
+<p>OVOS-shell is tightly coupled to <a href="#what-is-phal">PHAL</a>, the following companion plugins should be installed if you are
+using ovos-shell</p>
+<ul>
+<li><a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-notification-widgets">ovos-PHAL-plugin-notification-widgets</a></li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-network-manager">ovos-PHAL-plugin-network-manager</a></li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-gui-network-client">ovos-PHAL-plugin-gui-network-client</a></li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-wifi-setup">ovos-PHAL-plugin-wifi-setup</a></li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-alsa">ovos-PHAL-plugin-alsa</a></li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system">ovos-PHAL-plugin-system</a></li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-dashboard">ovos-PHAL-plugin-dashboard</a></li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-brightness-control-rpi">ovos-PHAL-plugin-brightness-control-rpi</a></li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-color-scheme-manager">ovos-PHAL-plugin-color-scheme-manager</a></li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-configuration-provider">ovos-PHAL-plugin-configuration-provider</a></li>
+</ul>
+<p>Further reading:</p>
+<ul>
+<li><a href="#plasma-bigscreen-gui-clients">plasma-bigscreen GUI clients</a></li>
+</ul>
+<h3 id="how-do-i-run-ovos-behind-a-proxy">How do I run OVOS behind a proxy?</h3>
+<p>Many schools, universities and workplaces run a <code>proxy</code> on their network. If you need to type in a username and password to access the external internet, then you are likely behind a <code>proxy</code>.</p>
+<p>If you plan to use OVOS behind a proxy, then you will need to do an additional configuration step.</p>
+<p><em>NOTE: In order to complete this step, you will need to know the <code>hostname</code> and <code>port</code> for the proxy server. Your network administrator will be able to provide these details. Your network administrator may want information on what type of traffic OVOS will be using. We use <code>https</code> traffic on port <code>443</code>, primarily for accessing ReST-based APIs.</em></p>
+<h4 id="using-ovos-behind-a-proxy-without-authentication">Using OVOS behind a proxy without authentication</h4>
+<p>If you are using OVOS behind a proxy without authentication, add the following environment variables, changing the <code>proxy_hostname.com</code> and <code>proxy_port</code> for the values for your network. These commands are executed from the Linux command line interface (CLI).</p>
+<pre><code class="language-bash">$ export http_proxy=http://proxy_hostname.com:proxy_port
+$ export https_port=http://proxy_hostname.com:proxy_port
+$ export no_proxy=&quot;localhost,127.0.0.1,localaddress,.localdomain.com,0.0.0.0,::1&quot;
+</code></pre>
+<h4 id="using-ovos-behind-an-authenticated-proxy">Using OVOS behind an authenticated proxy</h4>
+<p>If you are behind a proxy which requires authentication, add the following environment variables, changing the <code>proxy_hostname.com</code> and <code>proxy_port</code> for the values for your network. These commands are executed from the Linux command line interface (CLI).</p>
+<pre><code class="language-bash">$ export http_proxy=http://user:password@proxy_hostname.com:proxy_port
+$ export https_port=http://user:password@proxy_hostname.com:proxy_port
+$ export no_proxy=&quot;localhost,127.0.0.1,localaddress,.localdomain.com,0.0.0.0,::1&quot;
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../friends/" class="btn btn-neutral float-left" title="Friends"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../getting_image/" class="btn btn-neutral float-right" title="Downloading an image">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../friends/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../getting_image/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

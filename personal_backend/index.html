@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/personal_backend/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Personal Backend - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Personal Backend";
+        var mkdocs_page_input_path = "personal_backend.md";
+        var mkdocs_page_url = "/community-docs/personal_backend/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Personal Backend</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#install">Install</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#mycroft-setup">Mycroft Setup</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#companion-projects">Companion projects</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#docker">Docker</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-it-works">How it works</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#databases">Databases</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#device-settings">Device Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#location">Location</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#device-preferences">Device Preferences</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#skill-settings">Skill settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#email">Email</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#selene-proxy">Selene Proxy</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pairing">Pairing</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#selene-config">Selene Config</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-timeline">Project Timeline</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technologies &raquo;</li>
+      <li>Personal Backend</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ovos-personal-backend">OVOS Personal Backend</h1>
+<p>Personal mycroft backend alternative to mycroft.home, written in flask</p>
+<p>This repo is an alternative to the backend meant for personal usage, this allows you to run without mycroft servers</p>
+<p>:warning: there are no user accounts :warning:</p>
+<p>This is NOT meant to provision third party devices, but rather to run on the mycroft devices directly or on a private network</p>
+<p>For a full backend experience, the official mycroft backend has been open sourced, read the <a href="https://mycroft.ai/blog/open-sourcing-the-mycroft-backend/">blog post</a></p>
+<p>NOTE: There is no pairing, devices will just activate themselves and work</p>
+<h2 id="install">Install</h2>
+<p>from pip</p>
+<pre><code class="language-bash">pip install ovos-local-backend
+</code></pre>
+<h3 id="mycroft-setup">Mycroft Setup</h3>
+<p>There are 2 main intended ways to run local backend with mycroft</p>
+<ul>
+<li>on same device as mycroft-core, tricking it to run without mycroft servers</li>
+<li>on a private network, to manage all your devices locally</li>
+</ul>
+<p>NOTE: you can not fully run mycroft-core offline, it refuses to launch without internet connection, you can only replace the calls to use this backend instead of mycroft.home</p>
+<p>We recommend you use <a href="https://github.com/OpenVoiceOS/ovos-core">ovos-core</a> instead</p>
+<p>update your mycroft config to use this backend, delete <code>identity2.json</code> and restart mycroft</p>
+<pre><code class="language-json">{
+  &quot;server&quot;: {
+    &quot;url&quot;: &quot;http://0.0.0.0:6712&quot;,
+    &quot;version&quot;: &quot;v1&quot;,
+    &quot;update&quot;: true,
+    &quot;metrics&quot;: true
+  },
+  &quot;listener&quot;: {
+    &quot;wake_word_upload&quot;: {
+      &quot;url&quot;: &quot;http://0.0.0.0:6712/precise/upload&quot;
+    }
+  }
+}
+</code></pre>
+<h2 id="companion-projects">Companion projects</h2>
+<ul>
+<li><a href="https://github.com/OpenVoiceOS/ovos-backend-client">ovos-backend-client</a> - reference python library to interact with selene/local backend</li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-backend-manager">ovos-backend-manager</a> - graphical interface to manage all things backend</li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-stt-plugin-selene">ovos-stt-plugin-selene</a> - stt plugin for selene/local backend</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>start backend</p>
+<pre><code class="language-bash">$ ovos-local-backend -h
+usage: ovos-local-backend [-h] [--flask-port FLASK_PORT] [--flask-host FLASK_HOST]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --flask-port FLASK_PORT
+                        Mock backend port number
+  --flask-host FLASK_HOST
+                        Mock backend host
+
+</code></pre>
+<h2 id="docker">Docker</h2>
+<p>There is also a docker container you can use</p>
+<pre><code class="language-bash">docker run -p 8086:6712 -d --restart always --name local_backend ghcr.io/openvoiceos/local-backend:dev
+</code></pre>
+<h2 id="how-it-works">How it works</h2>
+<h3 id="configuration">Configuration</h3>
+<p>configure backend by editing/creating <code>~/.config/json_database/ovos_backend.json</code></p>
+<p>see default values <a href="./ovos_local_backend/configuration.py">here</a></p>
+<pre><code class="language-json">{
+  &quot;stt&quot;: {
+    &quot;module&quot;: &quot;ovos-stt-plugin-server&quot;,
+    &quot;ovos-stt-plugin-server&quot;: {&quot;url&quot;: &quot;https://stt.openvoiceos.com/stt&quot;}
+  },
+  &quot;backend_port&quot;: 6712,
+  &quot;geolocate&quot;: true,
+  &quot;override_location&quot;: false,
+  &quot;api_version&quot;: &quot;v1&quot;,
+  &quot;data_path&quot;: &quot;~&quot;,
+  &quot;record_utterances&quot;: false,
+  &quot;record_wakewords&quot;: false,
+  &quot;wolfram_key&quot;: &quot;$KEY&quot;,
+  &quot;owm_key&quot;: &quot;$KEY&quot;,
+  &quot;lang&quot;: &quot;en-us&quot;,
+  &quot;date_format&quot;: &quot;DMY&quot;,
+  &quot;system_unit&quot;: &quot;metric&quot;,
+  &quot;time_format&quot;: &quot;full&quot;,
+  &quot;default_location&quot;: {
+    &quot;city&quot;: {&quot;...&quot;: &quot;...&quot;},
+    &quot;coordinate&quot;: {&quot;...&quot;: &quot;...&quot;},
+    &quot;timezone&quot;: {&quot;...&quot;: &quot;...&quot;}
+  }
+}
+</code></pre>
+<ul>
+<li>stt config follows the same format of mycroft.conf and
+  uses <a href="https://github.com/OpenVoiceOS/OVOS-plugin-manager">ovos-plugin-manager</a></li>
+<li>set wolfram alpha key for wolfram alpha proxy expected by official mycroft skill</li>
+<li>set open weather map key for weather proxy expected by official mycroft skill</li>
+<li>if record_wakewords is set, recordings can be found at <code>DATA_PATH/wakewords</code></li>
+<li>if record_utterances is set, recordings can be found at <code>DATA_PATH/utterances</code></li>
+</ul>
+<h3 id="databases">Databases</h3>
+<p>Since the local backend is not meant to provision hundreds of devices or manage user accounts it works only with <a href="https://github.com/OpenJarbas/json_database">json databases</a></p>
+<ul>
+<li>metadata about uploaded wakewords can be found at <code>~/.local/share/json_database/ovos_wakewords.jsondb</code></li>
+<li>metadata about uploaded utterances can be found at <code>~/.local/share/json_database/ovos_utterances.jsondb</code></li>
+<li>database of uploaded metrics can be found at <code>~/.local/share/json_database/ovos_metrics.jsondb</code></li>
+<li>paired devices database can be found at <code>~/.local/share/json_database/ovos_devices.json</code></li>
+<li>per device skill settings database can be found at <code>~/.local/share/json_database/ovos_skill_settings.json</code></li>
+<li>shared skill settings database can be found at <code>~/.local/share/json_database/ovos_shared_skill_settings.json</code></li>
+</ul>
+<p>metrics, wake words and utterances respect the individual devices <code>opt_in</code> flag, nothing will be saved unless devices opt_in (default True)</p>
+<h3 id="device-settings">Device Settings</h3>
+<p>Each paired device has a few settings that control behaviour backend side</p>
+<ul>
+<li><code>name</code> - default <code>"Device-{uuid}"</code>, friendly device name for display</li>
+<li><code>opt_in</code> - default <code>True</code>, flag to control if metrics and speech from this device will be saved</li>
+<li><code>device_location</code> - default <code>"unknown"</code>, friendly name for indoor location</li>
+<li><code>email</code> - default from backend config, email to send notifications to</li>
+<li><code>isolated_skills</code> - default <code>False</code>, flag to control if skill settings are shared across devices (ovos only)</li>
+</ul>
+<p>In selene this info would be populated during pairing process, in local backend it needs to be updated manually</p>
+<ul>
+<li>you can change these settings per device via the <a href="./ovos_local_backend/backend/admin.py">admin api</a></li>
+<li>you can also change these settings per device by manually editing paired devices database</li>
+</ul>
+<h3 id="location">Location</h3>
+<p>Device location can be updated via the backend, mycroft-core will request this info on it's own from time to time</p>
+<p>default values comes from the local backend config file</p>
+<pre><code class="language-json">{
+  &quot;geolocate&quot;: true,
+  &quot;override_location&quot;: false,
+  &quot;default_location&quot;: {
+    &quot;city&quot;: {&quot;...&quot;: &quot;...&quot;},
+    &quot;coordinate&quot;: {&quot;...&quot;: &quot;...&quot;},
+    &quot;timezone&quot;: {&quot;...&quot;: &quot;...&quot;}
+  }
+}
+</code></pre>
+<ul>
+<li>if override location is True, then location will be set to configured default value</li>
+<li>if geolocate is True then location will be set from your ip address</li>
+<li>you can set a default location per device via the <a href="./ovos_local_backend/backend/admin.py">admin api</a></li>
+<li>you can also set a default location per device by manually editing paired devices database</li>
+</ul>
+<h3 id="device-preferences">Device Preferences</h3>
+<p>Some settings can be updated via the backend, mycroft-core will request this info on it's own from time to time</p>
+<p>default values comes from the local backend config file</p>
+<pre><code class="language-json">{
+  &quot;lang&quot;: &quot;en-us&quot;,
+  &quot;date_format&quot;: &quot;DMY&quot;,
+  &quot;system_unit&quot;: &quot;metric&quot;,
+  &quot;time_format&quot;: &quot;full&quot;
+}
+</code></pre>
+<ul>
+<li>these settings are also used for wolfram alpha / weather default values</li>
+<li>you can set these values per device via the <a href="./ovos_local_backend/backend/admin.py">admin api</a></li>
+<li>you can also set these values per device by manually editing paired devices database</li>
+</ul>
+<h3 id="skill-settings">Skill settings</h3>
+<p>in selene all device share skill settings, with local backend you can control this per device via <code>isolated_skills</code> flag</p>
+<p>"old selene" supported a single endpoint for both skill settings and settings meta, this allowed devices both to download and upload settings</p>
+<p>"new selene" split this into two endpoints, settingsMeta (upload only) and settings (download only), this disabled two way sync across devices</p>
+<ul>
+<li>you can set <code>isolated_skills</code> per device via the <a href="./ovos_local_backend/backend/admin.py">admin api</a></li>
+<li>you can also set <code>isolated_skills</code> per device by manually editing paired devices database</li>
+<li>both endpoints are available, but mycroft-core by default will use the new endpoints and does not support two way sync</li>
+<li>you can edit settings by using the "old selene" endpoint</li>
+<li>you can also edit settings by manually editing settings database</li>
+</ul>
+<h3 id="email">Email</h3>
+<p>Mycroft skills can request the backend to send an email to the account used for pairing the device</p>
+<ul>
+<li>Email will be sent to a pre-defined recipient email since there are no user accounts</li>
+<li>you can set a recipient email per device via the <a href="./ovos_local_backend/backend/admin.py">admin api</a></li>
+<li>you can set a recipient email per device by manually editing paired devices database</li>
+</ul>
+<p>with the local backend you need to configure your own SMTP server and recipient email, add the following section to your .conf</p>
+<pre><code class="language-json">{
+  &quot;email&quot;: {
+    &quot;smtp&quot;: {
+      &quot;username&quot;: &quot;sender@gmail.com&quot;,
+      &quot;password&quot;: &quot;123456&quot;,
+      &quot;host&quot;: &quot;&quot;,
+      &quot;port&quot;: 465
+    },
+    &quot;recipient&quot;: &quot;receiver@gmail.com&quot;
+  }
+}
+</code></pre>
+<p>If using gmail you will need to <a href="https://hotter.io/docs/email-accounts/secure-app-gmail/">enable less secure apps</a></p>
+<h3 id="selene-proxy">Selene Proxy</h3>
+<p>You can integrate local backend with selene, the backend will show up as a device you can manage in mycroft.home</p>
+<p>wait... what? isn't the point of local backend to disable selene?</p>
+<ul>
+<li>Open Dataset, You do not want to use selene, but you want to opt_in to the open dataset (share recordings with mycroft)</li>
+<li>Privacy, you want to use selene, but you do not want to give away your personal data (email, location, ip address...)</li>
+<li>Control, you want to use only a subset of selene features</li>
+<li>Convenience, pair once, manage all your devices</li>
+<li>Functionality, extra features such as isolated skill settings and forced 2 way sync</li>
+<li>Esoteric Setups, isolated mycroft services that can not share a identity file, such as <a href="https://github.com/OpenVoiceOS/ovos-qubes">ovos-qubes</a></li>
+</ul>
+<h4 id="pairing">Pairing</h4>
+<p>To pair the local backend with selene you have 2 options</p>
+<p>1 - pair a mycroft-core instance, then copy the identity file</p>
+<p>2 - enable proxy_pairing, whenever a device pairs with local backend the code it speaks is also valid for selene, use that code to pair local backend with selene</p>
+<p>If a device tries to use a selene enabled endpoint without the backend being paired a 401 authentication error will be returned, if the endpoint does not use selene (eg. disabled in config) this check is skipped</p>
+<h4 id="selene-config">Selene Config</h4>
+<p>In your backend config add the following section</p>
+<pre><code class="language-python">    &quot;selene&quot;: {
+        &quot;enabled&quot;: False,  # needs to be explicitly enabled by user
+        &quot;url&quot;: &quot;https://api.mycroft.ai&quot;,  # change if you are self hosting selene
+        &quot;version&quot;: &quot;v1&quot;,
+        # pairing settings
+        # NOTE: the file should be used exclusively by backend, do not share with a mycroft-core instance
+        &quot;identity_file&quot;: BACKEND_IDENTITY,  # path to identity2.json file
+        # send the pairing from selene to any device that attempts to pair with local backend
+        # this will provide voice/gui prompts to the user and avoid the need to copy a identity file
+        # only happens if backend is not paired with selene (hopefully exactly once)
+        # if False you need to pair an existing mycroft-core as usual and move the file for backend usage
+        &quot;proxy_pairing&quot;: False,
+
+        # micro service settings
+        # NOTE: STT is handled at plugin level, configure ovos-stt-plugin-selene
+        &quot;proxy_weather&quot;: True,  # use selene for weather api calls
+        &quot;proxy_wolfram&quot;: True,  # use selene for wolfram alpha api calls
+        &quot;proxy_geolocation&quot;: True,  # use selene for geolocation api calls
+        &quot;proxy_email&quot;: False,  # use selene for sending email (only for email registered in selene)
+
+        # device settings - if you want to spoof data in selene set these to False
+        &quot;download_location&quot;: True,  # set default location from selene
+        &quot;download_prefs&quot;: True,  # set default device preferences from selene
+        &quot;download_settings&quot;: True,  # download shared skill settings from selene
+        &quot;upload_settings&quot;: True,  # upload shared skill settings to selene
+        &quot;force2way&quot;: False,  # this forcefully re-enables 2way settings sync with selene
+        # this functionality was removed from core, we hijack the settingsmeta endpoint to upload settings
+        # upload will happen when mycroft-core boots and overwrite any values in selene (no checks for settings changed)
+        # the assumption is that selene changes are downloaded instantaneously
+        # if a device is offline when selene changes those changes will be discarded on next device boot
+
+        # opt-in settings - what data to share with selene
+        # NOTE: these also depend on opt_in being set in selene
+        &quot;opt_in&quot;: False,  # share data from all devices with selene (as if from a single device)
+        &quot;opt_in_blacklist&quot;: [],  # list of uuids that should ignore opt_in flag (never share data)
+        &quot;upload_metrics&quot;: True,  # upload device metrics to selene
+        &quot;upload_wakewords&quot;: True,  # upload wake word samples to selene
+        &quot;upload_utterances&quot;: True  # upload utterance samples to selene
+    }
+</code></pre>
+<h2 id="project-timeline">Project Timeline</h2>
+<ul>
+<li>Jan 2018 - <a href="https://github.com/OpenVoiceOS/OVOS-mock-backend/tree/014389065d3e5c66b6cb85e6e77359b6705406fe">initial release</a> of reverse engineered mycroft backend - by JarbasAI</li>
+<li>July 2018 - Personal backend <a href="https://mycroft.ai/blog/many-roads-one-destination/">added to Mycroft Roadmap</a></li>
+<li>October 2018 - Community <a href="https://mycroft.ai/blog/mycroft-personal-server-conversation/">involved in discussion</a></li>
+<li>Jan 2019 - JarbasAI implementation <a href="https://github.com/MycroftAI/personal-backend/tree/31ee96a8189d96f8102276bf4b9073811ee9a9b2">adopted by Mycroft</a></li>
+<li>NOTE: this should have been a fork or repository transferred, but was a bare clone</li>
+<li>Original repository was archived</li>
+<li>October 2019 - Official mycroft backend <a href="https://mycroft.ai/blog/open-sourcing-the-mycroft-backend/">open sourced under a viral license</a></li>
+<li>Jun 2020 - original project <a href="https://github.com/OpenJarbas/ZZZ-mock-backend">repurposed to be a mock backend</a> instead of a full alternative, <a href="https://github.com/JarbasSkills/skill-mock-backend">skill-mock-backend</a> released</li>
+<li>Jan 2021 - mock-backend adopted by OpenVoiceOS, original repo unarchived and ownership transferred</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../OCP/" class="btn btn-neutral float-left" title="Common Play"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../osm/" class="btn btn-neutral float-right" title="Skills Manager">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../OCP/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../osm/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

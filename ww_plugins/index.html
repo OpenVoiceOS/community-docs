@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/ww_plugins/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Wake Word - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Wake Word";
+        var mkdocs_page_input_path = "ww_plugins.md";
+        var mkdocs_page_url = "/community-docs/ww_plugins/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Wake Word</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#list-of-wake-word-plugins">List of Wake Word plugins</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#standalone-usage">Standalone Usage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#plugin-template">Plugin Template</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Plugins &raquo;</li>
+      <li>Wake Word</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="wake-word-plugins">Wake Word Plugins</h1>
+<p>WakeWord plugins classify audio and report if a certain word or sound is present or not</p>
+<p>These plugins usually correspond to the name of the voice assistant, "hey mycroft", but can also be used for other purposes</p>
+<p><img alt="ww" src="https://github.com/secretsauceai/secret_sauce_ai/raw/main/SSAI_wakeword_scene_compressed.png?raw=true" /></p>
+<h2 id="list-of-wake-word-plugins">List of Wake Word plugins</h2>
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/OpenVoiceOS/ovos-ww-plugin-pocketsphinx">ovos-ww-plugin-pocketsphinx</a></td>
+<td>phonemes</td>
+</tr>
+<tr>
+<td><a href="https://github.com/OpenVoiceOS/ovos-ww-plugin-vosk">ovos-ww-plugin-vosk</a></td>
+<td>text samples</td>
+</tr>
+<tr>
+<td><a href="https://github.com/OpenVoiceOS/ovos-ww-plugin-snowboy">ovos-ww-plugin-snowboy</a></td>
+<td>model</td>
+</tr>
+<tr>
+<td><a href="https://github.com/OpenVoiceOS/ovos-ww-plugin-precise">ovos-ww-plugin-precise</a></td>
+<td>model</td>
+</tr>
+<tr>
+<td><a href="https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-lite">ovos-ww-plugin-precise-lite</a></td>
+<td>model</td>
+</tr>
+<tr>
+<td><a href="https://github.com/OpenVoiceOS/ovos-ww-plugin-nyumaya">ovos-ww-plugin-nyumaya</a></td>
+<td>model</td>
+</tr>
+<tr>
+<td><a href="https://github.com/OpenVoiceOS/ovos-ww-plugin-nyumaya-legacy">ovos-ww-plugin-nyumaya-legacy</a></td>
+<td>model</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/neon_ww_plugin_efnet">neon_ww_plugin_efficientwordnet</a></td>
+<td>model</td>
+</tr>
+<tr>
+<td><a href="https://github.com/forslund/mycroft-porcupine-plugin">mycroft-porcupine-plugin</a></td>
+<td>model</td>
+</tr>
+<tr>
+<td><a href="https://github.com/OpenVoiceOS/ovos_ww_plugin_hotkeys">ovos-ww-plugin-hotkeys</a></td>
+<td>keyboard</td>
+</tr>
+</tbody>
+</table>
+<h2 id="standalone-usage">Standalone Usage</h2>
+<p>first lets get some boilerplate ouf of the way for the microphone handling logic</p>
+<pre><code class="language-python">import pyaudio
+
+# helper class
+class CyclicAudioBuffer:
+    def __init__(self, duration=0.98, initial_data=None,
+                 sample_rate=16000, sample_width=2):
+        self.size = self.duration_to_bytes(duration, sample_rate, sample_width)
+        initial_data = initial_data or self.get_silence(self.size)
+        # Get at most size bytes from the end of the initial data
+        self._buffer = initial_data[-self.size:]
+
+    @staticmethod
+    def duration_to_bytes(duration, sample_rate=16000, sample_width=2):
+        return int(duration * sample_rate) * sample_width
+
+    @staticmethod
+    def get_silence(num_bytes):
+        return b'\0' * num_bytes
+
+    def append(self, data):
+        &quot;&quot;&quot;Add new data to the buffer, and slide out data if the buffer is full
+        Arguments:
+            data (bytes): binary data to append to the buffer. If buffer size
+                          is exceeded the oldest data will be dropped.
+        &quot;&quot;&quot;
+        buff = self._buffer + data
+        if len(buff) &gt; self.size:
+            buff = buff[-self.size:]
+        self._buffer = buff
+
+    def get(self):
+        &quot;&quot;&quot;Get the binary data.&quot;&quot;&quot;
+        return self._buffer
+
+# pyaudio params
+FORMAT = pyaudio.paInt16
+CHANNELS = 1
+RATE = 16000
+CHUNK = 1024
+MAX_RECORD_SECONDS = 20
+SAMPLE_WIDTH = pyaudio.get_sample_size(FORMAT)
+audio = pyaudio.PyAudio()
+
+# start Recording
+stream = audio.open(channels=CHANNELS, format=FORMAT,
+    rate=RATE, frames_per_buffer=CHUNK, input=True)
+
+
+def load_plugin():
+    # Wake word initialization
+    config = {&quot;model&quot;: &quot;path/to/hey_computer.model&quot;}
+    return MyHotWord(&quot;hey computer&quot;, config=config)
+
+
+def listen_for_ww(plug):
+    # TODO - see examples below
+    return False
+
+plug = load_plugin()
+
+print(f&quot;Waiting for wake word {MAX_RECORD_SECONDS} seconds&quot;)
+found = listen_for_ww(plug)
+
+if found:
+    print(&quot;Found wake word!&quot;)
+else:
+    print(&quot;No wake word found&quot;)
+
+# stop everything
+plug.stop()
+stream.stop_stream()
+stream.close()
+audio.terminate()
+</code></pre>
+<p><strong><em>new style</em></strong> plugins</p>
+<p>New style plugins expect to receive live audio, they may keep their own cyclic buffers internally</p>
+<pre><code class="language-python">
+def listen_for_ww(plug):
+    for i in range(0, int(RATE / CHUNK * MAX_RECORD_SECONDS)):
+        data = stream.read(CHUNK)
+        # feed data directly to streaming prediction engines
+        plug.update(data)
+        # streaming engines return result here
+        found = plug.found_wake_word(data)
+        if found:
+            return True
+</code></pre>
+<p><strong><em>old style</em></strong> plugins (DEPRECATED)</p>
+<p>Old style plugins expect to receive ~3 seconds of audio data at once</p>
+<pre><code class="language-python">def listen_for_ww(plug):
+    # used for old style non-streaming wakeword (deprecated)
+    audio_buffer = CyclicAudioBuffer(plug.expected_duration,
+                                     sample_rate=RATE, sample_width=SAMPLE_WIDTH)
+    for i in range(0, int(RATE / CHUNK * MAX_RECORD_SECONDS)):
+        data = stream.read(CHUNK)
+        # add data to rolling buffer, used by non-streaming engines
+        audio_buffer.append(data)
+        # non streaming engines check the byte_data in audio_buffer
+        audio_data = audio_buffer.get()
+        found = plug.found_wake_word(audio_data)
+        if found:
+            return True
+</code></pre>
+<p><strong><em>new + old style</em></strong> plugins (backwards compatibility)</p>
+<p>if you are unsure what kind of plugin you will be using you can be compatible with both approaches like ovos-core</p>
+<pre><code class="language-python">def listen_for_ww(plug):
+    # used for old style non-streaming wakeword (deprecated)
+    audio_buffer = CyclicAudioBuffer(plug.expected_duration,
+                                     sample_rate=RATE, sample_width=SAMPLE_WIDTH)
+    for i in range(0, int(RATE / CHUNK * MAX_RECORD_SECONDS)):
+        data = stream.read(CHUNK)
+        # old style engines will ignore the update
+        plug.update(data)
+        # streaming engines will ignore the byte_data
+        audio_buffer.append(data)
+        audio_data = audio_buffer.get()
+        found = plug.found_wake_word(audio_data)
+        if found:
+            return True
+</code></pre>
+<h2 id="plugin-template">Plugin Template</h2>
+<pre><code class="language-python">from ovos_plugin_manager.templates.hotwords import HotWordEngine
+from threading import Event
+
+
+class MyWWPlugin(HotWordEngine):
+    def __init__(self, key_phrase=&quot;hey mycroft&quot;, config=None, lang=&quot;en-us&quot;):
+        super().__init__(key_phrase, config, lang)
+        self.detection = Event()
+        # read config settings for your plugin
+        self.sensitivity = self.config.get(&quot;sensitivity&quot;, 0.5)
+        # TODO - plugin stuff
+        # how does your plugin work? phonemes? text? models?
+        self.engine = MyWW(key_phrase) 
+
+    def found_wake_word(self, frame_data):
+        &quot;&quot;&quot;Check if wake word has been found.
+
+        Checks if the wake word has been found. Should reset any internal
+        tracking of the wake word state.
+
+        Arguments:
+            frame_data (binary data): Deprecated. Audio data for large chunk
+                                      of audio to be processed. This should not
+                                      be used to detect audio data instead
+                                      use update() to incrementally update audio
+        Returns:
+            bool: True if a wake word was detected, else False
+        &quot;&quot;&quot;
+        detected = self.detection.is_set()
+        if detected:
+            self.detection.clear()
+        return detected
+
+    def update(self, chunk):
+        &quot;&quot;&quot;Updates the hotword engine with new audio data.
+
+        The engine should process the data and update internal trigger state.
+
+        Arguments:
+            chunk (bytes): Chunk of audio data to process
+        &quot;&quot;&quot;
+        if self.engine.found_it(chunk): # TODO - check for wake word
+            self.detection.set()
+
+    def stop(self):
+        &quot;&quot;&quot;Perform any actions needed to shut down the wake word engine.
+
+        This may include things such as unloading data or shutdown
+        external processess.
+        &quot;&quot;&quot;
+        self.engine.bye()  # TODO - plugin specific shutdown
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tts_plugins/" class="btn btn-neutral float-left" title="Text To Speech"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../vad_plugins/" class="btn btn-neutral float-right" title="Voice Activity Detection">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tts_plugins/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../vad_plugins/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

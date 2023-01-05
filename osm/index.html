@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/osm/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Skills Manager - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Skills Manager";
+        var mkdocs_page_input_path = "osm.md";
+        var mkdocs_page_url = "/community-docs/osm/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Skills Manager</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#supported-stores">Supported stores</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install">Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#install_1">Install</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#enable">Enable</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#disable">Disable</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sync">Sync</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#priority">Priority</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#print-config">Print config</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#search">Search</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Technologies &raquo;</li>
+      <li>Skills Manager</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ovos-skills-manager">OVOS skills manager</h1>
+<p>Install skills from any appstore!</p>
+<p>The <a href="https://github.com/MycroftAI/mycroft-skills-manager">mycroft-skills-manager</a> alternative that is <a href="https://github.com/MycroftAI/mycroft-skills-manager/pull/75">not vendor locked</a>, this means you must use it responsibly! </p>
+<p>Do not install random skills, different appstores have different policies!</p>
+<p>Keep in mind any skill you install can <a href="https://github.com/JarbasSkills/skill-monkey-patcher">modify mycroft-core at runtime</a>, and very likely has 
+root access if you are running on a raspberry pi</p>
+<h2 id="supported-stores">Supported stores</h2>
+<ul>
+<li><a href="">OVOS</a> - this one is really a proof of concept for now, stay tuned!</li>
+<li><a href="">Mycroft Marketplace</a> - the official mycroft skills store, all skills are 
+  reviewed by humans!</li>
+<li><a href="">Pling</a> - the official plasma bigscreen skills store, skills are accepted 
+  by default and only removed if flagged as malicious</li>
+<li><a href="">Andlo's skill list</a> - not a real appstore, this is a web scrapped 
+  automatically generated list of 900+ skills from all over github, there 
+  is no review at all, it will catch <a href="https://github.com/JarbasAl/skill-XPLOIT-hijack-speech">malicious skills</a></li>
+</ul>
+<h2 id="install">Install</h2>
+<pre><code class="language-bash">pip install ovos-skills-manager
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>osm provides a few command line utilities, explained below</p>
+<h4 id="install_1">Install</h4>
+<p>Install a mycroft skill! Either pass a search query or a github url</p>
+<pre><code class="language-bash">(.venv) user@hostname:~$ osm install --help
+Usage: osm install [OPTIONS]
+
+Options:
+  --skill TEXT                    skill to install
+  --branch TEXT                   select skill github branch to use
+  --folder TEXT                   path where skill will be installed, default
+                                  /opt/mycroft/skills
+
+  --search                        search appstores, otherwise assume it's a
+                                  github url
+
+  --appstore [ovos|mycroft|pling|andlo|default|all]
+                                  search a specific appstore, default search
+                                  appstores enabled in config file
+
+  --method [all|name|url|category|author|tag|description]
+                                  match this metadata field when searching
+  --fuzzy / --exact               exact or fuzzy matching, default fuzzy
+  --thresh INTEGER RANGE          fuzzy matching threshold from 0 (everything
+                                  is a match) to 100 (exact match),  default
+                                  80
+
+  --no-ignore-case                ignore upper/lower case, default ignore
+  --help                          Show this message and exit.
+
+</code></pre>
+<h4 id="enable">Enable</h4>
+<p>Enable a new skills store</p>
+<pre><code class="language-bash">(.venv) user@hostname:~$ osm enable --help
+Usage: osm enable [OPTIONS]
+
+Options:
+  --appstore [ovos|mycroft|pling|andlo|all]
+                                  enable a specific appstore
+  --help                          Show this message and exit.
+
+</code></pre>
+<h4 id="disable">Disable</h4>
+<p>Disable a skills store</p>
+<pre><code class="language-bash">(.venv) user@hostname:~$ osm disable --help
+Usage: osm disable [OPTIONS]
+
+Options:
+  --appstore [ovos|mycroft|pling|andlo|all]
+                                  disable a specific appstore
+  --help                          Show this message and exit.
+</code></pre>
+<h4 id="sync">Sync</h4>
+<p>Sync skill list for a skills store</p>
+<p>Suggestion: set a cronjob for this</p>
+<pre><code class="language-bash">(.venv) user@hostname:~$ osm sync --help
+Usage: osm sync [OPTIONS]
+
+Options:
+  --appstore [ovos|mycroft|pling|andlo|default|all]
+                                  sync a specific appstore, default syncs
+                                  appstores enabled in config file
+
+  --rebuild                       rebuild skill database, if not set only sync
+                                  data for new skills
+
+  --merge                         merge skill data, if not set replaces skill
+                                  entries
+
+  --github                        augment skill data from github, by default
+                                  only saves data provided directly by the
+                                  appstore
+
+  --help                          Show this message and exit.
+</code></pre>
+<h4 id="priority">Priority</h4>
+<p>Change priority of a skills store, this will affect order of results and 
+have impact in the OSM-skill (coming soon) </p>
+<pre><code class="language-bash">(.venv) user@hostname:~$ osm priority --help
+Usage: osm priority [OPTIONS]
+
+Options:
+  --appstore [ovos|mycroft|pling|andlo]
+                                  change priority of a specific appstore
+  --priority INTEGER RANGE        appstore priority, from 0 (highest) to 100
+                                  (lowest)
+
+  --help                          Show this message and exit.
+</code></pre>
+<h4 id="print-config">Print config</h4>
+<p>print current configuration of osm, config file can be found at <code>~/.config/OpenVoiceOS/OVOS-SkillsManager.json</code></p>
+<pre><code class="language-bash">(.venv) user@hostname:~$ osm print --help
+Usage: osm print [OPTIONS]
+
+Options:
+  --appstore [ovos|mycroft|pling|andlo|all|default]
+                                  print config of a specific appstore
+  --help                          Show this message and exit.
+
+</code></pre>
+<h4 id="search">Search</h4>
+<p>Search skills and print results, searching can be done according any number 
+of criteria, this is useful for discovery</p>
+<pre><code class="language-bash">(.venv) user@hostname:~$ osm search --help
+Usage: osm search [OPTIONS]
+
+Options:
+  --query TEXT                    Search a skill with this query
+  --method [all|name|url|category|author|tag|description]
+                                  match this metadata field when searching
+  --appstore [ovos|mycroft|pling|andlo|default|all]
+                                  search a specific appstore, by default
+                                  searches appstores enabled in config file
+
+  --fuzzy / --exact               exact or fuzzy matching
+  --thresh INTEGER RANGE          fuzzy matching threshold from 0 (everything
+                                  is a match) to 100 (exact match)
+
+  --no-ignore-case                ignore upper/lower case
+  --help                          Show this message and exit.
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../personal_backend/" class="btn btn-neutral float-left" title="Personal Backend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../OCA/" class="btn btn-neutral float-right" title="Config Assistant">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../personal_backend/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../OCA/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

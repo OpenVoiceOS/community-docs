@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/backend/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Backend Services - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Backend Services";
+        var mkdocs_page_input_path = "backend.md";
+        var mkdocs_page_url = "/community-docs/backend/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Backend Services</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#supported-backends">Supported Backends</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#identity-information">Identity Information</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stt-plugin">STT Plugin</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#offline-backend">Offline Backend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#selene">Selene</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#personal-backend">Personal Backend</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#backend-manager">Backend Manager</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#admin-api">Admin Api</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ovos-api-service">OVOS API Service</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Advanced Usage &raquo;</li>
+      <li>Backend Services</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="backend-services">Backend Services</h1>
+<ul>
+<li><a href="#supported-backends">Supported Backends</a></li>
+<li><a href="#identity-information">Identity Information</a></li>
+<li><a href="#stt-plugin">STT Plugin</a></li>
+<li><a href="#offline.backend">Offline Backend</a></li>
+<li><a href="#selene">Selene</a></li>
+<li><a href="#personal-backend">Personal Backend</a><ul>
+<li><a href="#backend-manager">Backend Manager</a></li>
+<li><a href="#admin-api">Admin Api</a></li>
+</ul>
+</li>
+<li><a href="#ovos-api-service">OVOS API Service</a></li>
+</ul>
+<h2 id="supported-backends">Supported Backends</h2>
+<p>ovos-core supports multiple backends under a single unified interface</p>
+<ul>
+<li>Personal backend - <a href="https://github.com/OpenVoiceOS/OVOS-local-backend">self hosted</a></li>
+<li>Selene - https://api.mycroft.ai</li>
+<li>OpenVoiceOS API Service - https://api.openvoiceos.com</li>
+<li>Offline - support for setting your own api keys and query services directly</li>
+</ul>
+<p>Developers do not need to worry about backend details in their applications and skills</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Offline</th>
+<th>Personal</th>
+<th>Selene</th>
+<th>OVOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Admin</td>
+<td>yes [1]</td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Device</td>
+<td>yes [2]</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes [4]</td>
+</tr>
+<tr>
+<td>Metrics</td>
+<td>yes [2]</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes [4]</td>
+</tr>
+<tr>
+<td>Dataset</td>
+<td>yes [2]</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes [4]</td>
+</tr>
+<tr>
+<td>OAuth</td>
+<td>yes [2]</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes [4]</td>
+</tr>
+<tr>
+<td>Wolfram</td>
+<td>yes [3]</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Geolocate</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>STT</td>
+<td>yes [3]</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Weather</td>
+<td>yes [3]</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>yes [3]</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<pre><code>[1] will update user level mycroft.conf
+[2] shared json database with ovos-config-assistant and ovos-backend-manager
+[3] needs additional configuration (eg. credentials)
+[4] uses offline_backend functionality
+</code></pre>
+<h2 id="identity-information">Identity Information</h2>
+<p>A unique uuid and pairing information generated by registering with Home is stored in:
+<code>~/.config/mycroft/identity/identity2.json</code> <b>&lt;-- DO NOT SHARE THIS WITH OTHERS!</b></p>
+<p>This file uniquely identifies your device and should be kept safe</p>
+<h2 id="stt-plugin">STT Plugin</h2>
+<p>a companion stt plugin is available to use a backend as remote STT provider</p>
+<p>edit your configuration to use ovos-stt-plugin-selene</p>
+<pre><code class="language-json">{
+  &quot;stt&quot;: {
+    &quot;module&quot;: &quot;ovos-stt-plugin-selene&quot;
+  }
+}
+</code></pre>
+<p><a href="https://github.com/OpenVoiceOS/ovos-stt-plugin-selene">source code</a></p>
+<h2 id="offline-backend">Offline Backend</h2>
+<p>OVOS by default runs without a backend, in this case you will need to configure api keys manually</p>
+<p>This can be done with <a href="https://github.com/OpenVoiceOS/ovos-config-assistant">OCA</a> or by editing mycroft.conf</p>
+<p>edit your configuration to use the offline backend</p>
+<pre><code class="language-json">{
+  &quot;server&quot;: {
+    &quot;backend_type&quot;: &quot;offline&quot;
+  }
+}
+</code></pre>
+<h2 id="selene">Selene</h2>
+<p>The official mycroft home backend is called selene, users need to create an account and pair devices with the mycroft
+servers.</p>
+<p>This backend is not considered optional by MycroftAI but is not used by OVOS unless explicitly enabled</p>
+<p>Selene is AGPL licensed:
+- <a href="https://github.com/MycroftAI/selene-backend">backend source code</a>
+- <a href="https://github.com/MycroftAI/selene-ui">frontend source code</a></p>
+<p>edit your configuration to use the selene backend</p>
+<pre><code class="language-json">{
+  &quot;server&quot;: {
+    &quot;backend_type&quot;: &quot;selene&quot;,
+    &quot;url&quot;: &quot;https://api.mycroft.ai&quot;,
+    &quot;version&quot;: &quot;v1&quot;,
+    &quot;update&quot;: true,
+    &quot;metrics&quot;: true,
+    &quot;sync_skill_settings&quot;: true
+  }
+}
+</code></pre>
+<h2 id="personal-backend">Personal Backend</h2>
+<p>Personal backend is a reverse engineered alternative to selene that predates it</p>
+<p>It provides the same functionality for devices and packs some extra options</p>
+<p>It is not intended to serve different users or thousands of devices, there are no user accounts!</p>
+<p>This is currently the only way to run a vanilla mycroft-core device offline</p>
+<p>edit your configuration to use your own personal backend instance</p>
+<pre><code class="language-json">{
+  &quot;server&quot;: {
+    &quot;backend_type&quot;: &quot;personal&quot;,
+    &quot;url&quot;: &quot;http://0.0.0.0:6712&quot;,
+    &quot;version&quot;: &quot;v1&quot;,
+    &quot;update&quot;: true,
+    &quot;metrics&quot;: true,
+    &quot;sync_skill_settings&quot;: true
+  }
+}
+</code></pre>
+<p><a href="https://github.com/OpenVoiceOS/ovos-personal-backend">source code</a></p>
+<h3 id="backend-manager">Backend Manager</h3>
+<p>A web UI is provided to manage a personal backend instance</p>
+<p><img alt="" src="https://github.com/OpenVoiceOS/ovos-backend-manager/raw/dev/screenshots/demo.gif" /></p>
+<p><a href="https://github.com/OpenVoiceOS/ovos-backend-manager">source code</a></p>
+<h3 id="admin-api">Admin Api</h3>
+<p>personal backend provides a <a href="https://github.com/OpenVoiceOS/OVOS-local-backend#admin-api">admin api</a> that can be used to
+manage your devices</p>
+<pre><code class="language-python">from ovos_backend_client.api import AdminApi
+
+admin = AdminApi(&quot;secret_admin_key&quot;)
+uuid = &quot;...&quot;  # check identity2.json in the device you want to manage
+
+# manually pair a device
+identity_json = admin.pair(uuid)
+
+# set device info
+info = {&quot;opt_in&quot;: True,
+        &quot;name&quot;: &quot;my_device&quot;,
+        &quot;device_location&quot;: &quot;kitchen&quot;,
+        &quot;email&quot;: &quot;notifications@me.com&quot;,
+        &quot;isolated_skills&quot;: False,
+        &quot;lang&quot;: &quot;en-us&quot;}
+admin.set_device_info(uuid, info)
+
+# set device preferences
+prefs = {&quot;time_format&quot;: &quot;full&quot;,
+         &quot;date_format&quot;: &quot;DMY&quot;,
+         &quot;system_unit&quot;: &quot;metric&quot;,
+         &quot;lang&quot;: &quot;en-us&quot;,
+         &quot;wake_word&quot;: &quot;hey_mycroft&quot;,
+         &quot;ww_config&quot;: {&quot;phonemes&quot;: &quot;HH EY . M AY K R AO F T&quot;,
+                       &quot;module&quot;: &quot;ovos-ww-plugin-pocketsphinx&quot;,
+                       &quot;threshold&quot;: 1e-90},
+         &quot;tts_module&quot;: &quot;ovos-tts-plugin-mimic&quot;,
+         &quot;tts_config&quot;: {&quot;voice&quot;: &quot;ap&quot;}}
+admin.set_device_prefs(uuid, prefs)
+
+# set location data
+loc = {
+    &quot;city&quot;: {
+        &quot;code&quot;: &quot;Lawrence&quot;,
+        &quot;name&quot;: &quot;Lawrence&quot;,
+        &quot;state&quot;: {
+            &quot;code&quot;: &quot;KS&quot;,
+            &quot;name&quot;: &quot;Kansas&quot;,
+            &quot;country&quot;: {
+                &quot;code&quot;: &quot;US&quot;,
+                &quot;name&quot;: &quot;United States&quot;
+            }
+        }
+    },
+    &quot;coordinate&quot;: {
+        &quot;latitude&quot;: 38.971669,
+        &quot;longitude&quot;: -95.23525
+    },
+    &quot;timezone&quot;: {
+        &quot;code&quot;: &quot;America/Chicago&quot;,
+        &quot;name&quot;: &quot;Central Standard Time&quot;,
+        &quot;dstOffset&quot;: 3600000,
+        &quot;offset&quot;: -21600000
+    }
+}
+admin.set_device_location(uuid, loc)
+</code></pre>
+<h2 id="ovos-api-service">OVOS API Service</h2>
+<p>OVOS Api Service is not a full backend, it is a set of free proxy services hosted by the OVOS Team for usage in default
+skills</p>
+<p>device management functionality and user accounts do not exist, offline mode will be used for these apis</p>
+<p>edit your configuration to use the OVOS backend</p>
+<pre><code class="language-json">{
+  &quot;server&quot;: {
+    &quot;backend_type&quot;: &quot;ovos&quot;,
+    &quot;url&quot;: &quot;https://api.openvoiceos.com&quot;
+  }
+}
+</code></pre>
+<p><a href="https://github.com/OpenVoiceOS/ovos_api_service">source code</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../kdeconnect/" class="btn btn-neutral float-left" title="KDE Connect"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../config/" class="btn btn-neutral float-right" title="Configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../kdeconnect/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../config/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

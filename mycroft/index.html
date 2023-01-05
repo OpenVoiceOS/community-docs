@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/mycroft/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>OVOS vs MyCroft - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "OVOS vs MyCroft";
+        var mkdocs_page_input_path = "mycroft.md";
+        var mkdocs_page_url = "/community-docs/mycroft/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">OVOS vs MyCroft</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#speech-client">Speech Client</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#audio">Audio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#skills">Skills</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hardware">Hardware</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#misc">Misc</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Mycroft &raquo;</li>
+      <li>OVOS vs MyCroft</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ovos-core-vs-mycroft-core">ovos-core vs mycroft-core</h1>
+<h2 id="speech-client">Speech Client</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mycroft</th>
+<th>OVOS</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wake Word (listen)</td>
+<td>yes</td>
+<td>yes</td>
+<td>Only transcribe speech (STT) after a certain word is spoken</td>
+</tr>
+<tr>
+<td>Wake Up Word (sleep mode)</td>
+<td>yes</td>
+<td>yes</td>
+<td>When in sleep mode only listen for "wake up" (no STT)</td>
+</tr>
+<tr>
+<td>Hotword (bus event)</td>
+<td>no</td>
+<td>yes</td>
+<td>Emit bus events when a hotword is detected (no STT)</td>
+</tr>
+<tr>
+<td>Multiple Wake Words</td>
+<td>no</td>
+<td>yes</td>
+<td>Load multiple hotword engines/models simultaneously</td>
+</tr>
+<tr>
+<td>Fallback STT</td>
+<td>no</td>
+<td>yes</td>
+<td>fallback STT if the main one fails (eg, internet outage)</td>
+</tr>
+<tr>
+<td>Instant Listen</td>
+<td>no</td>
+<td>yes</td>
+<td>Do not pause between wake word detection and recording start</td>
+</tr>
+<tr>
+<td>Hybrid Listen</td>
+<td>no</td>
+<td>WIP</td>
+<td>Do not require wake word for follow up questions</td>
+</tr>
+<tr>
+<td>Continuous Listen</td>
+<td>no</td>
+<td>WIP</td>
+<td>Do not require wake word, always listen using VAD</td>
+</tr>
+<tr>
+<td>Recording mode</td>
+<td>no</td>
+<td>WIP</td>
+<td>Save audio instead of processing speech</td>
+</tr>
+<tr>
+<td>Wake Word Plugins</td>
+<td>yes</td>
+<td>yes</td>
+<td>Supports 3rd party integrations for hotword detection</td>
+</tr>
+<tr>
+<td>STT Plugins</td>
+<td>yes</td>
+<td>yes</td>
+<td>Supports 3rd party integrations for STT</td>
+</tr>
+<tr>
+<td>VAD plugins</td>
+<td>no   *</td>
+<td>yes</td>
+<td>Supports 3rd party integrations for voice activiy detection</td>
+</tr>
+</tbody>
+</table>
+<p>NOTES:</p>
+<ul>
+<li><a href="https://github.com/JarbasHiveMind/HiveMind-voice-sat">HiveMind Voice Satellite</a> uses ovos-core and supports the same
+  features</li>
+<li>Pyaudio has a bug in python 3.10, you may need to use <a href="https://git.skeh.site/skeh/pyaudio">this fork</a> (ovos-core and
+  mk2 only)</li>
+<li>VAD is supported in mycroft mark2 branch, but is hardcoded for silero</li>
+<li>Sleep mode loop has been <a href="https://github.com/OpenVoiceOS/ovos-core/pull/10">rewritten in ovos-core</a> and is much more
+  responsive than mycroft</li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-core/pull/82">Mic handling logic</a> has been ported from mk2 branch and is much
+  more responsive than mycroft dev branch</li>
+<li>Instant / Hybrid / Continuous listen settings are experimental, good microphone and AEC are highly recommended (such
+  as a mark2)</li>
+<li>in ovos-core this functionality has
+  been <a href="https://github.com/OpenVoiceOS/ovos-core/tree/dev/mycroft/listener">refactored and moved</a> to the
+  new <code>mycroft.listener</code>module</li>
+</ul>
+<h2 id="audio">Audio</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mycroft</th>
+<th>OVOS</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MPRIS integration</td>
+<td>no</td>
+<td>yes</td>
+<td>Integrate with MPRIS protocol</td>
+</tr>
+</tbody>
+</table>
+<p>NOTES:</p>
+<ul>
+<li><a href="https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin">OCP</a> can be used with mycroft-core, but not mk2</li>
+<li>OCP can be controlled via MPRIS, eg. KDEConnect</li>
+<li>OCP can control MPRIS enabled players, eg. spotify</li>
+</ul>
+<h2 id="skills">Skills</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mycroft</th>
+<th>OVOS</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skill Plugins</td>
+<td>no</td>
+<td>yes</td>
+<td>skills can be packaged like standard python projects and installed via setup.py (eg. with pip or your package manager)</td>
+</tr>
+<tr>
+<td>User Resources</td>
+<td>no</td>
+<td>yes</td>
+<td>Users can override resource files, eg. customize dialogs for installed skills</td>
+</tr>
+<tr>
+<td>Skill permissions</td>
+<td>no</td>
+<td>WIP</td>
+<td>Users can limit converse and fallback functionality per skill and configure the order in which skills are executed</td>
+</tr>
+<tr>
+<td>Intent Plugins</td>
+<td>no</td>
+<td>WIP</td>
+<td>Supports 3rd party integrations for Intent Matching</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hardware">Hardware</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mycroft</th>
+<th>OVOS</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System Plugins</td>
+<td>no</td>
+<td>yes</td>
+<td>Support for 3rd party hardware (eg. <a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk2">mk2-plugin</a>) and OS level integrations (eg. <a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-wifi-setup">wifi-setup</a>)</td>
+</tr>
+</tbody>
+</table>
+<p>NOTES:</p>
+<ul>
+<li>PHAL can be used with mycroft-core</li>
+</ul>
+<h2 id="misc">Misc</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mycroft</th>
+<th>OVOS</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offline usage</td>
+<td>no</td>
+<td>yes</td>
+<td>Can be configured to work without internet connectivity</td>
+</tr>
+<tr>
+<td>MultiLingual</td>
+<td>no</td>
+<td>WIP</td>
+<td>Can be configured to work in multiple languages at the same time</td>
+</tr>
+<tr>
+<td>HiveMind support</td>
+<td>WIP</td>
+<td>WIP</td>
+<td>Supports HiveMind for a distributed/remote mycroft experience</td>
+</tr>
+<tr>
+<td>XDG compliance</td>
+<td>WIP</td>
+<td>yes</td>
+<td>All resources respect XDG standards and support multiple users</td>
+</tr>
+<tr>
+<td>Usage as a lib</td>
+<td>no</td>
+<td>yes</td>
+<td>Packaged as a library, supports derivative voice assistants</td>
+</tr>
+</tbody>
+</table>
+<p>NOTES:</p>
+<ul>
+<li><a href="https://github.com/JarbasHiveMind">HiveMind</a> is being developed against ovos-core, development under mycroft-core is
+  stalled, see the <a href="https://github.com/JarbasHiveMind/HiveMind-core/wiki/Mycroft-Messages">hivemind wiki</a> for details</li>
+<li>XDG support includes multiple skill directories, all skill data, all configuration files, and all cached files</li>
+<li>You can build your own assistant on top of ovos-core, multiple assistants
+  can <a href="https://github.com/OpenVoiceOS/ovos-config/blob/dev/ovos_config/meta.py">co-exist in the same machine and use their own configuration files</a>
+  , ovos-core is packaged like a regular python package and can be handled as a requirement by package managers<ul>
+<li>examples projects: <a href="https://github.com/NeonGeckoCom/NeonCore/">neon-core</a>
+  , <a href="https://github.com/JarbasHiveMind/HiveMind-voice-sat">hivemind-voice-sat</a></li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../compat/" class="btn btn-neutral float-left" title="Compatibility"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../buildroot/" class="btn btn-neutral float-right" title="Buildroot">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../compat/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../buildroot/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/g2p_plugins/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Grapheme to Phoneme - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Grapheme to Phoneme";
+        var mkdocs_page_input_path = "g2p_plugins.md";
+        var mkdocs_page_url = "/community-docs/g2p_plugins/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Grapheme to Phoneme</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#list-of-g2p-plugins">List of G2P plugins</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#standalone-usage">Standalone Usage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#plugin-template">Plugin Template</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Plugins &raquo;</li>
+      <li>Grapheme to Phoneme</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="grapheme-to-phoneme-plugins">Grapheme to Phoneme Plugins</h1>
+<p>Grapheme to Phoneme is the process of converting text into a set of "sound units" called phonemes</p>
+<p>These plugins are used to auto generate mouth movements / visemes in the TTS stage, they can also be used to help
+configuring wake words or to facilitate training of TTS systems</p>
+<p>These plugins can provide phonemes either in ARPA or IPA alphabets, an automatic conversion will happen behind the scenes when needed</p>
+<p>Mouth movements are generated via a mapping of ARPA to VISEMES, </p>
+<p>Visemes are predefined mouth positions, timing per phonemes will default to 0.4 seconds if the plugin does not report a duration</p>
+<p><img alt="visemes" src="http://www.web3.lu/wp-content/uploads/2014/09/visemes.jpg" /></p>
+<p>Mapping based on <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.221.6377&amp;rep=rep1&amp;type=pdf">Jeffers phoneme to viseme map, seen in table 1</a>, partially based on the "12 mouth shapes visuals seen <a href="https://wolfpaulus.com/journal/software/lipsynchronization/">here</a></p>
+<h2 id="list-of-g2p-plugins">List of G2P plugins</h2>
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/g2p-cmudict-plugin">neon-g2p-cmudict-plugin</a></td>
+<td>ARPA</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/g2p-phoneme-guesser-plugin">neon-g2p-phoneme-guesser-plugin</a></td>
+<td>ARPA</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonJarbas/g2p-mimic-plugin">neon-g2p-mimic-plugin</a></td>
+<td>ARPA</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonJarbas/g2p-mimic2-plugin">neon-g2p-mimic2-plugin</a></td>
+<td>ARPA</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonJarbas/g2p-espeak-plugin">neon-g2p-espeak-plugin</a></td>
+<td>IPA</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/g2p-gruut-plugin">neon-g2p-gruut-plugin</a></td>
+<td>IPA</td>
+</tr>
+</tbody>
+</table>
+<h2 id="standalone-usage">Standalone Usage</h2>
+<p>All G2P plugins can be used as follows</p>
+<pre><code class="language-python">
+utterance = &quot;hello world&quot;
+word = &quot;hello&quot;
+lang=&quot;en-us&quot;
+
+plug = G2pPlugin()
+
+# convert a word into a list of phonemes
+phones = plug.get_ipa(word, lang)
+assert phones == ['h', 'ʌ', 'l', 'oʊ']
+
+phones = plug.get_arpa(word, lang)
+assert phones == ['HH', 'AH', 'L', 'OW']
+
+# convert a utterance into a list of phonemes
+phones = plug.utterance2arpa(utterance, lang)
+assert phones == ['HH', 'AH', 'L', 'OW', '.', 'W', 'ER', 'L', 'D']
+
+phones = plug.utterance2ipa(utterance, lang)
+assert phones == ['h', 'ʌ', 'l', 'oʊ', '.', 'w', 'ɝ', 'l', 'd']
+
+# convert a utterance into a list of viseme, duration pairs
+visemes = plug.utterance2visemes(utterance, lang)
+assert visemes == [('0', 0.0775), ('0', 0.155), ('3', 0.2325), ('2', 0.31), ('2', 0.434), ('2', 0.558), ('3', 0.682), ('3', 0.806)]
+</code></pre>
+<h2 id="plugin-template">Plugin Template</h2>
+<pre><code class="language-python">from ovos_plugin_manager.templates.g2p import Grapheme2PhonemePlugin
+from ovos_utils.lang.visimes import VISIMES
+
+# base plugin class
+class MyARPAG2PPlugin(Grapheme2PhonemePlugin):
+    def __init__(self, config=None):
+        self.config = config or {}
+
+    def get_arpa(self, word, lang, ignore_oov=False):
+        phones = []  # TODO implement
+        return phones
+
+    def get_durations(self, utterance, lang=&quot;en&quot;, default_dur=0.4):
+        words = utterance.split()
+        phones = [self.get_arpa(w, lang) for w in utterance.split()]
+        dur = default_dur  # TODO this is plugin specific
+        return [(pho, dur) for pho in phones]
+
+    def utterance2visemes(self, utterance, lang=&quot;en&quot;, default_dur=0.4):
+        phonemes = self.get_durations(utterance, lang, default_dur)
+        return [(VISIMES.get(pho[0].lower(), '4'), float(pho[1]))
+                for pho in phonemes]
+
+</code></pre>
+<p>If your plugin uses IPA instead of ARPA simply replace <code>get_arpa</code> with <code>get_ipa</code></p>
+<pre><code class="language-python">from ovos_plugin_manager.templates.g2p import Grapheme2PhonemePlugin
+from ovos_utils.lang.visimes import VISIMES
+
+# base plugin class
+class MyIPAG2PPlugin(Grapheme2PhonemePlugin):
+    def __init__(self, config=None):
+        self.config = config or {}
+
+    def get_ipa(self, word, lang, ignore_oov=False):
+        phones = []  # TODO implement
+        return phones
+
+    def get_durations(self, utterance, lang=&quot;en&quot;, default_dur=0.4):
+        # auto converted to arpa if ipa is implemented
+        phones = [self.get_arpa(w, lang) for w in utterance.split()]
+        dur = default_dur  # TODO this is plugin specific
+        return [(pho, dur) for pho in phones]
+
+    def utterance2visemes(self, utterance, lang=&quot;en&quot;, default_dur=0.4):
+        phonemes = self.get_durations(utterance, lang, default_dur)
+        return [(VISIMES.get(pho[0].lower(), '4'), float(pho[1]))
+                for pho in phonemes]
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../vad_plugins/" class="btn btn-neutral float-left" title="Voice Activity Detection"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../audio_plugins/" class="btn btn-neutral float-right" title="Audio Playback">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../vad_plugins/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../audio_plugins/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

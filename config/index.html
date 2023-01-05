@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/config/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Configuration - Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Configuration";
+        var mkdocs_page_input_path = "config.md";
+        var mkdocs_page_url = "/community-docs/config/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_image/">Downloading an image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../first_boot/">First boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_network/">Network setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_ovos/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Features and skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../standard_skills/">Standard skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_music/">Playing music</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../playing_video/">Playing video</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smartspeaker functionality</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../airplay/">Airplay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../spotifyd/">Spotify connect</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../btspeaker/">Bluetooth speaker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend Services</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Configuration</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#structure">Structure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ovosconf">ovos.conf</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reading-configuration">Reading Configuration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuring-configuration">Configuring Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#protected_keys">protected_keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#disable_user_config">disable_user_config</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#disable_remote_config">disable_remote_config</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OVOS-core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bus_service/">Bus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills_service/">Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../speech_service/">Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_service/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_service/">GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../skills/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_structure/">Anatomy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statements/">Dialog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prompts/">Prompts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../intents/">Intents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../context/">Context</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../converse/">Converse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_filesystem/">Filesystem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_settings/">Skill Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_gui/">Skill GUI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_api/">Skill API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../skill_json/">Skill Json</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dev/">F.A.Q.</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GUI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../homescreen/">Homescreen</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qml_guidelines/">QML Design Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linguistika/">Open Linguistika</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">Shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_protocol/">Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gui_extensions/">Extensions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Plugins</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OPM/">Plugin Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_plugins/">Speech To Text</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_plugins/">Text To Speech</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ww_plugins/">Wake Word</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vad_plugins/">Voice Activity Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../g2p_plugins/">Grapheme to Phoneme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio_plugins/">Audio Playback</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lang_plugins/">Language Detection/Translation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PHAL/">Platform/Hardware Abstraction Layer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technologies</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCP/">Common Play</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../osm/">Skills Manager</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OCA/">Config Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stt_server/">STT Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tts_server/">TTS Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../translate_server/">Translate Server</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mycroft</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../dinkum/">Dinkum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mycroft/">OVOS vs MyCroft</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../manjaro/">Manjaro</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comparison/">Compared</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Advanced Usage &raquo;</li>
+      <li>Configuration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="configuration">Configuration</h1>
+<ul>
+<li><a href="#structure">Structure</a><ul>
+<li><a href="#ovosconf">ovos.conf</a></li>
+</ul>
+</li>
+<li><a href="#reading-configuration">Reading Configuration</a></li>
+<li><a href="#configuring-configuration">Configuring Configuration</a><ul>
+<li><a href="#protected-keys">protected_keys</a></li>
+<li><a href="#disable-user-config">disable_user_config</a></li>
+<li><a href="#disable-remote-config">disable_remote_config</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="structure">Structure</h2>
+<h3 id="ovosconf">ovos.conf</h3>
+<p>The <code>ovos_config</code> package determines which config files to load based on <code>ovos.conf</code>.
+<code>get_ovos_config</code> will return default values that load <code>mycroft.conf</code> unless otherwise configured.</p>
+<p><code>ovos.conf</code> files are loaded in the following order, with later files taking priority over earlier ones in the list:</p>
+<ul>
+<li>/etc/OpenVoiceOS/ovos.conf</li>
+<li>/etc/mycroft/ovos.conf (Deprecated)</li>
+<li><code>XDG_CONFIG_DIRS</code> + /OpenVoiceOS/ovos.conf</li>
+<li>/etc/xdg/OpenVoiceOS/ovos.conf</li>
+<li><code>XDG_CONFIG_HOME</code> (default ~/.config) + /OpenVoiceOS/ovos.conf</li>
+</ul>
+<p>A simple <code>ovos_config</code> should have a structure like:</p>
+<pre><code class="language-json">{
+  &quot;base_folder&quot;: &quot;mycroft&quot;,
+  &quot;config_filename&quot;: &quot;mycroft.conf&quot;,
+  &quot;default_config_path&quot;: &quot;&lt;Absolute Path to Installed Core&gt;/configuration/mycroft.conf&quot;,
+  &quot;module_overrides&quot;: {},
+  &quot;submodule_mappings&quot;: {}
+}
+</code></pre>
+<blockquote>
+<p><em>Note</em>: <code>default_config_path</code> should always be an absolute path. This is generally
+detected automatically, but any manual override must specify an absolute path to a json or yaml config file.</p>
+</blockquote>
+<p>Non-Mycroft modules may specify alternate config paths. A call to <code>get_ovos_config</code> from
+<code>neon_core</code> or <code>neon_messagebus</code> will return a configuration like:</p>
+<pre><code class="language-json">{
+  &quot;base_folder&quot;: &quot;neon&quot;,
+  &quot;config_filename&quot;: &quot;neon.yaml&quot;,
+  &quot;default_config_path&quot;: &quot;/etc/example/config/neon.yaml&quot;,
+  &quot;module_overrides&quot;: {
+    &quot;neon_core&quot;: {
+      &quot;base_folder&quot;: &quot;neon&quot;,
+      &quot;config_filename&quot;: &quot;neon.yaml&quot;,
+      &quot;default_config_path&quot;: &quot;/etc/example/config/neon.yaml&quot;
+    }
+  },
+  &quot;submodule_mappings&quot;: {
+    &quot;neon_messagebus&quot;: &quot;neon_core&quot;,
+    &quot;neon_speech&quot;: &quot;neon_core&quot;,
+    &quot;neon_audio&quot;: &quot;neon_core&quot;,
+    &quot;neon_gui&quot;: &quot;neon_core&quot;
+  }
+}
+</code></pre>
+<p>If <code>get_ovos_config</code> was called from <code>mycroft</code> with the same configuration file as the last example,
+the returned configuration would be:</p>
+<pre><code class="language-json">{
+  &quot;base_folder&quot;: &quot;mycroft&quot;,
+  &quot;config_filename&quot;: &quot;mycroft.conf&quot;,
+  &quot;default_config_path&quot;: &quot;&lt;Path to Installed Core&gt;/configuration/mycroft.conf&quot;,
+  &quot;module_overrides&quot;: {
+    &quot;neon_core&quot;: {
+      &quot;base_folder&quot;: &quot;neon&quot;,
+      &quot;config_filename&quot;: &quot;neon.yaml&quot;,
+      &quot;default_config_path&quot;: &quot;/etc/example/config/neon.yaml&quot;
+    }
+  },
+  &quot;submodule_mappings&quot;: {
+    &quot;neon_messagebus&quot;: &quot;neon_core&quot;,
+    &quot;neon_speech&quot;: &quot;neon_core&quot;,
+    &quot;neon_audio&quot;: &quot;neon_core&quot;,
+    &quot;neon_gui&quot;: &quot;neon_core&quot;
+  }
+}
+</code></pre>
+<h2 id="reading-configuration">Reading Configuration</h2>
+<p><code>ovos_config.config.Configuration</code> is a singleton that loads a single config
+object. The configuration files loaded are determined by <code>ovos.conf</code> as described above and can be in either json or
+yaml format.</p>
+<p>Using the above example, if <code>Configuration()</code> is called from <code>neon-core</code>, the following configs would be loaded in this
+order:</p>
+<ul>
+<li>/etc/example/config/neon.yaml</li>
+<li><code>os.environ.get('MYCROFT_SYSTEM_CONFIG')</code> or /etc/neon/neon.yaml</li>
+<li><code>os.environ.get('MYCROFT_WEB_CACHE')</code> or <code>XDG_CONFIG_PATH</code>/neon/web_cache.json</li>
+<li>~/.neon/neon.yaml (Deprecated)</li>
+<li><code>XDG_CONFIG_DIRS</code> + /neon/neon.yaml</li>
+<li>/etc/xdg/neon/neon.yaml</li>
+<li><code>XDG_CONFIG_HOME</code> (default ~/.config) + /neon/neon.yaml</li>
+</ul>
+<p>When the configuration loader starts, it looks in these locations in this order, and loads ALL configurations. Keys that
+exist in multiple configuration files will be overridden by the last file to contain the value. This process results in
+a minimal amount being written for a specific device and user, without modifying default distribution files.</p>
+<h2 id="configuring-configuration">Configuring Configuration</h2>
+<p>There are a couple of special configuration keys that change the way the configuration stack loads.</p>
+<ul>
+<li><code>Default</code> config refers to the config specified at <code>default_config_path</code> in
+  <code>ovos.conf</code> (#1 <code>/etc/example/config/neon.yaml</code> in the stack above).</li>
+<li><code>System</code> config refers to the config at <code>/etc/{base_folder}/{config_filename}</code> (#2 <code>/etc/neon/neon.yaml</code> in the stack
+  above).</li>
+</ul>
+<h3 id="protected_keys">protected_keys</h3>
+<p>A <code>"protected_keys"</code> configuration section may be added to a <code>Default</code> or <code>System</code> Config file
+(default <code>/etc/mycroft/mycroft.conf</code>). This configuration section specifies
+other configuration keys that may not be specified in <code>remote</code> or <code>user</code> configurations.
+Keys may specify nested parameters with <code>.</code> to exclude specific keys within nested dictionaries.
+An example config could be:</p>
+<pre><code class="language-json">{
+  &quot;protected_keys&quot;: {
+    &quot;remote&quot;: [
+      &quot;gui_websocket.host&quot;,
+      &quot;websocket.host&quot;
+    ],
+    &quot;user&quot;: [
+      &quot;gui_websocket.host&quot;
+    ]
+  }
+}
+</code></pre>
+<p>This example specifies that <code>config['gui_websocket']['host']</code> may be specified in user configuration, but not remote.
+<code>config['websocket']['host']</code> may not be specified in user or remote config, so it will only consider default
+and system configurations.</p>
+<h3 id="disable_user_config">disable_user_config</h3>
+<p>If this config parameter is set to True in <code>Default</code> or <code>System</code> configuration,
+no user configurations will be loaded (no XDG configuration paths).</p>
+<h3 id="disable_remote_config">disable_remote_config</h3>
+<p>If this config parameter is set to True in <code>Default</code> or <code>System</code> configuration,
+the remote configuration (<code>web_cache.json</code>) will not be loaded.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../backend/" class="btn btn-neutral float-left" title="Backend Services"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../core/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../backend/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../core/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
