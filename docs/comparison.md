@@ -43,9 +43,9 @@ OpenVoiceOS ready to use images come in two flavours; The buildroot version, bei
 | **Updating** |
 | Update mechanism(s) | pip<br>*In the future:<br>Firmware updates. On-device and Over The Air* | pip<br>package manager | pip<br>package manager | OTA<br>*controlled by Mycroft* | pip<br>package manager |
 | **Voice Assistant - Functionality** |
-| STT - On device | Yes<br>*Kaldi/Vosk-API<br>WhisperCPP (WIP)<br>Whisper TFlite (WIP)* | Yes<br>*Kaldi/Vosk-API* | Yes<br>*?* | No | No |
-| STT - On premises | Yes<br>*Ovos Server Proxy<br>More...?* | Yes<br>*Ovos Server Proxy<br>* | Yes<br>*?* | No | No |
-| STT - Cloud | Yes<br>*Ovos Server Proxy<br>Google<br>More...?* | Yes<br>*Ovos Server Proxy<br>Google<br>* | Yes<br>*?* | No | No |
+| STT - On device | Yes<br>*Kaldi/Vosk-API<br>WhisperCPP (WIP)<br>Whisper TFlite (WIP)* | Yes<br>*Kaldi/Vosk-API* | Yes<br>*?* | Yes<br>*Vosk*<br>*Coqui*  | No |
+| STT - On premises | Yes<br>*Ovos STT Server<br>(any plugin)<br>* | Yes<br>*Ovos STT Server<br>(any plugin)<br>* | Yes<br>*?* | No | No |
+| STT - Cloud | Yes<br>*Ovos Server Proxy<br>Google<br>More...?* | Yes<br>*Ovos Server Proxy<br>Google<br>* | Yes<br>*?* | Yes<br>*Selene Google  Cloud Proxy<br>*|  Yes<br>*Selene Google (Chromium) Proxy <br>* |
 | TTS - On device | Yes<br>*Mimic 1<br>More...?* | Yes<br>*Mimic 1<br>More...?* | Yes<br>*Mimic 1<br>Mimic 3<br>More...?* | Yes<br>*Mimic 3* | Yes<br>*Mimic 1* |
 | TTS - On premises | Yes<br>*?* | Yes<br>*?* | Yes<br>*?* | No | No |
 | TTS - Cloud | Yes<br>*Google<br>Mimic 2<br>Mimic 3<br>More...?* | Yes<br>*Google<br>Mimic 2<br>Mimic 3<br>More...?*  | Yes<br>*?* | No | No |
