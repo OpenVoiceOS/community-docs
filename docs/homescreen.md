@@ -55,27 +55,28 @@ The media player widget is displayed in the bottom of the home screen, It replac
 
 ### Settings
 
-The homescreen has several customizations available.  This is sample `settings.conf` file with all of the options explained
+The homescreen has several customizations available.  This is sample `settings.json` file with all of the options explained
 
 ```
 {
-    "__mycroft_skill_firstrun": false,  # This is set on first load of the skill
-    "weather_skill": "skill-weather.openvoiceos",  # DEPRECIATED has no effect - PR #62 pending
-    "datetime_skill": "skill-date-time.mycroftai",  # Allows you to use a custom
-                    skill to display the date and time.  When NOT set defaults
-                    to "skill-ovos-date-time.openvoiceos"
-    "examples_skill": "ovos-skills-info.openvoiceos",  # Allows use of a custom
-                    skill for the examples.  When NOT set, defaults to use
-                    "ovos_skills_manager.utils.get_skills_example()" function
-    "wallpaper": "default.jpg",  # Allows a custom wallpaper url. Use complete url
-                    without any tilde `~`
-    "persistent_menu_hint": false,  # When true displays a hint of the pull-down
-                    menu at the top of the page
-    "examples_enabled": true,  # When false, the examples at the bottom of the screen
-                    will Not be visible
-    "randomize_examples": true,  # When false, the rotation of the examples will
-                    follow the way they are loaded in the list instead of a random example
-    "examples_prefix": true  # When false, the prefix 'Ask Me' will NOT be displayed
-                    with the examples
+    "__mycroft_skill_firstrun": false,
+    "weather_skill": "skill-weather.openvoiceos",
+    "datetime_skill": "skill-date-time.mycroftai",
+    "examples_skill": "ovos-skills-info.openvoiceos",
+    "wallpaper": "default.jpg",
+    "persistent_menu_hint": false,
+    "examples_enabled": true,
+    "randomize_examples": true,
+    "examples_prefix": true
 }
 ```
+
+  * __mycroft_skill_firstrun:  This is automatically set on first load of skill
+  * weather_skill:  DEPRECIATED and has no effect - [PR pending](https://github.com/OpenVoiceOS/skill-ovos-homescreen/pull/62)
+  * datetime_skill:  Allows you to use a custom skill to display the date and time.  Defaults to `skill-ovos-date-time.openvoiceos`
+  * examples_skill:  Allows use of a custom skill for the displayed examples.  Defaults to `ovos_skills_manager.utils.get_skills_example()` function
+  * wallpaper:  Allows a custom wallpaper to be displayed.  Use a complete url without any tilde `~`
+  * persistent_menu_hint:  When true, displayes a hint of the pull-down menu at the top of the page
+  * examples_enabled:  When false, the examples at the bottom of the screen will be hidden
+  * randomize_examples:  When false, the rotation of the examples will follow the way they are loaded
+  * examples_prefix:  When false, the prefix 'Ask Me' will NOT be displayed with the examples
