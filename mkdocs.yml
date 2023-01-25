@@ -45,6 +45,7 @@ nav:
         - Skill GUI: skill_gui.md
         - Skill API: skill_api.md
         - Skill Json: skill_json.md
+        - Skill Tests: skill_tests.md
         - F.A.Q.: dev.md
     - GUI:
         - Introduction: gui_intro.md
