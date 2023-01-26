@@ -6,31 +6,40 @@ This file contains metadata about the skill and is all you need to submit a skil
 
 ```javascript
 {
-  "name": "Wolfram Alpha",
-  "description": "Get information from Wolfram Alpha",
-  "skillname": "skill-wolfie",
-  "authorname": "JarbasSkills",
-  "url": "https://github.com/JarbasSkills/skill-wolfie",
-  "branch": "v0.1",
-  "desktopFile": false,
-  "systemDeps": false,
-  "download_url": "https://github.com/JarbasSkills/skill-wolfie/archive/v0.1.tar.gz",
-  "examples": [
-    "ask the wolf what is the speed of light",
-    "How tall is Mount Everest?",
-    "When was The Rocky Horror Picture Show released?",
-    "What is Madonna's real name?",
-    "What's 18 times 4?",
-    "How many inches in a meter?"
-  ],
-  "lang": "en-us",
-  "lang_support": {
-    "pt-pt": {
-      "name": "Wolfram Alpha",
-      "description": "...",
-      "examples": [...]
+    "name": "Wolfram Alpha",
+    "description": "Get information from Wolfram Alpha",
+    "skillname": "skill-wolfie",
+    "authorname": "JarbasSkills",
+    "url": "https://github.com/JarbasSkills/skill-wolfie",
+    "branch": "v0.1",
+    "desktopFile": false,
+    "systemDeps": false,
+    "download_url": "https://github.com/JarbasSkills/skill-wolfie/archive/v0.1.tar.gz",
+    "examples": [
+        "ask the wolf what is the speed of light",
+        "How tall is Mount Everest?",
+        "When was The Rocky Horror Picture Show released?",
+        "What is Madonna's real name?",
+        "What's 18 times 4?",
+        "How many inches in a meter?"
+    ],
+    "lang": "en-us",
+    "lang_support": {
+        "pt-pt": {
+          "name": "Wolfram Alpha",
+          "description": "...",
+          "examples": [...]
+        }
+    },
+    "requirements": {
+      "qt_version": "5",
+      "phal": ["phal-plugin-X"],
+      "admin": ["phal-admin-plugin-X"],
+      "ocp": ["ocp-plugin-X"],
+      "utterance": ["utterance-transformer.plugin-X"],
+      "audio": ["audio-transformer-plugin-X"],
+      "playback": ["audio-player-plugin-X"]      
     }
-  }
 }
 ```
 
@@ -50,3 +59,4 @@ On the JSON file:
 * `examples` is a list of example utterances that this skill should handle
 * `lang` is the language the `skill.json` and `README.md` files are written in
 * `lang_support` is a dict of other supported languages to translated skill `name`, `description`, and `examples`. Missing fields will default to top-level fields
+* `requirements` is a dict specifying other ovos platform requirements, in distributed setups such as docker plugins live in different services and can not be specified as regular python packages
