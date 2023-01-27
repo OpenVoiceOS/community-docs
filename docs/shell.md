@@ -24,3 +24,29 @@ Other distributions may offer alternative implementations such as:
 - [mycroft-gui](https://github.com/MycroftAI/mycroft-gui) also hosts a client for developers on the desktop.
 - [plasma-bigscreen](http://invent.kde.org/plasma/plasma-bigscreen)
 - [mycroft mark2](https://github.com/MycroftAI/mycroft-gui-mark-2)
+
+## Configuration
+The Shell can be configured in a few ways.
+
+### Shell Options
+`~/.config/OpenvoiceOS/OvosShell.conf` can be edited to change shell options that
+may also be changed via UI. An example config would look like:
+```
+[General]
+fakeBrightness=1
+menuLabels=true
+```
+
+### Themes
+Shell themes can be included in `/usr/share/OVOS/ColorSchemes/` or 
+`~/.local/share/OVOS/ColorSchemes/` in json format. Note that colors should include
+an alpha value (usually `FF`).
+
+```json
+{
+  "name": "Neon Green",
+  "primaryColor": "#FF072103",
+  "secondaryColor": "#FF2C7909",
+  "textColor": "#FFF1F1F1"
+}
+```
