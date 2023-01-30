@@ -3,6 +3,7 @@ site_url: https://openvoiceos.github.io/community-docs
 nav:
     - Home:
         - Introduction: index.md
+        - About: why.md
         - Glossary: glossary.md
         - License: license.md
         - Friends: friends.md
