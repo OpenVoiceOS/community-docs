@@ -28,6 +28,39 @@ OCP differs from a typical mycroft-core audio service in several aspects:
 - OCP manages external MPRIS enabled players, you can voice control 3rd party apps without writing a skill for it via
   OCP
 
+## FAQ
+
+- What is OCP?
+        OCP stands for OpenVoiceOS Common Play, it is a full-fledged media player.
+
+- Is OCP a standalone application?
+        Yes, OCP is a standalone but native OVOS application with full voice integration.
+
+- How does OCP differ from typical mycroft-core audio service?
+        OCP can run standalone, only needs a bus connection. It provides its own intents and GUI. OCP skills act as media providers, they do not usually handle playback. OCP handles several kinds of playback, including video and integrates with MPRIS.
+
+- What are OCP skills?
+        OCP skills are media providers/catalogs for OCP that provide search results.
+
+- How to find OCP skills?
+        You can find OCP skills in the awesome-ocp-skills list.
+
+- How is OCP configured?
+        OCP configuration is read from the "Audio" section in mycroft-core. The audio service plugin component acts as a compatibility layer with MycroftAI CommonPlay skills framework.
+
+- What is the OCP compatibility mode?
+        The operational mode refers to the OCP integration and can be "external", "native", or "auto".
+
+- Does OCP integrate with MPRIS?
+        Yes, OCP integrates with MPRIS and can be controlled from external apps like KdeConnect on your phone. It also manages external MPRIS enabled players.
+
+- What is the preferred audio service in OCP?
+        The preferred audio service in OCP is determined by the ordered list of audio backend preferences set in the configuration. The list is checked in order until a available backend is found.
+
+- Can OCP autoplay after media playback ends?
+        Yes, OCP has an "autoplay" option in the configuration that when set to True, behaves as if the search results are part of the playlist.
+
+
 ## OCP Skills
 
 Skills provide search results, think about them as media providers/catalogs for OCP
