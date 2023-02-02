@@ -11,6 +11,23 @@ PHAL plugins can perform actions such as hardware detection before loading, eg, 
 does not detect the sj201 hat. This makes plugins safe to install and bundle by default in our base images
 
 
+## FAQ
+
+- What is PHAL?
+    PHAL stands for Platform/Hardware Abstraction Layer, it is a component of OpenVoiceOS that replaces the concept of hardcoded "enclosure" from mycroft-core.
+
+- What does PHAL do?
+    PHAL is responsible for loading plugins that provide different functionalities. These plugins can handle system activities like reboot, shutdown, volume control, etc.
+
+- What are the different plugins available for PHAL?
+    There are various plugins available for PHAL, ranging from volume control to wifi setup, network management, and dashboard control. Some of the popular plugins are: ovos-PHAL-plugin-system, ovos-PHAL-plugin-mk2, ovos-PHAL-plugin-respeaker-2mic, ovos-PHAL-plugin-wifi-setup, ovos-PHAL-plugin-ipgeo, ovos-PHAL-plugin-dashboard, etc.
+
+- How does PHAL ensure that plugins are safe to install and use?
+    PHAL performs hardware detection before loading plugins. For example, the mark2 plugin will not load if it does not detect the sj201 hat. This makes plugins safe to install and use by default.
+
+- Is PHAL only for developers?
+    No, PHAL is not only for developers. It is an essential component of OpenVoiceOS and provides several functionalities that are useful for end-users as well.
+
 ## Plugins
 
 Platform/Hardware specific integrations are loaded by PHAL, these plugins can handle all sorts of system activities
