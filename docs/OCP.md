@@ -60,6 +60,23 @@ OCP differs from a typical mycroft-core audio service in several aspects:
 - Can OCP autoplay after media playback ends?
         Yes, OCP has an "autoplay" option in the configuration that when set to True, behaves as if the search results are part of the playlist.
 
+- What is the role of MPRIS in OCP?
+    MPRIS (Media Player Remote Interfacing Specification) is an API for controlling media players. In OCP, MPRIS integration provides a way to control and manage the media player from external applications such as KDE Connect, providing a seamless user experience.
+
+- Does OCP integrate with Spotify?
+    Yes, OCP integrates with Spotify and provides the ability to play music and control playback directly from the Spotify app, or other MPRIS enabled clients.
+
+- Is OCP open source?
+    Yes, OCP is open source and available on GitHub under the Apache 2.0 license.
+- How to install OCP skills?
+    OCP skills can be installed through the Mycroft Skill Manager (MSM). Simply search for the desired skill in the MSM and click on the "install" button.
+
+- Can OCP skills be removed?
+    Yes, OCP skills can be removed through the Mycroft Skill Manager (MSM). Simply search for the skill you would like to remove, and click on the "remove" button.
+
+- Is OCP customizable?
+    Yes, OCP is customizable through its configuration file, allowing you to set your preferred audio service, autoplay options, and more. Additionally, OCP skills can be installed and removed to provide only the media you like.
+
 
 ## OCP Skills
 
