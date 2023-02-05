@@ -15,10 +15,8 @@ OCP differs from a typical mycroft-core audio service in several aspects:
 - Can run standalone, only needs a bus connection
 - OCP provides it's own intents as if it was a skill
 - OCP provides it's own GUI as if it was a skill
-- mycroft-core CommonPlay skill framework is disabled when OCP loads
 - OCP skills have a dedicated MycroftSkill subclass and decorators in ovos-workshop
 - OCP skills act as media providers, they do not (usually) handle playback
-- mycroft-core CommonPlay skills have an imperfect compatibility layer and are given lower priority over OCP skills
 - OCP handles several kinds of playback, including video
 - OCP has a sub-intent parser for matching requested media types
 - AudioService becomes a subsystem for OCP
@@ -27,6 +25,11 @@ OCP differs from a typical mycroft-core audio service in several aspects:
 - OCP integrates with MPRIS, it can be controlled from external apps, eg KdeConnect in your phone
 - OCP manages external MPRIS enabled players, you can voice control 3rd party apps without writing a skill for it via
   OCP
+- mycroft-core CommonPlay skill framework is disabled when OCP loads 
+  - **WARNING**: this will be removed in ovos-core `0.1.0` or earlier
+- mycroft-core CommonPlay skills have an imperfect compatibility layer and are given lower priority over OCP skills 
+  - **WARNING**: this will be removed in ovos-core `0.1.0` or earlier
+  
 
 ## OCP Skills
 
@@ -34,7 +37,7 @@ Skills provide search results, think about them as media providers/catalogs for 
 
 You can find OCP skills in the [awesome-ocp-skills](https://github.com/OpenVoiceOS/awesome-ocp-skills) list 
 
-## Skills Menu
+### Skills Menu
 
 Some skills provide featured_media, you can access these from the OCP menu
 
@@ -44,7 +47,7 @@ Some skills provide featured_media, you can access these from the OCP menu
 
 selected files will be played in OCP
 
-![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/file_browser.gif)
+![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/ocp_file_browser.gif)
 
 folders are considered playlists
 

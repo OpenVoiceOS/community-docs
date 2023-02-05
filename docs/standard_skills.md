@@ -47,3 +47,11 @@ You can ask your device what the weather is or would be at any given time or pla
 The weather skill actually uses multiple pages indicated by the small dots at the bottom of the screen.
 
 ![Weather 2](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Weather%202.png)
+
+## File Browser
+
+The file browser allows you to browse the filesystem in your device and any connected media, you can view images and play music and videos.
+
+KDEConnect integration allows you to share files with your mobile devices
+
+![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/file_browser.gif)
