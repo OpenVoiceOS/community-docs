@@ -34,7 +34,32 @@ Skills provide search results, think about them as media providers/catalogs for 
 
 You can find OCP skills in the [awesome-ocp-skills](https://github.com/OpenVoiceOS/awesome-ocp-skills) list 
 
+### Skills Menu
+
+Some skills provide featured_media, you can access these from the OCP menu
+
+![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/ocp_skills.gif)
+
+### File Browser integration
+
+selected files will be played in OCP
+
+![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/file_browser.gif)
+
+folders are considered playlists
+
+![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/folder_playlist.gif)
+
+
 ## Configuration
+
+### GUI
+
+Some OCP settings are exposed via the GUI
+
+![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/ocp_timeout.gif)
+
+### Advanced
 
 OCP contains a audio service plugin component that acts as a compatibility layer with MycroftAI CommonPlay skills framework. 
 
