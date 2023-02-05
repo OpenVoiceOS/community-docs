@@ -57,6 +57,8 @@ folders are considered playlists
 
 Some OCP settings are exposed via the GUI
 
+Timeout settings
+
 ![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/ocp_timeout.gif)
 
 ### Advanced
