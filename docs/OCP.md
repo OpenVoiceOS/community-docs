@@ -43,6 +43,28 @@ Some skills provide featured_media, you can access these from the OCP menu
 
 ![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/ocp_skills.gif)
 
+## MPRIS integration
+
+### Sync with external players
+
+Via KDEConnect OCP can control and display data from external players
+
+See a demo here
+
+[![demo video](https://img.youtube.com/vi/1KMFV0UVYEM/default.jpg)](https://www.youtube.com/watch?v=1KMFV0UVYEM)
+
+This also includes voice intents, allowing you for example to voice control spotify
+
+### Manage multiple players
+
+If OCP is set to manage external players it will ensure only one of them is playing media at once, 
+if using KDEConnect this includes playback in connected devices
+
+See a demo here (**warning**: contains black metal)
+
+[![demo video](https://img.youtube.com/vi/YzC7oFYCcRE/default.jpg)](https://www.youtube.com/watch?v=YzC7oFYCcRE)
+
+
 ## File Browser integration
 
 selected files will be played in OCP
