@@ -33,6 +33,6 @@ The whole OCP framework has some benefits and features that are not skill specif
 
 ## Homescreen widget
 
-The homescreen skill that comes pre-installed with OpenVoiceOS also comes with a widget for the OCP framwork.
+The homescreen skill that comes pre-installed with OpenVoiceOS also comes with a widget for the OCP framework.
 
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/homescreen-mediawidget.gif)
