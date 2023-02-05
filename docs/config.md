@@ -8,7 +8,95 @@
     * [disable_user_config](#disable-user-config)
     * [disable_remote_config](#disable-remote-config)
 
-## Structure
+
+## Reading Configuration
+
+`ovos_config.config.Configuration` is a singleton that loads a single config
+object. The configuration files loaded are determined by `ovos.conf` as described below and can be in either json or
+yaml format.
+
+if `Configuration()` is called the following configs would be loaded in this
+order:
+
+- `{core-path}`/configuration/mycroft.conf
+- `os.environ.get('MYCROFT_SYSTEM_CONFIG')` or /etc/mycroft/mycroft.conf
+- `os.environ.get('MYCROFT_WEB_CACHE')` or `XDG_CONFIG_PATH`/neon/web_cache.json
+- ~/.mycroft/mycroft.conf (Deprecated)
+- `XDG_CONFIG_DIRS` + /mycroft/mycroft.conf
+- /etc/xdg/mycroft/mycroft.conf
+- `XDG_CONFIG_HOME` (default ~/.config) + /mycroft/mycroft.conf
+
+When the configuration loader starts, it looks in these locations in this order, and loads ALL configurations. Keys that
+exist in multiple configuration files will be overridden by the last file to contain the value. This process results in
+a minimal amount being written for a specific device and user, without modifying default distribution files.
+
+## Configuring Configuration
+
+There are a couple of special configuration keys that change the way the configuration stack loads.
+
+* `Default` config refers to the config specified at `default_config_path` in
+  `ovos.conf` (#1 `{core-path}/configuration/mycroft.conf` in the stack above).
+* `System` config refers to the config at `/etc/{base_folder}/{config_filename}` (#2 `/etc/mycroft/mycroft.conf` in the stack
+  above).
+
+### protected_keys
+
+A `"protected_keys"` configuration section may be added to a `Default` or `System` Config file
+(default `/etc/mycroft/mycroft.conf`). This configuration section specifies
+other configuration keys that may not be specified in `remote` or `user` configurations.
+Keys may specify nested parameters with `.` to exclude specific keys within nested dictionaries.
+An example config could be:
+
+```json
+{
+  "protected_keys": {
+    "remote": [
+      "gui_websocket.host",
+      "websocket.host"
+    ],
+    "user": [
+      "gui_websocket.host"
+    ]
+  }
+}
+```
+
+This example specifies that `config['gui_websocket']['host']` may be specified in user configuration, but not remote.
+`config['websocket']['host']` may not be specified in user or remote config, so it will only consider default
+and system configurations.
+
+### disable_user_config
+
+If this config parameter is set to True in `Default` or `System` configuration,
+no user configurations will be loaded (no XDG configuration paths).
+
+### disable_remote_config
+
+If this config parameter is set to True in `Default` or `System` configuration,
+the remote configuration (`web_cache.json`) will not be loaded.
+
+
+## Meta Configuration
+
+while `mycroft.conf` configures the voice assistant, `ovos.conf` configures the library
+
+what this means is that `ovos.conf` decides what files are loaded by the `Configuration` class described above, as an end user or skill developer you should never have to worry about this
+
+all XDG paths across OpenVoiceOS packages build their paths taking `ovos.conf` into consideration
+
+this feature is what allows downstream voice assistants such as neon-core to change their config files to `neon.yaml`
+
+Using the above example, if `Configuration()` is called from `neon-core`, the following configs would be loaded in this
+order:
+
+- `{core-path}`/configuration/neon.yaml
+- `os.environ.get('MYCROFT_SYSTEM_CONFIG')` or /etc/neon/neon.yaml
+- `os.environ.get('MYCROFT_WEB_CACHE')` or `XDG_CONFIG_PATH`/neon/web_cache.json
+- ~/.neon/neon.yaml (Deprecated)
+- `XDG_CONFIG_DIRS` + /neon/neon.yaml
+- /etc/xdg/neon/neon.yaml
+- `XDG_CONFIG_HOME` (default ~/.config) + /neon/neon.yaml
+
 
 ### ovos.conf
 
@@ -85,69 +173,3 @@ the returned configuration would be:
   }
 }
 ```
-
-## Reading Configuration
-
-`ovos_config.config.Configuration` is a singleton that loads a single config
-object. The configuration files loaded are determined by `ovos.conf` as described above and can be in either json or
-yaml format.
-
-Using the above example, if `Configuration()` is called from `neon-core`, the following configs would be loaded in this
-order:
-
-- /etc/example/config/neon.yaml
-- `os.environ.get('MYCROFT_SYSTEM_CONFIG')` or /etc/neon/neon.yaml
-- `os.environ.get('MYCROFT_WEB_CACHE')` or `XDG_CONFIG_PATH`/neon/web_cache.json
-- ~/.neon/neon.yaml (Deprecated)
-- `XDG_CONFIG_DIRS` + /neon/neon.yaml
-- /etc/xdg/neon/neon.yaml
-- `XDG_CONFIG_HOME` (default ~/.config) + /neon/neon.yaml
-
-When the configuration loader starts, it looks in these locations in this order, and loads ALL configurations. Keys that
-exist in multiple configuration files will be overridden by the last file to contain the value. This process results in
-a minimal amount being written for a specific device and user, without modifying default distribution files.
-
-## Configuring Configuration
-
-There are a couple of special configuration keys that change the way the configuration stack loads.
-
-* `Default` config refers to the config specified at `default_config_path` in
-  `ovos.conf` (#1 `/etc/example/config/neon.yaml` in the stack above).
-* `System` config refers to the config at `/etc/{base_folder}/{config_filename}` (#2 `/etc/neon/neon.yaml` in the stack
-  above).
-
-### protected_keys
-
-A `"protected_keys"` configuration section may be added to a `Default` or `System` Config file
-(default `/etc/mycroft/mycroft.conf`). This configuration section specifies
-other configuration keys that may not be specified in `remote` or `user` configurations.
-Keys may specify nested parameters with `.` to exclude specific keys within nested dictionaries.
-An example config could be:
-
-```json
-{
-  "protected_keys": {
-    "remote": [
-      "gui_websocket.host",
-      "websocket.host"
-    ],
-    "user": [
-      "gui_websocket.host"
-    ]
-  }
-}
-```
-
-This example specifies that `config['gui_websocket']['host']` may be specified in user configuration, but not remote.
-`config['websocket']['host']` may not be specified in user or remote config, so it will only consider default
-and system configurations.
-
-### disable_user_config
-
-If this config parameter is set to True in `Default` or `System` configuration,
-no user configurations will be loaded (no XDG configuration paths).
-
-### disable_remote_config
-
-If this config parameter is set to True in `Default` or `System` configuration,
-the remote configuration (`web_cache.json`) will not be loaded.
