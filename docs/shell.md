@@ -36,7 +36,7 @@ Display settings
 
 Color Theme editor
 
-![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/shell_settings.gif)
+![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/shell_theme.gif)
 
 
 ### Shell Options
