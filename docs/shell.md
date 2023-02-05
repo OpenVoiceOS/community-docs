@@ -34,6 +34,11 @@ Display settings
 
 ![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/shell_settings.gif)
 
+Color Theme editor
+
+![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/shell_settings.gif)
+
+
 ### Shell Options
 `~/.config/OpenvoiceOS/OvosShell.conf` can be edited to change shell options that
 may also be changed via UI. An example config would look like:

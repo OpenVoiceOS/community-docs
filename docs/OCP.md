@@ -34,13 +34,13 @@ Skills provide search results, think about them as media providers/catalogs for 
 
 You can find OCP skills in the [awesome-ocp-skills](https://github.com/OpenVoiceOS/awesome-ocp-skills) list 
 
-### Skills Menu
+## Skills Menu
 
 Some skills provide featured_media, you can access these from the OCP menu
 
 ![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/ocp_skills.gif)
 
-### File Browser integration
+## File Browser integration
 
 selected files will be played in OCP
 
@@ -57,7 +57,11 @@ folders are considered playlists
 
 Some OCP settings are exposed via the GUI
 
-Timeout settings
+Visualization can be either a wave or bars, just tap on it to change
+
+![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/ocp_wav_viz.gif)
+
+Timeout settings, return to homescreen widget after 30 seconds
 
 ![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/ocp_timeout.gif)
 
