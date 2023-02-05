@@ -56,7 +56,7 @@ nav:
         - Extensions: gui_extensions.md
         - Bigscreen: bigscreen.md
     - Backend:
-        - Backend Services: backend.md
+        - Available Backends: backend.md
         - Backend Client: backend_client.md
         - Personal Backend: personal_backend.md
         - Backend Manager: backend_manager.md
