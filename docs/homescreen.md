@@ -29,6 +29,8 @@ OpenVoiceOS comes with support for dedicated voice applications. Voice Applicati
 
 The home screen supports custom wallpapers and comes with a bunch of wallpapers to choose from. You can easily change your custom wallpaper by swiping from right to left on the home screen.
 
+![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/homescreen_wallpapers.gif)
+
 ## Widgets
 
 ![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/homescreen-widgets.png)
