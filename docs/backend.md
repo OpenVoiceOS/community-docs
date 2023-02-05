@@ -1,14 +1,4 @@
-# Backend Services
-
-* [Supported Backends](#supported-backends)
-* [Identity Information](#identity-information)
-* [STT Plugin](#stt-plugin)
-* [Offline Backend](#offline.backend)
-* [Selene](#selene)
-* [Personal Backend](#personal-backend)
-    + [Backend Manager](#backend-manager)
-    + [Admin Api](#admin-api)
-* [OVOS API Service](#ovos-api-service)
+# Available Backend Services
 
 ## Supported Backends
 
