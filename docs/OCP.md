@@ -37,6 +37,12 @@ Skills provide search results, think about them as media providers/catalogs for 
 
 You can find OCP skills in the [awesome-ocp-skills](https://github.com/OpenVoiceOS/awesome-ocp-skills) list 
 
+### Skills Menu
+
+Some skills provide featured_media, you can access these from the OCP menu
+
+![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/ocp_skills.gif)
+
 ## Homescreen widget
 
 The homescreen skill that comes pre-installed with OpenVoiceOS also comes with a widget for the OCP framework.
@@ -53,11 +59,6 @@ folders are considered playlists
 
 ![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/folder_playlist.gif)
 
-### Skills Menu
-
-Some skills provide featured_media, you can access these from the OCP menu
-
-![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/ocp_skills.gif)
 
 ## MPRIS integration
 
@@ -80,8 +81,6 @@ if using KDEConnect this includes playback in connected devices
 See a demo here (**warning**: contains black metal)
 
 [![demo video](https://img.youtube.com/vi/YzC7oFYCcRE/default.jpg)](https://www.youtube.com/watch?v=YzC7oFYCcRE)
-
-
 
 
 ## Configuration
