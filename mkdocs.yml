@@ -22,9 +22,6 @@ nav:
         - Spotify connect: spotifyd.md
         - Bluetooth speaker: btspeaker.md
         - KDE Connect: kdeconnect.md
-    - Advanced Usage:
-        - Backend Services: backend.md
-        - Configuration: config.md
     - OVOS-core:
         - Introduction: core.md
         - Bus: bus_service.md
@@ -32,6 +29,7 @@ nav:
         - Speech: speech_service.md
         - Audio: audio_service.md
         - GUI: gui_service.md
+        - Configuration: config.md
     - Skills:
         - Introduction: skills.md
         - Design Guidelines: guidelines.md
@@ -57,6 +55,11 @@ nav:
         - Protocol: gui_protocol.md
         - Extensions: gui_extensions.md
         - Bigscreen: bigscreen.md
+    - Backend:
+        - Backend Services: backend.md
+        - Backend Client: backend_client.md
+        - Personal Backend: personal_backend.md
+        - Backend Manager: backend_manager.md
     - Plugins:
         - Plugin Manager: OPM.md
         - Speech To Text: stt_plugins.md
@@ -69,7 +72,6 @@ nav:
         - Platform/Hardware Abstraction Layer: PHAL.md
     - Technologies:
         - Common Play: OCP.md
-        - Personal Backend: personal_backend.md
         - Skills Manager: osm.md
         - Config Assistant: OCA.md
         - STT Server: stt_server.md
