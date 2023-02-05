@@ -47,7 +47,8 @@ Some skills provide featured_media, you can access these from the OCP menu
 
 ### Sync with external players
 
-Via KDEConnect OCP can control and display data from external players
+Via MPRIS OCP can control and display data from external players, 
+if using KDEConnect this includes playback in connected devices
 
 See a demo here
 
