@@ -171,27 +171,6 @@ class MySkill(OVOSSkill):
          # TODO process data somehow
 ```
 
-
-## How do I use OAuth in a skill?
-
-Retrieving the tokens in a skill does not depend on the selected backend, the mechanism to register a token is backend
-specific
-
-First you need to authorize the application, this can be done
-with [ovos-config-assistant](https://github.com/OpenVoiceOS/ovos-config-assistant) if running offline
-or [ovos-backend-manager](https://github.com/OpenVoiceOS/ovos-backend-manager) if using personal backend
-
-If using selene there is no automated process to add a
-token, [you need to contact](https://chat.mycroft.ai/community/pl/ynftpfuwo3gubxmta5qqronpch) support@mycroft.ai
-
-```python
-from ovos_backend_client.api import OAuthApi, BackendType
-
-# api = OAuthApi()  # determine oauth backend from mycroft.conf
-api = OAuthApi(backend_type=BackendType.OFFLINE)  # explicitly use ovos-backend-manager oauth
-token_json = api.get_oauth_token("spotify")
-```
-
 ## How do I manage remote skill settings?
 
 To interact with skill settings via DeviceApi
@@ -251,27 +230,4 @@ from ovos_backend_client.api import GeolocationApi
 
 geo = GeolocationApi()
 data = geo.get_geolocation("Lisbon Portugal")
-```
-
-## How do I use Weather backend services?
-
-```python
-from ovos_backend_client.api import OpenWeatherMapApi
-
-owm = OpenWeatherMapApi()
-data = owm.get_weather()
-# dict - see api docs from owm onecall api
-```
-
-## How do I use WolframAlpha backend services?
-
-```python
-from ovos_backend_client.api import WolframAlphaApi
-
-wolf = WolframAlphaApi()
-answer = wolf.spoken("what is the speed of light")
-# The speed of light has a value of about 300 million meters per second
-
-data = wolf.full_results("2+2")
-# dict - see api docs from wolfram
 ```
