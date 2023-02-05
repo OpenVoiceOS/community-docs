@@ -1,3 +1,13 @@
+# Configuration
+
+- [Reading Configuration](#reading-configuration)
+- [Configuring Configuration](#configuring-configuration)
+    * [protected_keys](#protected-keys)
+    * [disable_user_config](#disable-user-config)
+    * [disable_remote_config](#disable-remote-config)
+- [Meta Configuration](#meta-configuration)
+    * [ovos.conf](#ovosconf)
+
 ## Reading Configuration
 
 `ovos_config.config.Configuration` is a singleton that loads a single config
