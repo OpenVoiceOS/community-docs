@@ -1,14 +1,3 @@
-# Configuration
-
-- [Structure](#structure)
-    * [ovos.conf](#ovosconf)
-- [Reading Configuration](#reading-configuration)
-- [Configuring Configuration](#configuring-configuration)
-    * [protected_keys](#protected-keys)
-    * [disable_user_config](#disable-user-config)
-    * [disable_remote_config](#disable-remote-config)
-
-
 ## Reading Configuration
 
 `ovos_config.config.Configuration` is a singleton that loads a single config
