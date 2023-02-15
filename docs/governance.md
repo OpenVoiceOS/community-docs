@@ -125,3 +125,38 @@ I joined the project with the intention of avoiding another MycroftAI-like envir
 for me personally It's essential that OpenVoiceOS remains free from the control of a single developer who decides what is or isn't useful for the project. The hallmark of an open-source project is the freedom of the code from being dominated by a single individual, ensuring that it's shaped by the contributions of a diverse community.
 
 An open-source project thrives on community involvement at every stage. The success of an open-source project is dependent on the collective efforts of its community and the active participation of its members
+
+
+--------------------
+@NeonDaniel Proposed (Simplified) Rewrite
+
+# Open Voice Governance Guidelines
+
+OVOS is a community project dedicated to building an open source voice assistant and related technologies. 
+This is not a contract, charter, or legal document of any kind but is how the OVOS organization and its members strive 
+to interact with each other.
+
+1) All projects under the organization will be licensed according to our Open Source Licensing Guidelines (LINK HERE)
+1) All collaborators will treat each other respectfully
+1) Unless specifically noted, a repository administrator has final say over what may and may not be included in a 
+   project. In the event that there are multiple administrators that are unable to reach a consensus, a simple majority
+   vote among repository administrators will determine if a change is accepted or not. If a consensus still is not reached,
+   an (other) OpenVoiceOS organization admin will be the tie-breaker.
+    > Note that any voting should be extremely uncommon, as there should be some solution that satisfies everyone.
+1) Proposed changes, roadmaps, or other short-term goals will be made public prior to adoption to allow for community 
+   input and to provide adequate notice for community developers to plan around. Broad project planning will be the
+   responsibility of the OpenVoiceOS organization admins; anything specific to a project/repository will be the responsibility
+   of that project's admin(s). There will generally be some overlap in membership, and it is always expected that projects
+   strive to maintain backwards-compatibility and maintainers collaborate on shared code/solutions.
+1) Every reasonable effort will be made to accommodate users. OVOS maintainers are responsible for reviewing user issues and changes.
+1) In the event that a project's sole admin is unable to continue filling that role, the departing admin may specify someone
+   to take their place. If the departing admin is unable to select a new admin, an OpenVoiceOS organization admin will
+   select someone.
+2) In the event that a feature implementation (PR) adds functionality that is currently roadmapped but not yet started,
+   every effort should be made by the contributor to meet any documented requirements and to collaborate with the project
+   admin to make any changes, add tests, etc.
+3) In the event that a feature implementation (PR) adds functionality that is not currently roadmapped, that project's maintainer
+   should make every effort to include that feature, collaborating with the contributor to make any necessary changes for
+   compatibility and future extensibility, adding tests, etc.
+    > Note that it is still up to the project's maintainer to decide if a feature is valid for inclusion and the above
+      guidelines all apply here.
