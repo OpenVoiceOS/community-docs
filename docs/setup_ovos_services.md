@@ -1,6 +1,6 @@
 # Running & Setting Up OVOS Services
 
-OpenVoiceOS is a software stack that includes seven important services, with some being optional, depending on the platform or environment. If you are a developer or would like to quickly test OpenVoiceOS for debugging purposes, you can run each service separately in a terminal. However, for users, distributions, and packagers, it is recommended to use systemd or any other init service that their userland supports for launching and managing OpenVoiceOS services.
+OpenVoiceOS is a software stack that includes six important services, with some being optional, depending on the platform or environment. If you are a developer or would like to quickly test OpenVoiceOS for debugging purposes, you can run each service separately in a terminal. However, for users, distributions, and packagers, it is recommended to use systemd or any other init service that their userland supports for launching and managing OpenVoiceOS services.
 
 ### Here are the commands for launching each of the services from the CLI:
 
