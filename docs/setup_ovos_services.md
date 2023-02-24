@@ -4,13 +4,12 @@ OpenVoiceOS is a software stack that includes seven important services, with som
 
 ### Here are the commands for launching each of the services from the CLI:
 
- - Launching the Messagebus service (required): python3 -m mycroft.messagebus.service
- - Launching the Skills service (required): python3 -m mycroft.skills
- - Launching the PHAL service (required): python3 -m ovos_PHAL
- - Launching the Audio service (required): python3 -m mycroft.audio
- - Launching the Voice service (required): python3 -m mycroft.client.speech
- - Launching the GUI service (optional): python3 -m mycroft.gui
- - Launching the CLI service (optional): python3 -m mycroft.client.text
+ - Launching the Messagebus service: python3 -m mycroft.messagebus.service
+ - Launching the Skills service: python3 -m mycroft.skills
+ - Launching the PHAL service: python3 -m ovos_PHAL
+ - Launching the Audio service: python3 -m mycroft.audio
+ - Launching the Voice service: python3 -m mycroft.client.speech
+ - Launching the GUI service: python3 -m mycroft.gui
 
 OpenVoiceOS services can be set up as SYSTEM or USER systemd services. The choice of which type to use and how to set them up is left up to the user, packager, and distributions. Keep in mind that these service scripts are just examples and may require changes based on your requirements.
 
@@ -55,8 +54,6 @@ TimeoutStopSec=1m
 Restart=on-failure
 StartLimitInterval=5min
 StartLimitBurst=4
-StandardOutput=append:/var/log/ovos/bus.log
-StandardError=file:/var/log/ovos/bus.error.log
 
 [Install]
 WantedBy=ovos.service
@@ -79,8 +76,6 @@ TimeoutStopSec=1m
 Restart=on-failure
 StartLimitInterval=5min
 StartLimitBurst=4
-StandardOutput=append:/var/log/ovos/skills.log
-StandardError=file:/var/log/ovos/skills.error.log
 
 [Install]
 WantedBy=ovos.service
@@ -104,8 +99,6 @@ TimeoutStopSec=1m
 Restart=on-failure
 StartLimitInterval=5min
 StartLimitBurst=4
-StandardOutput=append:/var/log/ovos/phal.log
-StandardError=file:/var/log/ovos/phal.error.log
 
 [Install]
 WantedBy=ovos.service
@@ -129,8 +122,6 @@ TimeoutStopSec=1m
 Restart=on-failure
 StartLimitInterval=5min
 StartLimitBurst=4
-StandardOutput=append:/var/log/ovos/audio.log
-StandardError=file:/var/log/ovos/audio.error.log
 
 [Install]
 WantedBy=ovos.service
@@ -154,8 +145,6 @@ TimeoutStopSec=1m
 Restart=on-failure
 StartLimitInterval=5min
 StartLimitBurst=4
-StandardOutput=append:/var/log/ovos/voice.log
-StandardError=file:/var/log/ovos/voice.error.log
 
 [Install]
 WantedBy=ovos.service
@@ -179,8 +168,6 @@ TimeoutStopSec=1m
 Restart=on-failure
 StartLimitInterval=5min
 StartLimitBurst=4
-StandardOutput=append:/var/log/ovos/ovos-gui.log
-StandardError=file:/var/log/ovos/ovos-gui.error.log
 
 [Install]
 WantedBy=ovos.service
