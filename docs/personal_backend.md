@@ -82,13 +82,34 @@ There is also a docker container you can use
 docker run -p 8086:6712 -d --restart always --name local_backend ghcr.io/openvoiceos/local-backend:dev
 ```
 
+a `docker-compose.yml` could look like this
+```yaml
+version: '3.6'
+services:
+    # ...
+    ovosbackend:
+        container_name: ovos_backend
+        image: ghcr.io/openvoiceos/local-backend:dev
+        # or build from local source (relative to docker-compose.yml)
+        # build: ../ovos/ovos-personal-backend/.
+        restart: unless-stopped
+        ports:
+          - "6712:6712"                                              # default port backend API
+          - "36535:36535"                                            # default port backend-manager
+        volumes:                                                     # <host>:<guest>:<SELinux flag>
+          - ./ovos/backend/config:/root/.config/json_database:z      # shared config directory
+          - ./ovos/backend/data:/root/.local/share/ovos_backend:Z    # shared data directory
+                                                                     # set `data_path` to `/root/.local/share/ovos_backend`
+```
+about [selinux flags](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) (omit if you don't deal with selinux)
+
 ## How it works
 
 ### Configuration
 
 configure backend by editing/creating ```~/.config/json_database/ovos_backend.json```
 
-see default values [here](./ovos_local_backend/configuration.py)
+see default values [here](https://github.com/OpenVoiceOS/ovos-personal-backend/blob/dev/ovos_local_backend/configuration.py)
 
 ```json
 {
