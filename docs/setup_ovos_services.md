@@ -13,7 +13,7 @@ OpenVoiceOS is a software stack that includes six important services, with some 
 
 OpenVoiceOS services can be set up as SYSTEM or USER systemd services. The choice of which type to use and how to set them up is left up to the user, packager, and distributions. Keep in mind that these service scripts are just examples and may require changes based on your requirements.
 
-### Setup the OpenVoiceOS service:
+### Setup the OpenVoiceOS service on Manjaro:
 - Create a service file called "ovos.service" under "/usr/lib/systemd/user/" with the following contents:
 
 ```
@@ -172,6 +172,9 @@ StartLimitBurst=4
 [Install]
 WantedBy=ovos.service
 ```
+
+### Setup the OpenVoiceOS service on Raspbian
+- Check [Services in Rasbian](./docs/setup_ovos_services.raspian.md)
 
 ### Using helper scripts
 
