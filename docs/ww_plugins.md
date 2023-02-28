@@ -132,7 +132,7 @@ def listen_for_ww(plug):
         data = stream.read(CHUNK)
         # add data to rolling buffer, used by non-streaming engines
         audio_buffer.append(data)
-        # non streaming engines check the byte_data in audio_buffer
+        # non-streaming engines check the byte_data in audio_buffer
         audio_data = audio_buffer.get()
         found = plug.found_wake_word(audio_data)
         if found:

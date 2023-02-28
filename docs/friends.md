@@ -30,8 +30,8 @@ code [here](https://invent.kde.org/plasma/plasma-bigscreen)
 
 ## <img src='https://neon.ai/sites/default/files/neon-ai-artificial-intelligence_1.png' card_color='#FEE255' width='50' height='50' style='vertical-align:bottom'/> NeonGecko
 
-Neon was one the first projects ever to adopt ovos-core as a library to build their own voice assistant,
-Neon works closely together with OVOS and both projects are mostly intercompatible
+Neon was one of the first projects ever to adopt ovos-core as a library to build their own voice assistant,
+Neon works closely together with OVOS and both projects are mostly compatible
 
 You find the website [here](https://neon.ai) and the source code [here](https://github.com/NeonGeckoCom)
 
@@ -47,7 +47,7 @@ You find the website [here](https://mycroft.ai) and the source code [here](https
 
 Secret Sauce AI is a coordinated community of tech minded AI enthusiasts working together on projects to identify
 blockers and improve the basic open source tools and pipeline components in the AI (voice) assistant pipeline (wakeword,
-ASR, NLU, NLG, TTS). The focus is mostly geared toward deployment on edge devices and self hosted solutions. This is not
+ASR, NLU, NLG, TTS). The focus is mostly geared toward deployment on edge devices and self-hosted solutions. This is not
 a voice assistant project in and of itself, rather Secret Sauce AI helps AI (voice) assistant projects come together as
 individuals and solve basic problems faced by the entire community.
 

@@ -16,7 +16,7 @@ You can ask your device what time or date it is just in case you lost your watch
 
 ## Setting an alarm
 
-Having your OpenVoiceOS device knowing and showing the time is great but it is even better to be woken up in the morning by your device.
+Having your OpenVoiceOS device knowing and showing the time is great, but it is even better to be woken up in the morning by your device.
 
 > Hey Mycroft, set an alarm for 8 AM.
 
@@ -30,7 +30,7 @@ Sometimes you are just busy but want to be alerted after a certain time. For tha
 
 ![Timer](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%205%20minutes%20timer.png)
 
-You can alway set more timers and even name them so you know which timers is for what.
+You can always set more timers and even name them, so you know which timers is for what.
 
 > Hey, Mycroft, set another timer called rice cooking for 7 minutes.
 
@@ -40,7 +40,7 @@ You can alway set more timers and even name them so you know which timers is for
 
 You can ask your device what the weather is or would be at any given time or place.
 
-> Hey Mycroft, what is the weatehr like today?
+> Hey Mycroft, what is the weather like today?
 
 ![Weather 1](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Weather%201.png)
 

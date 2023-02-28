@@ -24,7 +24,7 @@ a specific skill such as Science, Academics, Movie Info, TV info, and Music info
 
 ### Media
 
-One of the biggest use cases for Smart Speakers is playing media. The reason media playback is so popular is because it
+One of the biggest use cases for Smart Speakers is playing media. The reason media playback is so popular is that it
 makes playing a song so easy, all you have to do is say “Hey Mycroft play the Beatles,” and you can be enjoying music
 without having to reach for a phone or remote. In addition to listening to music, there are
 skills that handle videos as well.

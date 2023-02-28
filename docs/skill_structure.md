@@ -5,12 +5,12 @@
 The `dialog`, `vocab`, and `locale` directories contain subdirectories for each spoken language the skill supports.
 The subdirectories are named using the [IETF language tag](https://en.wikipedia.org/wiki/IETF\_language\_tag) for the
 language.
-For example, Brazilian Portugues is 'pt-br', German is 'de-de', and Australian English is 'en-au'.
+For example, Brazilian Portuguese is 'pt-br', German is 'de-de', and Australian English is 'en-au'.
 
-`dialog` and `vocab` have been deprecated, they are still supported but we strongly recommend you use `locale` for new
+`dialog` and `vocab` have been deprecated, they are still supported, but we strongly recommend you use `locale` for new
 skills
 
-inside the `locale` folder you will find subfolders for each language (eg. `en-us`), often all you need to do in order
+inside the `locale` folder you will find subfolders for each language (e.g. `en-us`), often all you need to do in order
 to translate a skill is adding a new folder for your language here
 
 each language folder can have the structure it wants, you may see files grouped by type in subfolder or all in the base
@@ -84,7 +84,7 @@ def initialize(self):
 We can use the `initialize` function to manually register intents, however the `@intent_handler` decorator is a
 cleaner way to achieve this. We will learn all about the different [Intents](../intents.md) shortly. 
 
-You may also see the `@intent_file_handler` decorator used in Skills. This has been deprecated and you can now
+You may also see the `@intent_file_handler` decorator used in Skills. This has been deprecated, and you can now
 replace any instance of this with the simpler `@intent_handler` decorator.
 
 In skills we can see two different intent styles.

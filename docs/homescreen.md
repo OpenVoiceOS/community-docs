@@ -8,7 +8,7 @@ The home screen is the central place for all your tasks. It is the first thing y
 
 ### Night Mode Feature
 
-The Night Mode feature let's you quickly switch your home screen into a dark standby clock, reducing the amount of light emitted by your device. This is especially useful if you are using your device in a dark room or at night. You can enable the night mode feature by tapping on the left edge pill button on the home screen.
+The Night Mode feature lets you quickly switch your home screen into a dark standby clock, reducing the amount of light emitted by your device. This is especially useful if you are using your device in a dark room or at night. You can enable the night mode feature by tapping on the left edge pill button on the home screen.
 
 ![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/homescreen-nightmode.gif)
 

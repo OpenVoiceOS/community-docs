@@ -136,7 +136,7 @@ WantedBy=mycroft.service
 
 AdminPlugins are just like regular PHAL plugins that run with `root` privileges
 
-A plugin needs to identify itself as a admin plugin via it's entry point, PHAL will not load Admin plugins and AdminPHAL will not load regular plugins
+A plugin needs to identify itself as an admin plugin via it's entry point, PHAL will not load Admin plugins and AdminPHAL will not load regular plugins
 
 Admin plugins will only load if their configuration contains `"enabled": true`. All admin plugins need to be explicitly enabled
 

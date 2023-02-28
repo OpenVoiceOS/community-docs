@@ -41,7 +41,7 @@ The `get_response()` method also takes the following optional arguments:
 
 [`ask_yesno()`](https://mycroft-core.readthedocs.io/en/latest/source/mycroft.html#mycroft.MycroftSkill.ask\_yesno) checks if the response contains "yes" or "no" like phrases.
 
-The vocab for this check is sourced from the Skills `yes.voc` and `no.voc` files (if they exist), as well as mycroft-cores defaults (contained within `mycroft-core/res/text/en-us/yes.voc`). A longer phrase containing the required vocab is considered successful eg both "yes" and "yeah that would be great thanks" would be considered a successful "yes".
+The vocab for this check is sourced from the Skills `yes.voc` and `no.voc` files (if they exist), as well as mycroft-cores defaults (contained within `mycroft-core/res/text/en-us/yes.voc`). A longer phrase containing the required vocab is considered successful e.g. both "yes" and "yeah that would be great thanks" would be considered a successful "yes".
 
 If "yes" or "no" responses are detected, then the method will return the string "yes" or "no". If the response does not contain "yes" or "no" vocabulary then the entire utterance will be returned. If no speech was detected indicating the User did not respond, then the method will return `None`.
 
@@ -67,7 +67,7 @@ def create_skill():
     return IceCreamSkill()
 ```
 
-In this example we have asked the User if they like ice cream. We then speak different dialog whether they respond yes or no. We also speak some error dialog if neither yes or no are returned.
+In this example we have asked the User if they like ice cream. We then speak different dialog whether they respond yes or no. We also speak some error dialog if neither yes nor no are returned.
 
 
 ## Providing a list of options
@@ -98,7 +98,7 @@ def create_skill():
     return IceCreamSkill()
 ```
 
-In this example we first speak some `welcome.dialog`. The list of flavors is then spoken, followed by the `what.flavor.dialog`. Finally we confirm the Users selection by speaking `coming.right.up.dialog`
+In this example we first speak some `welcome.dialog`. The list of flavors is then spoken, followed by the `what.flavor.dialog`. Finally, we confirm the Users selection by speaking `coming.right.up.dialog`
 
 ### Optional arguments
 

@@ -17,7 +17,7 @@ Settings can be managed via command line, shipped by images or managed via a bac
 When settings are fetched from the backend server, they are saved into a `settings.json` file. 
 This file is automatically created when a Skill is loaded even if the Skill does not have any settings. 
 Your Skill then accesses the settings from this file. 
-Nowadays the file is located in the Skill's XDG\_CONFIG\_DIR (usually `~/config/mycroft/skills/<skillname>`), however if a `settings.json` file already exists in the Skill's root directory (the deprecated location) that location is used for compatibility.
+Nowadays, the file is located in the Skill's XDG\_CONFIG\_DIR (usually `~/config/mycroft/skills/<skillname>`), however if a `settings.json` file already exists in the Skill's root directory (the deprecated location) that location is used for compatibility.
 
 ### Reading settings
 
@@ -144,7 +144,7 @@ Whilst the syntax differs, the structure of these two filetypes is the same. Thi
 
 Each section represents a group of settings that logically sit together. This enables us to display the settings more clearly in the web interface for users.
 
-In the simple example above we have just one section. However the [Spotify Skill settings](https://github.com/forslund/spotify-skill/blob/19.08/settingsmeta.json) contains two sections. The first is for Spotify Account authentication, and the second section contains settings to define your default playback device.
+In the simple example above we have just one section. However, the [Spotify Skill settings](https://github.com/forslund/spotify-skill/blob/19.08/settingsmeta.json) contains two sections. The first is for Spotify Account authentication, and the second section contains settings to define your default playback device.
 
 Each section must contain a `name` attribute that is used as the heading for that section, and an Array of `fields`.
 

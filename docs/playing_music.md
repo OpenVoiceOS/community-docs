@@ -14,7 +14,7 @@ Just ask it to play something will start playback from Youtube assuming the aske
 
 > Hey Mycroft, play disturbed sound of silence
 
-This should just start playing utilizing OCP as shown below. More information about the full functionality of OCP can be found at it's own chapter.
+This should just start playing utilizing OCP as shown below. More information about the full functionality of OCP can be found at its own chapter.
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20OCP%20Playing%201.png)
 
 ## Play the news

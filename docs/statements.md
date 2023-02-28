@@ -125,7 +125,7 @@ The Tomato Skill code snippet:
 
 When the User utters "Hey Mycroft, do you like RED tomatoes?", the second of the two Intent lines "do you like {type} tomatoes" is recognized by Mycroft, and the value 'RED' is returned in the message dictionary assigned to the 'type' entry when `handle_do_you_like()` is called. &#x20;
 
-The line `tomato_type = message.data.get('type')` extracts the value from the dictionary for the entry 'type'.  In this case,  the variable `tomato_type` will receive the value 'RED', and `speak_dialog()`will be called with the 'like.tomato.type' dialog file, and a dictionary with 'RED' assigned to 'type'.   The statement "i do like {type} tomatoes" might be randomly selected, and after insertion of the value 'RED' for the placeholder variable {type}, OVOS would say: "I do like RED tomatoes".
+The line `tomato_type = message.data.get('type')` extracts the value from the dictionary for the entry 'type'.  In this case,  the variable `tomato_type` will receive the value 'RED', and `speak_dialog()`will be called with the 'like.tomato.type' dialog file, and a dictionary with 'RED' assigned to 'type'.   The statement "I do like {type} tomatoes" might be randomly selected, and after insertion of the value 'RED' for the placeholder variable {type}, OVOS would say: "I do like RED tomatoes".
 
 Should the User utter "Hey Mycroft, do you like tomatoes?", the first line in the Intent file "do you like tomatoes" is recognized. There is no variable in this line, and when `handle_do_you_like()` is called, the dictionary in the message is empty. This means `tomato_type` is `None`,`speak_dialog('like.tomato.generic')` would be called, and Mycroft might reply with "Yes, I do like tomatoes".
 
@@ -135,7 +135,7 @@ By default, the `speak_dialog()` method is non-blocking. That is any code follow
 
 Rather than telling the User that we are fetching some data, then going out to fetch it, we can do the two things simultaneously providing a better experience.&#x20;
 
-However there are times when we need to wait until the statement has been spoken before doing something else. We have two options for this.
+However, there are times when we need to wait until the statement has been spoken before doing something else. We have two options for this.
 
 ### Wait Parameter
 

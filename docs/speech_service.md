@@ -19,7 +19,7 @@ each hotword can do one or more of the following:
 
 To add a new hotword add its configuration under "hotwords" section.
 
-By default all hotwords are disabled unless you set `"active": true`. 
+By default, all hotwords are disabled unless you set `"active": true`. 
 Under the `"listener"` setting a main wake word and stand up word are defined, those will be automatically enabled unless you set `"active": false`. 
 This is usually not desired unless you are looking to completely disabled wake word usage
 

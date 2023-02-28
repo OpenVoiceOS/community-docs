@@ -44,7 +44,7 @@ follow-up response. For example a weather forecast like this would be considered
 
 For a lot of skills the conversation might end with a simple statement from OVOS, and no further action is necessary.
 Try to imagine what the user is trying to accomplish, if a simple statement gets the job done there is no reason to keep
-the conversation rolling, and in fact a follow up might annoy the user with unnecessary interaction.
+the conversation rolling, and in fact a follow-up might annoy the user with unnecessary interaction.
 
 #### Prompts
 
@@ -54,7 +54,7 @@ Voice Response\). Many phone systems are notorious for being too verbose and dif
 With OVOS we’re trying to break that mold and make the interaction natural. If you follow the phone system method you
 may be giving the user the exact phrasing to say, but you’re also taking up valuable time and training them to think the
 system is very narrow in capability. In the event that the user does give a response that your skill can not handle,
-create follow up prompts that steer the user back on track.
+create follow-up prompts that steer the user back on track.
 
 Remember, there are no errors in a cooperative conversation.
 
@@ -79,12 +79,12 @@ repeatedly throughout the skill. Remember the phone system example, typically po
 inundate the user with many options and additional instructions at every step of the interaction.
 
 In the second example we see a better prompt, although the user gives a response that is easy for a human to understand
-it is more difficult to design a skill to understand. Instead the skill designer can apply a re-prompt strategy that
-steers the user back on track and doesn’t require them to start the interaction over. In this case the re-prompt changes
+it is more difficult to design a skill to understand. Instead, the skill designer can apply a re-prompt strategy that
+steers the user back on track and doesn't require them to start the interaction over. In this case the re-prompt changes
 the wording slightly to make it clear that the user needs to say a number. The next time the user interacts with this
 Skill, they will likely say a number in their first interaction.
 
-Determining whether or not to respond to the user with a statement or a prompt can be a bit tricky. When the user is
+Determining whether to respond to the user with a statement or a prompt can be a bit tricky. When the user is
 somewhat vague it is tempting to assume the user’s intent in order to speed along the interaction. Sometimes this is the
 right approach and sometimes it is not. If you are very confident in the user’s input then it is alright to assume, and
 respond with a statement. For example in the Wikipedia Skill the Wikipedia API is used to confidently select the best response.
@@ -96,7 +96,7 @@ respond with a statement. For example in the Wikipedia Skill the Wikipedia API i
 | **User**    | _Tell me about Abraham Lincoln_                                                                                                                                                                                                                   |
 | **Mycroft** | _Abraham Lincoln was an American statesman and lawyer who served as the 16th president of the UnitedStates from 1861 to 1865. Lincoln led the nation through its greatest moral, constitutional, and political crisis in the American Civil War_. |
 
-In contrast let’s look at an example of where a follow up prompt is a better approach. You’re working on a skill that
+In contrast, let’s look at an example of where a follow-up prompt is a better approach. You’re working on a skill that
 gives important information about birds, such as wingspan, laden and unladen airspeed, etc..
 
 **Avoid**
@@ -160,7 +160,7 @@ situations. For example Mycroft’s Timer Skill uses implicit confirmation when 
 This type of confirmation requires an input from the user to verify everything is correct. Only use explicit
 confirmation when needed as it can be tedious for the user to always confirm their input. This strategy is best when
 there are multiple steps, and it would be difficult to fix a misstep without starting over, or when deleting or
-modifying an existing multi-step input.
+modifying an existing multistep input.
 
 **Avoid**
 
@@ -233,7 +233,7 @@ For example, many personal navigation devices \(GPS units\) require users to inp
 This was a limitation of the technology, both the STT and intent parser were not capable of handling an entire address. 
 With OVOS you do not need to separate the address into multiple inputs. 
 It’s also easy to think like a traditional GUI and translate what are typically separate fields into prompts for the user,
-but that will only slows down the interaction. 
+but that will only slow down the interaction. 
 
 The best solution is to allow the user to input information both ways, all at once, or in pieces. 
 For example the Alarm skill allows the user to set a complicated alarm all in one go, or in steps.

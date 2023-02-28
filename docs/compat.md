@@ -52,7 +52,7 @@ Depending on the plugin this may make sense or not
 
 ### Known Incompatibilities
 
-Here we present a list of know incompatibilites between ovos-core and mycroft-core
+Here we present a list of know incompatibilities between ovos-core and mycroft-core
 
 | feature                              | consequence                                | reason                                            | workarounds                                |
 |--------------------------------------|--------------------------------------------|---------------------------------------------------|--------------------------------------------|

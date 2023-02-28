@@ -33,7 +33,7 @@ buildroot implementation
 OVOS started as MycroftOS, you can find the original mycroft forums
 thread [here](https://community.mycroft.ai/t/openvoiceos-a-bare-minimal-production-type-of-os-based-on-buildroot/4708).
 
-Over time more mycroft community members joined the project and it was renamed to OpenVoiceOS to avoid trademark issues.
+Over time more mycroft community members joined the project, and it was renamed to OpenVoiceOS to avoid trademark issues.
 
 Initially OVOS was focused on bundling mycroft-core and on creating only companion software, but due to contributions
 not being accepted upstream we now maintain an enhanced reference fork of mycroft-core with extra functionality, while
@@ -70,7 +70,7 @@ submitted to Mycroft to include in their projects at their discretion.
 
 We don't, OVOS is a volunteer project with no source of income or business model
 
-However we want to acknowledge [Blue Systems](https://blue-systems.com) and [NeonGeckoCom](https://neon.ai), a lot of
+However, we want to acknowledge [Blue Systems](https://blue-systems.com) and [NeonGeckoCom](https://neon.ai), a lot of
 the work in OVOS is done on paid company time from these projects
 
 ### Where is your website?
@@ -129,11 +129,11 @@ OVOS can run without any wake word configured, in this case you will only be abl
 best for privacy, not so great for a smart speaker
 
 ovos-core also provides a couple experimental settings, if you enable continuous listening then VAD will be used to
-detect speech and no wake word is needed, just speak to mycroft and it should answer! However this setting is
+detect speech and no wake word is needed, just speak to mycroft and it should answer! However, this setting is
 experimental for a reason, you may find that mycroft answers your TV or even tries to answer itself if your hardware
 does not have AEC
 
-Another experimental setting is hybrid mode, with hybrid mode you can ask follow up questions up to 45 seconds after the
+Another experimental setting is hybrid mode, with hybrid mode you can ask follow-up questions, up to 45 seconds after the
 last mycroft interaction, if you do not interact with mycroft it will go back to waiting for a wake word
 
 ### How fast can OVOS respond?
@@ -193,13 +193,13 @@ does not detect the sj201 hat. This makes plugins safe to install and bundle by 
 media player
 
 OCP is a [OVOSAbstractApplication](https://github.com/OpenVoiceOS/OVOS-workshop/blob/dev/ovos_workshop/app.py#L47), this
-means it is a standalome but native OVOS applicatiom with full voice integration
+means it is a standalone but native OVOS application with full voice integration
 
 OCP differs from mycroft-core in several aspects:
 
 - Can run standalone, only needs a bus connection
-- OCP provides it's own intents as if it was a skill
-- OCP provides it's own GUI as if it was a skill
+- OCP provides its own intents as if it was a skill
+- OCP provides its own GUI as if it was a skill
 - mycroft-core CommonPlay skill framework is disabled when OCP loads
 - OCP skills have a dedicated MycroftSkill class and decorators in ovos-workshop
 - OCP skills act as media providers, they do not (usually) handle playback
@@ -209,7 +209,7 @@ OCP differs from mycroft-core in several aspects:
 - AudioService becomes a subsystem for OCP
 - OCP also has AudioService plugin component introducing a compatibility layer for skills using "old style audioservice
   api"
-- OCP integrates with MPRIS, it can be controlled from external apps, eg KdeConnect in your phone
+- OCP integrates with MPRIS, it can be controlled from external apps, e.g. KdeConnect in your phone
 - OCP manages external MPRIS enabled players, you can voice control 3rd party apps without writing a skill for it via
   OCP
 

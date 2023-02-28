@@ -101,7 +101,7 @@ in mycroft-core all skills share a bus connection, this allows malicious skills 
 
 you can see a demonstration of this problem with [BusBrickerSkill](https://github.com/EvilJarbas/BusBrickerSkill)
 
-`"shared_connection": false` ensures each skill gets it's own websocket connection and avoids this problem
+`"shared_connection": false` ensures each skill gets its own websocket connection and avoids this problem
 
 Additionally, it is recommended you change `"host": "127.0.0.1"`, this will ensure no outside world connections are allowed
 
