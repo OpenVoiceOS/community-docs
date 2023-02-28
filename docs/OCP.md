@@ -2,19 +2,19 @@
 
 ![](https://github.com/OpenVoiceOS/ovos_assets/blob/master/Logo/ocp.png?raw=true)
 
-[OCP](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin) stands for OpenVoiceOS Common Play, it is a full fledged
+[OCP](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin) stands for OpenVoiceOS Common Play, it is a full-fledged
 media player
 
 ## Introduction 
 
 OCP is a [OVOSAbstractApplication](https://github.com/OpenVoiceOS/OVOS-workshop/blob/dev/ovos_workshop/app.py#L47), this
-means it is a standalone but native OVOS applicatiom with full voice integration
+means it is a standalone but native OVOS application with full voice integration
 
 OCP differs from a typical mycroft-core audio service in several aspects:
 
 - Can run standalone, only needs a bus connection
-- OCP provides it's own intents as if it was a skill
-- OCP provides it's own GUI as if it was a skill
+- OCP provides its own intents as if it was a skill
+- OCP provides its own GUI as if it was a skill
 - OCP skills have a dedicated MycroftSkill subclass and decorators in ovos-workshop
 - OCP skills act as media providers, they do not (usually) handle playback
 - OCP handles several kinds of playback, including video
@@ -22,7 +22,7 @@ OCP differs from a typical mycroft-core audio service in several aspects:
 - AudioService becomes a subsystem for OCP
 - OCP also has AudioService plugin component introducing a compatibility layer for skills using "old style audioservice
   api"
-- OCP integrates with MPRIS, it can be controlled from external apps, eg KdeConnect in your phone
+- OCP integrates with MPRIS, it can be controlled from external apps, e.g. KdeConnect in your phone
 - OCP manages external MPRIS enabled players, you can voice control 3rd party apps without writing a skill for it via
   OCP
 - mycroft-core CommonPlay skill framework is disabled when OCP loads 
@@ -99,11 +99,11 @@ Timeout settings, return to homescreen widget after 30 seconds
 
 ### Advanced
 
-OCP contains a audio service plugin component that acts as a compatibility layer with MycroftAI CommonPlay skills framework. 
+OCP contains an audio service plugin component that acts as a compatibility layer with MycroftAI CommonPlay skills framework. 
 
 in mycroft-core you can set OCP as `default-backend`, ovos-core is not required for OCP
 
-For compatibility and historical reasons OCP reads it's configuration from the `"Audio"` section
+For compatibility and historical reasons OCP reads its configuration from the `"Audio"` section
 
 ```javascript
 "Audio": {

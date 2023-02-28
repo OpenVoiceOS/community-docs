@@ -4,7 +4,7 @@ We have a universal donor policy, our code should be able to be used anywhere by
 
 OVOS is predominately Apache2 or BSD licensed. There are only a few exceptions to this, which are all licensed under other compatible open source licenses.
 
-Individual plugins or skills may have their own license, for example mimic3 is AGPL so we can not change the license of our plugin.
+Individual plugins or skills may have their own license, for example mimic3 is AGPL, so we can not change the license of our plugin.
 
 We are committed to maintain all core components fully free, any code that we have no control over the license will live in an optional plugin and be flagged as such.
 

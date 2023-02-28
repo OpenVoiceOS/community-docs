@@ -46,7 +46,7 @@ We will now look at each in more detail, including how to use them in a Skill.
 
 ## Keyword Intents
 
-Keyword based intent parsers determine user intent based on a list of keywords or entities contained within a users utterance.
+Keyword based intent parsers determine user intent based on a list of keywords or entities contained within a user's utterance.
 
 ### Defining keywords and entities
 
@@ -96,7 +96,7 @@ Let's consider a `type.rx` file to extract the type of potato we are interested 
 .* (make|like) (?P<Type>.*) potato
 ```
 
-**What is this regex doing?** `.*` matches zero, one or more of any single character. `(?P<Type>.*)` is known as a Named Capturing Group. The variable name is defined between the , and what is captured is defined after this name. In this case we use `.*` to capture anything.
+**What is this regex doing?** `.*` matches zero, one or more of any single character. `(?P<Type>.*)` is known as a Named Capturing Group. The variable name is defined between the "<>", and what is captured is defined after this name. In this case we use `.*` to capture anything.
 
 [Learn more about Regular Expressions](https://github.com/ziishaned/learn-regex/blob/master/README.md).
 
@@ -218,7 +218,7 @@ You can [download this entire Potato Skill from Github](https://github.com/krisg
 
 #### More vocab!
 
-One of the most common mistakes when getting started with Skills is that the vocab file doesn't include all of the keywords or terms that a User might use to trigger the intent. It is important to map out your Skill and test the interactions with others to see how they might ask questions differently.
+One of the most common mistakes when getting started with Skills is that the vocab file doesn't include all the keywords or terms that a User might use to trigger the intent. It is important to map out your Skill and test the interactions with others to see how they might ask questions differently.
 
 #### I have added new phrases in the .voc file, but Mycroft isn't recognizing them
 
@@ -318,7 +318,7 @@ class TomatoSkill(MycroftSkill):
         self.register_entity_file('type.entity')
 ```
 
-Now, we can say things like "do you like greenish tomatoes?" and it will tag type as: `"greenish"`. However if we say "do you like eating tomatoes?" - the phrase will not match as `"eating"` is not included in our `type.entity` file.
+Now, we can say things like "do you like greenish tomatoes?" and it will tag type as: `"greenish"`. However, if we say "do you like eating tomatoes?" - the phrase will not match as `"eating"` is not included in our `type.entity` file.
 
 #### Number matching
 
@@ -363,7 +363,7 @@ New York City
 San Francisco
 ```
 
-The problem is, now anything that is not specifically a mix of New York City, San Francisco, or something on Georgia Street won't match. Instead, we can specify an unknown word with :0. This would would be written as:
+The problem is, now anything that is not specifically a mix of New York City, San Francisco, or something on Georgia Street won't match. Instead, we can specify an unknown word with :0. This would be written as:
 
 ```text
 :0 :0 City
@@ -413,11 +413,11 @@ Look for {object}
 Find {object}
 ```
 
-There is no performance benefit to using parentheses expansion. When used appropriately, this syntax can be much clearer to read. However more complex structures should be broken down into multiple lines to aid readability and reduce false utterances being included in the model. Overuse can even result in the model training timing out, rendering the Skill unusable.
+There is no performance benefit to using parentheses expansion. When used appropriately, this syntax can be much clearer to read. However, more complex structures should be broken down into multiple lines to aid readability and reduce false utterances being included in the model. Overuse can even result in the model training timing out, rendering the Skill unusable.
 
 ### Using it in a Skill
 
-The `intent_handler()` _decorator_ can be used to create a examples based intent handler by passing in the filename of the `.intent` file as a string.
+The `intent_handler()` _decorator_ can be used to create an examples based intent handler by passing in the filename of the `.intent` file as a string.
 
 You may also see the `@intent_file_handler` decorator used in Skills. This has been deprecated and you can now replace any instance of this with the simpler `@intent_handler` decorator.
 

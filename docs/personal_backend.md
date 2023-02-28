@@ -175,7 +175,7 @@ In selene this info would be populated during pairing process, in local backend 
 
 ### Location
 
-Device location can be updated via the backend, mycroft-core will request this info on it's own from time to time
+Device location can be updated via the backend, mycroft-core will request this info on its own from time to time
 
 default values comes from the local backend config file
 ```json
@@ -197,7 +197,7 @@ default values comes from the local backend config file
 
 ### Device Preferences
 
-Some settings can be updated via the backend, mycroft-core will request this info on it's own from time to time
+Some settings can be updated via the backend, mycroft-core will request this info on its own from time to time
 
 default values comes from the local backend config file
 ```json
@@ -219,11 +219,11 @@ in selene all device share skill settings, with local backend you can control th
 
 "old selene" supported a single endpoint for both skill settings and settings meta, this allowed devices both to download and upload settings
 
-"new selene" split this into two endpoints, settingsMeta (upload only) and settings (download only), this disabled two way sync across devices
+"new selene" split this into two endpoints, settingsMeta (upload only) and settings (download only), this disabled two-way sync across devices
 
 - you can set `isolated_skills` per device via the [admin api](./ovos_local_backend/backend/admin.py)
 - you can also set `isolated_skills` per device by manually editing paired devices database
-- both endpoints are available, but mycroft-core by default will use the new endpoints and does not support two way sync
+- both endpoints are available, but mycroft-core by default will use the new endpoints and does not support two-way sync
 - you can edit settings by using the "old selene" endpoint
 - you can also edit settings by manually editing settings database
 
@@ -264,7 +264,7 @@ wait... what? isn't the point of local backend to disable selene?
 - Control, you want to use only a subset of selene features
 - Convenience, pair once, manage all your devices
 - Functionality, extra features such as isolated skill settings and forced 2 way sync
-- Esoteric Setups, isolated mycroft services that can not share a identity file, such as [ovos-qubes](https://github.com/OpenVoiceOS/ovos-qubes)
+- Esoteric Setups, isolated mycroft services that can not share an identity file, such as [ovos-qubes](https://github.com/OpenVoiceOS/ovos-qubes)
 
 #### Pairing
 
@@ -274,7 +274,7 @@ To pair the local backend with selene you have 2 options
 
 2 - enable proxy_pairing, whenever a device pairs with local backend the code it speaks is also valid for selene, use that code to pair local backend with selene
 
-If a device tries to use a selene enabled endpoint without the backend being paired a 401 authentication error will be returned, if the endpoint does not use selene (eg. disabled in config) this check is skipped
+If a device tries to use a selene enabled endpoint without the backend being paired a 401 authentication error will be returned, if the endpoint does not use selene (e.g. disabled in config) this check is skipped
 #### Selene Config
 
 In your backend config add the following section
@@ -282,13 +282,13 @@ In your backend config add the following section
 ```python
     "selene": {
         "enabled": False,  # needs to be explicitly enabled by user
-        "url": "https://api.mycroft.ai",  # change if you are self hosting selene
+        "url": "https://api.mycroft.ai",  # change if you are self-hosting selene
         "version": "v1",
         # pairing settings
         # NOTE: the file should be used exclusively by backend, do not share with a mycroft-core instance
         "identity_file": BACKEND_IDENTITY,  # path to identity2.json file
         # send the pairing from selene to any device that attempts to pair with local backend
-        # this will provide voice/gui prompts to the user and avoid the need to copy a identity file
+        # this will provide voice/gui prompts to the user and avoid the need to copy an identity file
         # only happens if backend is not paired with selene (hopefully exactly once)
         # if False you need to pair an existing mycroft-core as usual and move the file for backend usage
         "proxy_pairing": False,

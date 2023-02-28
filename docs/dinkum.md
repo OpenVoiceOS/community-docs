@@ -57,7 +57,7 @@ No, not even classic core skills run in dinkum. We have no plans to support this
 
 No, dinkum is designed in a very incompatible way, the `mycroft` module is not always mycroft-core and the `MycroftSkill` class is not always a MycroftSkill, we have no intention of transparently loading dinkum skills in ovos-core
 
-We have a small proof of concept tool to convert a dinkum skill into a ovos/classic core compatible skill, see https://github.com/OpenVoiceOS/undinkumfier
+We have a small proof of concept tool to convert a dinkum skill into an ovos/classic core compatible skill, see https://github.com/OpenVoiceOS/undinkumfier
 
 ### Does OCP work in dinkum?
 

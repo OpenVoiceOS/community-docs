@@ -1,6 +1,6 @@
 # OpenVoiceOS TTS Server
 
-Turn any OVOS TTS plugin into a micro service!
+Turn any OVOS TTS plugin into a microservice!
 
 
 ## Install

@@ -1,6 +1,6 @@
 # OpenVoiceOS Translate Server
 
-Turn any OVOS Language plugin into a micro service!
+Turn any OVOS Language plugin into a microservice!
 
 Use with OpenVoiceOS [companion plugin](https://github.com/OpenVoiceOS/ovos-translate-server-plugin)
 

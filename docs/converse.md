@@ -55,7 +55,7 @@ Skills are called in order of when they were last active. For example, if a user
 
 Then the utterance "what's the weather" would first be sent to the Timer Skill's `converse()` method, then to the intent service for normal handling where the Weather Skill would be called.
 
-As the Weather Skill was called it has now been added to the front of the Active Skills List. Hence the next utterance received will be directed to:
+As the Weather Skill was called it has now been added to the front of the Active Skills List. Hence, the next utterance received will be directed to:
 
 1. `WeatherSkill.converse()`
 2. `TimerSkill.converse()`
@@ -63,7 +63,7 @@ As the Weather Skill was called it has now been added to the front of the Active
 
 ### Making a Skill Active
 
-There are occasions where a Skill has not been triggered by the User but it should still be considered "Active".
+There are occasions where a Skill has not been triggered by the User, but it should still be considered "Active".
 
 In the case of our Ice Cream Skill - we might have a function that will execute when the customers order is ready. At this point, we also want to be responsive to the customers thanks, so we call `self.make_active()` to manually add our Skill to the front of the Active Skills List.
 

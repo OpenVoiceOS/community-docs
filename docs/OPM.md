@@ -5,7 +5,7 @@
 OPM is the [OVOS Plugin Manager](https://github.com/OpenVoiceOS/OVOS-plugin-manager), this base package provides
 arbitrary plugins to the ovos ecosystem
 
-OPM plugins import their base classes from OPM making them portable and independent from core, plugins can be used in
+OPM plugins import their base classes from OPM making them portable and independent of core, plugins can be used in
 your standalone projects
 
 By using OPM you can ensure a standard interface to plugins and easily make them configurable in your project, plugin

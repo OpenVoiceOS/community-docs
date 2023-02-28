@@ -79,7 +79,7 @@ At this stage, a booted image should resize its file system to fill the drive it
 ssh connections should use `ovos`/`ovos` to authenticate and be prompted to change password on login.
 
 ### network_manager
-Adds Balena wifi-connect to enable a portal for connecting the Pi device to a wifi network.
+Adds Balena wifi-connect to enable a portal for connecting the Pi device to a Wi-Fi network.
 
 A booted image will now be ready to connect to a network via SSID `OVOS`.
 

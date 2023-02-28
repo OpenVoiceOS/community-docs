@@ -7,15 +7,15 @@ At first run of your OpenVoiceOS device a first run setup wizard is started that
 ## Selecting Your Backend
 
 ### What is a backend ?
-A backend is a service that provides your device with additional tools to function, these could range from managing your skill settings to configuring certain aspects of your device OpenVoiceOS is all about choice,  We currently supports 3 backend types
+A backend is a service that provides your device with additional tools to function, these could range from managing your skill settings to configuring certain aspects of your device OpenVoiceOS is all about choice,  We currently support 3 backend types
 
 ![Select Backend](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/select-backend.png)
 
 ### Selene Backend
-The mycroft backend connects your device to mycroft servers and allows you to use their web interface to manage your device, this requires paring and all your Speech to text queiries are processed via this backend
+The mycroft backend connects your device to mycroft servers and allows you to use their web interface to manage your device, this requires paring and all your Speech to text queries are processed via this backend
 
 ### Personal Backend
-The personal backend is a choice for users who would like to self host their own backend on the device or in their personal home network, this backend requires additional setup but also provides a cool web interface to configure your device and manage your settings
+The personal backend is a choice for users who would like to self-host their own backend on the device or in their personal home network, this backend requires additional setup but also provides a cool web interface to configure your device and manage your settings
 
 ### No Backend
 Open Voice OS by default comes with no backend, we do not really believe you need a backend to do anything, this is the best choice for
@@ -40,7 +40,7 @@ Select A Text To Speech (TTS) Engine: A text-to-speech (TTS) system converts nor
 
 ![TTS](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/tts.png)
 
-Select A Speech To Text (STT) Engine: A speech-to-text (STT) sustem converts human speech to text, select an engine from the list
+Select A Speech To Text (STT) Engine: A speech-to-text (STT) system converts human speech to text, select an engine from the list
 
 ![STT](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/stt.png)
 

@@ -4,7 +4,7 @@ for how to implement good tests for a skill.
 
 ## Unit Tests
 Like any other module, testing each method in you skill can help prevent debugging
-headaches when something goes wrong. These tests are specific to a skill and it
+headaches when something goes wrong. These tests are specific to a skill, and it
 is up to the skill author to test that methods act as expected.
 
 ## OSM Installation Tests

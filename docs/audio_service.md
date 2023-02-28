@@ -15,7 +15,7 @@ This separation of native sources allows remote clients such as an android app t
 
 You can learn more about message targeting [here](https://jarbashivemind.github.io/HiveMind-community-docs/mycroft/)
 
-By default only utterances originating from the speech client and ovos cli are considered native
+By default, only utterances originating from the speech client and ovos cli are considered native
 
 for legacy reasons the names for ovos cli and speech client are `"debug_cli"` and `"audio"` respectively
 

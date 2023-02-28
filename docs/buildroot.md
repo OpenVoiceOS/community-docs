@@ -4,10 +4,10 @@
 
 The buildroot OpenVoiceOS editions is considered to be consumer friendly type of device, or as Mycroft A.I. would like to call, a retail version. However as we so not target a specific hardware platform and would like to support custom made systems we are implementing a smart way to detect and configure different type of Raspberry Pi HAT's.
 
-At boot the system scan the I2C bus for known and suppiorted HAT's and if found configures the underlying linux sound system. At the moment this is still very much in development, however the below HAT's are or should soon be supported by this system;
+At boot the system scan the I2C bus for known and supported HAT's and if found configures the underlying linux sound system. At the moment this is still very much in development, however the below HAT's are or should soon be supported by this system;
 - ReSpeaker 2-mic HAT
 - ReSpeaker 4-mic Square HAT
-- ReSpeaker 4-mic lineair / 6-mic HAT
+- ReSpeaker 4-mic linear / 6-mic HAT
 - USB devices such as the PS EYE-2
 - SJ-201 Dev Kits
 - SJ-201 Mark2 retail device
@@ -18,7 +18,7 @@ TODO - write docs
 
 ## Remote shared folder access (SMB - Windows)
 
-Your OpenVoiceOS device is accesable over the network from your Windows computer. This is still a work in process, but you can open a file explorer and navigate to you OpenVoiceOS device.
+Your OpenVoiceOS device is accessible over the network from your Windows computer. This is still a work in process, but you can open a file explorer and navigate to you OpenVoiceOS device.
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/SMB%20shares.png)
 At the moment the following directories within the user's home directory are shared over the network.
 - Documents
@@ -96,7 +96,7 @@ As example to build the rpi4 version;<br>
 
 Now grab a cup of coffee, go for a walk, sleep and repeat as the build process takes up a long time pulling everything from source and cross compiling everything for the device. Especially the qtwebengine package is taking a LONG time.
 <br>
-(At the moment there is an outstanding issue which prevents the build to run completely to the end. The plasma-workspace package will error out, not finding the libGLESv4 properly linked within QT5GUI. When the build stopped bacause of this error, edit the following file;
+(At the moment there is an outstanding issue which prevents the build to run completely to the end. The plasma-workspace package will error out, not finding the libGLESv4 properly linked within QT5GUI. When the build stopped because of this error, edit the following file;
 <br><br>
 buildroot/output/host/aarch64-buildroot-linux-gnu/sysroot/usr/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake
 <br><br>
@@ -111,10 +111,10 @@ Then you can continue the build process by re-running the "make rpi4_64-gui" com
 When everything goes fine the xz compressed image will be available within the release directory.
 
 
-### Booting image from sd card for the first time (setting up Wifi and backend).
+### Booting image from sd card for the first time (setting up Wi-Fi and backend).
 1.Ensure all required peripherals (mic, speakers, HDMI, usb mouse etc) are plugged in before powering on your RPI4 for the first time.
 <br>
-2. Skip this step if RPI4 is using an ethernet cable. Once powered on, the screen will present the Wifi setup screen ( a Wifi HotSpot is created). Connect to the Wifi HotSpot (ssid OVOS) from another device and follow the on-screen instructions to setup Wifi.
+2. Skip this step if RPI4 is using an ethernet cable. Once powered on, the screen will present the Wifi setup screen ( a Wifi HotSpot is created). Connect to the Wifi HotSpot (ssid OVOS) from another device and follow the on-screen instructions to set up Wifi.
 <br>
 3.Once Wifi is setup a choice of Mycroft backend and Local backend is presented. Choose the Mycroft backend for now and follow the on-screen instructions, Local backend is not ready to use yet. After the pairing process has completed and skills downloaded it's time to test/ use it.
 

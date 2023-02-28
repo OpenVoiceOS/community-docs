@@ -2,20 +2,20 @@
 
 ## Speech Client
 
-| Feature                   | Mycroft | OVOS | Description                                                   | 
-|---------------------------|---------|------|---------------------------------------------------------------|
-| Wake Word (listen)        | yes      | yes  | Only transcribe speech (STT) after a certain word is spoken   |  
-| Wake Up Word (sleep mode) | yes      | yes  | When in sleep mode only listen for "wake up" (no STT)         |
-| Hotword (bus event)       | no      | yes  | Emit bus events when a hotword is detected (no STT)           | 
-| Multiple Wake Words       | no      | yes  | Load multiple hotword engines/models simultaneously           | 
-| Fallback STT              | no      | yes  | fallback STT if the main one fails (eg, internet outage)      |
-| Instant Listen            | no      | yes  | Do not pause between wake word detection and recording start  | 
-| Hybrid Listen             | no      | WIP  | Do not require wake word for follow up questions              |
-| Continuous Listen         | no      | WIP  | Do not require wake word, always listen using VAD             |
-| Recording mode            | no      | WIP  | Save audio instead of processing speech                       |
-| Wake Word Plugins         | yes      | yes  | Supports 3rd party integrations for hotword detection         |  
-| STT Plugins               | yes      | yes  | Supports 3rd party integrations for STT                       | 
-| VAD plugins               | no   *  | yes  | Supports 3rd party integrations for voice activiy detection   |
+| Feature                   | Mycroft | OVOS | Description                                                  | 
+|---------------------------|---------|------|--------------------------------------------------------------|
+| Wake Word (listen)        | yes      | yes  | Only transcribe speech (STT) after a certain word is spoken  |  
+| Wake Up Word (sleep mode) | yes      | yes  | When in sleep mode only listen for "wake up" (no STT)        |
+| Hotword (bus event)       | no      | yes  | Emit bus events when a hotword is detected (no STT)          | 
+| Multiple Wake Words       | no      | yes  | Load multiple hotword engines/models simultaneously          | 
+| Fallback STT              | no      | yes  | fallback STT if the main one fails (eg, internet outage)     |
+| Instant Listen            | no      | yes  | Do not pause between wake word detection and recording start | 
+| Hybrid Listen             | no      | WIP  | Do not require wake word for follow up questions             |
+| Continuous Listen         | no      | WIP  | Do not require wake word, always listen using VAD            |
+| Recording mode            | no      | WIP  | Save audio instead of processing speech                      |
+| Wake Word Plugins         | yes      | yes  | Supports 3rd party integrations for hotword detection        |  
+| STT Plugins               | yes      | yes  | Supports 3rd party integrations for STT                      | 
+| VAD plugins               | no   *  | yes  | Supports 3rd party integrations for voice activity detection |
 
 NOTES:
 
@@ -43,8 +43,8 @@ NOTES:
 NOTES:
 
 - [OCP](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin) can be used with mycroft-core, but not mk2
-- OCP can be controlled via MPRIS, eg. KDEConnect
-- OCP can control MPRIS enabled players, eg. spotify
+- OCP can be controlled via MPRIS, e.g. KDEConnect
+- OCP can control MPRIS enabled players, e.g. spotify
 
 ## Skills
 
