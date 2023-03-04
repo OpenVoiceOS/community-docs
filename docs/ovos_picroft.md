@@ -65,7 +65,7 @@ Now the device setup is done.  Reboot
 
 <strong>*** From this point on, you should be able to access your device from any SSH terminal. *** </strong>
 
-For guide for how to do this, see https://www.raspberrypi.com/documentation/computers/remote-access.html.
+For guide for how to do this, see [https://www.raspberrypi.com/documentation/computers/remote-access.html](https://www.raspberrypi.com/documentation/computers/remote-access.html).
 
 From a linux machine, open a terminal and enter the command `ssh ovos@<your-remembered-IP-address>`.  There will be a warning making sure you want to connect to this device.  Enter yes, and when asked, enter the password for ovos that you made earlier in the setup. `ovos`
 
@@ -77,7 +77,7 @@ We should be done with the basic setup now.  You should have a running Raspberry
 
 ## Step 3: Install OVOS-CORE
 
-There are some recommendations to use a venv for ovos, this guide DOES NOT do that.  The ovos headless stack on a RPi3 is about all it can handle.  So it is assumed that this is a dedicated ovos device, therefore no venv is required.
+There are some recommendations to use a venv for ovos. This guide DOES NOT do that.  The ovos headless stack on a RPi3 is about all it can handle.  It is assumed that this is a dedicated ovos device, therefore no venv is required.
 
 There are a few packages required for ovos, so we will install those first
 
@@ -122,12 +122,15 @@ Enable the system files
 ## Step 5: Install the executables
 
 These are the files that systemd uses to start ovos.  These include `hooks` for restarting and stopping the services.
+
 - `cd ~/ovos-picroft/exec/`
 
 Here we need to copy the files to the right location.
+
 - `cp * ~/.local/bin/`
 
 And make them executable
+
 - `chmod a+x ~/.local/bin/mycroft*`
 
 These executables require `sdnotify`
@@ -146,7 +149,7 @@ Check with this
 
 - `systemctl --user status mycroft*`
 
-It takes a while to load, but they should all say `active (running)`
+It takes a while to load, but they should all eventually say `active (running)`, except for `mycroft.service` which should say `active (exited)`
 
 ## Step 6: Final thoughts
 
