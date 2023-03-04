@@ -52,3 +52,33 @@ The alarm widget is displayed in top left corner after the timer widget. It will
 The media player widget is displayed in the bottom of the home screen, It replaces the examples widget when a media player is active. The media player widget will show you the currently playing media and provide you with a quick way to pause, resume or skip the current media. You can also quickly access the media player by tapping the quick display media player button on the right side of the media player widget.
 
 ![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/homescreen-mediawidget.gif)
+
+## Configuration
+
+### Settings
+
+The homescreen has several customizations available.  This is sample `settings.json` file with all of the options explained
+
+```
+{
+    "__mycroft_skill_firstrun": false,
+    "weather_skill": "skill-weather.openvoiceos",
+    "datetime_skill": "skill-date-time.mycroftai",
+    "examples_skill": "ovos-skills-info.openvoiceos",
+    "wallpaper": "default.jpg",
+    "persistent_menu_hint": false,
+    "examples_enabled": true,
+    "randomize_examples": true,
+    "examples_prefix": true
+}
+```
+
+  * __mycroft_skill_firstrun:  This is automatically set on first load of skill
+  * weather_skill:  DEPRECATED and has no effect - [PR pending](https://github.com/OpenVoiceOS/skill-ovos-homescreen/pull/62)
+  * datetime_skill:  Allows you to use a custom skill to display the date and time.  Defaults to `skill-ovos-date-time.openvoiceos`
+  * examples_skill:  Allows use of a custom skill for the displayed examples.  Defaults to `ovos_skills_manager.utils.get_skills_example()` function
+  * wallpaper:  Allows a custom wallpaper to be displayed.  Use a complete url without any tilde `~`
+  * persistent_menu_hint:  When true, displayes a hint of the pull-down menu at the top of the page
+  * examples_enabled:  When false, the examples at the bottom of the screen will be hidden
+  * randomize_examples:  When false, the rotation of the examples will follow the way they are loaded
+  * examples_prefix:  When false, the prefix 'Ask Me' will NOT be displayed with the examples
