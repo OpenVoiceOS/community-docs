@@ -89,11 +89,11 @@ We will assume that everything from here will be done in the home directory of o
 
 `cd ~`
 
-We will use `pip` to install ovos-core, but we will be using the latest version directly from github.  The command is a little different
+We will use `pip` to install ovos-core, but we will be using the latest version directly from github.
 
-`pip install git+https://github.com/OpenVoiceOS/ovos-core[audio,PHAL,stt,tts,skills_lgpl,skills,bus,skills-essential]`
+`git clone https://github.com/OpenVoiceOS/ovos-core`
 
-Notice th `git+` in front of the rest of the URL.  This tells pip to install from git instead of PyPi
+`pip install ./ovos-core[audio,PHAL,stt,tts,skills_lgpl,skills,bus,skills-essential]`
 
 The rest of the setup requires a few more files.
 
