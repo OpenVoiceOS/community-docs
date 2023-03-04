@@ -72,7 +72,7 @@ The homescreen has several customizations available.  This is sample `settings.j
 ```
 
   * __mycroft_skill_firstrun:  This is automatically set on first load of skill
-  * weather_skill:  DEPRECIATED and has no effect - [PR pending](https://github.com/OpenVoiceOS/skill-ovos-homescreen/pull/62)
+  * weather_skill:  DEPRECATED and has no effect - [PR pending](https://github.com/OpenVoiceOS/skill-ovos-homescreen/pull/62)
   * datetime_skill:  Allows you to use a custom skill to display the date and time.  Defaults to `skill-ovos-date-time.openvoiceos`
   * examples_skill:  Allows use of a custom skill for the displayed examples.  Defaults to `ovos_skills_manager.utils.get_skills_example()` function
   * wallpaper:  Allows a custom wallpaper to be displayed.  Use a complete url without any tilde `~`
