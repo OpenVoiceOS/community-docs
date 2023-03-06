@@ -88,9 +88,7 @@ ovos-core manually you also need to install skills manually
 
 ### Does OVOS work offline?
 
-yes! by default ovos-core does not require internet.
-
-That said individual skills and plugins may require internet and most of the time you will want to use those
+By default ovos-core does not require a backend internet server to operate. Some skills can be accessed (via command line) entirely offline. The default speech-to-text (STT) engine currently requires an internet connection, though some self-hosted, offline options are available. Individual skills and plugins may require internet, and most of the time you will want to use those.
 
 ### Does OVOS depend on any servers?
 
