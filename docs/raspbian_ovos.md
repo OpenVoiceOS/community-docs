@@ -1,4 +1,6 @@
-# ovos-picroft
+# raspbian-ovos
+
+Pre-built images are available at the [OpenVoiceOS Downloads Site](https://downloads.openvoiceos.com/images/picroft/github/workspace/pi-gen/deploy/)
 
 OVOS on top of [RaspberryPiOS Lite](https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2023-02-22/2023-02-21-raspios-bullseye-arm64-lite.img.xz)
 
@@ -10,7 +12,7 @@ The RPi3 does not have the processing power to reliably run [ovos-shell](https:/
 
 By the end of the guide, you should have a running OVOS stack, (messagebus, phal, skills, voice, and speech), along with a "lite" version of RaspberryPiOS.  Which means you have a package manager, (apt) available to you also.
 
-Source files used by this guide can be found at [ovos-picroft](https://github.com/OpenVoiceOS/ovos-picroft).  Any issues or pull requests should be made in this repository.
+Source files used by this guide can be found at [raspbian-ovos](https://github.com/OpenVoiceOS/raspbian-ovos).  Any issues or pull requests should be made in this repository.
 
 ## Step 1: Create the boot medium
 
@@ -65,7 +67,7 @@ Now the device setup is done.  Reboot
 
 <strong>*** From this point on, you should be able to access your device from any SSH terminal. *** </strong>
 
-For guide for how to do this, see [https://www.raspberrypi.com/documentation/computers/remote-access.html](https://www.raspberrypi.com/documentation/computers/remote-access.html).
+For guide for how to do this, see [raspberrypi documentation remote-access](https://www.raspberrypi.com/documentation/computers/remote-access.html)
 
 From a linux machine, open a terminal and enter the command `ssh ovos@<your-remembered-IP-address>`.  There will be a warning making sure you want to connect to this device.  Enter yes, and when asked, enter the password for ovos that you made earlier in the setup. `ovos`
 
@@ -89,65 +91,21 @@ We will assume that everything from here will be done in the home directory of o
 
 `cd ~`
 
-We will use `pip` to install ovos-core, but we will be using the latest version directly from github.
+Clone this repository
 
-`git clone https://github.com/OpenVoiceOS/ovos-core`
+`git clone https://github.com/OpenVoiceOS/raspbian-ovos.git`
 
-`pip install ./ovos-core[audio,PHAL,stt,tts,skills_lgpl,skills,bus,skills-essential]`
+`cd raspbian-ovos`
 
-The rest of the setup requires a few more files.
+Run the install script and follow the prompts
 
-`git clone https://github.com/OpenVoiceOS/ovos-picroft.git`
-
-## Step 4: Install the systemd files
-
-We will be installing the systemd files as a regular user instead of system wide. The official ovos buildroot images installs these files in `/usr/lib/systemd/user/`. There are guides that say user systemd files can also be placed in `/etc/systemd/user.` or `$HOME/.config/systemd/user/`. We will be using the users home directory to avoid any permission issues.
-
-Enter the cloned repo `ovos-picroft` assuming you cloned this to your home directory
-
-`cd ~/ovos-picroft/systemd/`
-
-Copy the files from there
-
-- `cp * ~/.config/systemd/user/`
-
-Reload the systemd daemon
-
-- `systemctl --user daemon-reload`
-
-Enable the system files
-
-- `systemctl --user enable mycroft*`
-
-## Step 5: Install the executables
-
-These are the files that systemd uses to start ovos.  These include `hooks` for restarting and stopping the services.
-
-- `cd ~/ovos-picroft/exec/`
-
-Here we need to copy the files to the right location.
-
-- `cp * ~/.local/bin/`
-
-And make them executable
-
-- `chmod a+x ~/.local/bin/mycroft*`
-
-These executables require `sdnotify`
-
-- `pip install sdnotify`
-
-Do a reboot
-
-- `sudo reboot now`
-
-This takes a while, especially when you are used to a Rpi4 or x86 install.  Loading everything is about as much as a Rpi3 can handle I think.
+`./manual_install.sh`
 
 <strong>You should now have a running ovos device!!</strong>
 
 Check with this
 
-- `systemctl --user status mycroft*`
+`systemctl --user status mycroft*`
 
 It takes a while to load, but they should all eventually say `active (running)`, except for `mycroft.service` which should say `active (exited)`
 
@@ -155,6 +113,6 @@ It takes a while to load, but they should all eventually say `active (running)`,
 
 A generic install of ovos-core does not have any default skills shipped with it.
 
-Check [this page](https://openvoiceos.github.io/community-docs/skills_service/) for more information on skills.
+Check [this page](https://openvoiceos.github.io/community-docs/skills/) for more information on skills.
 
 Audio is also not covered here.  Pulseaudio should be running, check with `systemctl --user status pulseaudio`, but each piece of hardware is different to setup.  I am sure there is a guide somewhere for your hardware.  One thing to mention, this is a full raspbian install, so installing drivers should work also.
