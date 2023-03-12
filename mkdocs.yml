@@ -90,3 +90,5 @@ nav:
         - Raspbian: raspbian_ovos.md
 
 theme: readthedocs
+extra_css:
+    - css/extra.css
