@@ -72,27 +72,27 @@ Some other projects also provide images shipping OpenVoiceOS, such as Bigscreen,
 |:----------------------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
 | **Operating System**                                                            |
 | Base OS                                                                         |                    debian                     |                     manjaro                   | 
-| Last updated - YYYY/MM/DD                                                       |                    2023-0?-??                      |                     2023-0?-??                      | 
+| Last updated - YYYY/MM/DD                                                       |                    2023-0?-??                      |                     Rolling Release                      | 
 | **Software - Architecture**                                                                                |
 | Core                                                                                                       |                    neon-core                     |                     ovos-core                      | 
-| GUI                                                                                                        |       ovos-shell<br>*(mycroft-gui based)*        |      plasma-bigscreen<br>*(mycroft-gui based)*       | 
-| Launcher                                                                                                   |            systemd<br>system session             |            bash script            | 
+| GUI                                                                                                        |       ovos-shell<br>*(mycroft-gui based)*        |      Plasma Shell<br>*(mycroft-gui embedded)*       | 
+| Launcher                                                                                                   |            systemd<br>system session             |            systemd<br>user            | 
 | **Hardware - Compatibility**                                                                               |
 | Raspberry Pi                                                                                               |                        4                         |                4                | 
-| X86_64                                                                                                     |                          No                      |                       No                        | 
+| X86_64                                                                                                     |                          No                      |                      Manual Install                        | 
 | Virtual Appliance                                                                                          |                     ?                      |                       No                        | 
 | Docker                                                                                                     |                       Yes                        |                       No                        | 
 | Mark-1                                                                                                     |                        No                        |                       No                        | 
 | Mark-2                                                                                                     |            Yes            |              No               | 
 | Mark-2  (dev kit)                                                               |                    Yes                                                  |            No                                   |          
 | **Hardware - Peripherals**                                                                                 |
-| ReSpeaker                                                                                                  |                     ?                      |                       No                        | 
+| ReSpeaker                                                                                                  |                     ?                      |                       Yes (Manual Install)                        | 
 | USB                                                                                                        |                     ?                      |                       Yes                        |
 | SJ-201                                                                                                     |                                                         Yes                        |                       No                       | 
-| Google AIY v1                                                                                              |                                        ?                      |                       No                        |
-| Google AIY v2                                                                                              |                                       ?                      |                       No                        |
+| Google AIY v1                                                                                              |                                        ?                      |                       Yes (Manual Install)                        |
+| Google AIY v2                                                                                              |                                       ?                      |                       Yes (Manual Install)                        |
 | **Screen - GUI**                                                                                           |
-| GUI supported<br>*Showing a GUI if a screen is attached*                                                   |                                                  Yes<br>*ovos-shell on eglfs*           |           Yes<br>*plasma-bigscreen on X11*           |
+| GUI supported<br>*Showing a GUI if a screen is attached*                                                   |                                                  Yes<br>*ovos-shell on eglfs*           |           Yes<br>*plasma-bigscreen <br>X11 or Wayland*           |
 | **Network Setup - Options**                                                                                |
 | Mobile WiFi Setup<br>*Easy device "hotspot"<br>to connect from phone*                                      |                        No                        |                       No                       |
 | On device WiFi Setup<br>*Configure the connection<br>directly on device*                                |                                                                     Yes                        |                      Yes                       |
@@ -101,7 +101,7 @@ Some other projects also provide images shipping OpenVoiceOS, such as Bigscreen,
 | **Configuration - Option**                                                                                  |
 | Data privacy                                                                                               |                                                                           Yes                        |                     Yes                     |
 | Offline mode                                                                                               |                                                                       Yes                        |                       Yes                        | 
-| Color theming                                                                                              |                                                                           Yes                        |                       No                        | 
+| Color theming                                                                                              |                                                                           Yes                        |                       System                        | 
 | Non-Pairing mode                                                                                           |                                                                     Yes                        |                       Yes                        |
 | API Access w/o pairing                                                                                     |                                                                              Yes                        |                       Yes                        |
 | On-Device configuration                                                                                     |                                                                             Yes                        |                       ?                        | 
@@ -113,16 +113,16 @@ Some other projects also provide images shipping OpenVoiceOS, such as Bigscreen,
 | Update mechanism(s)                                                                                        |       Plugin-based mechanism</br>OS Updates **WIP** |         package manager          |
 | **Voice Assistant - Functionality**                                                                        |
 | STT - On device                                                                                                                   |           default: **Deepspeech**            |            Yes<br>*Vosk*         | 
-| STT - On premises                                                                                           |      Ovos STT Server<br>(any plugin)       |                       ?                        | 
+| STT - On premises                                                                                           |      Ovos STT Server<br>(any plugin)       |                        Ovos STT Server<br>(any plugin)                        | 
 | STT - Cloud                                                                                                    |                 Yes<br>*Google*                  |     ?     | 
 | TTS - On device                                                                                                                 |       default: **Coqui**       |                default: **Mimic**                 | 
-| TTS - On premises                                                                                                              |      Ovos TTS Server<br>(any plugin)       |                       ?                        |
+| TTS - On premises                                                                                                              |      Ovos TTS Server<br>(any plugin)       |                        Ovos TTS Server<br>(any plugin)                        |
 | TTS - Cloud                                                                                                |                         default: **Amazon Polly**               |                       default: **Mimic 3**                        |
 | **Smart Speaker - Functionality**                                                                          |
 | Music player connectivity<br>*use of external applications<br>on other devices*                            |                     ?                      |           Yes<br>*MPRIS (KDEKonnect)*           | 
 | Music player sync                                                                                          |                                                      Yes<br>*OCP<br>MPRIS*               |                       Yes<br>*OCP<br>MPRIS*                        | 
-| HomeAssistant integration                                                                                  |                                                            **WIP**<br>*HomeAssistant<br>PHAL Plugin*     |                     ?                     | 
-| Camera support                                                                                             |                                                                             Yes                        |                     ?                     | 
+| HomeAssistant integration                                                                                  |                                                            **WIP**<br>*HomeAssistant<br>PHAL Plugin*     |                     Yes (Manual Install)<br>*HomeAssistant<br>PHAL Plugin*                     | 
+| Camera support                                                                                             |                                                                             Yes                        |                     No                     | 
 
 ## Mycroft Images
 
