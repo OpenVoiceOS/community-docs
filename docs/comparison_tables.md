@@ -88,8 +88,37 @@ a headless raspbian image is also maintained by the community
 
 ### Friends
 
+|                         	| NeonAI                    	| Bigscreen              	|
+|-------------------------	|---------------------------	|------------------------	|
+| **Default Plugins**     	|                           	|                        	|
+| stt                     	|                           	|                        	|
+| fallback_stt            	|                           	|                        	|
+| tts                     	| neon-tts-plugin-coqui (?) 	| ovos-tts-plugin-mimic2 	|
+| fallback_tts            	|                           	| ovos-tts-plugin-mimic  	|
+| **Recommended Plugins** 	|                           	|                        	|
+| STT - On device         	|                           	|                        	|
+| STT - On premises       	|                           	|                        	|
+| STT - Cloud             	|                           	|                        	|
+| TTS - On device         	|                           	|                        	|
+| TTS - On premises       	|                           	|                        	|
+| TTS - Cloud             	|                           	|                        	|
+
 ## Mycroft
 
+|                           | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum) | Picroft<br>(Classic Core) |
+|-------------------------	|--------------------------|--------------------|---------------------------|
+| **Default Plugins**     	|                          |                    |                           |
+| stt                     	|                          |                    |                           |
+| fallback_stt            	|                          |                    |                           |
+| tts                     	|                          |                    |                           |
+| fallback_tts            	|                          |                    |                           |
+| **Recommended Plugins** 	|                          |                    |                           |
+| STT - On device         	|                          |                    |                           |
+| STT - On premises       	|                          |                    |                           |
+| STT - Cloud             	|                          |                    |                           |
+| TTS - On device         	|                          |                    |                           |
+| TTS - On premises       	|                          |                    |                           |
+| TTS - Cloud             	|                          |                    |                           |
 
 ## ???
 
