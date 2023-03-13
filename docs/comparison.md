@@ -114,7 +114,8 @@ Some other projects also provide images shipping OpenVoiceOS, such as Bigscreen,
 | **Voice Assistant - Functionality**                                                                        |
 | STT - On device                                                                                                                   |           default: **Deepspeech**            |            Yes<br>*Vosk*         | 
 | STT - On premises                                                                                           |      Ovos STT Server<br>(any plugin)       |                        Ovos STT Server<br>(any plugin)                        | 
-| STT - Cloud                                                                                                    |                 Yes<br>*Google*                  |     Yes<br>*Google*     |
+| STT - Cloud                                                                                                    |                 Ovos Server Proxy
+(google chromium)                  |     Yes<br>*Google*     |
 | TTS - On device                                                                                                                 |       default: **Coqui**       |                default: **Mimic**                 | 
 | TTS - On premises                                                                                                              |      Ovos TTS Server<br>(any plugin)       |                        Ovos TTS Server<br>(any plugin)                        |
 | TTS - Cloud                                                                                                |                         default: **Amazon Polly**               |                       default: **Mimic 2**                        |
