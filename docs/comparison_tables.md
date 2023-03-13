@@ -88,37 +88,37 @@ a headless raspbian image is also maintained by the community
 
 ### Friends
 
-|                         	| NeonAI                    	| Bigscreen              	|
-|-------------------------	|---------------------------	|------------------------	|
-| **Default Plugins**     	|                           	|                        	|
-| stt                     	| neon-stt-plugin-google-cloud-streaming |            	|
-| fallback_stt            	| ovos-stt-plugin-vosk      	|                        	|
-| tts                     	| neon-tts-plugin-coqui-remote | ovos-tts-plugin-mimic2 |
-| fallback_tts            	| neon-tts-plugin-coqui     	| ovos-tts-plugin-mimic  	|
-| **Recommended Plugins** 	|                           	|                        	|
-| STT - On device         	| vosk (Pi), neon-stt-pluin-nemo (x86) |               	|
-| STT - On premises       	| neon-stt-plugin-nemo      	|                        	|
-| STT - Cloud             	| neon-stt-plugin-google-cloud-streaming |             	|
-| TTS - On device         	| neon-tts-plugin-coqui     	|                        	|
-| TTS - On premises       	| neon-tts-plugin-coqui     	|                        	|
-| TTS - Cloud             	| neon-tts-plugin-coqui     	|                        	|
+|                         	| NeonAI                                 | Bigscreen              	|
+|-------------------------	|----------------------------------------|------------------------	|
+| **Default Plugins**     	|                           	         |                        	|
+| stt                     	| neon-stt-plugin-google-cloud-streaming |            	            |
+| fallback_stt            	| ovos-stt-plugin-vosk      	         |                        	|
+| tts                     	| neon-tts-plugin-coqui-remote           | ovos-tts-plugin-mimic2   |
+| fallback_tts            	| neon-tts-plugin-coqui     	         | ovos-tts-plugin-mimic  	|
+| **Recommended Plugins** 	|                           	         |                        	|
+| STT - On device         	| ovos-stt-plugin-vosk                   |                        	|
+| STT - On premises       	| neon-stt-plugin-nemo                   |                        	|
+| STT - Cloud             	| neon-stt-plugin-google-cloud-streaming |                      	|
+| TTS - On device         	| neon-tts-plugin-coqui                  |                        	|
+| TTS - On premises       	| neon-tts-plugin-coqui                  |                        	|
+| TTS - Cloud             	| neon-tts-plugin-coqui     	         |                        	|
 
 ## Mycroft
 
-|                           | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum) | Picroft<br>(Classic Core) |
-|-------------------------	|--------------------------|--------------------|---------------------------|
-| **Default Plugins**     	|                          |                    |                           |
-| stt                     	|                          |                    |                           |
-| fallback_stt            	|                          |                    |                           |
-| tts                     	|                          |                    |                           |
-| fallback_tts            	|                          |                    |                           |
-| **Recommended Plugins** 	|                          |                    |                           |
-| STT - On device         	|                          |                    |                           |
-| STT - On premises       	|                          |                    |                           |
-| STT - Cloud             	|                          |                    |                           |
-| TTS - On device         	|                          |                    |                           |
-| TTS - On premises       	|                          |                    |                           |
-| TTS - Cloud             	|                          |                    |                           |
+|                         | Mark 1<br>(Classic Core)              | Mark 2<br>(Dinkum)                    | Picroft<br>(Classic Core)             |
+|-------------------------|---------------------------------------|---------------------------------------|---------------------------------------|
+| **Default Plugins**     |                                       |                                       |                                       |
+| stt                     | mycroft (selene)<br>(internal plugin) | mycroft (selene)<br>(internal plugin) | mycroft (selene)<br>(internal plugin) |
+| fallback_stt            | N/A<br>(missing feature)              | N/A<br>(missing feature)              | N/A<br>(missing feature)              |
+| tts                     | mimic2<br>(internal plugin)           | mimic 3<br>(internal plugin)          | mimic2<br>(internal plugin)           |
+| fallback_tts            | mimic<br>(internal plugin)            | mimic<br>(internal plugin)            | mimic<br>(internal plugin)            |
+| **Recommended Plugins** |                                       |                                       |                                       |
+| STT - On device         | N/A                                   | grokotron<br>(internal plugin)        | N/A                                   |
+| STT - On premises       | N/A (?)                               | N/A                                   | N/A (?)                               |
+| STT - Cloud             | mycroft (selene)<br>(internal plugin) | mycroft (selene)<br>(internal plugin) | mycroft (selene)<br>(internal plugin) |
+| TTS - On device         | mimic<br>(internal plugin)            | mimic 3<br>(internal plugin)          | mimic<br>(internal plugin)            |
+| TTS - On premises       | N/A (?)                               | N/A (?)                               | N/A (?)                               |
+| TTS - Cloud             | mimic2<br>(internal plugin)           | N/A (?)                               | mimic2<br>(internal plugin)           |
 
 ## ???
 
