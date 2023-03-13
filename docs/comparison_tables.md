@@ -33,9 +33,9 @@ a headless raspbian image is also maintained by the community
 |------------------------------------------------|---------------------------|----------------------------------------|
 | **Operating System**                           |                           |                                        |
 | Base OS                                        | debian                    | manjaro                                |
-| Last Updated - YYYY/MM/DD                      | 2023-??-??                | 2023-??-??                             |
+| Last Updated - YYYY/MM/DD                      | 2023-03 (regular updates) | 2023-??-??                             |
 | **Customization**                              |                           |                                        |
-| Open Build System                              | Yes (?)                   | Yes (?)                                |
+| Open Build System                              | Yes                       | Yes (?)                                |
 | Package manager                                | apt                       | pacman                                 |
 | **Software - Architecture**                    |                           |                                        |
 | Core                                           | neon-core                 | ovos-core                              |
@@ -91,17 +91,17 @@ a headless raspbian image is also maintained by the community
 |                         	| NeonAI                    	| Bigscreen              	|
 |-------------------------	|---------------------------	|------------------------	|
 | **Default Plugins**     	|                           	|                        	|
-| stt                     	|                           	|                        	|
-| fallback_stt            	|                           	|                        	|
-| tts                     	| neon-tts-plugin-coqui (?) 	| ovos-tts-plugin-mimic2 	|
-| fallback_tts            	|                           	| ovos-tts-plugin-mimic  	|
+| stt                     	| neon-stt-plugin-google-cloud-streaming |            	|
+| fallback_stt            	| ovos-stt-plugin-vosk      	|                        	|
+| tts                     	| neon-tts-plugin-coqui-remote | ovos-tts-plugin-mimic2 |
+| fallback_tts            	| neon-tts-plugin-coqui     	| ovos-tts-plugin-mimic  	|
 | **Recommended Plugins** 	|                           	|                        	|
-| STT - On device         	|                           	|                        	|
-| STT - On premises       	|                           	|                        	|
-| STT - Cloud             	|                           	|                        	|
-| TTS - On device         	|                           	|                        	|
-| TTS - On premises       	|                           	|                        	|
-| TTS - Cloud             	|                           	|                        	|
+| STT - On device         	| vosk (Pi), neon-stt-pluin-nemo (x86) |               	|
+| STT - On premises       	| neon-stt-plugin-nemo      	|                        	|
+| STT - Cloud             	| neon-stt-plugin-google-cloud-streaming |             	|
+| TTS - On device         	| neon-tts-plugin-coqui     	|                        	|
+| TTS - On premises       	| neon-tts-plugin-coqui     	|                        	|
+| TTS - Cloud             	| neon-tts-plugin-coqui     	|                        	|
 
 ## Mycroft
 
