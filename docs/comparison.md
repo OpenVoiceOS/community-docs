@@ -86,11 +86,11 @@ Some other projects also provide images shipping OpenVoiceOS, such as Bigscreen,
 | Mark-2                                                                                                     |            Yes            |              No               | 
 | Mark-2  (dev kit)                                                               |                    Yes                                                  |            No                                   |          
 | **Hardware - Peripherals**                                                                                 |
-| ReSpeaker                                                                                                  |                     ?                      |                       Yes (Manual Install)                        | 
+| ReSpeaker                                                                                                  |                     ?                      |                       Supported (Not Installed)                        |
 | USB                                                                                                        |                     ?                      |                       Yes                        |
 | SJ-201                                                                                                     |                                                         Yes                        |                       No                       | 
-| Google AIY v1                                                                                              |                                        ?                      |                       Yes (Manual Install)                        |
-| Google AIY v2                                                                                              |                                       ?                      |                       Yes (Manual Install)                        |
+| Google AIY v1                                                                                              |                                        ?                      |                       Supported (Not Installed)                        |
+| Google AIY v2                                                                                              |                                       ?                      |                       Supported (Not Installed)                        |
 | **Screen - GUI**                                                                                           |
 | GUI supported<br>*Showing a GUI if a screen is attached*                                                   |                                                  Yes<br>*ovos-shell on eglfs*           |           Yes<br>*plasma-bigscreen <br>X11 or Wayland*           |
 | **Network Setup - Options**                                                                                |
@@ -121,7 +121,7 @@ Some other projects also provide images shipping OpenVoiceOS, such as Bigscreen,
 | **Smart Speaker - Functionality**                                                                          |
 | Music player connectivity<br>*use of external applications<br>on other devices*                            |                     ?                      |           Yes<br>*MPRIS (KDEKonnect)*           | 
 | Music player sync                                                                                          |                                                      Yes<br>*OCP<br>MPRIS*               |                       Yes<br>*OCP<br>MPRIS*                        | 
-| HomeAssistant integration                                                                                  |                                                            **WIP**<br>*HomeAssistant<br>PHAL Plugin*     |                     Yes (Manual Install)<br>*HomeAssistant<br>PHAL Plugin*                     | 
+| HomeAssistant integration                                                                                  |                                                            **WIP**<br>*HomeAssistant<br>PHAL Plugin*     |                     Supported (Not Installed)<br>*HomeAssistant<br>PHAL Plugin*                     |
 | Camera support                                                                                             |                                                                             Yes                        |                     No                     | 
 
 ## Mycroft Images
