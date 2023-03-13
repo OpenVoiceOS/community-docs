@@ -72,7 +72,7 @@ Some other projects also provide images shipping OpenVoiceOS, such as Bigscreen,
 |:----------------------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
 | **Operating System**                                                            |
 | Base OS                                                                         |                    debian                     |                     manjaro                   | 
-| Last updated - YYYY/MM/DD                                                       |                    2023-0?-??                      |                     Rolling Release                      | 
+| Last updated - YYYY/MM/DD                                                       |                    2023-0?-??                      |                     [Rolling Release](https://github.com/manjaro-arm/bigscreen/releases)                      | 
 | **Software - Architecture**                                                                                |
 | Core                                                                                                       |                    neon-core                     |                     ovos-core                      | 
 | GUI                                                                                                        |       ovos-shell<br>*(mycroft-gui based)*        |      Plasma Shell<br>*(mycroft-gui embedded)*       | 
