@@ -20,10 +20,14 @@ Mycroft images are largely unmaintained and are also listed for comparison purpo
   * [OpenVoiceOS](#openvoiceos-2)
   * [Friends](#friends-2)
   * [Mycroft](#mycroft-2)
-- [Hardware](#hardware)
+- [Configuration](#configuration)
   * [OpenVoiceOS](#openvoiceos-3)
   * [Friends](#friends-3)
   * [Mycroft](#mycroft-3)
+- [Hardware](#hardware)
+  * [OpenVoiceOS](#openvoiceos-4)
+  * [Friends](#friends-4)
+  * [Mycroft](#mycroft-4)
     
 
 ## Operating System
@@ -171,6 +175,8 @@ MNOs - Mycroft/Neon/OVOS
 | Spotify Daemon                     | Yes                                 | No (?)                              | No                                  |
 | Airplay                            | Yes                                 | No (?)                              | No                                  |
 | Bluetooth Speaker                  | WIP                                 | No (?)                              | No                                  |
+| **IOT Frameworks**                 |                                           |                    |                           |     
+| HomeAssistant integration          | **WIP**<br>*HomeAssistant<br>PHAL Plugin* | **WIP**<br>*HomeAssistant<br>PHAL Plugin* | **WIP**<br>*HomeAssistant<br>PHAL Plugin*<br>(manual install) |    
 
 ### Friends
 
@@ -192,46 +198,163 @@ MNOs - Mycroft/Neon/OVOS
 | Spotify Daemon                     | No                                  | No (?)                              | 
 | Airplay                            | No                                  | No (?)                              | 
 | Bluetooth Speaker                  | No                                  | No (?)                              | 
+| **IOT Frameworks**                 |                                           |                                           |                            
+| HomeAssistant integration          | **WIP**<br>*HomeAssistant<br>PHAL Plugin* | **WIP**<br>*HomeAssistant<br>PHAL Plugin* |
 
 
 ### Mycroft
 
-|                                    | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum) | Picroft<br>(Classic Core) |
-|------------------------------------|--------------------------|--------------------|---------------------------|
-| **Skill Frameworks**               |                          |                    |                           |
-| Mycroft Audio Service<br>(bus api) | Yes                      | ?                  | Yes                       |
-| Adapt Intents                      | Yes                      | Yes                | Yes                       |
-| Padatious Intents                  | Yes                      | Yes                | Yes                       |
-| OCP Skills                         | No                       | No                 | No                        |
-| MNOS Common Query Skills           | Yes                      | No                 | Yes                       |
-| MNOs Fallback Skills               | Yes                      | No                 | Yes                       |
-| MNOs Skills                        | Yes                      | No                 | Yes                       |
-| Mycroft Common Play Skills         | Yes                      | No                 | Yes                       |
-| **Media Frameworks**               |                          |                    |                           |                                     
-| OCP                                | No                       | No                 | No                        |
-| MPRIS                              | No                       | No                 | No                        |
-| KDEConnect                         | No                       | No                 | No                        |
-| Spotify Daemon                     | Partial (?)              | No                 | Partial (?)               |
-| Airplay                            | No                       | No                 | No                        |
-| Bluetooth Speaker                  | No                       | No                 | No                        |
+|                                    | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum)  | Picroft<br>(Classic Core) |
+|------------------------------------|--------------------------|---------------------|---------------------------|
+| **Skill Frameworks**               |                          |                     |                           |
+| Mycroft Audio Service<br>(bus api) | Yes                      | ?                   | Yes                       |
+| Adapt Intents                      | Yes                      | Yes                 | Yes                       |
+| Padatious Intents                  | Yes                      | Yes                 | Yes                       |
+| OCP Skills                         | No                       | No                  | No                        |
+| MNOS Common Query Skills           | Yes                      | No                  | Yes                       |
+| MNOs Fallback Skills               | Yes                      | No                  | Yes                       |
+| MNOs Skills                        | Yes                      | No                  | Yes                       |
+| Mycroft Common Play Skills         | Yes                      | No                  | Yes                       |
+| **Media Frameworks**               |                          |                     |                           |                                     
+| OCP                                | No                       | No                  | No                        |
+| MPRIS                              | No                       | No                  | No                        |
+| KDEConnect                         | No                       | No                  | No                        |
+| Spotify Daemon                     | Partial (?)              | No                  | Partial (?)               |
+| Airplay                            | No                       | No                  | No                        |
+| Bluetooth Speaker                  | No                       | No                  | No                        |
+| **IOT Frameworks**                 |                          |                     |                           |     
+| HomeAssistant integration          | Yes (?)<br>Mycroft Skill | Yes<br>Dinkum Skill | Yes (?)<br>Mycroft Skill |    
+
+
+## Configuration
+
+### OpenVoiceOS
+
+|           | ovos-buildroot | ovos-arch | ovos-raspbian |
+|-----------|----------------|-----------|---------------|
+| **Configuration - Option**                                                      |
+| Data privacy                                                                    |                                   Yes                                   |                        Yes                        |                       Yes                         |                       
+| Offline mode                                                                    |                                   Yes  <br> (setup skill)               |                        Yes  <br> (setup skill)    |                       yes  <br> (need to change default plugins)                       |                      
+| Color theming                                                                   |                                   Yes                                   |                        Yes                        |                       No                          |                      
+| Non-Pairing mode                                                                |                                   Yes  <br> (setup skill)                                 |                        Yes   <br> (setup skill)                     |                 Yes<br> (preconfigured default)                  |                      
+| API Access w/o pairing                                                          |                                   Yes                                   |                        Yes                        |                       Yes                         |                      
+| On-Screen configuration                                                         |                                   Yes                                   |                        Yes                        |                       No                          |                     
+| Online configuration                                                            |                           personal-backend + dashboard<br>**wip**                            |                personal-backend + dashboard<br>**wip**                 |               personal-backend + dashboard<br>(manual install)                 |                     
+| **Network Setup - Options**                                                     |
+| Mobile WiFi Setup<br>*Easy device "hotspot"<br>to connect from phone*           |                                   Yes                                   |                        No                         |                   No                    |                       
+| On device WiFi Setup<br>*Configure the connection<br>directly on screen*        |                                   Yes                                   |                        Yes                        |                   No                     |                     
+| On screen keyboard                                                              |                                   Yes                                   |                        Yes                        |                       No                          |                     
+| Reconfigure network<br>*Easy way to change the<br>network settings*             |                                   Yes <br> (on screen)                                  |                        Yes  <br> (on screen)                       |                  Yes  <br> (raspi-config)                     |                      
+
+
+
+### Friends
+
+|         	| NeonAI | Bigscreen |
+|-----------|--------|-----------| 
+| **Network Setup - Options**                                                                                |
+| Mobile WiFi Setup<br>*Easy device "hotspot"<br>to connect from phone*                                      |                        No                        |                       No                       |
+| On device WiFi Setup<br>*Configure the connection<br>directly on device*                                |                                                                     Yes                        |                      Yes                       |
+| On screen keyboard                                                                                         |                                                                               Yes                        |                       Yes                       |
+| Reconfigure network<br>*Easy way to change the<br>network settings*                                            |                                                                            Yes                        |                      Yes                       |
+| **Configuration - Option**                                                                                  |
+| Data privacy                                                                                               |                                                                           Yes                        |                     Yes                     |
+| Offline mode                                                                                               |                                                                       Yes                        |                       Yes                        | 
+| Color theming                                                                                              |                                                                           Yes                        |                       No                        | 
+| Non-Pairing mode                                                                                           |                                                                     Yes                        |                       Yes                        |
+| API Access w/o pairing                                                                                     |                                                                              Yes                        |                       Yes                        |
+| On-Device configuration                                                                                     |                                                                             Yes                        |                       ?                        | 
+| Online configuration                                                                                        |                                                   *WIP*                       |                       ?                       | 
+
+
+### Mycroft
+
+|           | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum) | Picroft<br>(Classic Core) |
+|-----------|--------------------------|--------------------|---------------------------|
+| **Network Setup - Options**                                                                                |
+| Mobile WiFi Setup<br>*Easy device "hotspot"<br>to connect from phone*                                      |                        Yes                        |                       Yes                       | No |
+| On device WiFi Setup<br>*Configure the connection<br>directly on device*                                |                            No                        |                       No                        | No |
+| On screen keyboard                                                                                         |                         No                        |                       Yes                       | No |
+| Reconfigure network<br>*Easy way to change the<br>network settings*                                            |                                                                            Yes  <br> (mk1 menu)                      |                       No                        | No |
+| **Configuration - Option**                                                                                  |
+| Data privacy                                                                                               |                                                                           Partial                        |                     Partial                     | Partial |
+| Offline mode                                                                                               |                                                                      No                 |                       No                        | No |
+| Color theming                                                                                              |                                                                  No                        |                       No                        | No |
+| Non-Pairing mode                                                                                           |                                                                 No                        |                       No                        | No |
+| API Access w/o pairing                                                                                     |                                                                         No                       |                       No                        | No |
+| On-Device configuration                                                                                     |                                                                         No                       |                       No                        | No |
+| Online configuration                                                                                        |                                                   Yes                      |                       Yes                       | Yes |
 
 
 ## Hardware
 
 ### OpenVoiceOS
 
-|           | ovos-buildroot | ovos-arch | ovos-raspbian |
-|-----------|----------------|-----------|---------------|
-| **X**     |                |           |               |
+|                              | ovos-buildroot                | ovos-arch            | ovos-raspbian                        |
+|------------------------------|-------------------------------|----------------------|--------------------------------------|
+| **Hardware - Compatibility** |
+| Raspberry Pi 3B              | Yes                           | No                   | Yes                                  |   
+| Raspberry Pi 3B+             | Yes                           | No                   | Yes                                  | 
+| Raspberry Pi 3A+             | Yes                           | No                   | Yes                                  |   
+| Raspberry Pi 4               | Yes                           | Yes                  | Yes                                  | 
+| X86_64                       | *planned*                     | No                   | No                                   |                     
+| Mark-1                       | **WIP**                       | No                   | No<br>*possibly in future*           |                        
+| Mark-2                       | **WIP**<br>(no leds)          | **WIP**<br>(no leds) | partial<br>(no gui + manual install) |           
+| Mark-2  (dev kit)            | Yes                           | Yes                  | partial<br>(no gui + manual install) |           
+| **Hardware - Peripherals**   |
+| ReSpeaker  2-mic             | Yes (?)                       | Yes (?)              | manual install (?)                   |        
+| ReSpeaker  4-mic squared     | Yes (?)                       | No (?)               | manual install (?)                   |        
+| ReSpeaker  4-mic linear      | Yes (?)                       | No (?)               | manual install (?)                   |  
+| ReSpeaker  6-mic             | Yes (?)                       | No (?)               | manual install (?)                   |                
+| USB                          | Yes                           | Yes                  | Yes                                  |                    
+| SJ-201                       | Yes                           | Yes                  | manual install (?)                   |                   
+| Google AIY v1                | manual install (?)            | manual install       | manual install (?)                   |                     
+| Google AIY v2                | No<br>*perhaps in the future* | manual install       | manual install (?)                   |                   
+
 
 ### Friends
 
 |         	| NeonAI | Bigscreen |
-|-----------|--------|-----------| 
-| **X**     |        |           |  
+|-----------|--------|-----------|
+| **Hardware - Compatibility** |
+| Raspberry Pi 3B              | No                 | No                   | 
+| Raspberry Pi 3B+             | No                 | No                   | 
+| Raspberry Pi 3A+             | No                 | No                   | 
+| Raspberry Pi 4               | Yes                | Yes                  | 
+| X86_64                       | No                 | No                   |                   
+| Mark-1                       | No                 | No                   |                      
+| Mark-2                       | Yes                | No                   |         
+| Mark-2  (dev kit)            | Yes                | No                   | 
+| **Hardware - Peripherals**   |
+| ReSpeaker  2-mic             | manual install (?) | manual install (?)   | 
+| ReSpeaker  4-mic squared     | manual install (?) | manual install (?)   |   
+| ReSpeaker  4-mic linear      | manual install (?) | manual install (?)   |
+| ReSpeaker  6-mic             | manual install (?) | manual install (?)   |          
+| USB                          | Yes                | Yes                  |                 
+| SJ-201                       | Yes                | No                   |              
+| Google AIY v1                | manual install (?) | manual install (?)   |                 
+| Google AIY v2                | manual install (?) | manual install (?)   |              
+
 
 ### Mycroft
 
-|           | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum) | Picroft<br>(Classic Core) |
-|-----------|--------------------------|--------------------|---------------------------|
-| **X**     |                          |                    |                           |
+|                              | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum)     | Picroft<br>(Classic Core)            |
+|------------------------------|--------------------------|------------------------|--------------------------------------|
+| **Hardware - Compatibility** |
+| Raspberry Pi 3B              | No                       | No                     | Yes                                  |   
+| Raspberry Pi 3B+             | No                       | No                     | Yes                                  | 
+| Raspberry Pi 3A+             | No                       | No                     | No (?)                               |   
+| Raspberry Pi 4               | No                       | Yes<br>(sandbox image) | Yes (?)                              | 
+| X86_64                       | No                       | No                     | No                                   |                      
+| Mark-1                       | Yes                      | No                     | No                                   |                        
+| Mark-2                       | No                       | Yes                    | No                                   |           
+| Mark-2  (dev kit)            | No                       | Yes                    | No                                   |           
+| **Hardware - Peripherals**   |
+| ReSpeaker  2-mic             | No                       | No                 | manual install (?)                   |        
+| ReSpeaker  4-mic squared     | No                       | No                 | manual install (?)                   |        
+| ReSpeaker  4-mic linear      | No                       | No                 | manual install (?)                   |  
+| ReSpeaker  6-mic             | No                       | No                 | manual install (?)                   |                
+| USB                          | Yes (?)                  | No (?)             | Yes                                  |                    
+| SJ-201                       | No                       | Yes                | manual install (?)                   |                   
+| Google AIY v1                | No                       | No                 | Yes (?)                              |                     
+| Google AIY v2                | No                       | No                 | manual install (?)                   |                   
