@@ -12,10 +12,9 @@ Download Images:
 
 - [buildroot](https://drive.google.com/drive/folders/113-zmx6ncoeLNsayseNxoaTlaAk1AfU2)
   - SSH Details: Username: mycroft | password: mycroft
-- [manjaro](http://downloads.openvoiceos.com/images/)
-  - SSH Details for Respeaker Image: Username: mycroft | password: 12345
-  - SSH Details for Mark-2/DevKit Image: Username: ovos | password: ovos
-- [rpi3-headless](https://downloads.openvoiceos.com/images/picroft/github/workspace/pi-gen/deploy/)
+- [manjaro](https://downloads.openvoiceos.com/images/manjaro/)
+  - SSH Details: Username: ovos | password: ovos
+- [rpi3-headless](https://downloads.openvoiceos.com/images/raspbian/)
   - SSH Details: Username: ovos | password: ovos
  
 Build images from scratch:
