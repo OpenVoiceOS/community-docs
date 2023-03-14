@@ -1,9 +1,7 @@
-
-
 ## Operating System
 
-OpenVoiceOS ready to use images come in several flavours;
-The buildroot version, being the minimal consumer type of image and the Manjaro version, being the full distribution easy / easier for developing.
+OpenVoiceOS ready to use images come in several flavours; The buildroot version, being the minimal consumer type of
+image and the Manjaro version, being the full distribution easy / easier for developing.
 
 a headless raspbian image is also maintained by the community
 
@@ -26,7 +24,6 @@ a headless raspbian image is also maintained by the community
 | **Screen - GUI**                               |                                    |                           |                                 |
 | GUI supported<br>*Show GUI if screen attached* | eglfs                              | eglfs                     | N/A                             |
 
-
 ### Friends
 
 |                                                | NeonAI                    | Bigscreen                              |
@@ -46,7 +43,6 @@ a headless raspbian image is also maintained by the community
 | **Screen - GUI**                               |                           |                                        |
 | GUI supported<br>*Show GUI if screen attached* | eglfs                     | X11/Wayland                            |
 
-
 ### Mycroft
 
 |                                                | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum)                         | Picroft<br>(Classic Core) |
@@ -65,7 +61,6 @@ a headless raspbian image is also maintained by the community
 | Update mechanism                               | package manager (?)      | OTA<br>*controlled by Mycroft*             | git pull                  |
 | **Screen - GUI**                               |                          |                                            |                           |
 | GUI supported<br>*Show GUI if screen attached* | N/A                      | X11                                        | N/A                       |
-
 
 ## Plugins
 
@@ -88,22 +83,22 @@ a headless raspbian image is also maintained by the community
 
 ### Friends
 
-|                         	| NeonAI                                 | Bigscreen              	|
-|-------------------------	|----------------------------------------|------------------------	|
-| **Default Plugins**     	|                           	         |                        	|
-| stt                     	| neon-stt-plugin-google-cloud-streaming | ovos-stt-plugin-server<br>(ovos proxy) |
-| fallback_stt            	| ovos-stt-plugin-vosk      	         | N/A                      |
-| tts                     	| neon-tts-plugin-coqui-remote           | ovos-tts-plugin-mimic2   |
-| fallback_tts            	| neon-tts-plugin-coqui     	         | ovos-tts-plugin-mimic  	|
-| **Recommended Plugins** 	|                           	         |                        	|
-| STT - On device         	| ovos-stt-plugin-vosk                   | ovos-stt-plugin-vosk     |
-| STT - On premises       	| neon-stt-plugin-nemo                   | ovos-stt-plugin-server<br>(any plugin) |
-| STT - Cloud             	| neon-stt-plugin-google-cloud-streaming | ovos-stt-plugin-server<br>(ovos proxy) |
-| TTS - On device         	| neon-tts-plugin-coqui                  | ovos-tts-plugin-mimic3   |
-| TTS - On premises       	| neon-tts-plugin-coqui                  | ovos-tts-plugin-server<br>(any plugin) |
-| TTS - Cloud             	| neon-tts-plugin-coqui     	         | ovos-tts-plugin-mimic3-server<br>(public servers) |
+|                         | NeonAI                                         | Bigscreen                                         |
+|-------------------------|------------------------------------------------|---------------------------------------------------|
+| **Default Plugins**     |                           	                   |                                                   |
+| stt                     | neon-stt-plugin-google-cloud-streaming         | ovos-stt-plugin-server<br>(ovos proxy)            |
+| fallback_stt            | ovos-stt-plugin-vosk                           | N/A                                               |
+| tts                     | neon-tts-plugin-coqui-remote                   | ovos-tts-plugin-mimic2                            |
+| fallback_tts            | neon-tts-plugin-coqui                          | ovos-tts-plugin-mimic                             |
+| **Recommended Plugins** |                           	                   |                                                   |
+| STT - On device         | ovos-stt-plugin-vosk                           | ovos-stt-plugin-vosk                              |
+| STT - On premises       | neon-stt-plugin-nemo                           | ovos-stt-plugin-server<br>(any plugin)            |
+| STT - Cloud             | neon-stt-plugin-google-cloud-streaming         | ovos-stt-plugin-server<br>(ovos proxy)            |
+| TTS - On device         | neon-tts-plugin-coqui                          | ovos-tts-plugin-mimic3                            |
+| TTS - On premises       | ovos-stt-plugin-server + neon-tts-plugin-coqui | ovos-tts-plugin-server<br>(any plugin)            |
+| TTS - Cloud             | neon-tts-plugin-coqui-remote                   | ovos-tts-plugin-mimic3-server<br>(public servers) |
 
-## Mycroft
+### Mycroft
 
 |                         | Mark 1<br>(Classic Core)              | Mark 2<br>(Dinkum)                    | Picroft<br>(Classic Core)             |
 |-------------------------|---------------------------------------|---------------------------------------|---------------------------------------|
@@ -120,10 +115,92 @@ a headless raspbian image is also maintained by the community
 | TTS - On premises       | N/A (?)                               | N/A (?)                               | N/A (?)                               |
 | TTS - Cloud             | mimic2<br>(internal plugin)           | N/A (?)                               | mimic2<br>(internal plugin)           |
 
-## ???
+
+## Functionality
+
+MNOs - Mycroft/Neon/OVOS
 
 ### OpenVoiceOS
 
+|                                    | ovos-buildroot                      | ovos-arch                           | ovos-raspbian                       |
+|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
+| **Skill Frameworks**               |                                     |                                     |                                     |
+| Mycroft Audio Service<br>(bus api) | Yes                                 | Yes                                 | Yes                                 |
+| Adapt Intents                      | Yes                                 | Yes                                 | Yes                                 |
+| Padatious Intents                  | Yes                                 | Yes                                 | Yes                                 |
+| OCP Skills                         | Yes                                 | Yes                                 | Partial<br>(audio only)             |
+| MNOS Common Query Skills           | Yes                                 | Yes                                 | Yes                                 |
+| MNOs Fallback Skills               | Yes                                 | Yes                                 | Yes                                 |
+| MNOs Skills                        | Yes                                 | Yes                                 | Yes                                 |
+| Mycroft Common Play Skills         | Partial<br>(imperfect compat layer) | Partial<br>(imperfect compat layer) | Partial<br>(imperfect compat layer) |
+| **Media Frameworks**               |                                     |                                     |                                     |
+| OCP                                | Yes                                 | Yes                                 | Yes                                 |
+| MPRIS                              | Yes                                 | Yes                                 | Yes (?)                             |
+| KDEConnect                         | Yes                                 | Yes (?)                             | No                                  |
+| Spotify Daemon                     | Yes                                 | No (?)                              | No                                  |
+| Airplay                            | Yes                                 | No (?)                              | No                                  |
+| Bluetooth Speaker                  | WIP                                 | No (?)                              | No                                  |
+
 ### Friends
 
-## Mycroft
+|                                 	 | NeonAI                              | Bigscreen                           |
+|------------------------------------|-------------------------------------|-------------------------------------| 
+| **Skill Frameworks**               |                                     |                                     |  
+| Mycroft Audio Service<br>(bus api) | Yes                                 | Yes                                 |
+| Adapt Intents                      | Yes                                 | Yes                                 | 
+| Padatious Intents                  | Yes                                 | Yes                                 | 
+| OCP Skills                         | Yes                                 | Yes                                 | 
+| MNOS Common Query Skills           | Yes                                 | Yes                                 |
+| MNOs Fallback Skills               | Yes                                 | Yes                                 | 
+| MNOs Skills                        | Yes                                 | Yes                                 | 
+| Mycroft Common Play Skills         | Partial<br>(imperfect compat layer) | Partial<br>(imperfect compat layer) |
+| **Media Frameworks**               |                                     |                                     |
+| OCP                                | Yes                                 | Yes                                 | 
+| MPRIS                              | Yes (?)                             | Yes                                 | 
+| KDEConnect                         | No (?)                              | Yes (?)                             |
+| Spotify Daemon                     | No                                  | No (?)                              | 
+| Airplay                            | No                                  | No (?)                              | 
+| Bluetooth Speaker                  | No                                  | No (?)                              | 
+
+
+### Mycroft
+
+|                                    | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum) | Picroft<br>(Classic Core) |
+|------------------------------------|--------------------------|--------------------|---------------------------|
+| **Skill Frameworks**               |                          |                    |                           |
+| Mycroft Audio Service<br>(bus api) | Yes                      | ?                  | Yes                       |
+| Adapt Intents                      | Yes                      | Yes                | Yes                       |
+| Padatious Intents                  | Yes                      | Yes                | Yes                       |
+| OCP Skills                         | No                       | No                 | No                        |
+| MNOS Common Query Skills           | Yes                      | No                 | Yes                       |
+| MNOs Fallback Skills               | Yes                      | No                 | Yes                       |
+| MNOs Skills                        | Yes                      | No                 | Yes                       |
+| Mycroft Common Play Skills         | Yes                      | No                 | Yes                       |
+| **Media Frameworks**               |                          |                    |                           |                                     
+| OCP                                | No                       | No                 | No                        |
+| MPRIS                              | No                       | No                 | No                        |
+| KDEConnect                         | No                       | No                 | No                        |
+| Spotify Daemon                     | Partial (?)              | No                 | Partial (?)               |
+| Airplay                            | No                       | No                 | No                        |
+| Bluetooth Speaker                  | No                       | No                 | No                        |
+
+
+## Hardware
+
+### OpenVoiceOS
+
+|           | ovos-buildroot | ovos-arch | ovos-raspbian |
+|-----------|----------------|-----------|---------------|
+| **X**     |                |           |               |
+
+### Friends
+
+|         	| NeonAI | Bigscreen |
+|-----------|--------|-----------| 
+| **X**     |        |           |  
+
+### Mycroft
+
+|           | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum) | Picroft<br>(Classic Core) |
+|-----------|--------------------------|--------------------|---------------------------|
+| **X**     |                          |                    |                           |
