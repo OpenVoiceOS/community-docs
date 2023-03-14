@@ -171,10 +171,10 @@ MNOs - Mycroft/Neon/OVOS
 | **Media Frameworks**               |                                     |                                     |                                     |
 | OCP                                | Yes                                 | Yes                                 | Yes                                 |
 | MPRIS                              | Yes                                 | Yes                                 | Yes (?)                             |
-| KDEConnect                         | Yes                                 | Yes (?)                             | No                                  |
-| Spotify Daemon                     | Yes                                 | No (?)                              | No                                  |
-| Airplay                            | Yes                                 | No (?)                              | No                                  |
-| Bluetooth Speaker                  | WIP                                 | No (?)                              | No                                  |
+| KDEConnect                         | Yes                                 | WIP                                 | No                                  |
+| Spotify Daemon                     | Yes                                 | No                                  | No                                  |
+| Airplay                            | Yes                                 | No                                  | No                                  |
+| Bluetooth Speaker                  | WIP                                 | No                                  | No                                  |
 | **IOT Frameworks**                 |                                           |                    |                           |     
 | HomeAssistant integration          | **WIP**<br>*HomeAssistant<br>PHAL Plugin* | **WIP**<br>*HomeAssistant<br>PHAL Plugin* | **WIP**<br>*HomeAssistant<br>PHAL Plugin*<br>(manual install) |    
 
@@ -194,7 +194,7 @@ MNOs - Mycroft/Neon/OVOS
 | **Media Frameworks**               |                                     |                                     |
 | OCP                                | Yes                                 | Yes                                 | 
 | MPRIS                              | Yes (?)                             | Yes                                 | 
-| KDEConnect                         | No (?)                              | Yes (?)                             |
+| KDEConnect                         | No (?)                              | Yes                                 |
 | Spotify Daemon                     | No                                  | No (?)                              | 
 | Airplay                            | No                                  | No (?)                              | 
 | Bluetooth Speaker                  | No                                  | No (?)                              | 
@@ -263,8 +263,8 @@ MNOs - Mycroft/Neon/OVOS
 | Color theming                                                                                              |                                                                           Yes                        |                       No                        | 
 | Non-Pairing mode                                                                                           |                                                                     Yes                        |                       Yes                        |
 | API Access w/o pairing                                                                                     |                                                                              Yes                        |                       Yes                        |
-| On-Device configuration                                                                                     |                                                                             Yes                        |                       ?                        | 
-| Online configuration                                                                                        |                                                   *WIP*                       |                       ?                       | 
+| On-Device configuration                                                                                     |                                                                             Yes                        |                       No                        |
+| Online configuration                                                                                        |                                                   *WIP*                       |                      No                        |
 
 
 ### Mycroft
@@ -321,7 +321,7 @@ MNOs - Mycroft/Neon/OVOS
 | Raspberry Pi 3B+             | No                 | No                   | 
 | Raspberry Pi 3A+             | No                 | No                   | 
 | Raspberry Pi 4               | Yes                | Yes                  | 
-| X86_64                       | No                 | No                   |                   
+| X86_64                       | No                 | [Yes](https://github.com/manjaro/plasma-bigscreen/releases) |
 | Mark-1                       | No                 | No                   |                      
 | Mark-2                       | Yes                | No                   |         
 | Mark-2  (dev kit)            | Yes                | No                   | 
