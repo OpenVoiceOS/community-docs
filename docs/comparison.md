@@ -1,42 +1,237 @@
-# OpenVoiceOS vs Neon A.I. vs Mycroft A.I.
+# Images compared
 
-## OpenVoiceOS images
+OpenVoiceOS ready to use images come in several flavours; The buildroot version, being the minimal consumer type of
+image and the Manjaro version, being the full distribution easy / easier for developing. a headless raspbian image is also maintained by the community
 
-OpenVoiceOS ready to use images come in several flavours;
-The buildroot version, being the minimal consumer type of image and the Manjaro version, being the full distribution easy / easier for developing.
+Some friend projects also publish images that include OpenVoiceOS in some form, those are also listed here
 
-a headless raspbian image is also maintained by the community
+Mycroft images are largely unmaintained and are also listed for comparison purposes, usage is not recommended
 
-|                                                                                 |                     **OpenVoiceOS<br>(Buildroot)**                      |           **OpenVoiceOS<br>(Manjaro)**            |           **OpenVoiceOS<br>(Raspbian)**           | 
-|:--------------------------------------------------------------------------------|:-----------------------------------------------------------------------:|:-------------------------------------------------:|:-------------------------------------------------:|
-| **Operating System**                                                            |
-| Base OS                                                                         |                    buildroot                     |                     manjaro                     | raspbian |
-| Last updated - YYYY/MM/DD                                                       |                    2023-0?-??                      |                     2023-0?-??                      | 2023-03-?? |
-| **Software - Architecture**                                                     |
-| Core                                                                            |                                ovos-core                                |                     ovos-core                     |                     ovos-core                     |  
-| GUI                                                                             |                   ovos-shell<br>*(mycroft-gui based)*                   |        ovos-shell<br>*(mycroft-gui based)*        |                       N/A                        |   
-| Launcher                                                                        |                         systemd<br>user session                         |             systemd<br>system session             |              systemd<br>user session              |    
-| **Hardware - Compatibility**                                                    |
-| Raspberry Pi                                                                    |                                3/3b/3b+/4                                |                         4                         |                    3/3b/3b+/4                     |   
-| X86_64                                                                          |                                *planned*                                |                        No                         |               No               |                    
-| Virtual Appliance                                                               |                                *planned*                                |                        No                         |                     ?                       |                    
-| Docker                                                                          |                       No<br>*possibly in future*                        |                        Yes                        |                     ?                       |                      
-| Mark-1                                                                          |                              **WIP**                               |                        No                         |   No<br>*possibly in future*  |                        
-| Mark-2                                                                          |                    **WIP**<br>(no leds)                                 |            **WIP**<br>(no leds)                   |            partial<br>(no gui + manual install)           |           
-| Mark-2  (dev kit)                                                               |                    Yes                                                  |            Yes                                    |            partial<br>(no gui + manual install)           |           
-| **Hardware - Peripherals**                                                      |
-| ReSpeaker                                                                       |             **WIP**<br>2-mic<br>4-mic squared<br>4-mic linear<br>6-mic             |  **WIP**<br>2-mic<br>4-mic squared<br>4-mic linear<br>6-mic  |                       manual install                         |                  
-| USB                                                                             |                                   Yes                                   |                        Yes                        |                       Yes                         |                    
-| SJ-201                                                                          |                                   Yes                                   |                        Yes                        |                       manual install                         |                   
-| Google AIY v1                                                                   |                      manual install                      |           manual install            |      manual install      |                     
-| Google AIY v2                                                                   |                      No<br>*perhaps in the future*                      |           manual install            |      manual install      |                   
-| **Screen - GUI**                                                                |
-| GUI supported<br>*Showing a GUI if a screen is attached*                        |                      Yes<br>*ovos-shell on eglfs*                       |           Yes<br>*ovos-shell on eglfs*            |                       No                          |        
-| **Network Setup - Options**                                                     |
-| Mobile WiFi Setup<br>*Easy device "hotspot"<br>to connect from phone*           |                                   Yes                                   |                        No                         |                   No                    |                       
-| On device WiFi Setup<br>*Configure the connection<br>directly on screen*        |                                   Yes                                   |                        Yes                        |                   No                     |                     
-| On screen keyboard                                                              |                                   Yes                                   |                        Yes                        |                       No                          |                     
-| Reconfigure network<br>*Easy way to change the<br>network settings*             |                                   Yes <br> (on screen)                                  |                        Yes  <br> (on screen)                       |                  Yes  <br> (raspi-config)                     |                      
+
+- [Operating System](#operating-system)
+      * [OpenVoiceOS](#openvoiceos)
+      * [Friends](#friends)
+      * [Mycroft](#mycroft)
+- [Plugins](#plugins)
+      * [OpenVoiceOS](#openvoiceos-1)
+      * [Friends](#friends-1)
+      * [Mycroft](#mycroft-1)
+- [Functionality](#functionality)
+      * [OpenVoiceOS](#openvoiceos-2)
+      * [Friends](#friends-2)
+      * [Mycroft](#mycroft-2)
+- [Configuration](#configuration)
+      * [OpenVoiceOS](#openvoiceos-3)
+      * [Friends](#friends-3)
+      * [Mycroft](#mycroft-3)
+- [Hardware](#hardware)
+      * [OpenVoiceOS](#openvoiceos-4)
+      * [Friends](#friends-4)
+      * [Mycroft](#mycroft-4)
+    
+
+## Operating System
+
+
+### OpenVoiceOS
+
+|                                                | ovos-buildroot                     | ovos-arch                 | ovos-raspbian                   |
+|------------------------------------------------|------------------------------------|---------------------------|---------------------------------|
+| **Operating System**                           |                                    |                           |                                 |
+| Base OS                                        | buildroot                          | manjaro                   | raspbian                        |
+| Last Updated - YYYY/MM/DD                      | 2023-0?-??                         | 2023-0?-??                | 2023-0?-??                      |
+| **Customization**                              |                                    |                           |                                 |
+| Open Build System                              | Yes                                | Yes                       | Yes<br>(pi-gen github workflow) |
+| Package manager                                | N/A<br>(*No buildtools available*) | pacman                    | apt                             |
+| **Software - Architecture**                    |                                    |                           |                                 |
+| Core                                           | ovos-core                          | ovos-core                 | ovos-core                       |
+| GUI                                            | ovos-shell                         | ovos-shell                | N/A                             |
+| Launcher                                       | systemd<br>user session            | systemd<br>system session | systemd<br>user session         |
+| **Updating**                                   |                                    |                           |                                 |
+| Update mechanism                               | pip<br>(bash scripts)              | pip<br>(bash scripts)     | pip<br>(bash scripts)           |
+| **Screen - GUI**                               |                                    |                           |                                 |
+| GUI supported<br>*Show GUI if screen attached* | eglfs                              | eglfs                     | N/A                             |
+
+### Friends
+
+|                                                | NeonAI                    | Bigscreen                              |
+|------------------------------------------------|---------------------------|----------------------------------------|
+| **Operating System**                           |                           |                                        |
+| Base OS                                        | debian                    | manjaro                                |
+| Last Updated - YYYY/MM/DD                      | 2023-03 (regular updates) | [Rolling Release](https://github.com/manjaro-arm/bigscreen/releases)          |
+| **Customization**                              |                           |                                        |
+| Open Build System                              | Yes                       | [Manjaro ARM Tools](https://gitlab.manjaro.org/manjaro-arm/applications/manjaro-arm-tools)                               |
+| Package manager                                | apt                       | pacman                                 |
+| **Software - Architecture**                    |                           |                                        |
+| Core                                           | neon-core                 | ovos-core                              |
+| GUI                                            | ovos-shell                | Plasma Shell                           |
+| Launcher                                       | systemd<br>system session | systemd<br>user session                |
+| **Updating**                                   |                           |                                        |
+| Update mechanism                               | PHAL plugin<br>(pip/git)  | package manager<br>(mycroft-bigscreen) |
+| **Screen - GUI**                               |                           |                                        |
+| GUI supported<br>*Show GUI if screen attached* | eglfs                     | X11/Wayland                            |
+
+### Mycroft
+
+|                                                | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum)                         | Picroft<br>(Classic Core) |
+|------------------------------------------------|--------------------------|--------------------------------------------|---------------------------|
+| **Operating System**                           |                          |                                            |                           |
+| Base OS                                        | raspbian                 | Pantacor                                   | raspbian                  |
+| Last Updated - YYYY/MM/DD                      | 20??-??-??               | 2023-??-??                                 | 20??-??-??                |
+| **Customization**                              |                          |                                            |                           |
+| Open Build System                              | github readme            | No (?)<br>*build tools are not public*     | github readme             |
+| Package manager                                | apt                      | apt<br>(*limited by read-only filesystem*) | apt                       |
+| **Software - Architecture**                    |                          |                                            |                           |
+| Core                                           | mycroft-core             | dinkum                                     | mycroft-core              |
+| GUI                                            | N/A                      | plasma-nano                                | N/A                       |
+| Launcher                                       | systemd (?)              | Pantacor                                   | bash script               |
+| **Updating**                                   |                          |                                            |                           |
+| Update mechanism                               | package manager (?)      | OTA<br>*controlled by Mycroft*             | git pull                  |
+| **Screen - GUI**                               |                          |                                            |                           |
+| GUI supported<br>*Show GUI if screen attached* | N/A                      | X11                                        | N/A                       |
+
+## Plugins
+
+### OpenVoiceOS
+
+|                         | ovos-buildroot                                    | ovos-arch                                         | ovos-raspbian                                     |
+|-------------------------|---------------------------------------------------|---------------------------------------------------|---------------------------------------------------|
+| **Default Plugins**     |                                                   |                                                   |                                                   |
+| VAD                     | ovos-vad-plugin-webrtcvad                         | ovos-vad-plugin-webrtcvad                         | ovos-vad-plugin-webrtcvad                         |
+| stt                     | ovos-stt-plugin-server<br>(ovos proxy)            | ovos-stt-plugin-server<br>(ovos proxy)            | ovos-stt-plugin-server<br>(ovos proxy)            |
+| fallback_stt            | N/A                                               | N/A                                               | N/A                                               |
+| tts                     | ovos-tts-plugin-mimic3-server<br>(public servers) | ovos-tts-plugin-mimic3-server<br>(public servers) | ovos-tts-plugin-mimic3-server<br>(public servers) |
+| fallback_tts            | ovos-tts-plugin-mimic                             | ovos-tts-plugin-mimic                             | ovos-tts-plugin-mimic                             |
+| **Recommended Plugins** |                                                   |                                                   |                                                   |
+| STT - On device         | ovos-stt-plugin-vosk                              | ovos-stt-plugin-vosk                              | ovos-stt-plugin-vosk                              |
+| STT - On premises       | ovos-stt-plugin-server<br>(any plugin)            | ovos-stt-plugin-server<br>(any plugin)            | ovos-stt-plugin-server<br>(any plugin)            |
+| STT - Cloud             | ovos-stt-plugin-server<br>(ovos proxy)            | ovos-stt-plugin-server<br>(ovos proxy)            | ovos-stt-plugin-server<br>(ovos proxy)            |
+| TTS - On device         | ovos-tts-plugin-mimic3                            | ovos-tts-plugin-mimic3                            | ovos-tts-plugin-mimic3                            |
+| TTS - On premises       | ovos-tts-plugin-server<br>(any plugin)            | ovos-tts-plugin-server<br>(any plugin)            | ovos-tts-plugin-server<br>(any plugin)            |
+| TTS - Cloud             | ovos-tts-plugin-mimic3-server<br>(public servers) | ovos-tts-plugin-mimic3-server<br>(public servers) | ovos-tts-plugin-mimic3-server<br>(public servers) |
+| VAD                     | ovos-vad-plugin-webrtcvad                         | ovos-vad-plugin-silero                            | ovos-vad-plugin-silero                            |
+
+
+### Friends
+
+|                         | NeonAI                                         | Bigscreen                                         |
+|-------------------------|------------------------------------------------|---------------------------------------------------|
+| **Default Plugins**     |                           	                   |                                                   |
+| VAD                     | ovos-vad-plugin-webrtcvad                      | ovos-vad-plugin-webrtcvad                      | 
+| stt                     | neon-stt-plugin-google-cloud-streaming         | ovos-stt-plugin-server<br>(ovos proxy)            |
+| fallback_stt            | ovos-stt-plugin-vosk                           | N/A                                               |
+| tts                     | neon-tts-plugin-coqui-remote                   | ovos-tts-plugin-mimic2                            |
+| fallback_tts            | neon-tts-plugin-coqui                          | ovos-tts-plugin-mimic                             |
+| **Recommended Plugins** |                           	                   |                                                   |
+| STT - On device         | ovos-stt-plugin-vosk                           | ovos-stt-plugin-vosk                              |
+| STT - On premises       | neon-stt-plugin-nemo                           | ovos-stt-plugin-server<br>(any plugin)            |
+| STT - Cloud             | neon-stt-plugin-google-cloud-streaming         | ovos-stt-plugin-server<br>(ovos proxy)            |
+| TTS - On device         | neon-tts-plugin-coqui                          | ovos-tts-plugin-mimic3                            |
+| TTS - On premises       | ovos-stt-plugin-server + neon-tts-plugin-coqui | ovos-tts-plugin-server<br>(any plugin)            |
+| TTS - Cloud             | neon-tts-plugin-coqui-remote                   | ovos-tts-plugin-mimic3-server<br>(public servers) |
+| VAD                     | ovos-vad-plugin-webrtcvad                      | ovos-vad-plugin-webrtcvad                         |
+
+### Mycroft
+
+|                         | Mark 1<br>(Classic Core)              | Mark 2<br>(Dinkum)                    | Picroft<br>(Classic Core)             |
+|-------------------------|---------------------------------------|---------------------------------------|---------------------------------------|
+| **Default Plugins**     |                                       |                                       |                                       |
+| VAD                     | N/A<br>(missing feature)              | silero (hardcoded)                    | N/A<br>(missing feature)              |
+| stt                     | mycroft (selene)<br>(internal plugin) | mycroft (selene)<br>(internal plugin) | mycroft (selene)<br>(internal plugin) |
+| fallback_stt            | N/A<br>(missing feature)              | N/A<br>(missing feature)              | N/A<br>(missing feature)              |
+| tts                     | mimic2<br>(internal plugin)           | mimic 3<br>(internal plugin)          | mimic2<br>(internal plugin)           |
+| fallback_tts            | mimic<br>(internal plugin)            | mimic<br>(internal plugin)            | mimic<br>(internal plugin)            |
+| **Recommended Plugins** |                                       |                                       |                                       |
+| STT - On device         | N/A                                   | grokotron<br>(internal plugin)        | N/A                                   |
+| STT - On premises       | N/A (?)                               | N/A                                   | N/A (?)                               |
+| STT - Cloud             | mycroft (selene)<br>(internal plugin) | mycroft (selene)<br>(internal plugin) | mycroft (selene)<br>(internal plugin) |
+| TTS - On device         | mimic<br>(internal plugin)            | mimic 3<br>(internal plugin)          | mimic<br>(internal plugin)            |
+| TTS - On premises       | N/A (?)                               | N/A (?)                               | N/A (?)                               |
+| TTS - Cloud             | mimic2<br>(internal plugin)           | N/A (?)                               | mimic2<br>(internal plugin)           |
+| VAD                     | N/A<br>(missing feature)              | silero (hardcoded)                    | N/A<br>(missing feature)              |
+
+
+## Functionality
+
+MNOs - Mycroft/Neon/OVOS
+
+### OpenVoiceOS
+
+|                                    | ovos-buildroot                      | ovos-arch                           | ovos-raspbian                       |
+|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
+| **Skill Frameworks**               |                                     |                                     |                                     |
+| Mycroft Audio Service<br>(bus api) | Yes                                 | Yes                                 | Yes                                 |
+| Adapt Intents                      | Yes                                 | Yes                                 | Yes                                 |
+| Padatious Intents                  | Yes                                 | Yes                                 | Yes                                 |
+| OCP Skills                         | Yes                                 | Yes                                 | Partial<br>(audio only)             |
+| MNOS Common Query Skills           | Yes                                 | Yes                                 | Yes                                 |
+| MNOs Fallback Skills               | Yes                                 | Yes                                 | Yes                                 |
+| MNOs Skills                        | Yes                                 | Yes                                 | Yes                                 |
+| Mycroft Common Play Skills         | Partial<br>(imperfect compat layer) | Partial<br>(imperfect compat layer) | Partial<br>(imperfect compat layer) |
+| **Media Frameworks**               |                                     |                                     |                                     |
+| OCP                                | Yes                                 | Yes                                 | Yes                                 |
+| MPRIS                              | Yes                                 | Yes                                 | Yes (?)                             |
+| KDEConnect                         | Yes                                 | Yes (?)                             | No                                  |
+| Spotify Daemon                     | Yes                                 | No (?)                              | No                                  |
+| Airplay                            | Yes                                 | No (?)                              | No                                  |
+| Bluetooth Speaker                  | WIP                                 | No (?)                              | No                                  |
+| **IOT Frameworks**                 |                                           |                    |                           |     
+| HomeAssistant integration          | **WIP**<br>*HomeAssistant<br>PHAL Plugin* | **WIP**<br>*HomeAssistant<br>PHAL Plugin* | **WIP**<br>*HomeAssistant<br>PHAL Plugin*<br>(manual install) |    
+
+### Friends
+
+|                                 	 | NeonAI                              | Bigscreen                           |
+|------------------------------------|-------------------------------------|-------------------------------------| 
+| **Skill Frameworks**               |                                     |                                     |  
+| Mycroft Audio Service<br>(bus api) | Yes                                 | Yes                                 |
+| Adapt Intents                      | Yes                                 | Yes                                 | 
+| Padatious Intents                  | Yes                                 | Yes                                 | 
+| OCP Skills                         | Yes                                 | Yes                                 | 
+| MNOS Common Query Skills           | Yes                                 | Yes                                 |
+| MNOs Fallback Skills               | Yes                                 | Yes                                 | 
+| MNOs Skills                        | Yes                                 | Yes                                 | 
+| Mycroft Common Play Skills         | Partial<br>(imperfect compat layer) | Partial<br>(imperfect compat layer) |
+| **Media Frameworks**               |                                     |                                     |
+| OCP                                | Yes                                 | Yes                                 | 
+| MPRIS                              | Yes (?)                             | Yes                                 | 
+| KDEConnect                         | No (?)                              | Yes (?)                             |
+| Spotify Daemon                     | No                                  | No (?)                              | 
+| Airplay                            | No                                  | No (?)                              | 
+| Bluetooth Speaker                  | No                                  | No (?)                              | 
+| **IOT Frameworks**                 |                                           |                                           |                            
+| HomeAssistant integration          | **WIP**<br>*HomeAssistant<br>PHAL Plugin* | **WIP**<br>*HomeAssistant<br>PHAL Plugin* |
+
+
+### Mycroft
+
+|                                    | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum)  | Picroft<br>(Classic Core) |
+|------------------------------------|--------------------------|---------------------|---------------------------|
+| **Skill Frameworks**               |                          |                     |                           |
+| Mycroft Audio Service<br>(bus api) | Yes                      | ?                   | Yes                       |
+| Adapt Intents                      | Yes                      | Yes                 | Yes                       |
+| Padatious Intents                  | Yes                      | Yes                 | Yes                       |
+| OCP Skills                         | No                       | No                  | No                        |
+| MNOS Common Query Skills           | Yes                      | No                  | Yes                       |
+| MNOs Fallback Skills               | Yes                      | No                  | Yes                       |
+| MNOs Skills                        | Yes                      | No                  | Yes                       |
+| Mycroft Common Play Skills         | Yes                      | No                  | Yes                       |
+| **Media Frameworks**               |                          |                     |                           |                                     
+| OCP                                | No                       | No                  | No                        |
+| MPRIS                              | No                       | No                  | No                        |
+| KDEConnect                         | No                       | No                  | No                        |
+| Spotify Daemon                     | Partial (?)              | No                  | Partial (?)               |
+| Airplay                            | No                       | No                  | No                        |
+| Bluetooth Speaker                  | No                       | No                  | No                        |
+| **IOT Frameworks**                 |                          |                     |                           |     
+| HomeAssistant integration          | Yes (?)<br>Mycroft Skill | Yes<br>Dinkum Skill | Yes (?)<br>Mycroft Skill |    
+
+
+## Configuration
+
+### OpenVoiceOS
+
+|           | ovos-buildroot | ovos-arch | ovos-raspbian |
+|-----------|----------------|-----------|---------------|
 | **Configuration - Option**                                                      |
 | Data privacy                                                                    |                                   Yes                                   |                        Yes                        |                       Yes                         |                       
 | Offline mode                                                                    |                                   Yes  <br> (setup skill)               |                        Yes  <br> (setup skill)    |                       yes  <br> (need to change default plugins)                       |                      
@@ -45,54 +240,18 @@ a headless raspbian image is also maintained by the community
 | API Access w/o pairing                                                          |                                   Yes                                   |                        Yes                        |                       Yes                         |                      
 | On-Screen configuration                                                         |                                   Yes                                   |                        Yes                        |                       No                          |                     
 | Online configuration                                                            |                           personal-backend + dashboard<br>**wip**                            |                personal-backend + dashboard<br>**wip**                 |               personal-backend + dashboard<br>(manual install)                 |                     
-| **Customization**                                                               |
-| Open Build System                                                               |                                   Yes                                   |                        Yes                        |                       Yes                         |                      
-| Package manager                                                                 |     No<br>*No buildtools available.<br>Perhaps opkg in the future*      |                 Yes<br>*(pacman)*                 |                  Yes<br>*(apt)*                   |                      
-| **Updating**                                                                    |
-| Update mechanism(s)                                                             | pip <br>(bash scripts)<br>*planned:Firmware updates.<br>On-device and Over The Air* |              pip <br>(bash scripts)               |    pip <br>(bash scripts)  | 
-| **Voice Assistant - Functionality**                                             |
-| STT - On device                                                                 |   Yes<br>*Kaldi/Vosk-API<br>WhisperCPP (WIP)<br>Whisper TFlite (WIP)*   |              Yes<br>*Kaldi/Vosk-API*              |              No                          |         
-| STT - On premises                                                               |              Ovos STT Server<br>(any plugin)               |   Ovos STT Server<br>(any plugin)     |   Ovos STT Server<br>(any plugin)    |      
-| STT - Cloud                                                                     |            Ovos Server Proxy<br>(google chromium)            |     Ovos Server Proxy<br>(google chromium)      |    Ovos Server Proxy<br>(google chromium)     |                 
-| TTS - On device                                                                 |                      default: **Mimic 1**                       |           default: **Mimic 1**            |              default: **Mimic 1**                     |     
-| TTS - On premises                                                               |         Ovos TTS Server<br>(any plugin)                  |  Ovos TTS Server<br>(any plugin)     |   Ovos TTS Server<br>(any plugin)    |     
-| TTS - Cloud                                                                     |            default: **Mimic 3**               | default: **Mimic 3** | default: **Mimic 3** |              
-| **Smart Speaker - Functionality**                                               |
-| Music player connectivity<br>*use of external applications<br>on other devices* |  Yes<br>*Airplay<br>Spotifyd<br>Bluetooth<br>Snapcast<br>KDE Connect*   |                      ?                      |           ?                       |                     
-| Music player sync                                                               |                          Yes<br>*OCP<br>MPRIS*                          |               Yes<br>*OCP<br>MPRIS*               |                   No<br>*wip*                     |              
-| HomeAssistant integration                                                       |                                 **WIP**<br>*HomeAssistant<br>PHAL Plugin*                                 |       **WIP**<br>*HomeAssistant<br>PHAL Plugin*       |                    **WIP**<br>*HomeAssistant<br>PHAL Plugin*<br>(manual install)                     |    
-| Camera support                                                                  |                                   Yes                                   |                       *wip*                       |                      *wip*                        |                    
+| **Network Setup - Options**                                                     |
+| Mobile WiFi Setup<br>*Easy device "hotspot"<br>to connect from phone*           |                                   Yes                                   |                        No                         |                   No                    |                       
+| On device WiFi Setup<br>*Configure the connection<br>directly on screen*        |                                   Yes                                   |                        Yes                        |                   No                     |                     
+| On screen keyboard                                                              |                                   Yes                                   |                        Yes                        |                       No                          |                     
+| Reconfigure network<br>*Easy way to change the<br>network settings*             |                                   Yes <br> (on screen)                                  |                        Yes  <br> (on screen)                       |                  Yes  <br> (raspi-config)                     |                      
 
 
-## Friend Images
 
-Some other projects also provide images shipping OpenVoiceOS, such as Bigscreen, or some derivative voice assistant, such as NeonAI
+### Friends
 
-|                                                                                                            |                   **Neon AI**                    |             Bigscreen |
-|:----------------------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
-| **Operating System**                                                            |
-| Base OS                                                                         |                    debian                     |                     manjaro                   | 
-| Last updated - YYYY/MM/DD                                                       |                    2023-0?-??                      |                     2023-0?-??                      | 
-| **Software - Architecture**                                                                                |
-| Core                                                                                                       |                    neon-core                     |                     ovos-core                      | 
-| GUI                                                                                                        |       ovos-shell<br>*(mycroft-gui based)*        |      plasma-bigscreen<br>*(mycroft-gui based)*       | 
-| Launcher                                                                                                   |            systemd<br>system session             |            bash script            | 
-| **Hardware - Compatibility**                                                                               |
-| Raspberry Pi                                                                                               |                        4                         |                4                | 
-| X86_64                                                                                                     |                          No                      |                       No                        | 
-| Virtual Appliance                                                                                          |                     ?                      |                       No                        | 
-| Docker                                                                                                     |                       Yes                        |                       No                        | 
-| Mark-1                                                                                                     |                        No                        |                       No                        | 
-| Mark-2                                                                                                     |            Yes            |              No               | 
-| Mark-2  (dev kit)                                                               |                    Yes                                                  |            No                                   |          
-| **Hardware - Peripherals**                                                                                 |
-| ReSpeaker                                                                                                  |                     ?                      |                       No                        | 
-| USB                                                                                                        |                     ?                      |                       Yes                        |
-| SJ-201                                                                                                     |                                                         Yes                        |                       No                       | 
-| Google AIY v1                                                                                              |                                        ?                      |                       No                        |
-| Google AIY v2                                                                                              |                                       ?                      |                       No                        |
-| **Screen - GUI**                                                                                           |
-| GUI supported<br>*Showing a GUI if a screen is attached*                                                   |                                                  Yes<br>*ovos-shell on eglfs*           |           Yes<br>*plasma-bigscreen on X11*           |
+|         	| NeonAI | Bigscreen |
+|-----------|--------|-----------| 
 | **Network Setup - Options**                                                                                |
 | Mobile WiFi Setup<br>*Easy device "hotspot"<br>to connect from phone*                                      |                        No                        |                       No                       |
 | On device WiFi Setup<br>*Configure the connection<br>directly on device*                                |                                                                     Yes                        |                      Yes                       |
@@ -106,53 +265,12 @@ Some other projects also provide images shipping OpenVoiceOS, such as Bigscreen,
 | API Access w/o pairing                                                                                     |                                                                              Yes                        |                       Yes                        |
 | On-Device configuration                                                                                     |                                                                             Yes                        |                       ?                        | 
 | Online configuration                                                                                        |                                                   *WIP*                       |                       ?                       | 
-| **Customization**                                                                                          |
-| Open Build System                                                                                          |                                                              Yes                        |     Yes    | 
-| Package manager                                                                                            |                                     Yes                        | Yes |
-| **Updating**                                                                                               |
-| Update mechanism(s)                                                                                        |       Plugin-based mechanism</br>OS Updates **WIP** |         package manager          |
-| **Voice Assistant - Functionality**                                                                        |
-| STT - On device                                                                                                                   |           default: **Deepspeech**            |            Yes<br>*Vosk*         | 
-| STT - On premises                                                                                           |      Ovos STT Server<br>(any plugin)       |                       ?                        | 
-| STT - Cloud                                                                                                    |                 Yes<br>*Google*                  |     ?     | 
-| TTS - On device                                                                                                                 |       default: **Coqui**       |                default: **Mimic**                 | 
-| TTS - On premises                                                                                                              |      Ovos TTS Server<br>(any plugin)       |                       ?                        |
-| TTS - Cloud                                                                                                |                         default: **Amazon Polly**               |                       default: **Mimic 3**                        |
-| **Smart Speaker - Functionality**                                                                          |
-| Music player connectivity<br>*use of external applications<br>on other devices*                            |                     ?                      |           Yes<br>*MPRIS (KDEKonnect)*           | 
-| Music player sync                                                                                          |                                                      Yes<br>*OCP<br>MPRIS*               |                       Yes<br>*OCP<br>MPRIS*                        | 
-| HomeAssistant integration                                                                                  |                                                            **WIP**<br>*HomeAssistant<br>PHAL Plugin*     |                     ?                     | 
-| Camera support                                                                                             |                                                                             Yes                        |                     ?                     | 
 
-## Mycroft Images
 
-MycroftAI also provides some images, we do not recommend using any of these but provide a table for comparison
+### Mycroft
 
-|                                                                                                            |                   **Mark I<br>(Classic Core)**                    |             **Mark II<br>(Dinkum)**             | **Picroft<br>(Classic Core)**  |
-|:----------------------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:-----------------------------------------------:|
-| **Operating System**                                                            |
-| Base OS                                                                         |                    raspbian                     |                     pantacor containers                    | raspbian |
-| Last updated - YYYY/MM/DD                                                       |                    20??-0?-??                      |                     2023-0?-??                      | 20??-??-?? |
-| **Software - Architecture**                                                                                |
-| Core                                                                                                       |                    mycroft-core                     |                     Dinkum                      | mycroft-core |
-| GUI                                                                                                        |       N/A        |      plasma-nano<br>*(mycroft-gui based)*       | N/A |
-| Launcher                                                                                                   |            ?             |            Pantacor            | bash script |
-| **Hardware - Compatibility**                                                                               |
-| Raspberry Pi                                                                                               |                        Mark I <br> (only)                         |                Mark II<br>(only)                | 3/3b/3b/4 |
-| X86_64                                                                                                     |                          No                      |                       No                        | No |
-| Virtual Appliance                                                                                          |                     ?                      |                       No                        | No |
-| Docker                                                                                                     |                       ?                        |                       No                        | No |
-| Mark-1                                                                                                     |                        Yes                        |                       No                        | No |
-| Mark-2                                                                                                     |            No            |              Yes               | No |
-| Mark-2  (dev kit)                                                               |                    No                                                 |            No                                   |            No           |
-| **Hardware - Peripherals**                                                                                 |
-| ReSpeaker                                                                                                  |                     No                      |                       No                        | Yes<br>*manual installation?* |
-| USB                                                                                                        |                     No                      |                       No                        | Yes<br>*manual installation* |
-| SJ-201                                                                                                     |                    No                        |                       Yes                       | No<br>*sandbox image maybe* |
-| Google AIY v1                                                                                              |                    No                      |                       No                        | No<br>*manual installation?* |
-| Google AIY v2                                                                                              |                    No                     |                       No                        | No<br>*manual installation?* |
-| **Screen - GUI**                                                                                           |
-| GUI supported<br>*Showing a GUI if a screen is attached*                                                   |                                                  No         |           Yes<br>*plasma-nano on X11*           | No |
+|           | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum) | Picroft<br>(Classic Core) |
+|-----------|--------------------------|--------------------|---------------------------|
 | **Network Setup - Options**                                                                                |
 | Mobile WiFi Setup<br>*Easy device "hotspot"<br>to connect from phone*                                      |                        Yes                        |                       Yes                       | No |
 | On device WiFi Setup<br>*Configure the connection<br>directly on device*                                |                            No                        |                       No                        | No |
@@ -166,20 +284,77 @@ MycroftAI also provides some images, we do not recommend using any of these but 
 | API Access w/o pairing                                                                                     |                                                                         No                       |                       No                        | No |
 | On-Device configuration                                                                                     |                                                                         No                       |                       No                        | No |
 | Online configuration                                                                                        |                                                   Yes                      |                       Yes                       | Yes |
-| **Customization**                                                                                          |
-| Open Build System                                                                                          |                                                              Yes                        |     Partial<br>*build tools are not public*     | Yes |
-| Package manager                                                                                            |                                     Yes                        | Yes<br>*limited becuase of read-only filesystem | Yes |
-| **Updating**                                                                                               |
-| Update mechanism(s)                                                                                        |       ? |         OTA<br>*controlled by Mycroft*          | git pull |
-| **Voice Assistant - Functionality**                                                                        |
-| STT - On device                                                                                                                   |      No           |            Yes<br>*Vosk*<br>*Coqui*             | No |
-| STT - On premises                                                                                           |      No     |                       No                        | No |
-| STT - Cloud                                                                                                    |                 default: **Selene**<br>(Google Chromium Proxy)                |     default: **Selene**<br>(Google Cloud Proxy)     |   default: **Selene**<br>(Google Chromium Proxy) |
-| TTS - On device                                                                                                                 |       default: **Mimic 1**       |                default: **Mimic 3**                 | default: **Mimic 1** |
-| TTS - On premises                                                                                                              |       ?         |                       No                        | No |
-| TTS - Cloud                                                                                                |                         default: **Mimic 2**            |                       default: **Mimic 2**                        | default: **Mimic 2** |
-| **Smart Speaker - Functionality**                                                                          |
-| Music player connectivity<br>*use of external applications<br>on other devices*                            |                     No                   |           Yes<br>*MPD<br>Local Files*           | No<br>*manual installation?* |
-| Music player sync                                                                                          |                                                     No             |                       No                        | No |
-| HomeAssistant integration                                                                                  |                                                            ?   |                     Yes<br>Mycroft Skill                     | ? |
-| Camera support                                                                                             |                                                                          No                      |                     ?                     | ? |
+
+
+## Hardware
+
+### OpenVoiceOS
+
+|                              | ovos-buildroot                | ovos-arch            | ovos-raspbian                        |
+|------------------------------|-------------------------------|----------------------|--------------------------------------|
+| **Hardware - Compatibility** |
+| Raspberry Pi 3B              | **WIP**                           | No                   | Yes                                  |   
+| Raspberry Pi 3B+             | **WIP**                           | No                   | Yes                                  | 
+| Raspberry Pi 3A+             | **WIP**                           | No                   | Yes                                  |   
+| Raspberry Pi 4               | Yes                           | Yes                  | Yes                                  | 
+| X86_64                       | *planned*                     | No                   | No                                   |                     
+| Mark-1                       | **WIP**                       | No                   | No<br>*possibly in future*           |                        
+| Mark-2                       | **WIP**<br>(no leds)          | **WIP**<br>(no leds) | partial<br>(no gui + manual install) |           
+| Mark-2  (dev kit)            | Yes                           | Yes                  | partial<br>(no gui + manual install) |           
+| **Hardware - Peripherals**   |
+| ReSpeaker  2-mic             | Yes (?)                       | Yes (?)              | manual install (?)                   |        
+| ReSpeaker  4-mic squared     | Yes (?)                       | No (?)               | manual install (?)                   |        
+| ReSpeaker  4-mic linear      | Yes (?)                       | No (?)               | manual install (?)                   |  
+| ReSpeaker  6-mic             | Yes (?)                       | No (?)               | manual install (?)                   |                
+| USB                          | Yes                           | Yes                  | Yes                                  |                    
+| SJ-201                       | Yes                           | Yes                  | manual install (?)                   |                   
+| Google AIY v1                | manual install (?)            | manual install       | manual install (?)                   |                     
+| Google AIY v2                | No<br>*perhaps in the future* | manual install       | manual install (?)                   |                   
+
+
+### Friends
+
+|         	| NeonAI | Bigscreen |
+|-----------|--------|-----------|
+| **Hardware - Compatibility** |
+| Raspberry Pi 3B              | No                 | No                   | 
+| Raspberry Pi 3B+             | No                 | No                   | 
+| Raspberry Pi 3A+             | No                 | No                   | 
+| Raspberry Pi 4               | Yes                | Yes                  | 
+| X86_64                       | No                 | No                   |                   
+| Mark-1                       | No                 | No                   |                      
+| Mark-2                       | Yes                | No                   |         
+| Mark-2  (dev kit)            | Yes                | No                   | 
+| **Hardware - Peripherals**   |
+| ReSpeaker  2-mic             | manual install (?) | manual install (?)   | 
+| ReSpeaker  4-mic squared     | manual install (?) | manual install (?)   |   
+| ReSpeaker  4-mic linear      | manual install (?) | manual install (?)   |
+| ReSpeaker  6-mic             | manual install (?) | manual install (?)   |          
+| USB                          | Yes                | Yes                  |                 
+| SJ-201                       | Yes                | No                   |              
+| Google AIY v1                | manual install (?) | manual install (?)   |                 
+| Google AIY v2                | manual install (?) | manual install (?)   |              
+
+
+### Mycroft
+
+|                              | Mark 1<br>(Classic Core) | Mark 2<br>(Dinkum)     | Picroft<br>(Classic Core)            |
+|------------------------------|--------------------------|------------------------|--------------------------------------|
+| **Hardware - Compatibility** |
+| Raspberry Pi 3B              | No                       | No                     | Yes                                  |   
+| Raspberry Pi 3B+             | No                       | No                     | Yes                                  | 
+| Raspberry Pi 3A+             | No                       | No                     | No (?)                               |   
+| Raspberry Pi 4               | No                       | Yes<br>(sandbox image) | Yes (?)                              | 
+| X86_64                       | No                       | No                     | No                                   |                      
+| Mark-1                       | Yes                      | No                     | No                                   |                        
+| Mark-2                       | No                       | Yes                    | No                                   |           
+| Mark-2  (dev kit)            | No                       | Yes                    | No                                   |           
+| **Hardware - Peripherals**   |
+| ReSpeaker  2-mic             | No                       | No                 | manual install (?)                   |        
+| ReSpeaker  4-mic squared     | No                       | No                 | manual install (?)                   |        
+| ReSpeaker  4-mic linear      | No                       | No                 | manual install (?)                   |  
+| ReSpeaker  6-mic             | No                       | No                 | manual install (?)                   |                
+| USB                          | Yes (?)                  | No (?)             | Yes                                  |                    
+| SJ-201                       | No                       | Yes                | manual install (?)                   |                   
+| Google AIY v1                | No                       | No                 | Yes (?)                              |                     
+| Google AIY v2                | No                       | No                 | manual install (?)                   |                   
