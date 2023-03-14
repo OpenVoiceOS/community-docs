@@ -24,6 +24,7 @@ nav:
         - KDE Connect: kdeconnect.md
     - OVOS-core:
         - Introduction: core.md
+        - Startup: setup_ovos_services.md
         - Bus: bus_service.md
         - Skills: skills_service.md
         - Speech: speech_service.md
