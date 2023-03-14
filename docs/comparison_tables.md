@@ -33,14 +33,14 @@ a headless raspbian image is also maintained by the community
 |------------------------------------------------|---------------------------|----------------------------------------|
 | **Operating System**                           |                           |                                        |
 | Base OS                                        | debian                    | manjaro                                |
-| Last Updated - YYYY/MM/DD                      | 2023-03 (regular updates) | 2023-??-??                             |
+| Last Updated - YYYY/MM/DD                      | 2023-03 (regular updates) | [Rolling Release](https://github.com/manjaro-arm/bigscreen/releases)          |
 | **Customization**                              |                           |                                        |
-| Open Build System                              | Yes                       | Yes (?)                                |
+| Open Build System                              | Yes                       | [Manjaro ARM Tools](https://gitlab.manjaro.org/manjaro-arm/applications/manjaro-arm-tools)                               |
 | Package manager                                | apt                       | pacman                                 |
 | **Software - Architecture**                    |                           |                                        |
 | Core                                           | neon-core                 | ovos-core                              |
-| GUI                                            | ovos-shell                | plasma-bigscreen                       |
-| Launcher                                       | systemd<br>system session | bash script                            |
+| GUI                                            | ovos-shell                | Plasma Shell                           |
+| Launcher                                       | systemd<br>system session | systemd<br>user session                |
 | **Updating**                                   |                           |                                        |
 | Update mechanism                               | PHAL plugin<br>(pip/git)  | package manager<br>(mycroft-bigscreen) |
 | **Screen - GUI**                               |                           |                                        |
@@ -91,17 +91,17 @@ a headless raspbian image is also maintained by the community
 |                         	| NeonAI                                 | Bigscreen              	|
 |-------------------------	|----------------------------------------|------------------------	|
 | **Default Plugins**     	|                           	         |                        	|
-| stt                     	| neon-stt-plugin-google-cloud-streaming |            	            |
-| fallback_stt            	| ovos-stt-plugin-vosk      	         |                        	|
+| stt                     	| neon-stt-plugin-google-cloud-streaming | ovos-stt-plugin-server<br>(ovos proxy) |
+| fallback_stt            	| ovos-stt-plugin-vosk      	         | N/A                      |
 | tts                     	| neon-tts-plugin-coqui-remote           | ovos-tts-plugin-mimic2   |
 | fallback_tts            	| neon-tts-plugin-coqui     	         | ovos-tts-plugin-mimic  	|
 | **Recommended Plugins** 	|                           	         |                        	|
-| STT - On device         	| ovos-stt-plugin-vosk                   |                        	|
-| STT - On premises       	| neon-stt-plugin-nemo                   |                        	|
-| STT - Cloud             	| neon-stt-plugin-google-cloud-streaming |                      	|
-| TTS - On device         	| neon-tts-plugin-coqui                  |                        	|
-| TTS - On premises       	| neon-tts-plugin-coqui                  |                        	|
-| TTS - Cloud             	| neon-tts-plugin-coqui     	         |                        	|
+| STT - On device         	| ovos-stt-plugin-vosk                   | ovos-stt-plugin-vosk     |
+| STT - On premises       	| neon-stt-plugin-nemo                   | ovos-stt-plugin-server<br>(any plugin) |
+| STT - Cloud             	| neon-stt-plugin-google-cloud-streaming | ovos-stt-plugin-server<br>(ovos proxy) |
+| TTS - On device         	| neon-tts-plugin-coqui                  | ovos-tts-plugin-mimic3   |
+| TTS - On premises       	| neon-tts-plugin-coqui                  | ovos-tts-plugin-server<br>(any plugin) |
+| TTS - Cloud             	| neon-tts-plugin-coqui     	         | ovos-tts-plugin-mimic3-server<br>(public servers) |
 
 ## Mycroft
 
