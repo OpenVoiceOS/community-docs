@@ -93,6 +93,7 @@ Mycroft images are largely unmaintained and are also listed for comparison purpo
 |                         | ovos-buildroot                                    | ovos-arch                                         | ovos-raspbian                                     |
 |-------------------------|---------------------------------------------------|---------------------------------------------------|---------------------------------------------------|
 | **Default Plugins**     |                                                   |                                                   |                                                   |
+| VAD                     | ovos-vad-plugin-webrtcvad                         | ovos-vad-plugin-webrtcvad                         | ovos-vad-plugin-webrtcvad                         |
 | stt                     | ovos-stt-plugin-server<br>(ovos proxy)            | ovos-stt-plugin-server<br>(ovos proxy)            | ovos-stt-plugin-server<br>(ovos proxy)            |
 | fallback_stt            | N/A                                               | N/A                                               | N/A                                               |
 | tts                     | ovos-tts-plugin-mimic3-server<br>(public servers) | ovos-tts-plugin-mimic3-server<br>(public servers) | ovos-tts-plugin-mimic3-server<br>(public servers) |
@@ -104,12 +105,15 @@ Mycroft images are largely unmaintained and are also listed for comparison purpo
 | TTS - On device         | ovos-tts-plugin-mimic3                            | ovos-tts-plugin-mimic3                            | ovos-tts-plugin-mimic3                            |
 | TTS - On premises       | ovos-tts-plugin-server<br>(any plugin)            | ovos-tts-plugin-server<br>(any plugin)            | ovos-tts-plugin-server<br>(any plugin)            |
 | TTS - Cloud             | ovos-tts-plugin-mimic3-server<br>(public servers) | ovos-tts-plugin-mimic3-server<br>(public servers) | ovos-tts-plugin-mimic3-server<br>(public servers) |
+| VAD                     | ovos-vad-plugin-webrtcvad                         | ovos-vad-plugin-silero                            | ovos-vad-plugin-silero                            |
+
 
 ### Friends
 
 |                         | NeonAI                                         | Bigscreen                                         |
 |-------------------------|------------------------------------------------|---------------------------------------------------|
 | **Default Plugins**     |                           	                   |                                                   |
+| VAD                     | ovos-vad-plugin-webrtcvad                      | ovos-vad-plugin-webrtcvad                      | 
 | stt                     | neon-stt-plugin-google-cloud-streaming         | ovos-stt-plugin-server<br>(ovos proxy)            |
 | fallback_stt            | ovos-stt-plugin-vosk                           | N/A                                               |
 | tts                     | neon-tts-plugin-coqui-remote                   | ovos-tts-plugin-mimic2                            |
@@ -121,12 +125,14 @@ Mycroft images are largely unmaintained and are also listed for comparison purpo
 | TTS - On device         | neon-tts-plugin-coqui                          | ovos-tts-plugin-mimic3                            |
 | TTS - On premises       | ovos-stt-plugin-server + neon-tts-plugin-coqui | ovos-tts-plugin-server<br>(any plugin)            |
 | TTS - Cloud             | neon-tts-plugin-coqui-remote                   | ovos-tts-plugin-mimic3-server<br>(public servers) |
+| VAD                     | ovos-vad-plugin-webrtcvad                      | ovos-vad-plugin-webrtcvad                         |
 
 ### Mycroft
 
 |                         | Mark 1<br>(Classic Core)              | Mark 2<br>(Dinkum)                    | Picroft<br>(Classic Core)             |
 |-------------------------|---------------------------------------|---------------------------------------|---------------------------------------|
 | **Default Plugins**     |                                       |                                       |                                       |
+| VAD                     | N/A<br>(missing feature)              | silero (hardcoded)                    | N/A<br>(missing feature)              |
 | stt                     | mycroft (selene)<br>(internal plugin) | mycroft (selene)<br>(internal plugin) | mycroft (selene)<br>(internal plugin) |
 | fallback_stt            | N/A<br>(missing feature)              | N/A<br>(missing feature)              | N/A<br>(missing feature)              |
 | tts                     | mimic2<br>(internal plugin)           | mimic 3<br>(internal plugin)          | mimic2<br>(internal plugin)           |
@@ -138,6 +144,7 @@ Mycroft images are largely unmaintained and are also listed for comparison purpo
 | TTS - On device         | mimic<br>(internal plugin)            | mimic 3<br>(internal plugin)          | mimic<br>(internal plugin)            |
 | TTS - On premises       | N/A (?)                               | N/A (?)                               | N/A (?)                               |
 | TTS - Cloud             | mimic2<br>(internal plugin)           | N/A (?)                               | mimic2<br>(internal plugin)           |
+| VAD                     | N/A<br>(missing feature)              | silero (hardcoded)                    | N/A<br>(missing feature)              |
 
 
 ## Functionality
