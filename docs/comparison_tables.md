@@ -1,9 +1,33 @@
-## Operating System
+# Images compared
 
 OpenVoiceOS ready to use images come in several flavours; The buildroot version, being the minimal consumer type of
-image and the Manjaro version, being the full distribution easy / easier for developing.
+image and the Manjaro version, being the full distribution easy / easier for developing. a headless raspbian image is also maintained by the community
 
-a headless raspbian image is also maintained by the community
+Some friend projects also publish images that include OpenVoiceOS in some form, those are also listed here
+
+Mycroft images are largely unmaintained and are also listed for comparison purposes, usage is not recommended
+
+
+- [Operating System](#operating-system)
+  * [OpenVoiceOS](#openvoiceos)
+  * [Friends](#friends)
+  * [Mycroft](#mycroft)
+- [Plugins](#plugins)
+  * [OpenVoiceOS](#openvoiceos-1)
+  * [Friends](#friends-1)
+  * [Mycroft](#mycroft-1)
+- [Functionality](#functionality)
+  * [OpenVoiceOS](#openvoiceos-2)
+  * [Friends](#friends-2)
+  * [Mycroft](#mycroft-2)
+- [Hardware](#hardware)
+  * [OpenVoiceOS](#openvoiceos-3)
+  * [Friends](#friends-3)
+  * [Mycroft](#mycroft-3)
+    
+
+## Operating System
+
 
 ### OpenVoiceOS
 
