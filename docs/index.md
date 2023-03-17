@@ -11,7 +11,7 @@ Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-
 
 ## Getting Involved
 
-This is an open source project. We would love your help. We have prepared a [contributing](.github/CONTRIBUTING.md) guide to help you get started.
+This is an open source project. We would love your help. We have prepared a [contributing](contributing.md) guide to help you get started.
 
 If this is your first PR, or you're not sure where to get started,
 say hi in [OpenVoiceOS Chat](https://matrix.to/#/!XFpdtmgyCoPDxOMPpH:matrix.org?via=matrix.org) and a team member would be happy to mentor you.
