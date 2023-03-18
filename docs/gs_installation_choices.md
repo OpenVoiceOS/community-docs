@@ -11,7 +11,7 @@ These images are development images in alpha stage, bugs and incomplete features
 ### Install choices
 You can install OVOS either as an image, container, or manually.
 
-There are currently three image choices for OVOS.  Buildroot, Manjaro and Picroft.  You can also build images from scratch using Buildroot and Manjaro
+There are currently three image choices for OVOS.  Buildroot, Manjaro and Raspbian.  You can also build images from scratch using Buildroot and Manjaro
 
 A docker container is available for Manjaro.
 

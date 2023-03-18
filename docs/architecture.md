@@ -90,7 +90,7 @@ The transport protocol works between gui service and the gui clients, mycroft do
 OVOS images are powered by [ovos-shell](https://openvoiceos.github.io/community-docs/shell/), the client side
 implementation of the gui protocol
 
-The GUI library which implements the protocol lives in the [mycroft-gui](https://github.com/MycroftAI/mycroft-gui) repository.
+The GUI library which implements the protocol lives in the [Mycroft GUI](https://github.com/OpenVoiceOS/mycroft-gui) repository.
 
 # GUI Service
 

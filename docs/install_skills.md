@@ -198,7 +198,7 @@ ex. `pip install git+https://github.com/OpenVoiceOS/skill-ovos-date-time.git` sh
 
 After installing skills this way, ovos skills service needs to be restarted
 
-buildroot / ovos-picroft
+buildroot / raspbian
 
 `systemctl --user restart mycroft-skills`
 

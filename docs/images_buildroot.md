@@ -8,7 +8,7 @@ At boot the system scan the I2C bus for known and supported HAT's and if found c
 - ReSpeaker 2-mic HAT
 - ReSpeaker 4-mic Square HAT
 - ReSpeaker 4-mic linear / 6-mic HAT
-- USB devices such as the PS EYE-2
+- USB devices such as the PS2 EYE
 - SJ-201 Dev Kits
 - SJ-201 Mark2 retail device
 

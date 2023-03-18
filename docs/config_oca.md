@@ -9,7 +9,9 @@ OCA provides a local Web UI similar to ovos-backend-manager, in here you can con
 
 ## CLI
 
-A command line interface is planned but not yet available to provide equivalent functionality to the Web UI
+A command line interface is available using ovos-config
+
+[More Information](https://github.com/OpenVoiceOS/ovos-config)
 
 ## Python utils
 

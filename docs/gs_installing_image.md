@@ -27,6 +27,7 @@
 
 - [buildroot](https://openvoiceos.github.io/community-docs/buildroot/)
 - [manjaro](https://openvoiceos.github.io/community-docs/manjaro/)
+- [raspbian](install_raspbian.md)
 
 ## Flashing your image
 

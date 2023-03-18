@@ -19,6 +19,8 @@ Available backends:
 ## Selecting a backend
 **Editors Note** coming soon, placeholder information
 
+The default for ovos-core is no backend.
+
 You can go without a backend and go offline and use our free proxy for API services with no accounts.
 
 Install the skill-ovos-setup to get the prompt to setup a backend.  Without this installed, you will NOT hear the prompt to pick a backend.
