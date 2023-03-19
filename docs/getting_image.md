@@ -15,11 +15,15 @@ Download Images:
 - [manjaro](http://downloads.openvoiceos.com/images/)
   - SSH Details for Respeaker Image: Username: mycroft | password: 12345
   - SSH Details for Mark-2/DevKit Image: Username: ovos | password: ovos
+- [raspbian](https://downloads.openvoiceos.com/images/raspbian/)
+  - SSH Details: Username: ovos | password: ovos
+  - systemd services are `ovos-<service-name>.service`
 
 Build images from scratch:
 
 - [buildroot](https://openvoiceos.github.io/community-docs/buildroot/)
 - [manjaro](https://openvoiceos.github.io/community-docs/manjaro/)
+- [raspbian](https://openvoiceos.github.io/community-docs/raspbian_ovos/)
 
 ### Flashing your image
 
