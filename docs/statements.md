@@ -1,4 +1,6 @@
 # Statements
+**Editors Note**
+This will probably move
 
 ## Speaking a statement
 

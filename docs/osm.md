@@ -1,28 +1,5 @@
-# OVOS skills manager
-
-Install skills from any appstore!
-
-The [mycroft-skills-manager](https://github.com/MycroftAI/mycroft-skills-manager) alternative that is [not vendor locked](https://github.com/MycroftAI/mycroft-skills-manager/pull/75), this means you must use it responsibly! 
-
-Do not install random skills, different appstores have different policies!
-
-Keep in mind any skill you install can [modify mycroft-core at runtime](https://github.com/JarbasSkills/skill-monkey-patcher), and very likely has 
-root access if you are running on a raspberry pi
-
-
-## Supported stores
-
-- [OVOS]() - this one is really a proof of concept for now, stay tuned!
-- [Mycroft Marketplace]() - the official mycroft skills store, all skills are 
-  reviewed by humans!
-- [Pling]() - the official plasma bigscreen skills store, skills are accepted 
-  by default and only removed if flagged as malicious
-- [Andlo's skill list]() - not a real appstore, this is a web scrapped 
-  automatically generated list of 900+ skills from all over github, there 
-  is no review at all, it will catch [malicious skills](https://github.com/JarbasAl/skill-XPLOIT-hijack-speech)
-  
-## Install
-
+# OpenVoiceOS Skill Manager
+## Install ovos-skills-manager (osm)
 
 ```bash
 pip install ovos-skills-manager
@@ -46,7 +23,7 @@ Options:
   --folder TEXT                   path where skill will be installed, default
                                   /opt/mycroft/skills
 
-  --search                        search appstores, otherwise assume it's a
+  --search                        search appstores, otherwise assume its a
                                   github url
 
   --appstore [ovos|mycroft|pling|andlo|default|all]
@@ -62,7 +39,6 @@ Options:
 
   --no-ignore-case                ignore upper/lower case, default ignore
   --help                          Show this message and exit.
-
 ```
 
 #### Enable

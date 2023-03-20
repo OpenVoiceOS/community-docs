@@ -13,10 +13,6 @@
 + [Can I change the wake word?](#can-i-change-the-wake-word)
 + [Can OVOS run without a wake word?](#can-ovos-run-without-a-wake-word)
 + [How fast can OVOS respond?](#how-fast-can-ovos-respond)
-+ [What is OPM?](#what-is-opm)
-+ [What is PHAL?](#what-is-phal)
-+ [What is OCP?](#what-is-ocp)
-+ [What is OVOS-shell?](#what-is-ovos-shell)
 + [How do I run OVOS behind a proxy?](#how-do-i-run-ovos-behind-a-proxy)
 
 ### What is OVOS?
@@ -154,94 +150,6 @@ Through this process there are a number of factors that can affect the perceived
 * Streaming STT - we have been experimenting with the use of streaming services. This transcribes audio as it's received rather than waiting for the entire utterance to be finished and sending the resulting audio file to a server to be processed in its entirety. It is possible to switch to a streaming STT service. See [STT Plugins](../OPM/#list-of-stt-plugins) for a list of options available.
 * Dialog structure - a long sentence will always take more time to synthesize than a short one. Skill developers can help provide quicker response times by considering the structure of their dialog and breaking that dialog up.
 * TTS Caching - synthesized audio is cached meaning common recently generated phrases don't need to be generated, they can be returned immediately.
-
-
-### What is OPM?
-
-OPM is the [OVOS Plugin Manager](https://github.com/OpenVoiceOS/OVOS-plugin-manager), this base package provides
-arbitrary plugins to the ovos ecosystem
-
-OPM plugins import their base classes from OPM making them portable and independent from core, plugins can be used in
-your standalone projects
-
-By using OPM you can ensure a standard interface to plugins and easily make them configurable in your project, plugin
-code and example configurations are mapped to a string via python entrypoints in setup.py
-
-Some projects using OPM are [ovos-core](https://github.com/OpenVoiceOS/ovos-core)
-, [hivemind-voice-sat](https://github.com/JarbasHiveMind/HiveMind-voice-sat)
-, [ovos-personal-backend](https://github.com/OpenVoiceOS/OVOS-local-backend)
-, [ovos-stt-server](https://github.com/OpenVoiceOS/ovos-stt-http-server)
-and [ovos-tts-server](https://github.com/OpenVoiceOS/ovos-tts-server)
-
-### What is PHAL?
-
-[PHAL](https://github.com/OpenVoiceOS/ovos_PHAL) is our Platform/Hardware Abstraction Layer, it completely replaces the
-concept of hardcoded "enclosure" from mycroft-core
-
-Any number of plugins providing functionality can be loaded and validated at runtime, plugins can
-be [system integrations](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system) to handle things like reboot and
-shutdown, or hardware drivers such as [mycroft mark2 plugin](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk2)
-
-PHAL plugins can perform actions such as hardware detection before loading, eg, the mark2 plugin will not load if it
-does not detect the sj201 hat. This makes plugins safe to install and bundle by default in our base images
-
-### What is OCP?
-
-[OCP](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin) stands for OpenVoiceOS Common Play, it is a full fledged
-media player
-
-OCP is a [OVOSAbstractApplication](https://github.com/OpenVoiceOS/OVOS-workshop/blob/dev/ovos_workshop/app.py#L47), this
-means it is a standalone but native OVOS application with full voice integration
-
-OCP differs from mycroft-core in several aspects:
-
-- Can run standalone, only needs a bus connection
-- OCP provides its own intents as if it was a skill
-- OCP provides its own GUI as if it was a skill
-- mycroft-core CommonPlay skill framework is disabled when OCP loads
-- OCP skills have a dedicated MycroftSkill class and decorators in ovos-workshop
-- OCP skills act as media providers, they do not (usually) handle playback
-- mycroft-core CommonPlay skills have an imperfect compatibility layer and are given lower priority over OCP skills
-- OCP handles several kinds of playback, including video
-- OCP has a sub-intent parser for matching requested media types
-- AudioService becomes a subsystem for OCP
-- OCP also has AudioService plugin component introducing a compatibility layer for skills using "old style audioservice
-  api"
-- OCP integrates with MPRIS, it can be controlled from external apps, e.g. KdeConnect in your phone
-- OCP manages external MPRIS enabled players, you can voice control 3rd party apps without writing a skill for it via
-  OCP
-
-### What is OVOS-shell?
-
-The [gui service](https://github.com/OpenVoiceOS/ovos-core/tree/dev/mycroft/gui) in ovos-core will expose a websocket to
-the GUI client following the protocol
-outlined [here](https://github.com/MycroftAI/mycroft-gui/blob/master/transportProtocol.md)
-
-The GUI library which implements the protocol lives in the [mycroft-gui](https://github.com/MycroftAI/mycroft-gui)
-repository, The repository also hosts a development client for skill developers wanting to develop on the desktop.
-
-[OVOS-shell](https://github.com/OpenVoiceOS/ovos-shell) is the OpenVoiceOS client implementation of the mycroft-gui
-library used in our embedded device images, other distributions may offer alternative implementations such
-as [plasma-bigscreen](http://invent.kde.org/plasma/plasma-bigscreen)*
-or [mycroft mark2](https://github.com/MycroftAI/mycroft-gui-mark-2)
-
-OVOS-shell is tightly coupled to [PHAL](#what-is-phal), the following companion plugins should be installed if you are
-using ovos-shell
-
-- [ovos-PHAL-plugin-notification-widgets](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-notification-widgets)
-- [ovos-PHAL-plugin-network-manager](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-network-manager)
-- [ovos-PHAL-plugin-gui-network-client](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-gui-network-client)
-- [ovos-PHAL-plugin-wifi-setup](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-wifi-setup)
-- [ovos-PHAL-plugin-alsa](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-alsa)
-- [ovos-PHAL-plugin-system](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system)
-- [ovos-PHAL-plugin-dashboard](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-dashboard)
-- [ovos-PHAL-plugin-brightness-control-rpi](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-brightness-control-rpi)
-- [ovos-PHAL-plugin-color-scheme-manager](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-color-scheme-manager)
-- [ovos-PHAL-plugin-configuration-provider](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-configuration-provider)
-
-Further reading:
-
-* [plasma-bigscreen GUI clients](#plasma-bigscreen-gui-clients)
 
 
 ### How do I run OVOS behind a proxy?

@@ -1,94 +1,74 @@
-site_name: Documentation
+site_name: OVOS User Documentation
 site_url: https://openvoiceos.github.io/community-docs
 nav:
     - Home:
         - Introduction: index.md
-        - About: why.md
+        - About: about.md
+    - Getting Started Guide:
+        - Hardware: gs_hardware.md
+        - Installation Choices: gs_installation_choices.md
+        - Installing an Image: gs_installing_image.md
+        - First boot: gs_first_boot.md
+        - Next Steps: gs_next_steps.md
+    - Architecture:
+        - OpenVoiceOS Architecture: architecture.md
+        - Backend: arch_backend.md
+        - APIs: arch_apis.md
+        - Services: arch_services.md
+        - Plugins: arch_plugins.md
+        - PHAL: arch_phal.md
+        - Skills: arch_skills.md
+        - Statements: statements.md
+    - Hardware:
+        - Platforms: hardware_platforms.md
+        - Audio: hardware_audio.md
+        - Video: hardware_video.md
+    - Installation:
+        - Installation Introduction: install_intro.md
+        - Install OVOS Core: install_ovos_core.md
+        - Installing Skills: install_skills.md
+    - Configuration:
+        - OVOS Core Configuration: config_ovos_core.md
+        - OVOS Config Assistant: config_oca.md
+        - Homescreen Configuration: config_homescreen.md
+        - Backend Configuration: config_backend.md
+        - GUI Configuration: config_gui.md
+        - Skill Configuration: config_skills.md
+        - Changing the Wake Word: config_wake_word.md
+        - OpenVoiceOS Security: config_security.md
+    - Additional Services:
+        - Selene Backend: selene_backend.md
+        - Personal Backend: personal_backend.md
+        - KDE Connect: kdeconnect.md
+        - Speech to Text backends: stt_backends.md
+        - Text to Speech backends: tts_backends.md
+    - Images:
+        - Introduction: images_intro.md
+        - Buildroot: images_buildroot.md
+        - Manjaro: images_manjaro.md
+        - Raspbian: install_raspbian.md
+    - Other Builds:
+        - Mycroft: mycroft.md
+        - NeonOS: neonos.md
+    - Troubleshooting:
+          - Introduction to Troubleshooting: troubleshooting_intro.md
+          - Troubleshooting Audio: troubleshooting_audio.md
+          - Troubleshooting Installation: troubleshooting_installation.md
+          - Troubleshooting Network: troubleshooting_network.md
+          - Troubleshooting Wakeword: troubleshooting_wakeword.md
+          - Troubleshooting OVOS Core: troubleshooting_ovos_core.md
+          - Troubleshooting Backend: troubleshooting_backend.md
+          - Troubleshooting TTS: troubleshooting_tts.md
+          - Troubleshooting STT: troubleshooting_stt.md
+          - Troubleshooting Skills: troubleshooting_skills.md
+          - Troubleshooting Plugins: troubleshooting_plugins.md
+    - HOWTO:
+          - Howto secure ssh: howto_secure_ssh.md
+    - Appendix:
         - Glossary: glossary.md
+        - FAQ: faq.md
+        - Compatibility: compat.md
         - License: license.md
         - Friends: friends.md
-        - F.A.Q.: faq.md
-    - Getting Started Guide:
-        - Downloading an image: getting_image.md
-        - First boot: first_boot.md
-        - Network setup: setup_network.md
-        - Configuration: setup_ovos.md
-    - Features and skills:
-        - Standard skills: standard_skills.md
-        - Playing music: playing_music.md
-        - Playing video: playing_video.md
-    - Smartspeaker functionality:
-        - Airplay: airplay.md
-        - Spotify connect: spotifyd.md
-        - Bluetooth speaker: btspeaker.md
-        - KDE Connect: kdeconnect.md
-    - OVOS-core:
-        - Introduction: core.md
-        - Bus: bus_service.md
-        - Skills: skills_service.md
-        - Speech: speech_service.md
-        - Audio: audio_service.md
-        - GUI: gui_service.md
-        - Configuration: config.md
-    - Skills:
-        - Introduction: skills.md
-        - Installing new skills: skill_install.md
-        - Design Guidelines: guidelines.md
-        - Anatomy: skill_structure.md
-        - Dialog: statements.md
-        - Prompts: prompts.md
-        - Intents: intents.md
-        - Context: context.md
-        - Converse: converse.md
-        - Filesystem: skill_filesystem.md
-        - Skill Settings: skill_settings.md
-        - Skill GUI: skill_gui.md
-        - Skill API: skill_api.md
-        - Skill Json: skill_json.md
-        - Skill Tests: skill_tests.md
-        - F.A.Q.: dev.md
-    - GUI:
-        - Introduction: gui_intro.md
-        - Homescreen: homescreen.md
-        - QML Design Guidelines: qml_guidelines.md
-        - Open Linguistika: linguistika.md
-        - Shell: shell.md
-        - Protocol: gui_protocol.md
-        - Extensions: gui_extensions.md
-        - Bigscreen: bigscreen.md
-    - Backend:
-        - Available Backends: backend.md
-        - Backend Client: backend_client.md
-        - Personal Backend: personal_backend.md
-        - Backend Manager: backend_manager.md
-    - Plugins:
-        - Plugin Manager: OPM.md
-        - Speech To Text: stt_plugins.md
-        - Text To Speech: tts_plugins.md
-        - Wake Word: ww_plugins.md
-        - Voice Activity Detection: vad_plugins.md
-        - Grapheme to Phoneme: g2p_plugins.md
-        - Audio Playback: audio_plugins.md
-        - Language Detection/Translation: lang_plugins.md
-        - Platform/Hardware Abstraction Layer: PHAL.md
-    - Technologies:
-        - Common Play: OCP.md
-        - Skills Manager: osm.md
-        - Config Assistant: OCA.md
-        - STT Server: stt_server.md
-        - TTS Server: tts_server.md
-        - Translate Server: translate_server.md
-    - Mycroft:
-        - Dinkum: dinkum.md
-        - Compatibility: compat.md
-        - OVOS vs MyCroft: mycroft.md
-    - Images:
-        - Buildroot: buildroot.md
-        - Manjaro: manjaro.md
-        - Compared: comparison.md
-    - Other Builds:
-        - Raspbian: raspbian_ovos.md
-
+        - Images: images.md
 theme: readthedocs
-extra_css:
-    - css/extra.css
