@@ -1,4 +1,4 @@
-# Contributed to OpenVoiceOS
+# Contributing to OpenVoiceOS
 
 If this is your first PR, or you're not sure where to get started,
 say hi in [OpenVoiceOS Chat](https://matrix.to/#/!XFpdtmgyCoPDxOMPpH:matrix.org?via=matrix.org) and a team member would be happy to mentor you.

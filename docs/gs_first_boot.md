@@ -70,6 +70,7 @@ From here you can select another network or click the configuration icon on the 
 ### What is a backend ?
 
 ## Mycroft A.I. - Selene Backend
+**NOTE** The Public Selene Backend from Mycroft may be going away soon, it's not recommended to use.
 
 The Pairing Process
 

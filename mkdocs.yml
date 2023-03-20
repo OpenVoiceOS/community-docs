@@ -27,7 +27,6 @@ nav:
         - Installation Introduction: install_intro.md
         - Install OVOS Core: install_ovos_core.md
         - Installing Skills: install_skills.md
-        - Raspbian: install_raspbian.md
     - Configuration:
         - OVOS Core Configuration: config_ovos_core.md
         - OVOS Config Assistant: config_oca.md
@@ -41,10 +40,13 @@ nav:
         - Selene Backend: selene_backend.md
         - Personal Backend: personal_backend.md
         - KDE Connect: kdeconnect.md
+        - Speech to Text backends: stt_backends.md
+        - Text to Speech backends: tts_backends.md
     - Images:
         - Introduction: images_intro.md
         - Buildroot: images_buildroot.md
         - Manjaro: images_manjaro.md
+        - Raspbian: install_raspbian.md
     - Other Builds:
         - Mycroft: mycroft.md
         - NeonOS: neonos.md
