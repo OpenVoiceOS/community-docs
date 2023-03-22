@@ -7,7 +7,7 @@ Major revisions coming here, mostly placeholder information
 The skills service is responsible for loading skills and intent parsers
 
 All user queries are handled by the skills service, you can think of it as OVOS's brain
-
+[More Information](https://openvoiceos.github.io/ovos-technical-manual/skills_service/)
 ## Speech Service
 ### Speech Client
 
