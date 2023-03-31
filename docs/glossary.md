@@ -42,6 +42,10 @@ The OpenVoiceOS home screen is the central place for all your tasks. It is the f
 ### Intent
 When an utterance is classified for its action and entities (e.g. 'turn on the kitchen lights' -> skill: home assistant, action: turn on/off, entity: kitchen lights)
 
+### MPRIS
+ (Media Player Remote Interfacing Specification) is a standard D-Bus interface which aims to provide a common programmatic API for controlling media players.
+[More Inforamtion](https://wiki.archlinux.org/title/MPRIS)
+
 ### mycroft.conf
 Primary configuration file for the voice assistant. Possible locations:
 - /home/ovos/.local/lib/python3.9/site-packages/mycroft/configuration/mycroft.conf
@@ -132,6 +136,10 @@ does not detect the sj201 hat. This makes plugins safe to install and bundle by 
 The smallest phonetic unit in a language that is capable of conveying a distinction in meaning, as the m of mat and the b of bat in English.
 
 ### Service 
+
+### Snapcast
+Snapcast is a multiroom client-server audio player, where all clients are time synchronized with the server to play perfectly synced audio. It's not a standalone player, but an extension that turns your existing audio player into a Sonos-like multiroom solution.
+[More Information](https://github.com/badaix/snapcast)
 ### Prompts and Statements
 You can think of **Prompts** as questions and **Statements** as providing information to the user that does not need a follow-up response.
 ### QML
