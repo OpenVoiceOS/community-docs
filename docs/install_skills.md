@@ -25,18 +25,23 @@ root access if you are running on a raspberry pi
   is no review at all, it will catch [malicious skills](https://github.com/JarbasAl/skill-XPLOIT-hijack-speech)
 
 ## OpenVoiceOS Skill Manager
-``` 
+```bash 
 pip install ovos-skills-manager
 ```
 Enable a skill store
-``` 
+```bash
 osm enable --appstore [ovos|mycroft|pling|andlo|all]
 ```
 Search for a skill and install it
-```
+```bash
 osm install --search
 ```
-[More Information](osm.md)
+See more osm commands
+```bash
+osm --help
+osm install --help
+```
+[More Information](https://github.com/travellingtechie/ovos_skill_manager#readme)
 ## Manual Install
 
 ### Finding Skills
