@@ -5,9 +5,8 @@
 
 ## Downloading an Image
 
-###Buildroot Latest Images
+### Buildroot Latest Image
 
-- [RPi3-64](https://drive.google.com/file/d/1gTrQxMZEOV0J4ZrICyxfjA5cpNIjwDJP/view?usp=share_link)
 - [RPi4-64](https://drive.google.com/file/d/1PUtNXfZ5jMUlVAgyN-KXPdVdX6r51eBw/view?usp=share_link)
 ### Manjaro Latest Images
 
