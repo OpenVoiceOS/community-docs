@@ -1,8 +1,44 @@
 # raspbian-ovos
 
-Pre-built images are available at the [OpenVoiceOS Downloads Site](https://downloads.openvoiceos.com/images/picroft/github/workspace/pi-gen/deploy/)
+Pre-built images are available at the [OpenVoiceOS Downloads Site](https://downloads.openvoiceos.com/images/raspbian/)
 
 OVOS on top of [RaspberryPiOS Lite](https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2023-02-22/2023-02-21-raspios-bullseye-arm64-lite.img.xz)
+
+## Burning an image to SD card or USB drive
+
+#### raspi-imager
+
+It has been noted that there is issues when using `raspi-imager` to burn an image.  This is how to eliminate those issues.
+
+- Do Not change the username
+- Do Not enter WiFi credentals
+  - WiFi configuration is provided by the image itself.
+    - On first boot, you will be prompted to connect to `SSID OVOS` and go to the website `start.openvoiceos.com`.  This is **not the official ovos website** but a hotspot that the image has created.
+    - From there, you enter your credentals for the WiFi network you want to connect to.
+    - If for some reason this method does not work, `sudo raspi-config` is available to use and `nmtui` is also available
+
+#### linux dd command
+
+**Be carefull with the dd command, you can render your computer useless very easy**
+- [Download the zipped image](https://downloads.openvoiceos.com/images/raspbian/)
+- Unzip the image to the directory of your choice `unzip <path-to-zipped-image>`
+- Check where your sd card or usb drive is located  `lsusb`
+  - It should be visable as `sdx`
+- Write the unzipped image to the disk `sudo dd if=<path-to-unzipped-image> of=<path-to-sd-card> bs=4M status=progress`
+
+Upon completion, you should have a bootable image to use
+
+#### First Login
+
+This image comes with a predefined user, `ovos` with password `ovos`.  It is recommended that you change your password on first login.
+
+`sudo passwd ovos`
+
+Enter your new password twice
+
+This image on a RPi3B takes several minutes to boot before you hear the mentioned prompt, and several more minutes to finish booting.  If you don't think it is working, please wait upto 3 minutes each time before thinking something went wrong.
+
+# The section below is for advanced usage and is NOT currently recommended
 
 ## Purpose of this guide
 
