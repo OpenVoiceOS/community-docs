@@ -64,6 +64,7 @@ nav:
           - Troubleshooting Plugins: troubleshooting_plugins.md
     - HOWTO:
           - Howto secure ssh: howto_secure_ssh.md
+          - Develop OCP (Media) skills: dev_ocp_skill.md
     - Appendix:
         - Glossary: glossary.md
         - FAQ: faq.md
