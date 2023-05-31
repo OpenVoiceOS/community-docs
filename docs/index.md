@@ -20,7 +20,7 @@ Join the [Discussions](https://github.com/OpenVoiceOS/OpenVoiceOS/discussions) f
 ## Links
 * [Latest Release](https://github.com/OpenVoiceOS/ovos-core/releases)
 * [OpenVoiceOS Chat](https://matrix.to/#/!XFpdtmgyCoPDxOMPpH:matrix.org?via=matrix.org)
-* [OpenVoiceOS Website](https://openvoiceos.com/)
+* [OpenVoiceOS Website](https://openvoiceos.org/)
 * [Mycroft Chat](https://chat.mycroft.ai)
 * [Mycroft Forum](https://community.mycroft.ai)
 * [Mycroft Blog](https://mycroft.ai/blog)
