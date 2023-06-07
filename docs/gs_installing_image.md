@@ -5,16 +5,10 @@
 
 ## Downloading an Image
 
-###Buildroot Latest Images
+### Buildroot Latest Image
 
-- [RPi3-64](https://drive.google.com/file/d/1gTrQxMZEOV0J4ZrICyxfjA5cpNIjwDJP/view?usp=share_link)
 - [RPi4-64](https://drive.google.com/file/d/1PUtNXfZ5jMUlVAgyN-KXPdVdX6r51eBw/view?usp=share_link)
-### Manjaro Latest Images
-
-- [devkit](https://downloads.openvoiceos.com/images/manjaro/ovos-dev-edition-devkit-190822.img.gz) Aug 2022
-- [Generic](https://downloads.openvoiceos.com/images/manjaro/ovos-dev-edition-generic-090323-221429.img.xz) Mar 2023
-- [Mark 2](https://downloads.openvoiceos.com/images/manjaro/ovos-dev-edition-mark2-170223-091407.img.xz) Feb 2023
-- [Respeaker](https://downloads.openvoiceos.com/images/manjaro/ovos-dev-edition-respeaker-090223-172552.img.xz) Feb 2023
+- 
 ### Raspbian Latest Images
 
 - [rpi3-headless](https://downloads.openvoiceos.com/images/raspbian/)
@@ -23,6 +17,7 @@
 - **BuildRoot:** Username: mycroft | password: mycroft
 - **Manjaro:** Username: ovos | password: ovos
 - **Raspbian:** Username: ovos | password: ovos
+
 ### Build images from scratch:
 
 - [buildroot](https://openvoiceos.github.io/community-docs/buildroot/)
