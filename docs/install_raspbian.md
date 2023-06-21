@@ -204,7 +204,7 @@ Check your installation with
 
 The full OVOS can take a few minutes to load (especially on a Pi 3), but the processes should all eventually say `active (running)`, except for `ovos.service` which should say `active (exited)`
 
-You can also track progress by watching /var/log/syslog.  Once things slow down you can try saying "Hey Mycroft". In a few seconds (the first time is slow) you should hear a 'ding' from the system. They say "What day is it".  After a delay you should hear information about today's date.
+You can also track progress by watching /var/log/syslog.  Once things slow down you can try saying "Hey Mycroft". In a few seconds (the first time is slow) you should hear a 'ding' from the system. Then say "What day is it".  After a delay you should hear information about today's date.
 
 ## Final thoughts
 
