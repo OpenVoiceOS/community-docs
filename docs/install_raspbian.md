@@ -12,9 +12,9 @@ OVOS source files used by this guide can be found at [raspbian-ovos](https://git
 
 Raspberry Pi Imager is available [here](https://www.raspberrypi.com/software/). There have been issues when using Raspberry Pi Imager to burn pre-built images. From Linux we have had success starting the imager with the command `sudo raspi-imager`.
 
-## Use a pre-built OVOS/PI Environment image saved to an SD card
+## Use a pre-built OVOS/PI Environment image saved to an SD card (option on hold as we build a central image server)
 
-Download a pre-built OVOS/PI image from [dead link: OpenVoiceOS Downloads Site](https://downloads.openvoiceos.com/images/raspbian/).
+We are currently in the process of building a centralized image server for our pre-built images.  Once the server is complete, you'll be able t download a pre-built OVOS/PI image from a central site.  Thank you for your patience.
 
 Here are two methods to install your OVOS/PI image file onto your SD card.
 
