@@ -71,7 +71,7 @@ Our experience with Linux is to invoke the raspi-imager with `sudo raspi-imager`
 
 From here you must choose one of two methods:
 
-#### Method 1: Tried, tested, and reliable, but not a headless install
+#### Method 1: Tried, tested, and reliable, Pi needs a monitor to complete the install
 
 Here we use the Raspberry Pi Imager to write your media **without selecting any Advanced Options**.
 
@@ -115,7 +115,7 @@ Now the device setup is done. Exit raspi-config and reboot.
 
 `sudo reboot now`
 
-#### Method 2: Use Raspberry Pi Imager advanced options to do a headless install of a wireless OVOS Pi
+#### Method 2: Use Raspberry Pi Imager advanced options to install without a monitor
 
 Here we use the Raspberry Pi Imager to write your media **and let the Imager handle your network and SSH setup**.
 
