@@ -14,7 +14,7 @@ Raspberry Pi Imager is available [here](https://www.raspberrypi.com/software/). 
 
 ## Use a pre-built OVOS/PI Environment image saved to an SD card (option on hold as we build a central image server)
 
-We are currently in the process of building a centralized image server for our pre-built images.  Once the server is complete, you'll be able t download a pre-built OVOS/PI image from a central site.  Thank you for your patience.
+We are currently in the process of building a centralized image server for our pre-built images.  Once the server is complete, you'll be able to download a pre-built OVOS/PI image from a central site.  Thank you for your patience.
 
 Here are two methods to install your OVOS/PI image file onto your SD card.
 
