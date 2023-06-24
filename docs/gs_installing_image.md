@@ -11,7 +11,7 @@
 - 
 ### Raspbian Latest Images
 
-- [rpi3-headless](https://downloads.openvoiceos.com/images/raspbian/)
+- [rpi3-headless](https://ovosimages.ziggyai.online/raspbian)
 
 ## Default users
 - **BuildRoot:** Username: mycroft | password: mycroft

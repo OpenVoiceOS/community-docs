@@ -12,9 +12,9 @@ OVOS source files used by this guide can be found at [raspbian-ovos](https://git
 
 Raspberry Pi Imager is available [here](https://www.raspberrypi.com/software/). There have been issues when using Raspberry Pi Imager to burn pre-built images. From Linux we have had success starting the imager with the command `sudo raspi-imager`.
 
-## Use a pre-built OVOS/PI Environment image saved to an SD card (option on hold as we build a central image server)
+## Use a pre-built OVOS/PI Environment image saved to an SD card
 
-We are currently in the process of building a centralized image server for our pre-built images.  Once the server is complete, you'll be able to download a pre-built OVOS/PI image from a central site.  Thank you for your patience.
+Download a pre-built OVOS/PI image from our [raspbian-ovos download site](https://ovosimages.ziggyai.online/raspbian).
 
 Here are two methods to install your OVOS/PI image file onto your SD card.
 
@@ -51,7 +51,7 @@ On first boot, you will be voice-prompted to connect to `SSID OVOS` and go to th
 
 Then from a computer that supports wireless networking, connect to the SSID 'OVOS' and go to the website 'start.openvoiceos.com'. There you can enter the credentials of your WiFi network.  If your sound isn't working, no worries, you can keep scanning your computer's list of nearby SSIDs until you see OVOS, and then connect to the network without hearing the verbal prompt.
 
-This image on a RPi3B takes several minutes to boot before you hear the audio prompt, and several more minutes to finish booting.  If you don't think it's working, please wait up to 3 minutes each time before thinking something went wrong. You can also follow progress on /var/log/syslog.
+This image on a RPi3B takes several minutes to boot before you hear the audio prompt, and several more minutes to finish booting.  If you don't think it's working, please wait up to 3 minutes each time before thinking something went wrong. You can also follow progress in the OVOS log files found in ~/.local/state/mycroft/*.log.
 
 If for some reason this method does not work, `sudo raspi-config` and `nmtui` are also available.
 
@@ -71,7 +71,7 @@ Our experience with Linux is to invoke the raspi-imager with `sudo raspi-imager`
 
 From here you must choose one of two methods:
 
-#### Method 1: Tried, tested, and reliable, but not a headless install
+#### Method 1: Tried, tested, and reliable, Pi needs a monitor to complete the install
 
 Here we use the Raspberry Pi Imager to write your media **without selecting any Advanced Options**.
 
@@ -115,7 +115,7 @@ Now the device setup is done. Exit raspi-config and reboot.
 
 `sudo reboot now`
 
-#### Method 2: Use Raspberry Pi Imager advanced options to do a headless install of a wireless OVOS Pi
+#### Method 2: Use Raspberry Pi Imager advanced options to install without a monitor
 
 Here we use the Raspberry Pi Imager to write your media **and let the Imager handle your network and SSH setup**.
 
@@ -204,7 +204,7 @@ Check your installation with
 
 The full OVOS can take a few minutes to load (especially on a Pi 3), but the processes should all eventually say `active (running)`, except for `ovos.service` which should say `active (exited)`
 
-You can also track progress by watching /var/log/syslog.  Once things slow down you can try saying "Hey Mycroft". In a few seconds (the first time is slow) you should hear a 'ding' from the system. They say "What day is it".  After a delay you should hear information about today's date.
+You can also track progress by watching the files in ~/.local/state/mycroft/*.log.  Once things slow down you can try saying "Hey Mycroft". In a few seconds (the first time is slow) you should hear a 'ding' from the system. Then say "What day is it".  After a delay you should hear information about today's date.
 
 ## Final thoughts
 
