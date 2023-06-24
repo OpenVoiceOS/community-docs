@@ -51,7 +51,7 @@ On first boot, you will be voice-prompted to connect to `SSID OVOS` and go to th
 
 Then from a computer that supports wireless networking, connect to the SSID 'OVOS' and go to the website 'start.openvoiceos.com'. There you can enter the credentials of your WiFi network.  If your sound isn't working, no worries, you can keep scanning your computer's list of nearby SSIDs until you see OVOS, and then connect to the network without hearing the verbal prompt.
 
-This image on a RPi3B takes several minutes to boot before you hear the audio prompt, and several more minutes to finish booting.  If you don't think it's working, please wait up to 3 minutes each time before thinking something went wrong. You can also follow progress on /var/log/syslog.
+This image on a RPi3B takes several minutes to boot before you hear the audio prompt, and several more minutes to finish booting.  If you don't think it's working, please wait up to 3 minutes each time before thinking something went wrong. You can also follow progress in the OVOS log files found in ~/.local/state/mycroft/*.log.
 
 If for some reason this method does not work, `sudo raspi-config` and `nmtui` are also available.
 
@@ -204,7 +204,7 @@ Check your installation with
 
 The full OVOS can take a few minutes to load (especially on a Pi 3), but the processes should all eventually say `active (running)`, except for `ovos.service` which should say `active (exited)`
 
-You can also track progress by watching /var/log/syslog.  Once things slow down you can try saying "Hey Mycroft". In a few seconds (the first time is slow) you should hear a 'ding' from the system. Then say "What day is it".  After a delay you should hear information about today's date.
+You can also track progress by watching the files in ~/.local/state/mycroft/*.log.  Once things slow down you can try saying "Hey Mycroft". In a few seconds (the first time is slow) you should hear a 'ding' from the system. Then say "What day is it".  After a delay you should hear information about today's date.
 
 ## Final thoughts
 
