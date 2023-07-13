@@ -1,103 +1,170 @@
 # OpenVoiceOS Architecture
-**Editors Note**
-Most of the text in the entire architecture section will not remain, it's my notes so I can create some architecture drawings and simplified information.
+**This section can be a bit technical, but is included for refrence**
 
-## Bus Service
+OVOS is a collection of modular services that work together to provide a seamless, private, open source voice assistant.  Every OVOS service runs as an indivudually and interacts with one another.
+
+The suggested way to start OVOS is with systemd service files.  Most of the supported images run these services as a normal `user` instead of system wide.  If you get and error when using the system files, try using it as a system service.
+
+- user service
+  - `systemctl --user status ovos.service`
+- system service
+  - `systemctl status ovos.service`
+
+## ovos-core
+https://github.com/OpenVoiceOS/ovos-core
+
+This service provides the main instance for OVOS and handles all of the skill loading, and intent processing.
+
+All user queries are handled by the skills service, you can think of it as OVOS's brain
+
+typical systemd command
+
+`systemctl --user status ovos-skills`
+
+[Technical Docs on Skills](https://openvoiceos.github.io/ovos-technical-manual/skills_service/)
+
+## Messagebus
+https://github.com/OpenVoiceOS/ovos-messagebus
+
+C++ version
+
+https://github.com/OpenVoiceOS/ovos-bus_service
 
 The bus service provides a websocket where all internal events travel
 
 You can think of the bus service as OVOS's nervous system
 
-The mycroft-bus is considered an internal and private websocket, external clients should not connect directly to it.  **Please do not expose the messagebus to the outside world!**
+The mycroft-bus is considered an internal and private websocket, **external clients should not connect directly to it.**
 
-### Message
-A Message consists of a json payload, it contains a `type` , some `data` and a `context`. 
+[Technical docs for messagebus](https://openvoiceos.github.io/ovos-technical-manual/bus_service/)
 
-The `context` is considered to be metadata and might be changed at any time in transit, the `context` can contain anything depending on where the message came from, and often is completely empty. 
+typical systemd command
 
-You can think of the message `context` as a sort of session data for a individual interaction, in general messages down the chain keep the `context` from the original message, most listeners (eg, skills) will only care about `type` and `data`. 
+`systemctl --user start ovos-messagebus`
 
-ovos-core uses the message `context` to add metadata about the messages themselves, where do they come from and what are they intended for.
+## Listener
+https://github.com/OpenVoiceOS/ovos-dinkum-listener
 
-#### Sources
+The listener service is used to detect your voice.  It controlls the WakeWord, STT (Speech To Text), and VAD Plugins.  You can modify microphone settings and enable additional features under the listener section such as wake word / utterance recording / uploading
 
-ovos-core injects the context when it emits an utterance, this can be either typed in the `ovos-cli-client` or spoken via STT service
+The [ovos-dinkum-listener](https://github.com/OpenVoiceOS/ovos-dinkum-listener) is the new OVOS listener that replaced the origional [ovos-listener](https://github.com/OpenVoiceOS/ovos-listener) and has many more options.  Others still work, but are not recommended.
 
-STT will identify itself as `audio`
+[Technical Listener Docs](https://openvoiceos.github.io/ovos-technical-manual/speech_service/)
 
-ovos-cli-client will identify itself as `debug_cli`
+typical systemd command
 
-`mycroft.conf` contains a `native_sources` section you can configure to change how the audio service processes external requests
+`systemctl --user start ovos-dinkum-listener`
 
-#### Destinations
+### STT Plugins
 
-Output capable services are the cli and the TTS
+This is where speech is transcribed into text and forwarded to the skills service.
 
-The command line is a debug tool, it will ignore the `destination`
+Two STT plugins may be loaded at once, if the primary plugin fails for some reason the second plugin will be used.
 
-TTS checks the message context if it's the intended target for the message and will only speak in the following conditions:
+This allows you to have a lower accuracy offline model as fallback to account for internet outages, this ensures your device never becomes fully unusable.
 
-- Explicitly targeted i.e. the `destination` is `"audio"`
-- `destination` is set to `None`
-- `destination` is missing completely
+Several different STT (Speech To Text) Plugins are avaliable for use.  OVOS provides a number of public servers using the [ovos-stt-plugin-server](https://github.com/OpenVoiceOS/ovos-stt-plugin-server) plugin and are hosted by OVOS contributors.  No additional configuration is required.
 
-The idea is that for example when the android app is used to access OpenVoiceOS the device at home shouldn't start to speak.
+[OVOS Supported STT Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-stt-plugin&type=all&language=&sort=)
 
-TTS will be executed when `"audio"` or `"debug_cli"` are the `destination`
+**TODO** Fix link to how to change stt
 
-A missing `destination` or if the `destination` is set to `None` is interpreted as a multicast and should trigger all output capable processes (be it the audio service, a web-interface, the KDE plasmoid or maybe the android app)
+[Changing STT Plugin](stt-plugins.md)
 
+### WakeWord Plugins
 
-# Converse
+A WakeWord is what OVOS uses to activate the device.  By default `Hey Mycroft` is used by OVOS.  Like other things in the OVOS ecosystem, this is configurable.
 
-Each Skill may define a `converse()` method. This method will be called anytime the Skill has been recently active and a new utterance is processed.&#x20;
+[OVOS Supported WakeWord Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-ww-plugin&type=all&language=&sort=)
 
-The converse method expects a single argument which is a standard Mycroft Message object. This is the same object an intent handler receives.
+**TODO** Fix link to change ww
 
-Converse methods must return a Boolean value. True if an utterance was handled, otherwise False.
+[Changing the WakeWord](change-ww.md)
 
-### Active Skill List
+#### HotWords
 
-A Skill is considered active if it has been called in the last 5 minutes.
+OVOS allows you to load any number of hot words in parallel and trigger different actions when they are detected
 
-Skills are called in order of when they were last active. For example, if a user spoke the following commands:
+each hotword can do one or more of the following:
 
-> Hey Mycroft, set a timer for 10 minutes
->
-> Hey Mycroft, what's the weather
+  - trigger listening, also called a **wake_word**
+  - play a sound
+  - emit a bus event
+  - take ovos-core out of sleep mode, also called a **wakeup_word** or **standup_word**
+  - take ovos-core out of recording mode, also called a **stop_word**
 
-Then the utterance "what's the weather" would first be sent to the Timer Skill's `converse()` method, then to the intent service for normal handling where the Weather Skill would be called.
+**TODO** fix link to adding HotWords
 
-As the Weather Skill was called it has now been added to the front of the Active Skills List. Hence, the next utterance received will be directed to:
+[Setting and adding HotWords](setting-HotWords.md)
 
-1. `WeatherSkill.converse()`
-2. `TimerSkill.converse()`
-3. Normal intent parsing service
+### VAD Plugins
 
-### Making a Skill Active
+VAD Plugins serve to detect when you are actually speaking to the device, and when you quit talking.
 
-There are occasions where a Skill has not been triggered by the User, but it should still be considered "Active".
+[OVOS Supported VAD Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-vad-plugin&type=all&language=&sort=)
 
-In the case of our Ice Cream Skill - we might have a function that will execute when the customers order is ready. At this point, we also want to be responsive to the customers thanks, so we call `self.make_active()` to manually add our Skill to the front of the Active Skills List.
+**TODO** fix link to vad stuff
 
-## GUI Protocol
+[Changing VAD Plugin](Change_VAD_Plugin.md)
 
-T[he [gui service](https://github.com/OpenVoiceOS/ovos-core/tree/dev/mycroft/gui) in ovos-core will expose a websocket to
-the GUI clients following the protocol outlined [here](https://github.com/MycroftAI/mycroft-gui/blob/master/transportProtocol.md)
+## Audio
 
-The transport protocol works between gui service and the gui clients, mycroft does not directly use the protocol but instead communicates with the gui service via the standard mycroft bus]()
+https://github.com/OpenVoiceOS/ovos-audio
 
-OVOS images are powered by [ovos-shell](https://openvoiceos.github.io/community-docs/shell/), the client side
-implementation of the gui protocol
+The audio service handles the output of of all audio. It is how you hear the voice responses, music, or any other noise from your OVOS device.
 
-The GUI library which implements the protocol lives in the [Mycroft GUI](https://github.com/OpenVoiceOS/mycroft-gui) repository.
+[Configuring Audio](audio_conf.md)
 
-# GUI Service
+### TTS Plugins
 
-OVOS uses the standard mycroft-gui framework, you can find the official
-documentation [here](https://mycroft-ai.gitbook.io/docs/skill-development/displaying-information/mycroft-gui)
+TTS (Text To Speech) is the verbal response from OVOS.  There are several plugins avaliable that support different engines.  Multiple languages and voices are avaliable to use
 
-The GUI service provides a websocket for gui clients to connect to, it is responsible for implementing the gui protocol
-under ovos-core.
+OVOS provides a set of public TTS servers hosted by community members.  It uses the [ovos-tts-server-plugin](https://github.com/OpenVoiceOS/ovos-tts-server-plugin), and no additional configuration is needed.
 
-You can find indepth documentation in the dedicated GUI section of these docs
+[Supported TTS Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-tts-plugin&type=all&language=&sort=)
+
+**TODO** Fix link to how to change tts
+
+[Changing TTS Plugin](change-tts.md)
+
+## PHAL
+
+https://github.com/OpenVoiceOS/ovos-PHAL
+
+PHAL stands for Plugin based Hardware Abstraction Layer and is used to allow access of different hardware devices to use the OVOS software stack.  It completely replaces the
+concept of hardcoded "enclosure" from mycroft-core.
+
+Any number of plugins providing functionality can be loaded and validated at runtime, plugins can
+be [system integrations](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system) to handle things like reboot and
+shutdown, or hardware drivers such as [mycroft mark1 plugin](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk1)
+
+[Supported PHAL Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-phal-plugin&type=all&language=&sort=)
+
+**TODO** link to phal plugin details
+
+[PHAL Plugins](phal-plugins.md)
+
+### Admin PHAL
+
+Similar to regular PHAL, but is used when `sudo` or `privlidged user` is needed
+
+[Admin PHAL](admin-phal.md)
+
+## GUI
+OVOS uses the standard mycroft-gui framework, you can find the official documentation [here](https://mycroft-ai.gitbook.io/docs/skill-development/displaying-information/mycroft-gui)
+
+The GUI service provides a websocket for gui clients to connect to, it is responsible for implementing the gui protocol under ovos-core.
+
+You can find indepth documentation [here](https://openvoiceos.github.io/ovos-technical-manual/gui_service/)
+
+## Other OVOS services
+
+OVOS provides a number of helper scripts to allow the user to control the device at the command line.
+
+- `ovos-say-to`  This provides a way to communicate an intent to ovos.
+- `ovos-say-to "what time is it"`
+- `ovos-listen`  This opens the microphone for listening, just like if you would have said the WakeWord.  It is expecting a verbal command.
+  - Continue by speaking to your device `"what time is it"`
+- `ovos-speak`  This takes your command and runs it through the TTS (Text To Speech) engine and speaks what was provided.
+- `ovos-speak "hello world"` will output `"hello world"` in the configured TTS voice
+- `ovos-config` is a command line interface that allows you to view and set configuration values.

@@ -1,3 +1,0 @@
-# Hardware Platforms
-
-** coming soon **

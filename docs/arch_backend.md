@@ -1,6 +1,6 @@
 # OpenVoiceOS Backends
 
-A backend is a service that provides your device with additional tools to function, these could range from managing your skill settings to configuring certain aspects of your device. The backend is optional in OVOS, especially if you're running a single device. 
+A backend is a service that provides your device with additional tools to function, these could range from managing your skill settings to configuring certain aspects of your device. The backend is optional and concidered to be advanced usage in OVOS.  By default, OVOS does not use a backend, and is totally unnecessasary for basic usage.  A local backend becomes usefull if you have several devices around the house and would like a central place to configure them.
 
 A backend can provide:
 
@@ -10,24 +10,9 @@ A backend can provide:
 
 Available backends:
 
-- Offline: no backend all configuration local
-- Personal: Self hosted minimal backend
-- OpenvoiceOS API Service: Not a true backend, provides a proxy for APIs for privacy
-- Selene: Provided by Mycroft.ai, can be [self hosted](https://github.com/MycroftAI/selene-backend).  The official Mycroft.ai hosting will likely be going away and is deprecated.
-- Neon: Coming soon
+- Offline: no backend all configuration local. This is the DEFAULT
+- Personal: [Self hosted minimal backend](https://github.com/OpenVoiceOS/ovos-personal-backend)
 
-## Selecting a backend
-**Editors Note** coming soon, placeholder information
+**TODO** fix link to personal backend
 
-The default for ovos-core is no backend.
-
-You can go without a backend and go offline and use our free proxy for API services with no accounts.
-
-Install the skill-ovos-setup to get the prompt to setup a backend.  Without this installed, you will NOT hear the prompt to pick a backend.
-
-You can manually change mycroft.conf to enable a different backend if needed, but you will have to install setup skill and add "setup" to "ready_settings" in mycroft.conf
-
-
-More Information is available in the [backend client repo](https://github.com/OpenVoiceOS/ovos-backend-client)
-
-
+[Setting Up a Personal Backend](setup-backend.md)

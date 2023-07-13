@@ -1,30 +1,40 @@
 # Booting your OpenVoiceOS device.
 
-Depending on which image you downloaded you will first see the boot splash which indicates the Operating System is booting. For the buildroot edition the below boot splash will be shown.
+Each image has it's own first boot process.
+
+## Buildroot
+
+When you first boot the Buildroot image, you will be greated with an OVOS splash screen as shown below.
 
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Buildroot%20bootsplash.png)
 
-If this is the very first time you boot your device, booting might take a bit longer as normal as the system is preparing its local filesystem and extending it over the full size of the sdcard/USB device.
+As this is the first time you have booted your device, it might take a bit longer than normal as the system is preparing its local filesystem and extending it over the full size of the sdcard/USB device.
 Eventually the progress bar will be filled up indicating the Operating System has been fully booted, after which the ovos-shell animated loading screen will be shown.
 
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Spinner.png)
 
-Again, if this is the first time you boot your device this might take a bit longer as the ovos-core configuration is populated and skills are being setup.
+Again, since this is your first boot, this might take a bit longer as the ovos-core configuration is populated and skills are being setup.
+
+## Raspbian
+
+The Raspbian image is headless, and therefore you will not see these images.  You can still monitor the boot procees by attaching a screen and follow the boot process from the command line.
 
 ## Setting up your Wi-Fi network connection
 
-Depending on which image you downloaded you will be greeted by the network configuration screen with either one or two option. The buildroot image supports setting up the network via two options.
+The buildroot image supports setting up the network via two options.
 
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Network%20setup.png)
 
 - On a mobile device
 - On the OpenVoiceOS device itself.
 
-You can also skip this step to configure it later or never ask it again if you want your device to run fully offline. (Bear in mind you need to configure your device to use local STT and TTS engines and obvious asking your device things that require internet will not work.)
+You can also skip this step to configure it later or never ask it again if you want your device to run fully offline. (Bear in mind you need to configure your device to use local STT and TTS engines and obvious asking your device things that require internet will not work.  This includes the date and time as a Raspberry Pi does not have a Real Time Clock and therefore does not know this data without being told)
 
 ### On Mobile Setup
 
-Choosing this option will create a temporarily open network - hotspot called "OVOS" to which you can connect from your mobile device.
+**This is the defult option for the headless images**
+
+Choosing this option will create a temporarily open network - hotspot called "OVOS" to which you can connect from your mobile device.  The Raspbian image will give a voice prompt to connect to the hotspot and direct you to a webpage that will allow you to connect your device to WiFi.
 
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Connect%20hotspot.png)
 
@@ -32,7 +42,7 @@ On your mobile device go into Settings -> Wi-Fi Settings and the "OVOS" open net
 
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20WiFi%20network%20list.PNG)
 
-Connect your device with the OVOS network and a webpage will open to configure the Wi-Fi network on your OpenVoiceOS device. (NOTE: On newer mobile operating systems the captive portal capture has changed and the website will not automatically be opened. If this is the case you can open a browser manually and go to http://172.16.127.1 )
+Connect your device with the OVOS network and a webpage will open to configure the Wi-Fi network on your OpenVoiceOS device. (NOTE: On newer mobile operating systems the captive portal capture has changed and the website will not automatically be opened. If this is the case you can open a browser manually and go to http://start.OpenVoiceOS.com)
 The following webpage will be shown;
 
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20WiFi%20setup%20startpage.PNG)
@@ -41,9 +51,11 @@ Select your Wi-Fi network from the list, insert your password and press the "Con
 
 ![](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/iPhone%20-%20WiFi%20setup%20filled-in.PNG)
 
-If everything went fine, you will soon see the green "connected" screen on your OpenVoiceOS device.
+If everything went fine, you will soon see the green "connected" screen, Buildroot only, on your OpenVoiceOS device.  The Raspbian image does NOT have a completed prompt
 
 ### On Device Setup
+
+**Not avaliable on headless images**
 
 Choosing this option allows you to set up your Wi-Fi network straight on your OpenVoiceOS device. If selected a screen with the available networks will be shown on your OpenVoiceOS device.
 
@@ -69,21 +81,11 @@ From here you can select another network or click the configuration icon on the 
 
 ### What is a backend ?
 
-## Mycroft A.I. - Selene Backend
-**NOTE** The Public Selene Backend from Mycroft may be going away soon, it's not recommended to use.
-
-The Pairing Process
-
-![Selene](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/selene.png)
-
-The GUI will now show you a Pairing Code, This pairing code needs to be entered on the mycroft backend which you can find online at https://account.mycroft.ai
-
-- Create an account using your email id on https://account.mycroft.ai
-- Head over to https://account.mycroft.ai/devices/add
-- Enter the pairing code, a unique device name, and location settings
-- Click next on the web interface, your device should now be paired
-
 ## No backend - No calling home
+
+**This is the suggested method and is default with the headless images**
+
+**Only the Buildroot image will have these options no further action is required for the headless images**
 
 Select A Text To Speech (TTS) Engine: A text-to-speech (TTS) system converts normal language text into speech, select an engine from the list
 

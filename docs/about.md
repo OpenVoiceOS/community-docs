@@ -18,7 +18,7 @@ Whether you prefer voice commands or a more traditional touch interface, OpenVoi
 
 One of the key advantages of OpenVoiceOS is its open-source nature, which means that anyone with the technical skills can contribute to the platform and help shape its future.
 
-Whether you're a software developer, data scientist, or just someone with a passion for technology, you can get involved and help build the next generation of personal assistants and smart speakers.
+Whether you're a software developer, data scientist, someone with a passion for technology, or just a casual user that would like to experience what OVOS has to offer, you can get involved and help build the next generation of personal assistants and smart speakers.
 
 With OpenVoiceOS, you have the option to run the platform fully offline, giving you complete control over your data and ensuring that your information is never shared with third parties. This makes OpenVoiceOS the perfect choice for anyone who values privacy and security.
 

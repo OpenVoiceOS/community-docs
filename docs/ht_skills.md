@@ -1,4 +1,4 @@
-# OVOS Skills
+# How do I - Skills
 
 ## What can a Skill do?
 
@@ -38,13 +38,10 @@ products.
 
 Voice games are becoming more and more popular, especially those that allow multiple users to play together. Trivia games are some of the most popular types of games to develop for voice assistants. There are several games already available for OVOS. There are native voice adventure games, ports of the popular text adventure games from infocom, a Crystal Ball game, a Number Guessing game and much more!
 
-# OpenVoiceOS Standard Skills
-
-# Standard Skills Usage
-
+## OpenVoiceOS Standard Skills
 Your OpenVoiceOS device comes with certain skills pre-installed for basic functionality out of the box. You can also install new skills however more about that at a later stage.
 
-## Date / Time skill
+### Date / Time skill
 
 You can ask your device what time or date it is just in case you lost your watch.
 
@@ -56,7 +53,7 @@ You can ask your device what time or date it is just in case you lost your watch
 
 ![Date](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Date.png)
 
-## Setting an alarm
+### Setting an alarm
 
 Having your OpenVoiceOS device knowing and showing the time is great, but it is even better to be woken up in the morning by your device.
 
@@ -64,7 +61,7 @@ Having your OpenVoiceOS device knowing and showing the time is great, but it is 
 
 ![Alarm](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Alarm.png)
 
-## Setting of timers
+### Setting of timers
 
 Sometimes you are just busy but want to be alerted after a certain time. For that you can use timers.
 
@@ -78,7 +75,7 @@ You can always set more timers and even name them, so you know which timers is f
 
 ![Timers](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Two%20timers.png)
 
-## Asking the weather
+### Asking the weather
 
 You can ask your device what the weather is or would be at any given time or place.
 
@@ -90,17 +87,4 @@ The weather skill actually uses multiple pages indicated by the small dots at th
 
 ![Weather 2](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Weather%202.png)
 
-## File Browser
-
-The file browser allows you to browse the filesystem in your device and any connected media, you can view images and play music and videos.
-
-KDEConnect integration allows you to share files with your mobile devices
-
-![](https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/ocp/file_browser.gif)
-
-
-## GUI Framework
-
-Mycroft-GUI is an open source visual and display framework for Mycroft running on top of KDE Plasma Technology and built using Kirigami a lightweight user interface framework for convergent applications which are empowered by Qt.
-
-OVOS uses the standard mycroft-gui framework, you can find the official documentation [here](https://mycroft-ai.gitbook.io/docs/skill-development/displaying-information/mycroft-gui)
+There are more installed, just try.  If you don't get the response you expected, see the section on [installing new skills](ht_skills_install.md)

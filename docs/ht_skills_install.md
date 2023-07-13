@@ -1,12 +1,12 @@
-# Installing New Skills
-
-There are a few ways to install skills in ovos.  The preferred way is with `pip` and a `setup.py` file.
+# How do I - Installing Skills
+This section will help you to understand what a skill is and how to install and use skills with OVOS
 
 ## Finding Skills
 
 Most skills are found throughout github.  The official skills can be found with a simple search in the [OVOS github page](https://github.com/orgs/OpenVoiceOS/repositories?q=skill&type=all&language=&sort=).  There are a few other places they can be found. [Neon AI](https://github.com/NeonGeckoCom) has several skills, and a search through github will for sure find more.
 
 ## Installing a found skill
+There are a few ways to install skills in ovos.  The preferred way is with `pip` and a `setup.py` file.
 
 ### pip install
 
@@ -16,7 +16,7 @@ The syntax is `pip install git+<github/repository.git>`.
 
 ex. `pip install git+https://github.com/OpenVoiceOS/skill-ovos-date-time.git` should install the ovos-date-time skill
 
-They can be installed locally also.
+Skills can be installed from a local file also.
 
 Clone the repository
 
@@ -45,10 +45,6 @@ and clone the found skill here with git
 ex. `git clone https://github.com/OpenVoiceOS/skill-ovos-date-time.git` will install the ovos-date-time skill.
 
 A restart of the ovos-skills service is not required when installing this way.
-
-[Information on Skills](arch_skills.md)
-
-[Configuring Skills](config_skills.md)
 
 ## Depreciated
 The OVOS skills manager is in need of some love, and when official skill stores are created, this will be updated to use the new methods.  Until then, this method is **NOT** recomended, and **NOT** supported.  The following is included just as refrence.

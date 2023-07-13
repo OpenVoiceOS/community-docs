@@ -1,6 +1,5 @@
 # OpenVoiceOS Services
-** Editors Note **  
-Major revisions coming here, mostly placeholder information
+**Editors Note** Major revisions coming here, mostly placeholder information
 
 ## Skills Service
 

@@ -4,16 +4,20 @@
 
 the OVOS project documentation is written and maintained by users just like you!
 
-Think of these docs both as your starting point and also forever changing and incomplete
+These documents are your starting point for installing and using OpenVoiceOS software
 
-Please [open Issues and Pull Requests](https://github.com/OpenVoiceOS/community-docs)!
+**Note** some sections may be incomplete or outdated
 
+Please [open Issues](https://github.com/OpenVoiceOS/community-docs/issues) [and Pull Requests](https://github.com/OpenVoiceOS/community-docs/pulls)!
+
+## Just want to get started with OVOS?
+Check out our [Quick Start Guide](quick_start.md) for help with installing an image, your first boot, and basic configuration.
 
 ## Getting Involved
 
 This is an open source project. We would love your help. We have prepared a [contributing](contributing.md) guide to help you get started.
 
-If this is your first PR, or you're not sure where to get started,
+If this is your first experience with OpenVoiceOS, or you're not sure where to get started,
 say hi in [OpenVoiceOS Chat](https://matrix.to/#/!XFpdtmgyCoPDxOMPpH:matrix.org?via=matrix.org) and a team member would be happy to mentor you.
 Join the [Discussions](https://github.com/OpenVoiceOS/OpenVoiceOS/discussions) for questions and answers.
 
@@ -21,6 +25,10 @@ Join the [Discussions](https://github.com/OpenVoiceOS/OpenVoiceOS/discussions) f
 * [Latest Release](https://github.com/OpenVoiceOS/ovos-core/releases)
 * [OpenVoiceOS Chat](https://matrix.to/#/!XFpdtmgyCoPDxOMPpH:matrix.org?via=matrix.org)
 * [OpenVoiceOS Website](https://openvoiceos.org/)
+* [OpenVoiceOS Reddit](https://www.reddit.com/r/OpenVoiceOS/)
+
+Being depereciated, please start making the change to OVOS pages
+
 * [Mycroft Chat](https://chat.mycroft.ai)
 * [Mycroft Forum](https://community.mycroft.ai)
 * [Mycroft Blog](https://mycroft.ai/blog)

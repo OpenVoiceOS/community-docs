@@ -4,29 +4,44 @@ nav:
     - Home:
         - Introduction: index.md
         - About: about.md
-    - Getting Started Guide:
-        - Hardware: gs_hardware.md
-        - Installation Choices: gs_installation_choices.md
-        - Installing an Image: gs_installing_image.md
-        - First boot: gs_first_boot.md
-        - Next Steps: gs_next_steps.md
-    - Architecture:
+        - Supported Hardware: hardware.md
+            - Audio: hardware_audio.md
+            - Video: hardware_video.md
         - OpenVoiceOS Architecture: architecture.md
-        - Backend: arch_backend.md
-        - APIs: arch_apis.md
-        - Services: arch_services.md
-        - Plugins: arch_plugins.md
-        - PHAL: arch_phal.md
-        - Skills: arch_skills.md
-        - Statements: statements.md
-    - Hardware:
-        - Platforms: hardware_platforms.md
-        - Audio: hardware_audio.md
-        - Video: hardware_video.md
-    - Installation:
-        - Installation Introduction: install_intro.md
-        - Install OVOS Core: install_ovos_core.md
+    - Quick Start Guide:
+        - Introduction: qs_intro.md
+        - First Boot: qs_first_boot.md
+        - Next Steps: qs_next_steps.md
+    - Installation Options:
+        - Introduction: install_intro.md
+        - Installing an Image: qs_intro.md
+        - Install as a Library: install_ovos_core.md
+        - Install with Docker: install_ovos_docker.md
+        _ Install GUI: install_gui.md
+    - Starting OVOS:
+        - Introduction: starting_intro.md
+        - Starting Modules: starting_modules.md
+        - Starting Systemd: starting_systemd.md
+        - Starting Docker: starting_docker.md
+    - Configuration:
+        - Introduction: config.md
+        - Using ovos-config: config_ovos_config.md
+        - Manualy Editing Files: config_manual_config.md
+    - How To:
+        - Introduction: ht_intro.md
+        - Skills: ht_skills.md
+            - Installing Skills: ht_skills_install.md
+            - Configuring: ht_skills_config.md
+        - TTS: ht_tts.md
+            - Configuring: ht_tts_config.md
+        - STT: ht_stt.md
+        - WakeWord: ht_ww.md
+        - HotWords: ht_hw.md
+        - PHAL: ht_phal.md
+        - Custom Services: ht_services.md
+    - Additional Components:
         - Installing Skills: install_skills.md
+        - Installing PHAL Plugins: PHAL.md
     - Configuration:
         - OVOS Core Configuration: config_ovos_core.md
         - OVOS Config Assistant: config_oca.md
@@ -72,4 +87,15 @@ nav:
         - License: license.md
         - Friends: friends.md
         - Images: images.md
+    - Move Me:
+        - Backend: arch_backend.md
+        - APIs: arch_apis.md
+        - Skills: arch_skills.md
+        - Statements: statements.md
+    - Installation:
+        - Installation Introduction: install_intro.md
+        - Install OVOS Image: install_ovos_images.md
+        - Install OVOS Core: install_ovos_core.md
+        - Install OVOS Docker: install_ovos_docker.md
+        - Starting OVOS: starting_ovos.md
 theme: readthedocs
