@@ -66,8 +66,6 @@ nav:
           - Troubleshooting STT: troubleshooting_stt.md
           - Troubleshooting Skills: troubleshooting_skills.md
           - Troubleshooting Plugins: troubleshooting_plugins.md
-    - HOWTO:
-          - Develop OCP (Media) skills: dev_ocp_skill.md
     - Appendix:
         - Glossary: glossary.md
         - FAQ: faq.md
