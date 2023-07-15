@@ -28,6 +28,8 @@ https://github.com/OpenVoiceOS/ovos-messagebus
 
 C++ version
 
+**NOTE** This is an `alpha` version and mostly `Proof of Concept`.  It has been known to crash often
+
 https://github.com/OpenVoiceOS/ovos-bus_service
 
 The bus service provides a websocket where all internal events travel

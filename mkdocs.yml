@@ -51,7 +51,6 @@ nav:
         - Buildroot: images_buildroot.md
         - Raspbian: install_raspbian.md
     - Other Builds:
-        - Manjaro: images_manjaro.md
         - Mycroft: mycroft.md
         - NeonOS: neonos.md
     - Troubleshooting:

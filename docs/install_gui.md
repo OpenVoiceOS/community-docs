@@ -4,7 +4,7 @@ The GUI is a totaly optional component of OVOS, but adds a ton more functionalit
 ## About the GUI
 The OVOS GUI is an independent component of OVOS which uses QT5/6 to display information on your devices screen.  It is touchscreen compliant [1](#Footnotes#1), and has an on screen keyboard for entering data.  On a Raspberry Pi, the GUI runs in a framebuffer, therefore not needing a full window manager.  This saves resources on underpowered devices.
 
-[mycroft-gui-qt5](https://github.com/OpenVoiceOS/mycroft-gui-qt5) is a fork of the origional [mycroft-gui](https://github.com/MycroftAI/mycroft-gui) which has had its licence changed to GPL v3 for all new code.
+[mycroft-gui-qt5](https://github.com/OpenVoiceOS/mycroft-gui-qt5) is a fork of the origional [mycroft-gui](https://github.com/MycroftAI/mycroft-gui)
 
 [mycroft-gui-qt6](https://github.com/OpenVoiceOS/mycroft-gui-qt6) is in the works, but not all skills support it yet.
 

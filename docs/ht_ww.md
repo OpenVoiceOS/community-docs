@@ -45,7 +45,16 @@ Add the following to your `~/.config/mycroft/mycroft.conf` file.
 }
 ```
 
-The most important section is `"wake_word": "hey_ziggy"` in the `"listener"` section, which tells OVOS what the default wakeword should be, and in the `"hotwords"` section, `"active": true`, which tells the assistant to use the wakeword. If you want to disable a wakeword, you can set this to `false`. If enabling a wakeword, be sure to also set `"listen": true`.
+### Sections explained
+The most important section is `"wake_word": "hey_ziggy"` in the `"listener"` section.
+
+This tells OVOS what the default wakeword should be.
+
+In the `"hotwords"` section, `"active": true`, is only used if multiple wakewords are being used.  By default, what ever `wake_word` is set in the `listener` section is automatically set to `true`.
+
+If you want to disable a wakeword, you can set this to `false`.
+
+If enabling a wakeword, be sure to also set `"listen": true`.
 
 Multiple hotwords can be configured at the same time, even the same word with different plugins.  This allows for more accurate ones to be used before the less accurate, but only if the plugin is installed.
 
