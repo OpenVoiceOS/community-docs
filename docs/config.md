@@ -5,6 +5,8 @@ When you first start OVOS, there should not be any configuration needed to have 
 
 This password is **EXTREAMLY** insecure and should be changed or use ssh keys for logging in.
 
+[Secureing SSH](config_security.md)
+
 This section will explain how the configuration works, and how to do basic configuration changes.
 
 The rest of this section will assume you have shell access to your device.

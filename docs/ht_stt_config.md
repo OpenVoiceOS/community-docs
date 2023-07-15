@@ -34,4 +34,4 @@ By default, the default language that is configured with OVOS will be used, but 
 
 `"ovos-tts-plugin-piper"` - Specify specific plugin settings here.  Multiple entries are allowed.  If an empty dict is provided, `{}`, the plugin will use its default values.
 
-Refer to the TTS github repository for specifications on each plugin
+Refer to the STT plugin github repository for specifications on each plugin

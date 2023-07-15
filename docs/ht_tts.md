@@ -1,6 +1,14 @@
 # How do I - TTS
 TTS plugins are responsible for converting text into audio for playback.  Several options are available each with different attributes and supported languages.  Some can be run on device, others need an internet connection to work.
 
+As with most OVOS packages, the TTS plugins are available on [PyPi](https://pypi.org/search/?q=ovos+tts) and can be installed with `pip install`
+
+`pip install ovos-tts-plugin-piper`
+
+will install the latest stable version.  If there are installation errors, you can install the latest `alpha` versions of the plugins.
+
+`pip install --pre ovos-tts-plugin-piper`
+
 By default, OVOS uses [ovos-tts-server-plugin](https://github.com/OpenVoiceOS/ovos-tts-server-plugin) and a series of public TTS servers, provided by OVOS community members, to send speech to your device.  If you host your own TTS server, or this option is not acceptiable to you, there are many other options to use.
 
 ## List of TTS plugins

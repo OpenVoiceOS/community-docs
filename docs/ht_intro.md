@@ -5,7 +5,7 @@ This section is provided as a basic QnA for common questions.
 
 [How do I - TTS](ht_tts.md)
 
-[How do I - STT](ht_stt.md)
+[How do I - Listener](ht_listener_intro.md)
 
 [How do I - WakeWord](ht_ww.md)
 

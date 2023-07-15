@@ -34,35 +34,24 @@ nav:
             - Configuring: ht_skills_config.md
         - TTS: ht_tts.md
             - Configuring: ht_tts_config.md
-        - STT: ht_stt.md
-        - WakeWord: ht_ww.md
-        - HotWords: ht_hw.md
+        - Listener: ht_listener_intro.md
+            - Microphone: ht_mic.md
+            - STT: ht_stt.md
+            - WakeWord/HotWords: ht_ww.md
         - PHAL: ht_phal.md
-        - Custom Services: ht_services.md
-    - Additional Components:
-        - Installing Skills: install_skills.md
-        - Installing PHAL Plugins: PHAL.md
-    - Configuration:
-        - OVOS Core Configuration: config_ovos_core.md
-        - OVOS Config Assistant: config_oca.md
-        - Homescreen Configuration: config_homescreen.md
-        - Backend Configuration: config_backend.md
-        - GUI Configuration: config_gui.md
-        - Skill Configuration: config_skills.md
-        - Changing the Wake Word: config_wake_word.md
-        - OpenVoiceOS Security: config_security.md
+        - Homescreen:
+            - Configuration: ht_config_homescreen.md
+        - OpenVoiceOS Security: ht_config_security.md
     - Additional Services:
         - Selene Backend: selene_backend.md
         - Personal Backend: personal_backend.md
         - KDE Connect: kdeconnect.md
-        - Speech to Text backends: stt_backends.md
-        - Text to Speech backends: tts_backends.md
     - Images:
         - Introduction: images_intro.md
         - Buildroot: images_buildroot.md
-        - Manjaro: images_manjaro.md
         - Raspbian: install_raspbian.md
     - Other Builds:
+        - Manjaro: images_manjaro.md
         - Mycroft: mycroft.md
         - NeonOS: neonos.md
     - Troubleshooting:
@@ -78,7 +67,6 @@ nav:
           - Troubleshooting Skills: troubleshooting_skills.md
           - Troubleshooting Plugins: troubleshooting_plugins.md
     - HOWTO:
-          - Howto secure ssh: howto_secure_ssh.md
           - Develop OCP (Media) skills: dev_ocp_skill.md
     - Appendix:
         - Glossary: glossary.md
@@ -86,16 +74,4 @@ nav:
         - Compatibility: compat.md
         - License: license.md
         - Friends: friends.md
-        - Images: images.md
-    - Move Me:
-        - Backend: arch_backend.md
-        - APIs: arch_apis.md
-        - Skills: arch_skills.md
-        - Statements: statements.md
-    - Installation:
-        - Installation Introduction: install_intro.md
-        - Install OVOS Image: install_ovos_images.md
-        - Install OVOS Core: install_ovos_core.md
-        - Install OVOS Docker: install_ovos_docker.md
-        - Starting OVOS: starting_ovos.md
 theme: readthedocs

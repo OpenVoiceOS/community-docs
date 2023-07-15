@@ -1,7 +1,7 @@
 # How do I - STT
 STT (Speech to Text) is what converts your voice into commands that OVOS recognizes and converts them to an intent that is used to activate skills.
 
-There are several STT engines avaliable to use with OVOS and uses [ovos-stt-plugin-server](https://github.com/OpenVoiceOS/ovos-stt-plugin-server) and a list of public servers hosted by OVOS community members.
+There are several STT engines avaliable and OVOS uses [ovos-stt-plugin-server](https://github.com/OpenVoiceOS/ovos-stt-plugin-server) and a list of public servers hosted by OVOS community members by default.
 
 ## List of STT plugins
 

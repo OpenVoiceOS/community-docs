@@ -2,6 +2,15 @@
 This section will help you to understand what a skill is and how to install and use skills with OVOS
 
 ## Finding Skills
+OVOS official skills can be found on [PyPi](https://pypi.org/search/?q=ovos+skill) and the latest stable version can be installed with a `pip install` command.
+
+`pip install ovos-skill-naptime`
+
+If you have issues installing with this command, you may need to use the `alpha` versions.  Pip has a command line flag for this `--pre`
+
+`pip install --pre ovos-skill-naptime`
+
+will install the latest `alpha` version.  This should fix dependency issues with the stable versions.
 
 Most skills are found throughout github.  The official skills can be found with a simple search in the [OVOS github page](https://github.com/orgs/OpenVoiceOS/repositories?q=skill&type=all&language=&sort=).  There are a few other places they can be found. [Neon AI](https://github.com/NeonGeckoCom) has several skills, and a search through github will for sure find more.
 

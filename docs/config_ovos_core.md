@@ -1,6 +1,6 @@
 # Configuration
 
-ovos-core reads from several config files and is able to combine them into one main configuration to be used by all to the OVOS modules.
+ovos-core reads from several config files and is able to combine them into one main configuration to be used by all of the OVOS modules.
 
 The default configuration is locatated at `<python install directory>/site-packages/ovos-config/mycroft/mycroft.conf`
 

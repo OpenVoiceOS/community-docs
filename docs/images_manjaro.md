@@ -1,4 +1,5 @@
 # ovos-image-arch-recipe
+**NOTE** This repo has been archived and will no longer be updated
 
 Make a manjaro based OpenVoiceOS image
 
