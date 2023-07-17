@@ -1,9 +1,11 @@
 # OpenVoiceOS Architecture
-**This section can be a bit technical, but is included for refrence**
+**This section can be a bit technical, but is included for reference.** It is not necessary to read this section for day-to-day usage of OVOS.
 
-OVOS is a collection of modular services that work together to provide a seamless, private, open source voice assistant.  Every OVOS service runs as an indivudually and interacts with one another.
+OVOS is a collection of modular services that work together to provide a seamless, private, open source voice assistant.  Every OVOS service runs individually and interacts with the other avaliable services.
 
-The suggested way to start OVOS is with systemd service files.  Most of the supported images run these services as a normal `user` instead of system wide.  If you get and error when using the system files, try using it as a system service.
+The suggested way to start OVOS is with systemd service files.  Most of the supported images run these services as a normal `user` instead of system wide.  If you get an error when using the system files, try using it as a system service.
+
+**NOTE** The `ovos.service` is just a wrapper to control the other OVOS services.  It is used here as an example showing `--user` vs `system`.
 
 - user service
   - `systemctl --user status ovos.service`
@@ -15,28 +17,30 @@ https://github.com/OpenVoiceOS/ovos-core
 
 This service provides the main instance for OVOS and handles all of the skill loading, and intent processing.
 
-All user queries are handled by the skills service, you can think of it as OVOS's brain
+All user queries are handled by the skills service.  You can think of it as OVOS's brain
 
 typical systemd command
 
 `systemctl --user status ovos-skills`
 
+`systemctl --user restart ovos-skills`
+
 [Technical Docs on Skills](https://openvoiceos.github.io/ovos-technical-manual/skills_service/)
 
 ## Messagebus
-https://github.com/OpenVoiceOS/ovos-messagebus
+[ovos-messagebus](https://github.com/OpenVoiceOS/ovos-messagebus)
 
 C++ version
 
-**NOTE** This is an `alpha` version and mostly `Proof of Concept`.  It has been known to crash often
+**NOTE** This is an `alpha` version and mostly `Proof of Concept`.  It has been known to crash often.
 
-https://github.com/OpenVoiceOS/ovos-bus_service
+[ovos-bus-service](https://github.com/OpenVoiceOS/ovos-bus_service)
 
 The bus service provides a websocket where all internal events travel
 
 You can think of the bus service as OVOS's nervous system
 
-The mycroft-bus is considered an internal and private websocket, **external clients should not connect directly to it.**
+The mycroft-bus is considered an internal and private websocket, **external clients should not connect directly to it.  Please do not expose the messagebus to the outside world!**
 
 [Technical docs for messagebus](https://openvoiceos.github.io/ovos-technical-manual/bus_service/)
 
@@ -45,9 +49,9 @@ typical systemd command
 `systemctl --user start ovos-messagebus`
 
 ## Listener
-https://github.com/OpenVoiceOS/ovos-dinkum-listener
+[ovos-dinkum-listener](https://github.com/OpenVoiceOS/ovos-dinkum-listener)
 
-The listener service is used to detect your voice.  It controlls the WakeWord, STT (Speech To Text), and VAD Plugins.  You can modify microphone settings and enable additional features under the listener section such as wake word / utterance recording / uploading
+The listener service is used to detect your voice.  It controls the WakeWord, STT (Speech To Text), and VAD (Voice Activity Detection) Plugins.  You can modify microphone settings and enable additional features under the listener section such as wake word / utterance recording / uploading
 
 The [ovos-dinkum-listener](https://github.com/OpenVoiceOS/ovos-dinkum-listener) is the new OVOS listener that replaced the origional [ovos-listener](https://github.com/OpenVoiceOS/ovos-listener) and has many more options.  Others still work, but are not recommended.
 
@@ -61,11 +65,11 @@ typical systemd command
 
 This is where speech is transcribed into text and forwarded to the skills service.
 
-Two STT plugins may be loaded at once, if the primary plugin fails for some reason the second plugin will be used.
+Two STT plugins may be loaded at once.  If the primary plugin fails for some reason the second plugin will be used.
 
-This allows you to have a lower accuracy offline model as fallback to account for internet outages, this ensures your device never becomes fully unusable.
+This allows you to have a lower accuracy offline model as fallback to account for internet outages, which ensures your device never becomes fully unusable.
 
-Several different STT (Speech To Text) Plugins are avaliable for use.  OVOS provides a number of public servers using the [ovos-stt-plugin-server](https://github.com/OpenVoiceOS/ovos-stt-plugin-server) plugin and are hosted by OVOS contributors.  No additional configuration is required.
+Several different STT (Speech To Text) Plugins are available for use.  OVOS provides a number of public servers using the [ovos-stt-plugin-server](https://github.com/OpenVoiceOS/ovos-stt-plugin-server) plugin and are hosted by OVOS trusted members [(Members hosting services)](members.md#Members-hosting-services).  No additional configuration is required.
 
 [OVOS Supported STT Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-stt-plugin&type=all&language=&sort=)
 
@@ -79,13 +83,11 @@ A WakeWord is what OVOS uses to activate the device.  By default `Hey Mycroft` i
 
 [OVOS Supported WakeWord Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-ww-plugin&type=all&language=&sort=)
 
-**TODO** Fix link to change ww
-
-[Changing the WakeWord](change-ww.md)
+[Changing the WakeWord](ht-ww.md)
 
 #### HotWords
 
-OVOS allows you to load any number of hot words in parallel and trigger different actions when they are detected
+OVOS allows you to load any number of hot words in parallel and trigger different actions when they are detected.
 
 each hotword can do one or more of the following:
 
@@ -103,6 +105,8 @@ each hotword can do one or more of the following:
 
 VAD Plugins serve to detect when you are actually speaking to the device, and when you quit talking.
 
+Typicaly, unless you are having issues with your device hearing you, this plugin does not need changed.
+
 [OVOS Supported VAD Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-vad-plugin&type=all&language=&sort=)
 
 **TODO** fix link to vad stuff
@@ -113,7 +117,7 @@ VAD Plugins serve to detect when you are actually speaking to the device, and wh
 
 https://github.com/OpenVoiceOS/ovos-audio
 
-The audio service handles the output of of all audio. It is how you hear the voice responses, music, or any other noise from your OVOS device.
+The audio service handles the output of all audio. It is how you hear the voice responses, music, or any other sound from your OVOS device.
 
 [Configuring Audio](audio_conf.md)
 
@@ -121,7 +125,7 @@ The audio service handles the output of of all audio. It is how you hear the voi
 
 TTS (Text To Speech) is the verbal response from OVOS.  There are several plugins avaliable that support different engines.  Multiple languages and voices are avaliable to use
 
-OVOS provides a set of public TTS servers hosted by community members.  It uses the [ovos-tts-server-plugin](https://github.com/OpenVoiceOS/ovos-tts-server-plugin), and no additional configuration is needed.
+OVOS provides a set of public TTS servers hosted by OVOS trusted members [(Members hosting services)](members.md#Members-hosting-services).  It uses the [ovos-tts-server-plugin](https://github.com/OpenVoiceOS/ovos-tts-server-plugin), and no additional configuration is needed.
 
 [Supported TTS Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-tts-plugin&type=all&language=&sort=)
 
@@ -133,8 +137,7 @@ OVOS provides a set of public TTS servers hosted by community members.  It uses 
 
 https://github.com/OpenVoiceOS/ovos-PHAL
 
-PHAL stands for Plugin based Hardware Abstraction Layer and is used to allow access of different hardware devices to use the OVOS software stack.  It completely replaces the
-concept of hardcoded "enclosure" from mycroft-core.
+PHAL stands for **Plugin based Hardware Abstraction Layer.**  It is used to allow access of different hardware devices acess to use the OVOS software stack.  It completely replaces the concept of hardcoded "enclosure" from mycroft-core.
 
 Any number of plugins providing functionality can be loaded and validated at runtime, plugins can
 be [system integrations](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system) to handle things like reboot and

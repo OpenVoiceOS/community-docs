@@ -71,4 +71,5 @@ nav:
         - Compatibility: compat.md
         - License: license.md
         - Friends: friends.md
+        - OVOS Members: members.md
 theme: readthedocs

@@ -27,7 +27,7 @@ Once you have an image downloaded, it needs to be flashed to a boot device.
 
 ### Decompress the image
 
-The Buildroot image is compressed in `.xz` format and needs decompressed before it can be flashed.
+The Buildroot image is compressed in `.xz` format and the raspbian image is in `.zip` format and both need decompressed before it can be flashed.
 
 **Windows**
 
@@ -35,7 +35,7 @@ Use `winzip` or `7-zip` to decompress the image.
 
 **Linux**
 
-Use `gunzip` to decompress the image.
+Use `gunzip` to decompress `.xz` compressed images and `unzip` to decompress `.zip` images.
 
 The resulting file should end in `.img` and is now ready fot flash to a device.
 

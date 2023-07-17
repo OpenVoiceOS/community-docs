@@ -14,11 +14,8 @@ Please [open Issues](https://github.com/OpenVoiceOS/community-docs/issues) [and 
 Check out our [Quick Start Guide](quick_start.md) for help with installing an image, your first boot, and basic configuration.
 
 ## Getting Involved
-
-This is an open source project. We would love your help. We have prepared a [contributing](contributing.md) guide to help you get started.
-
 If this is your first experience with OpenVoiceOS, or you're not sure where to get started,
-say hi in [OpenVoiceOS Chat](https://matrix.to/#/!XFpdtmgyCoPDxOMPpH:matrix.org?via=matrix.org) and a team member would be happy to mentor you.
+say hi in [OpenVoiceOS Chat](https://matrix.to/#/#openvoiceos-support:matrix.org) and a team member would be happy to mentor you.
 Join the [Discussions](https://github.com/OpenVoiceOS/OpenVoiceOS/discussions) for questions and answers.
 
 ## Links

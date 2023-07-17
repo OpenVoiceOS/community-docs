@@ -42,8 +42,7 @@ There are several HAT's that are avaliable, some with just a microphone, others 
   - 2/4/6/8 mic boards (Works native with Buildroot image.  Others needs configuration)
 - AIY VoiceHat V1 (Works with `/boot/config.txt` modification)
 - AIY VoiceBonnet V2 (Works with custom driver update and `/boot/config.txt` modification)
-
-[Audio Troubleshooting - HATs](troubleshooting_audio.md#hats)
+- [Audio Troubleshooting - HATs](troubleshooting_audio.md#hats)
 
 ## Specialty Hardware
 Some special sound boards are also supported.
@@ -51,11 +50,9 @@ Some special sound boards are also supported.
 - SJ201 sound board (Mark 2 sound board)
   - Buildroot Native support
   - Supported on other devices with manual install of drivers
-
-[Audio Troubleshooting - SJ201](troubleshooting_audio.md#sj201)
+  - [Audio Troubleshooting - SJ201](troubleshooting_audio.md#sj201)
 
 - Mark 1 custom sound board
   - (Native support - raspbian-ovos mark1 image)
   - Other device support with `/boot.config.txt` modification
-
-[Audio Troubleshooting - Mark 1](troubleshooting_audio.md#mk1)
+  - [Audio Troubleshooting - Mark 1](troubleshooting_audio.md#mk1)
