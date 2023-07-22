@@ -4,7 +4,8 @@ nav:
     - Home:
         - Introduction: index.md
         - About: about.md
-        - Supported Hardware: hardware.md
+        - Supported Hardware: 
+            - Introduction: hardware.md
             - Audio: hardware_audio.md
             - Video: hardware_video.md
         - OpenVoiceOS Architecture: architecture.md
@@ -29,13 +30,16 @@ nav:
         - Manualy Editing Files: config_manual_config.md
     - How To:
         - Introduction: ht_intro.md
-        - Skills: ht_skills.md
+        - Skills:
+            - Introduction: ht_skills.md
             - Installing Skills: ht_skills_install.md
             - Configuring: ht_skills_config.md
-        - TTS: ht_tts.md
+        - TTS: 
+            - Introduction: ht_tts.md
             - Configuring: ht_tts_config.md
             - Change Your Assistant's Voice: ht_change_voice.md
-        - Listener: ht_listener_intro.md
+        - Listener: 
+            - Introduction: ht_listener_intro.md
             - Microphone: ht_mic.md
             - STT: ht_stt.md
             - WakeWord/HotWords: ht_ww.md
