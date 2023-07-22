@@ -1,14 +1,14 @@
 # OVOS Listener - WakeWords / HotWords
-OVOS uses "wakewords" to activate the system.  This is what "hey Google" or "alexa" is on propitary devices.  By default, OVOS uses the wakeword "hey Mycroft".
+OVOS uses "wakewords" to activate the system.  This is what "hey Google" or "Alexa" is on proprietary devices.  By default, OVOS uses the WakeWord "hey Mycroft".
 
-OVOS "hotwords" is the configuration section to specify what the wakewords do.  Multiple "hotwords" can be used to do a variety of things from putting OVOS into active listening mode, a WakeWord like "hey Mycroft", to issueing a command such as "stop" or "wake up"
+OVOS "hotwords" is the configuration section to specify what the WakeWord do.  Multiple "hotwords" can be used to do a variety of things from putting OVOS into active listening mode, a WakeWord like "hey Mycroft", to issuing a command such as "stop" or "wake up"
 
-As with everything else, this too can be changed, and several plugins are avaliable.  Some work better than others.
+As with everything else, this too can be changed, and several plugins are available.  Some work better than others.
 
 ## List of OVOS WakeWord Plugins
 | Plugin                                 | Type     | Description                           |
 |----------------------------------------|----------|----------------------------|
-| [ovos-ww-plugin-precise-lite](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-lite) | Model | The most accurate plugin avaliable as it uses [pretrained models](https://github.com/OpenVoiceOS/precise-lite-models) and [community models](https://github.com/OpenVoiceOS/ovos-ww-community-dataset) are avaliable also |
+| [ovos-ww-plugin-precise-lite](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-lite) | Model | The most accurate plugin available as it uses [pretrained models](https://github.com/OpenVoiceOS/precise-lite-models) and [community models](https://github.com/OpenVoiceOS/ovos-ww-community-dataset) are available also |
 | [ovos-ww-plugin-openWakeWord](https://github.com/OpenVoiceOS/ovos-ww-plugin-openWakeWord) | Model | Uses [openWakeWord](https://www.github.com/dscripka/openwakeword) for detection |
 | [ovos-ww-plugin-vosk](https://github.com/OpenVoiceOS/ovos-ww-plugin-vosk) | Full Word | Uses full word detection from a loaded model. |
 | [ovos-ww-plugin-pocketsphinx](https://github.com/OpenVoiceOS/ovos-ww-plugin-pocketsphinx) | Phonomes | Probably the least accurate, but can be used on almost any device |

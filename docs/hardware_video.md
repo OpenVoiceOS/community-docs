@@ -2,7 +2,7 @@
 
 ## Display
 
-If your device supports video out, you can use a screen on your device. (RPI3/3b/3b+ will not run a GUI due to lack of processing power, but you can access your device on a locally connected screen)
+If your device supports video out, you can use a screen on your device. (RPI3/3b/3b+ will not the OVOS GUI, [ovos-shell](https://github.com/OpenVoiceOS/ovos-shell), due to lack of processing power, but you can access a command prompt on a locally connected screen)
 
 ## Touchscreens
 

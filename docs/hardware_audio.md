@@ -2,9 +2,9 @@
 
 Recommendations and notes on speakers and microphones
 
-Most audio devices are avaliable to use with the help of Plugins and should for the most part work by default.
+Most audio devices are available to use with the help of Plugins and should for the most part work by default.
 
-If your device does not work, pop in to our [matrix support channel](https://app.element.io/#/room/#openvoiceos-support:matrix.org), please create an [issue](https://github.com/OpenVoiceOS/ovos-dinkum-listener/issues) or start a [discussion](https://github.com/orgs/OpenVoiceOS/discussions) about your device.
+If your device does not work, pop in to our [Matrix support channel](https://app.element.io/#/room/#openvoiceos-support:matrix.org), please create an [issue](https://github.com/OpenVoiceOS/ovos-dinkum-listener/issues) or start a [discussion](https://github.com/orgs/OpenVoiceOS/discussions) about your device.
 
 ## USB
 Most USB devices should work without any issues.  But, not all devices are created equally.
@@ -18,9 +18,10 @@ Most USB devices should work without any issues.  But, not all devices are creat
 - Speakers
   - Generic USB Speakers (Works without issue, but sound quality varies)
 - Cameras
-  - Generic webcam (Works, but is not guarenteed to work with some camera skills)
+  - Generic webcam (Works, but is not guaranteed to work with some camera skills)
   - PS3 Eye (Same as Generic webcam)
   - Kinect V1 (Same as Generic webcam)
+  - [Andrea Electronics C1-1028100-3](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/get-mycroft/picroft#tested-hardware) 
 
 [Audio Troubleshooting - USB](troubleshooting_audio.md#USB)
 
@@ -34,10 +35,10 @@ Analog output to headphones, or external speakers should work also.  There may b
 
 [Audio Troubleshooting - Analog](troubleshooting_audio.md#analog)
 
-## Raspberry Pi HAT's
-There are several HAT's that are avaliable, some with just a microphone, others that play audio out also.  Several are supported and tested, others should work with the proper configuration.
+## Raspberry Pi HATs
+There are several HAT's that are available, some with just a microphone, others that play audio out also.  Several are supported and tested, others should work with the proper configuration.
 
-### Tested RPi HAT's
+### Tested RPi HATs
 - Respeaker
   - 2/4/6/8 mic boards (Works native with Buildroot image.  Others needs configuration)
 - AIY VoiceHat V1 (Works with `/boot/config.txt` modification)

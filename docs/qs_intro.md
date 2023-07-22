@@ -1,11 +1,11 @@
 # OVOS Quick Start Guide - Get an image
 
-So you just want to give OVOS a go.  This quick start will help get an OVOS image installed and running on your Raspberry PI.
+So you just want to give OVOS a try?  This quick start will help get an OVOS image installed and running on your Raspberry Pi.
 
-**NOTE** The GUI will not reliably run on a RPi3 and is therefore not recomended for that device.
+**NOTE** The GUI will not reliably run on a RPi3 and is therefore not recommended for that device.
 
 ## Download an OVOS image
-OVOS provides a couple of different images specificaly for the Raspberry Pi.
+OVOS provides a couple of different images specifically for the Raspberry Pi.
 
 ### Buildroot Latest Image
 
@@ -23,11 +23,11 @@ OVOS also provides a "Headless" image that is similar to the origional `picroft`
 
 Once you have an image downloaded, it needs to be flashed to a boot device.
 
-**NOTE** If you have a Raspberry Pi 4 we recommend to use a good USB3.1 device or better, a USB3 SSD. If you have a Raspberry Pi 3, use a proper sdcard. (From fast to slow: SSD - USB3.1 - sdcard - USB2)
+**NOTE** If you have a Raspberry Pi 4 we recommend to use a good USB3.1 device or better, a USB3 SSD. If you have a Raspberry Pi 3, use a proper SD card. (From fast to slow: SSD - USB3.1 - SD card - USB2)
 
 ### Decompress the image
-
-The Buildroot image is compressed in `.xz` format and the raspbian image is in `.zip` format and both need decompressed before it can be flashed.
+Some image writing methods, `dd`, may require your file be decompressed.  Others, BalenaEtcher for example, can use a compressed image.
+The Buildroot image is compressed in `.xz` format and the raspbian image is in `.zip` format.
 
 **Windows**
 
@@ -37,13 +37,11 @@ Use `winzip` or `7-zip` to decompress the image.
 
 Use `gunzip` to decompress `.xz` compressed images and `unzip` to decompress `.zip` images.
 
-The resulting file should end in `.img` and is now ready fot flash to a device.
+The resulting file should end in `.img` and is now ready to flash to a device.
 
 ### Flashing Software
 
-Flashing your image to your sdcard or USB drive is not different from flashing any other image. For the non-technical users we advise to use the flashing utility, [Raspberry Pi Imager](https://www.raspberrypi.com/software/) from the Raspberry Pi Foundation.  It is avaliable for both Windows and Linux.
-
-**NOTE** There have been issues when using Raspberry Pi Imager to burn pre-built images. From Linux we have had success starting the imager with the command `sudo raspi-imager`.
+Flashing your image to your SD card or USB drive is not different from flashing any other image. For the non-technical users we advise to use the flashing utility, [Raspberry Pi Imager](https://www.raspberrypi.com/software/) from the Raspberry Pi Foundation.  It is available for Windows, Mac OS, and Linux.
 
 - Start up the Raspberry Pi Imager.  On Linux, start Raspberry Pi Imager with "**sudo** raspi-imager".
 - For "Choose OS", select "Use custom" and select the OVOS/PI image file downloaded from the OpenVoiceOS Downloads Site.
@@ -60,4 +58,4 @@ Upon completion, you should have a bootable SD card or USB drive.
 - It should be visible as `sdxx`
 - Write the unzipped image to the disk `sudo dd if=<path-to-unzipped-image> of=<path-to-sd-card> bs=4M status=progress`
 
-No matter what method your used, upon completion, you should have a bootable SD card or USB drive.
+No matter what method you used, upon completion, you should have a bootable SD card or USB drive.

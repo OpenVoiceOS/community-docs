@@ -34,10 +34,12 @@ nav:
             - Configuring: ht_skills_config.md
         - TTS: ht_tts.md
             - Configuring: ht_tts_config.md
+            - Change Your Assistant's Voice: ht_change_voice.md
         - Listener: ht_listener_intro.md
             - Microphone: ht_mic.md
             - STT: ht_stt.md
             - WakeWord/HotWords: ht_ww.md
+            - VAD: ht_vad.md
         - PHAL: ht_phal.md
         - Homescreen:
             - Configuration: ht_config_homescreen.md

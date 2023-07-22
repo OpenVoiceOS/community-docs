@@ -4,7 +4,7 @@
 
 Prebuilt images come with a default set of skills installed, including, but not limited to the date/time, and weather.  Give them a shot.
 
-Speak these commands and enjoy the spoils
+Speak these commands and enjoy the spoils:
 
 `Hey Mycroft, what time is it?`
 
@@ -14,17 +14,17 @@ Speak these commands and enjoy the spoils
 
 `Hey Mycroft, will it rain today?`
 
-While there are several default skills installed, there are many more avaliabe to be used.  The link below will show you how to find and install more skills.
+While there are several default skills installed, there are many more available to be used.  The link below will show you how to find and install more skills.
 
 [Installing Skills](ht_skills.md)
 
 But wait, there's more!!
 
-OVOS is highly configurable, and uses a file in either `json` or `yaml` format to provide these options.  While in most cases, OVOS should just work, sometimes you either need to, or want to change some options.
+OVOS is highly configurable, and uses a file in either `JSON` or `YAML` format to provide these options.  While in most cases, OVOS should just work, sometimes you either need to, or want to change some options.
 
 [OVOS Configuration](config.md)
 
-OVOS ships with a default TTS (Text to Speech) engine which speaks in the origional `Alan-Pope` voice that Mycroft used.  There are MANY more to choose from.  The following link will help you choose and configure a different voice for your assistant.
+OVOS ships with a default TTS (Text to Speech) engine which speaks in the original `Alan-Pope` voice that Mycroft used.  There are MANY more to choose from.  The following link will help you choose and configure a different voice for your assistant.
 
 [Configuring TTS](ht_tts.md)
 
@@ -32,14 +32,14 @@ Your device does not understand your voice when you speak?  There are options fo
 
 [Changing STT](ht_stt.md)
 
-Your OVOS assistant uses a "wake word" which lets it know it is time to start listening to your commands.  By default, the phrase to wake OVOS is `Hey Mycroft`.  This, like most things in OVOS is totally configurable.  Follow the link to learn more.
+Your OVOS assistant uses a "wake word" which lets it know it is time to start listening to your commands.  By default, the phrase to wake OVOS is `Hey Mycroft`.  This, like most things in OVOS, is totally configurable.  Follow the link to learn more.
 
 [Changing the Wake Word](ht_ww.md)
 
-PHAL plugins allow OVOS to interact with the underlying hardware and operating system.  Several are avaliabe, and may be installed and run together.
+PHAL plugins allow OVOS to interact with the underlying hardware and operating system.  Several are available, and may be installed and run together.
 
 [Configuring PHAL](ht_phal.md)
 
-OVOS ships with default services avaliabe to the public to use.  These include public TTS and STT servers, a weather API provided by [link to weather provider](#), access to Wolfram, and more.  Part of being an open and private system, you can also change these to your own prefrences.
+OVOS ships with default services available to the public to use.  These include public TTS and STT servers, a weather API provided by [OpenMeteo](https://openmeteo.com/), access to Wolfram, and more.  Since OVOS is an open and private system, you can also change these to your own preferences.
 
 [Install your own Services](#) **WIP**

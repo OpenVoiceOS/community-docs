@@ -1,11 +1,23 @@
 # Starting OVOS - systemd
-OVOS being a modular system has several pieces that can start individually.
+OVOS, being a modular system, has several pieces that can start individually.
 
-user systemd service files are the recomended way to start each module, but may be started in other ways also.
+The OVOS team suggests doing this in a `virtual environment`.  While not necessary, it can keep dependency problems in a running system from conflicting with one another.
 
-This is the prefered method to start the OVOS modules.  If you have not used `systemd` before, there is a lot of refrence on the web with more information.  It is out of scope of this document.  The following is assuming the user `ovos` is being used.
+### Starting a Virtual Environment
+We will assume that you are starting from your home directory.
+Enter the following commands into a shell terminal.
+```
+python -m venv .venv
 
-A `systemd service` file and a `systemd hook` file is required for this to work.  We will create both files for the `ovos-messagebus` service because this is used by all other modules.  The provided `system hook` files need another python package `sdnotify` to work as written.
+. .venv/bin/activate
+```
+After a couple of seconds, your command prompt will change with `(.venv)` being at the front.
+ nn
+User `systemd` service files are the recommended way to start each module.  Other methods exist, such as using the modules as a python library, but are advanced topics and not discussed here.
+
+This is the preferred method to start the OVOS modules.  If you have not used `systemd` before, there are many references on the web with more information.  It is out of scope of this document.  The following is assuming the user `ovos` is being used.
+
+A `systemd service` file and a `systemd hook` file is required for this to work.  We will create both files for the `ovos-messagebus` service because this is used by all other modules.  The provided `system hook` files need another Python package `sdnotify` to work as written.
 
 `pip install sdnotify`
 
@@ -119,3 +131,13 @@ Now on every reboot, the OVOS system should start automatically.
 **NOTE** the systemd service and hook files are examples used in the [raspbian-ovos](https://github.com/OpenVoiceOS/raspbian-ovos) repository.
 
 For each module that needs to be started, they should have similar `service` and `hook` files.
+
+For a complete system the following need to be running.
+- [ovos-messagebus.service](https://github.com/OpenVoiceOS/raspbian-ovos/tree/dev/stage-core/02-messagebus/files)
+- [ovos-skills.service](https://github.com/OpenVoiceOS/raspbian-ovos/tree/dev/stage-core/01-ovos-core/files)
+- [ovos-audio.service](https://github.com/OpenVoiceOS/raspbian-ovos/tree/dev/stage-audio/01-speech/files)
+- [ovos-dinkum-listener.service](https://github.com/OpenVoiceOS/raspbian-ovos/tree/dev/stage-audio/02-voice/files)
+- [ovos-phal.service](https://github.com/OpenVoiceOS/raspbian-ovos/tree/dev/stage-phal/01-user/files)
+
+The `ovos-admin-phal.service` need to run as a system service or with the user `root`
+- [ovos-admin-phal.service](https://github.com/OpenVoiceOS/raspbian-ovos/tree/dev/stage-phal/02-admin/files)

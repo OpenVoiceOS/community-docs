@@ -3,7 +3,7 @@ Being a modular system has the advantage of being able to start with several dif
 
 If you installed an image, your device is already pre-configured to start all of the services automatically.
 
-At the time of this writing, both images use systemd service files to start, restart, and stop each OVOS module.
+As of July 2023, both the Buildroot image, and the Rasbpian image, use systemd service files to start, restart, and stop each OVOS module.
 
 Typical command to restart the OVOS stack
 

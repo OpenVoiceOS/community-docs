@@ -22,16 +22,16 @@ If your file is empty, or does not have a `"stt"` section, you need to create it
 }
 ```
 
-By default, the default language that is configured with OVOS will be used, but should (WIP), detect the spoken language and convert it as necessasary.
+By default, the language that is configured with OVOS will be used, but should (WIP), detect the spoken language and convert it as necessary.
 
 ## Sections explained
 
-`"module"` - This is where you specify what TTS module to use.
+`"module"` - This is where you specify what STT module to use.
 
-`"fallback_module"` - If by chance your first TTS engine fails, OVOS will try to use this one.  It is usually configured to use an `on device` engine so that you always have some output even if you are disconnected from the internet.
+`"fallback_module"` - If by chance your first STT engine fails, OVOS will try to use this one.  It is usually configured to use an `on device` engine so that you always have some output even if you are disconnected from the internet.
 
 `"ovos-tts-server-plugin"`
 
 `"ovos-tts-plugin-piper"` - Specify specific plugin settings here.  Multiple entries are allowed.  If an empty dict is provided, `{}`, the plugin will use its default values.
 
-Refer to the STT plugin github repository for specifications on each plugin
+Refer to the STT plugin GitHub repository for specifications on each plugin

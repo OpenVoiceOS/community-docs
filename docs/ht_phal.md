@@ -1,18 +1,15 @@
 # OVOS PHAL
-[PHAL](https://github.com/OpenVoiceOS/ovos_PHAL) is our Platform/Hardware Abstraction Layer, it completely replaces the
-concept of hardcoded "enclosure" from mycroft-core
+[PHAL](https://github.com/OpenVoiceOS/ovos_PHAL) is our Platform/Hardware Abstraction Layer, it completely replaces the concept of hardcoded "enclosure" from `mycroft-core`.
 
 Any number of plugins providing functionality can be loaded and validated at runtime, plugins can
-be [system integrations](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system) to handle things like reboot and
-shutdown, or hardware drivers such as [mycroft mark2 plugin](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk2)
+be [system integrations](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system) to handle things like reboot and shutdown, or hardware drivers such as [Mycroft Mark 2 plugin](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk2).
 
-PHAL plugins can perform actions such as hardware detection before loading, eg, the mark2 plugin will not load if it
-does not detect the sj201 hat. This makes plugins safe to install and bundle by default in our base images
+PHAL plugins can perform actions such as hardware detection before loading, eg, the mark2 plugin will not load if it does not detect the sj201 hat. This makes plugins safe to install and bundle by default in our base images.
 
 
 ## Plugins
 
-Platform/Hardware specific integrations are loaded by PHAL, these plugins can handle all sorts of system activities
+Platform/Hardware specific integrations are loaded by PHAL, these plugins can handle all sorts of system activities.
 
 | Plugin                                                                                                            | Description                          |
 |-------------------------------------------------------------------------------------------------------------------|--------------------------------------|
@@ -43,13 +40,12 @@ AdminPHAL performs the exact same function as PHAL, but plugins it loads will ha
 
 This service is intended for handling any OS-level interactions requiring escalation of privileges. Be very careful when installing Admin plugins and scrutinize them closely
 
-NOTE: Because this service runs as root, plugins it loads are responsible for not writing
-configuration changes which would result in breaking config file permissions.
+NOTE: Because this service runs as root, plugins it loads are responsible for not writing configuration changes which would result in breaking config file permissions.
 
 ### Admin Plugins
 
-AdminPlugins are just like regular PHAL plugins that run with `root` privileges
+AdminPlugins are just like regular PHAL plugins that run with `root` privileges.
 
-Admin plugins will only load if their configuration contains `"enabled": true`. All admin plugins need to be explicitly enabled
+Admin plugins will only load if their configuration contains `"enabled": true`. All admin plugins need to be explicitly enabled.
 
-You can find plugin packaging documentation [here](https://openvoiceos.github.io/community-docs/OPM/#packaging)
+You can find plugin packaging documentation [here](https://openvoiceos.github.io/community-docs/OPM/#packaging).

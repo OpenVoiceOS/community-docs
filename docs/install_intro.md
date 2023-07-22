@@ -2,11 +2,11 @@
 
 [OpenVoiceOS](https://openvoiceos.org/) is an open source platform for smart speakers and other voice-centric devices.
 
-ovos-core is a backwards-compatible descendant of [Mycroft-core](https://github.com/MycroftAI/mycroft-core), the central component of Mycroft. It contains extensions and features not present upstream.
+`ovos-core` is a backwards-compatible descendant of [Mycroft-core](https://github.com/MycroftAI/mycroft-core), the central component of Mycroft. It contains extensions and features not present upstream.
 
 All Mycroft Skills and Plugins should work normally with OVOS-core. 
 
-ovos-core is fully modular. Furthermore, common components have been repackaged as plugins. That means it isn't just a great assistant on its own, but also a pretty small library!
+`ovos-core` is fully modular. Furthermore, common components have been repackaged as plugins. That means it isn't just a great assistant on its own, but also a pretty small library!
 
 ## Getting Started
 
@@ -27,7 +27,7 @@ The easiest and fastest way to experience what OVOS has to offer is to use one o
 
 ### From source as a library
 
-Images are not the only way to use OVOS, it can be installed on almost any system as a set of python libraries. ovos-core is very modular, depending on where you are running ovos-core you may want to run only a subset of the services
+Images are not the only way to use OVOS.  It can be installed on almost any system as a set of Python libraries. `ovos-core` is very modular; depending on where you are running `ovos-core` you may want to run only a subset of the services
 
 This is an advanced setup and requires access to a command shell and can take more effort to get working.
 

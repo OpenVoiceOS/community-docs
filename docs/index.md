@@ -2,7 +2,7 @@
 
 ![](https://github.com/OpenVoiceOS/ovos_assets/blob/master/Logo/ovos-logo-512.png?raw=true)
 
-the OVOS project documentation is written and maintained by users just like you!
+The OVOS project documentation is written and maintained by users just like you!
 
 These documents are your starting point for installing and using OpenVoiceOS software
 
@@ -11,7 +11,7 @@ These documents are your starting point for installing and using OpenVoiceOS sof
 Please [open Issues](https://github.com/OpenVoiceOS/community-docs/issues) [and Pull Requests](https://github.com/OpenVoiceOS/community-docs/pulls)!
 
 ## Just want to get started with OVOS?
-Check out our [Quick Start Guide](quick_start.md) for help with installing an image, your first boot, and basic configuration.
+Check out our [Quick Start Guide](qs_intro.md) for help with installing an image, your first boot, and basic configuration.
 
 ## Getting Involved
 If this is your first experience with OpenVoiceOS, or you're not sure where to get started,
@@ -24,7 +24,7 @@ Join the [Discussions](https://github.com/OpenVoiceOS/OpenVoiceOS/discussions) f
 * [OpenVoiceOS Website](https://openvoiceos.org/)
 * [OpenVoiceOS Reddit](https://www.reddit.com/r/OpenVoiceOS/)
 
-Being depereciated, please start making the change to OVOS pages
+The below links are in the process of being deprecated.
 
 * [Mycroft Chat](https://chat.mycroft.ai)
 * [Mycroft Forum](https://community.mycroft.ai)

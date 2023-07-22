@@ -29,7 +29,7 @@ ovos-config show --section tts
 ## Changing Configuration Values
 We will continue with the example above, TTS.
 
-Change the host of the tts server:
+Change the host of the TTS server:
 
 `ovos-config set -k tts` will show a table of values that can be edited
 

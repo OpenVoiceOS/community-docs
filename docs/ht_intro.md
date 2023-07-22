@@ -1,5 +1,5 @@
 # How Do I???
-This section is provided as a basic QnA for common questions.
+This section is provided as a basic Q&A for common questions.
 
 [How do I - Skills](ht_skills.md)
 
