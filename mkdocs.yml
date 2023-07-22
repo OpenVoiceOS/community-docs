@@ -4,48 +4,53 @@ nav:
     - Home:
         - Introduction: index.md
         - About: about.md
-    - Getting Started Guide:
-        - Hardware: gs_hardware.md
-        - Installation Choices: gs_installation_choices.md
-        - Installing an Image: gs_installing_image.md
-        - First boot: gs_first_boot.md
-        - Next Steps: gs_next_steps.md
-    - Architecture:
+        - Supported Hardware: hardware.md
+            - Audio: hardware_audio.md
+            - Video: hardware_video.md
         - OpenVoiceOS Architecture: architecture.md
-        - Backend: arch_backend.md
-        - APIs: arch_apis.md
-        - Services: arch_services.md
-        - Plugins: arch_plugins.md
-        - PHAL: arch_phal.md
-        - Skills: arch_skills.md
-        - Statements: statements.md
-    - Hardware:
-        - Platforms: hardware_platforms.md
-        - Audio: hardware_audio.md
-        - Video: hardware_video.md
-    - Installation:
-        - Installation Introduction: install_intro.md
-        - Install OVOS Core: install_ovos_core.md
-        - Installing Skills: install_skills.md
+    - Quick Start Guide:
+        - Introduction: qs_intro.md
+        - First Boot: qs_first_boot.md
+        - Next Steps: qs_next_steps.md
+    - Installation Options:
+        - Introduction: install_intro.md
+        - Installing an Image: qs_intro.md
+        - Install as a Library: install_ovos_core.md
+        - Install with Docker: install_ovos_docker.md
+        _ Install GUI: install_gui.md
+    - Starting OVOS:
+        - Introduction: starting_intro.md
+        - Starting Modules: starting_modules.md
+        - Starting Systemd: starting_systemd.md
+        - Starting Docker: starting_docker.md
     - Configuration:
-        - OVOS Core Configuration: config_ovos_core.md
-        - OVOS Config Assistant: config_oca.md
-        - Homescreen Configuration: config_homescreen.md
-        - Backend Configuration: config_backend.md
-        - GUI Configuration: config_gui.md
-        - Skill Configuration: config_skills.md
-        - Changing the Wake Word: config_wake_word.md
-        - OpenVoiceOS Security: config_security.md
+        - Introduction: config.md
+        - Using ovos-config: config_ovos_config.md
+        - Manualy Editing Files: config_manual_config.md
+    - How To:
+        - Introduction: ht_intro.md
+        - Skills: ht_skills.md
+            - Installing Skills: ht_skills_install.md
+            - Configuring: ht_skills_config.md
+        - TTS: ht_tts.md
+            - Configuring: ht_tts_config.md
+            - Change Your Assistant's Voice: ht_change_voice.md
+        - Listener: ht_listener_intro.md
+            - Microphone: ht_mic.md
+            - STT: ht_stt.md
+            - WakeWord/HotWords: ht_ww.md
+            - VAD: ht_vad.md
+        - PHAL: ht_phal.md
+        - Homescreen:
+            - Configuration: ht_config_homescreen.md
+        - OpenVoiceOS Security: ht_config_security.md
     - Additional Services:
         - Selene Backend: selene_backend.md
         - Personal Backend: personal_backend.md
         - KDE Connect: kdeconnect.md
-        - Speech to Text backends: stt_backends.md
-        - Text to Speech backends: tts_backends.md
     - Images:
         - Introduction: images_intro.md
         - Buildroot: images_buildroot.md
-        - Manjaro: images_manjaro.md
         - Raspbian: install_raspbian.md
     - Other Builds:
         - Mycroft: mycroft.md
@@ -62,14 +67,11 @@ nav:
           - Troubleshooting STT: troubleshooting_stt.md
           - Troubleshooting Skills: troubleshooting_skills.md
           - Troubleshooting Plugins: troubleshooting_plugins.md
-    - HOWTO:
-          - Howto secure ssh: howto_secure_ssh.md
-          - Develop OCP (Media) skills: dev_ocp_skill.md
     - Appendix:
         - Glossary: glossary.md
         - FAQ: faq.md
         - Compatibility: compat.md
         - License: license.md
         - Friends: friends.md
-        - Images: images.md
+        - OVOS Members: members.md
 theme: readthedocs

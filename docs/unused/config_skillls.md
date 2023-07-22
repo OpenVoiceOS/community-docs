@@ -1,5 +1,7 @@
 # Skill Settings
 
+Each skill will have its own config file usually located at `~/.local/share/mycroft/skills/<skill_id>`
+
 Skill settings provide the ability for users to configure a Skill using the command line or a web-based interface. 
 
 This is often used to:
@@ -10,3 +12,4 @@ This is often used to:
 
 Skill settings are completely optional.
 
+Refer to each skill repository for valid configuration values.

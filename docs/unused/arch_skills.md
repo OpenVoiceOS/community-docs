@@ -1,4 +1,3 @@
-# Skills Architecture
 # OVOS Skills
 
 ## What can a Skill do?

@@ -1,6 +1,5 @@
 # Statements
-**Editors Note**
-This will probably move
+**Editors Note** This will probably move
 
 ## Speaking a statement
 
