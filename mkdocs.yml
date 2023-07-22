@@ -17,7 +17,7 @@ nav:
         - Installing an Image: qs_intro.md
         - Install as a Library: install_ovos_core.md
         - Install with Docker: install_ovos_docker.md
-        _ Install GUI: install_gui.md
+        - Install GUI: install_gui.md
     - Starting OVOS:
         - Introduction: starting_intro.md
         - Starting Modules: starting_modules.md
