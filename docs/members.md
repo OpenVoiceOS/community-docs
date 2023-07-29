@@ -1,5 +1,8 @@
 # OVOS Team Members
 
+| Community Testers           | ![forslund](https://avatars.githubusercontent.com/u/804543?v=4) | ![builderjer](https://avatars.githubusercontent.com/u/34875857?s=400&u=d83283dadcfeafe485976ed40d1e0646cc1f8c42&v=4)
+|---|---|
+
 [JarbasAI](https://github.com/JarbasAl)  
 [Daniel McKnight](https://github.com/NeonDaniel)  
 [j1nx](https://github.com/j1nx)  
