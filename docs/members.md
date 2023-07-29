@@ -33,7 +33,7 @@
 
 [Faster Whisper STT](https://fasterwhisper.ziggyai.online/status)
 
-**use with ovos-tts-plugin-mimic3**
+**use with ovos-tts-plugin-mimic3-server**
 
 [Mimic3 TTS](https://mimic3sample.ziggyai.online/api/healthcheck)
 
@@ -45,6 +45,6 @@
 
 ### BlueSystems
 
-**use with ovos-tts-plugin-mimic3**
+**use with ovos-tts-plugin-mimic3-server**
 
 [Mimic3 TTS](http://mycroft.blue-systems.com:59125/api/healthcheck)
