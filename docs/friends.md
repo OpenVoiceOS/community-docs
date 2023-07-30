@@ -54,3 +54,10 @@ individuals and solve basic problems faced by the entire community.
 You find the website [here](https://github.com/secretsauceai/secret_sauce_ai) and the source
 code [here](https://github.com/secretsauceai)
 
+## <img src='https://blue-systems.com/wp-content/uploads/2019/08/bs-logo.png width='50' height='50' style='vertical-align:bottom'/> Blue Systems
+
+Blue Systems claims to have one goal "We are a dedicated team from around the world to work on one goal: The advancement of free software solutions to be viable for daily use in every computing field. "
+
+They currently host a TTS service used by the [ovos-tts-plugin-mimic3-server](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic3-server)
+
+You find the website [here](https://blue-systems.com)
