@@ -1,53 +1,25 @@
 # OVOS Team Members
 
-| Community Testers           | ![forslund](https://avatars.githubusercontent.com/u/804543?v=4) | ![builderjer](https://avatars.githubusercontent.com/u/34875857?s=400&u=d83283dadcfeafe485976ed40d1e0646cc1f8c42&v=4)
-|---|---|
-
-[JarbasAI](https://github.com/JarbasAl)  
-[Daniel McKnight](https://github.com/NeonDaniel)  
-[j1nx](https://github.com/j1nx)  
-[forslund](https://github.com/forslund)  
-[ChanceNCounter](https://github.com/ChanceNCounter)  
-[5trongthany](https://github.com/5trongthany)  
-[builderjer](https://github.com/builderjer)  
-[goldyfruit](https://github.com/goldyfruit)  
-[mikejgray](https://github.com/mikejgray)  
-[emphasize](https://github.com/emphasize)  
-[dscripka](https://github.com/dscripka)
+| [Community Testers](https://github.com/orgs/OpenVoiceOS/teams/community-testers) | external contirbutors | <div><span><a href="https://github.com/goldyfruit"><img src="https://avatars.githubusercontent.com/u/614115?v=4" alt="goldyfruit" width="25" height="25"></a>&nbsp;<a href="/forslund"><img src="https://avatars.githubusercontent.com/u/804543?v=4" alt="forslund" width="25" height="25"></a>&nbsp;<a href="https://github.com/emphasize"><img src="https://avatars.githubusercontent.com/u/25036977?v=4" alt="emphasize" width="25" height="25"></a>&nbsp;<a href="https://github.com/mikejgray"><img src="https://avatars.githubusercontent.com/u/30268971?v=4" alt="mikejgray" width="25" height="25"></a>&nbsp;<a href="https://github.com/builderjer"><img src="https://avatars.githubusercontent.com/u/34875857?v=4" alt="builderjer" width="25" height="25"></a></span></div> |
+|---|:---:|---:|
+| [Distro and Packaging Team](https://github.com/orgs/OpenVoiceOS/teams/distro-packaging-team) | containers, images, and packages | <div><span><a href="https://github.com/goldyfruit"><img src="https://avatars.githubusercontent.com/u/614115?v=4" alt="goldyfruit" width="25" height="25"></a>&nbsp;<a href="https://github.com/j1nx"><img src="https://avatars.githubusercontent.com/u/641281?v=4" alt="j1nx" width="25" height="25"></a>&nbsp;<a href="https://github.com/emphasize"><img src="https://avatars.githubusercontent.com/u/25036977?v=4" alt="emphasize" width="25" height="25"></a>&nbsp;<a href="https://github.com/builderjer"><img src="https://avatars.githubusercontent.com/u/34875857?v=4" alt="builderjer" width="25" height="25"></a></span></div> |
+| [Language Support - QA](https://github.com/orgs/OpenVoiceOS/teams/language-support-qa) | ensure lanugage support and accurate translations | <div><span><a href="https://github.com/goldyfruit"><img src="https://avatars.githubusercontent.com/u/614115?v=4" alt="goldyfruit" width="25" height="25"></a>&nbsp;<a href="https://github.com/ChanceNCounter"><img src="https://avatars.githubusercontent.com/u/2975131?v=4" alt="ChanceNCounter" width="25" height="25"></a>&nbsp;<a href="https://github.com/emphasize"><img src="https://avatars.githubusercontent.com/u/25036977?v=4" alt="emphasize" width="25" height="25"></a>&nbsp;<a href="https://github.com/JarbasAl"><img src="https://avatars.githubusercontent.com/u/33701864?v=4" alt="JarbasAl" width="25" height="25"></a></span></div> |
+| [Documentation Team](https://github.com/orgs/OpenVoiceOS/teams/documentation) | community documentation | <div><span></span><a href="https://github.com/mikejgray"><img src="https://avatars.githubusercontent.com/u/30268971?v=4" alt="mikejgray" width="25" height="25"></a>&nbsp;<a href="https://github.com/builderjer"><img src="https://avatars.githubusercontent.com/u/34875857?v=4" alt="builderjer" width="25" height="25"></div> |
+| [Skills - QA](https://github.com/orgs/OpenVoiceOS/teams/skills-qa) | skills quality assurance | <div><span><a href="https://github.com/emphasize"><img src="https://avatars.githubusercontent.com/u/25036977?v=4" alt="emphasize" width="25" height="25"></a>&nbsp;<a href="https://github.com/mikejgray"><img src="https://avatars.githubusercontent.com/u/30268971?v=4" alt="mikejgray" width="25" height="25"></a>&nbsp;<a href="https://github.com/builderjer"><img src="https://avatars.githubusercontent.com/u/34875857?v=4" alt="builderjer" width="25" height="25"></a></span></div> |
+| [OPM](https://github.com/orgs/OpenVoiceOS/teams/opm) | community plugins | <div><span><a href="https://github.com/dscripka"><img src="https://avatars.githubusercontent.com/u/9630975?v=4" alt="mikejgray" width="25" height="25"></a>&nbsp;<a href="https://github.com/mikejgray"><img src="https://avatars.githubusercontent.com/u/30268971?v=4" alt="mikejgray" width="25" height="25"></a></span></div> |
+| | |
+| **[OVOS Common Play](https://github.com/orgs/OpenVoiceOS/teams/ocp)** | audio/video playback team | <div><span><a href="/forslund"><img src="https://avatars.githubusercontent.com/u/804543?v=4" alt="forslund" width="25" height="25"></a>&nbsp;<a href="https://github.com/JarbasAl"><img src="https://avatars.githubusercontent.com/u/33701864?v=4" alt="JarbasAl" width="25" height="25"></a>&nbsp;<a href="https://github.com/NeonDaniel"><img src="https://avatars.githubusercontent.com/u/34697904?v=4" alt="NeonDaniel" width="25" height="25"></a></span></div> |
+| | |
+| **[OVOS Administrators](https://github.com/orgs/OpenVoiceOS/teams/ovos-admins)** |  | <div><span><a href="https://github.com/j1nx"><img src="https://avatars.githubusercontent.com/u/641281?v=4" alt="j1nx" width="25" height="25"></a>&nbsp;<a href="https://github.com/ChanceNCounter"><img src="https://avatars.githubusercontent.com/u/2975131?v=4" alt="ChanceNCounter" width="25" height="25"></a>&nbsp;<a href="https://github.com/JarbasAl"><img src="https://avatars.githubusercontent.com/u/33701864?v=4" alt="JarbasAl" width="25" height="25"></a>&nbsp;<a href="https://github.com/NeonDaniel"><img src="https://avatars.githubusercontent.com/u/34697904?v=4" alt="NeonDaniel" width="25" height="25"></a></span></div> |**
+| | [automations](https://github.com/orgs/OpenVoiceOS/teams/automations) | <div><span><a href="https://github.com/JarbasAl"><img src="https://avatars.githubusercontent.com/u/33701864?v=4" alt="JarbasAl" width="25" height="25"></a>&nbsp;<a href="https://github.com/NeonDaniel"><img src="https://avatars.githubusercontent.com/u/34697904?v=4" alt="NeonDaniel" width="25" height="25"></a></span></div> |
+| | [core](https://github.com/orgs/OpenVoiceOS/teams/core) | <div><span><a href="https://github.com/JarbasAl"><img src="https://avatars.githubusercontent.com/u/33701864?v=4" alt="JarbasAl" width="25" height="25"></a>&nbsp;<a href="https://github.com/NeonDaniel"><img src="https://avatars.githubusercontent.com/u/34697904?v=4" alt="NeonDaniel" width="25" height="25"></a></span></div> |
+| | [Backend](https://github.com/orgs/OpenVoiceOS/teams/backend) | <div><span><a href="https://github.com/JarbasAl"><img src="https://avatars.githubusercontent.com/u/33701864?v=4" alt="JarbasAl" width="25" height="25"></a>&nbsp;<a href="https://github.com/NeonDaniel"><img src="https://avatars.githubusercontent.com/u/34697904?v=4" alt="NeonDaniel" width="25" height="25"></a></span></div> |
 
 ## Members hosting services
-
-### goldyfruit
-
-**use with ovos-tts-server-plugin**
-
-[Mimic1 TTS](https://tts.smartgic.io/mimic/status)  
-[Mimic3 TTS](https://tts.smartgic.io/mimic3/status)  
-[Piper TTS](https://tts.smartgic.io/piper/status)  
-
-### builderjer
-
-**use with ovos-tts-server-plugin**
-
-[Mimic3 TTS](https://mimic3.ziggyai.online/status)  
-[Piper TTS](https://pipertts.ziggyai.conline/status)
-
-**use with ovos-stt-server-plugin**
-
-[Faster Whisper STT](https://fasterwhisper.ziggyai.online/status)
-
-**use with ovos-tts-plugin-mimic3-server**
-
-[Mimic3 TTS](https://mimic3sample.ziggyai.online/api/healthcheck)
-
-### OVOS
-
-**use with ovos-stt-server-plugin**
-
-[Faster Whisper STT](https://stt.openvoiceos.org/status)
-
-### BlueSystems
-
-**use with ovos-tts-plugin-mimic3-server**
-
-[Mimic3 TTS](http://mycroft.blue-systems.com:59125/api/healthcheck)
+| Member | Service | Plugin | URL |
+|---|:---:|:---:|:---:|
+| <div><a href="https://github.com/goldyfruit"><img src="https://avatars.githubusercontent.com/u/614115?v=4" alt="goldyfruit" width="25" height="25"></a></div> | TTS | [ovos-tts-server-plugin](https://github.com/OpenVoiceOS/ovos-tts-server-plugin) | <div>Mimic 1 - [https://tts.smartgic.io/mimic](https://tts.smartgic.io/mimic/status)</div><div>Mimic 3 - [https://tts.smartgic.io/mimic3](https://tts.smartgic.io/mimic3/status)</div><div>Piper - [https://tts.smartgic.io/piper](https://tts.smartgic.io/piper/status)</div> |
+| <div><a href="https://github.com/builderjer"><img src="https://avatars.githubusercontent.com/u/34875857?v=4" alt="builderjer" width="25" height="25"></a></div> | TTS | [ovos-tts-server-plugin](https://github.com/OpenVoiceOS/ovos-tts-server-plugin) | <div>Mimic 3 - [https://mimic3.ziggyai.online](https://mimic3.ziggyai.online/status)</div><div>Piper - [https://pipertts.ziggyai.online](https://pipertts.ziggyai.online/status)</div> |
+| <div><a href="https://github.com/builderjer"><img src="https://avatars.githubusercontent.com/u/34875857?v=4" alt="builderjer" width="25" height="25"></a></div> | TTS | [ovos-tts-plugin-mimic3-server](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic3-server) | Mimic 3 - [https://mimic3sample.ziggyai.online/api/tts](https://mimic3sample.ziggyai.online/api/healthcheck) |
+| <div><a href="https://github.com/builderjer"><img src="https://avatars.githubusercontent.com/u/34875857?v=4" alt="builderjer" width="25" height="25"></a></div> | STT | [ovos-stt-plugin-server](https://github.com/OpenVoiceOS/ovos-stt-plugin-server) | Faster Whisper - [https://fasterwhisper.ziggyai.online](https://fasterwhisper.ziggyai.online/status) |
+| <div><a href="https://github.com/OpenVoiceOS"><img src="https://avatars.githubusercontent.com/u/72275918?&v=4" alt="OVOS" width="25" height="25"></a></div> | STT | [ovos-stt-plugin-server](https://github.com/OpenVoiceOS/ovos-stt-plugin-server) | Faster Whisper - [https://stt.openvoiceos.org](https://stt.openvoiceos.org/status) |
