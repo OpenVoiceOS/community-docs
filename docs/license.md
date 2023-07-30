@@ -31,5 +31,5 @@ The following repositories do not respect our universal donor policy, please ens
 | [ovos-intent-plugin-padatious](https://github.com/OpenVoiceOS/ovos-intent-plugin-padatious) | Apache2.0 | [padatious](https://github.com/MycroftAI/padatious) license might not be valid, depends on libfann2 (LGPL) |
 | [ovos-tts-plugin-mimic3](https://github.com/OpenVoiceOS/ovos-tts-plugin-mimic3)             | AGPL      | depends on mimic3 (AGPL)                                                                                   |
 | [ovos-tts-plugin-SAM](https://github.com/OpenVoiceOS/ovos-tts-plugin-SAM)                   | ?         | reverse engineered abandonware                                                                             |
-| [ovos-PHAL-plugin-respeaker-2mic](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-respeaker-2mic) | GPL | depends on [apa102-pi](https://github.com/tinue/apa102-pi) (GPL)                            |
-| [ovos-PHAL-plugin-respeaker-4mic](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-respeaker-4mic) | GPL | depends on [apa102-pi](https://github.com/tinue/apa102-pi) (GPL)                            |
+| [ovos-PHAL-plugin-respeaker-2mic](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-respeaker-2mic) | GPL | based on [apa102-pi](https://github.com/tinue/apa102-pi) (GPL)                            |
+| [ovos-PHAL-plugin-respeaker-4mic](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-respeaker-4mic) | GPL | based on [apa102-pi](https://github.com/tinue/apa102-pi) (GPL)                            |
