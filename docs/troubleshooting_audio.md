@@ -25,7 +25,7 @@ This will list the cards, which can then be referenced in arecord using -D hw:<c
 arecord -f dat -r 16000 -D hw:4,0 -c 4 -d 10 test2.wav
 ```
 You can then play the file back to test your speakers
-``` 
+```
 aplay -D hw:2,0 test2.wav
 ```
 ** If PulseAudio is installed, Alsa should be configured to use PulseAudio as it's default, and we don't change anything in Alsa, we configure our default sources and sinks in Pulse Audio**
@@ -35,7 +35,7 @@ Verify that pulseaudio is installed
 apt list pulseaudio
 ```
 Verify that Alsa is using Pulse Audio as the default
-``` 
+```
 $ aplay -L | head -n9
 null
     Discard all samples (playback) or generate zero samples (capture)
@@ -56,32 +56,18 @@ e.g.
 ```
 pacmd set-default-source alsa_input.usb-OmniVision_Technologies__Inc._USB_Camera-B4.09.24.1-01.multichannel-input
 ```
-### Test if OVOS is receiving mic input
-You can test if OVOS is recieving mic input using the `ovos-cli-client`
-
-Install the ovos-cli-client from github to ensure you have the latest version
-```
-cd ~
-git clone https://github.com/openvoiceos/ovos-cli-client
-pip install ./ovos-cli-client
-```
-Run the ovos-cli-client
-``` 
-ovos-cli-client
-```
-In the lower left you can observe the microphone levels, when you talk, the levels should increase.  If they don't ovos is probably using the wrong microphone.
 ### Gather Data
 Before submitting an issue or asking a question on Element, please gather the following data.
 
 For Microphone issues:
-``` 
+```
 arecord -l
 arecord -L | head -n9
 pactl list sources
 pacmd dump
 ```
 For Speaker issues:
-``` 
+```
 aplay -l
 aplay -L | head -n9
 pactl list sinks
@@ -104,4 +90,9 @@ to this:
 ### Automatically suspend sinks/sources that become idle for too long
 #load-module module-suspend-on-idle
 ```
-and then restart PulseAudio. There is quite a lot of variation in how people do this but killall pulseaudio is one option (it gets automatically started again).  If you want to be sure, you can restart the system.
+and restart pulseaudio
+```
+pulseaudio -k
+pulseaudio --start
+```
+
