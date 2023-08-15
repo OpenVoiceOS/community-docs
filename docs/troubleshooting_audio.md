@@ -90,4 +90,9 @@ to this:
 ### Automatically suspend sinks/sources that become idle for too long
 #load-module module-suspend-on-idle
 ```
-and then restart PulseAudio. There is quite a lot of variation in how people do this but killall pulseaudio is one option (it gets automatically started again).  If you want to be sure, you can restart the system.
+and restart pulseaudio
+```
+pulseaudio -k
+pulseaudio --start
+```
+
