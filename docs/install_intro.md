@@ -1,10 +1,12 @@
 # OpenVoiceOS
 
+**OVOS is only available for 64Bit systems.  There are some required packages that are not available on 32Bit systems**
+
 [OpenVoiceOS](https://openvoiceos.org/) is an open source platform for smart speakers and other voice-centric devices.
 
 `ovos-core` is a backwards-compatible descendant of [Mycroft-core](https://github.com/MycroftAI/mycroft-core), the central component of Mycroft. It contains extensions and features not present upstream.
 
-All Mycroft Skills and Plugins should work normally with OVOS-core. 
+All Mycroft Skills and Plugins should work normally with OVOS-core.
 
 `ovos-core` is fully modular. Furthermore, common components have been repackaged as plugins. That means it isn't just a great assistant on its own, but also a pretty small library!
 
