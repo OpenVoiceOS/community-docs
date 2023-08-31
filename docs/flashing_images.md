@@ -23,7 +23,7 @@ The resulting file should end in `.img` and is now ready to flash to a device.
 
 Flashing your image to your SD card or USB drive is not different from flashing any other image. For the non-technical users we advise to use the flashing utility, [Raspberry Pi Imager](https://www.raspberrypi.com/software/) from the Raspberry Pi Foundation. It is available for Windows, Mac OS, and Linux.
 
-- Start up the Raspberry Pi Imager. On Linux, start Raspberry Pi Imager with "**sudo** raspi-imager".
+- Start up the Raspberry Pi Imager. On Linux, start Raspberry Pi Imager with `sudo raspi-imager`.
 - For "Choose OS", select "Use custom" and select the OVOS/PI image file downloaded from the OpenVoiceOS Downloads Site.
 - For "Choose Storage", select your removable boot media, probably something like "Internal SD Card Reader".
 - Then select "Write". Do not click the cog. Do not change the username. Username is ovos and is built in. Do not enter WiFi credentials, you will add them at first boot.

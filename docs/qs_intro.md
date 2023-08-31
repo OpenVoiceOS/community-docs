@@ -6,19 +6,23 @@ So you just want to give OVOS a try? Here are the three fastest ways to get star
 - [Docker](#docker)
 - [Manual Install](#manual-install)
 
+**NOTE** All official OVOS images are running alpha versions of 0.0.7 until OVOS 0.0.8 is released. At that point, users will have the option to choose between alpha or stable versions.
+
 ## Raspberry Pi
 
-This quick start will help get an OVOS image installed and running on your Raspberry Pi. These images are all 64-bit operating systems. 32-bit operating systems on the Raspberry Pi will have limited OVOS functionality due to lack of dependency support.
+This quick start will help get an OVOS image installed and running on your Raspberry Pi. These images are all 64-bit operating systems.
+
+If you want to build your own 32-bit image for OVOS, note that 32-bit operating systems on the Raspberry Pi will have limited OVOS functionality due to lack of dependency support.
 
 **NOTE:** The OVOS GUI will not reliably run on a RPi3 and is therefore not recommended for that device.
 
 ### Download an OVOS image
 
-OVOS provides a couple of different images specifically for the Raspberry Pi: a [headless image (RaspOVOS)](#rasberry-pi-os-latest-images) and an older/work-in-progress [full GUI image (Buildroot)](#buildroot-latest-image).
+OVOS provides a couple of different images specifically for the Raspberry Pi: a [headless image built on Raspberry Pi OS (RaspOVOS)](#rasberry-pi-os-latest-images) and an older/work-in-progress [full GUI image (Buildroot)](#buildroot-latest-image).
 
 #### Raspberry Pi OS Latest Images
 
-OVOS also provides a "Headless" image that is similar to the original `picroft` software from `MycroftAI`. It runs without a screen and works with a RPi3b/b+. It is often referred to as **RaspOVOS**.
+OVOS provides a "Headless" image that is similar to the original `picroft` software from `MycroftAI`. It runs without a screen, is built on top of Raspberry Pi OS, and works with a RPi3b/b+. It is often referred to as **RaspOVOS**.
 
 - [headless images](https://ovosimages.ziggyai.online/raspbian/development)
 
@@ -45,8 +49,6 @@ The new OVOS buildroot image (under construction) uses Podman to manage the OVOS
 [https://github.com/OpenVoiceOS/ovos-docker](https://github.com/OpenVoiceOS/ovos-docker)
 
 The README at the link above explains how to set up OVOS on Docker for multiple different architectures and operating systems. New images are built nightly.
-
-**NOTE** The Docker images are all running alpha versions of 0.0.7 until OVOS 0.0.8 is released. At that point, users will have the option to choose between alpha or stable versions.
 
 To install Docker, [please see the official documentation](https://docs.docker.com/engine/install/).
 
