@@ -1,61 +1,57 @@
-# OVOS Quick Start Guide - Get an image
+# OVOS Quick Start Guide
 
-So you just want to give OVOS a try?  This quick start will help get an OVOS image installed and running on your Raspberry Pi.
+So you just want to give OVOS a try? Here are the three fastest ways to get started:
 
-**NOTE** The GUI will not reliably run on a RPi3 and is therefore not recommended for that device.
+- [Raspberry Pi](#raspberry-pi)
+- [Docker](#docker)
+- [Manual Install](#manual-install)
 
-## Download an OVOS image
-OVOS provides a couple of different images specifically for the Raspberry Pi.
+## Raspberry Pi
 
-### Buildroot Latest Image
+This quick start will help get an OVOS image installed and running on your Raspberry Pi. These images are all 64-bit operating systems. 32-bit operating systems on the Raspberry Pi will have limited OVOS functionality due to lack of dependency support.
 
-The most advanced and featureful is the Buildroot image.  If you want a GUI, this is currently your only choice.
+**NOTE:** The OVOS GUI will not reliably run on a RPi3 and is therefore not recommended for that device.
 
-- [RPi4-64](https://drive.google.com/file/d/1PUtNXfZ5jMUlVAgyN-KXPdVdX6r51eBw/view?usp=share_link)
+### Download an OVOS image
 
-### Raspbian Latest Images
+OVOS provides a couple of different images specifically for the Raspberry Pi: a [headless image (RaspOVOS)](#rasberry-pi-os-latest-images) and an older/work-in-progress [full GUI image (Buildroot)](#buildroot-latest-image).
 
-OVOS also provides a "Headless" image that is similar to the origional `picroft` software from `MycroftAI`.  It runs without a screen and works with a RPi3b/b+
+#### Raspberry Pi OS Latest Images
+
+OVOS also provides a "Headless" image that is similar to the original `picroft` software from `MycroftAI`. It runs without a screen and works with a RPi3b/b+. It is often referred to as **RaspOVOS**.
 
 - [headless images](https://ovosimages.ziggyai.online/raspbian/development)
 
-## Flashing your image
+[Instructions on flashing the image can be found here](flashing_images.md).
 
-Once you have an image downloaded, it needs to be flashed to a boot device.
+#### Buildroot Latest Image
 
-**NOTE** If you have a Raspberry Pi 4 we recommend to use a good USB3.1 device or better, a USB3 SSD. If you have a Raspberry Pi 3, use a proper SD card. (From fast to slow: SSD - USB3.1 - SD card - USB2)
+The most advanced and featureful is the Buildroot image. If you want the full GUI, this is currently your only choice. _Please note that this image is older and running on OVOS 0.0.6. A new Buildroot image is in development but not yet available._
 
-### Decompress the image
-Some image writing methods, `dd`, may require your file be decompressed.  Others, BalenaEtcher for example, can use a compressed image.
-The Buildroot image is compressed in `.xz` format and the raspbian image is in `.zip` format.
+- [RPi4-64](https://drive.google.com/file/d/1PUtNXfZ5jMUlVAgyN-KXPdVdX6r51eBw/view?usp=share_link)
 
-**Windows**
+[Instructions on flashing the image can be found here](flashing_images.md).
 
-Use `winzip` or `7-zip` to decompress the image.
+#### Docker on Raspberry Pi
 
-**Linux**
+The Docker version of OVOS works well on a Raspberry Pi with any distro. It also has a minimal GUI available. For more information, see the [Docker instructions](#docker).
 
-Use `gunzip` to decompress `.xz` compressed images and `unzip` to decompress `.zip` images.
+## Docker
 
-The resulting file should end in `.img` and is now ready to flash to a device.
+For most users, the easiest way to get started with OVOS is to use Docker. Docker is a containerization platform that allows you to run applications in a sandboxed environment. This means that you can run OVOS on any operating system that supports Docker, including Windows, MacOS, and Linux. Podman is also supported.
 
-### Flashing Software
+The new OVOS buildroot image (under construction) uses Podman to manage the OVOS services, allowing for easy setup and upgrades.
 
-Flashing your image to your SD card or USB drive is not different from flashing any other image. For the non-technical users we advise to use the flashing utility, [Raspberry Pi Imager](https://www.raspberrypi.com/software/) from the Raspberry Pi Foundation.  It is available for Windows, Mac OS, and Linux.
+[https://github.com/OpenVoiceOS/ovos-docker](https://github.com/OpenVoiceOS/ovos-docker)
 
-- Start up the Raspberry Pi Imager.  On Linux, start Raspberry Pi Imager with "**sudo** raspi-imager".
-- For "Choose OS", select "Use custom" and select the OVOS/PI image file downloaded from the OpenVoiceOS Downloads Site.
-- For "Choose Storage", select your removable boot media, probably something like "Internal SD Card Reader".
-- Then select "Write". Do not click the cog. Do not change the username. Username is ovos and is built in. Do not enter WiFi credentials, you will add them at first boot.
+The README at the link above explains how to set up OVOS on Docker for multiple different architectures and operating systems. New images are built nightly.
 
-Upon completion, you should have a bootable SD card or USB drive.
+**NOTE** The Docker images are all running alpha versions of 0.0.7 until OVOS 0.0.8 is released. At that point, users will have the option to choose between alpha or stable versions.
 
-## Warning EXTREME CARE needs to be taken while using this method
+To install Docker, [please see the official documentation](https://docs.docker.com/engine/install/).
 
-**Be careful with the dd command, you can easily render your computer useless**
+## Manual Install
 
-- Check where your sd card or usb drive is located using the `lsusb` command.
-- It should be visible as `sdxx`
-- Write the unzipped image to the disk `sudo dd if=<path-to-unzipped-image> of=<path-to-sd-card> bs=4M status=progress`
+For Debian-based Linux distros, [you can install OVOS manually via a shell script](https://github.com/OpenVoiceOS/raspbian-ovos/blob/dev/manual_user_install.sh). This is not recommended for most users, but may be useful for developers and advanced users.
 
-No matter what method you used, upon completion, you should have a bootable SD card or USB drive.
+[OVOS also maintains an Ansible playbook for installing the assistant software](https://github.com/OpenVoiceOS/ovos-ansible). It currently supports Debian-based distros, but support for other distros is planned, and PRs are welcome.
