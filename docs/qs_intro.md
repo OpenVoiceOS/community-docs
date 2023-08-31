@@ -55,3 +55,7 @@ To install Docker, [please see the official documentation](https://docs.docker.c
 For Debian-based Linux distros, [you can install OVOS manually via a shell script](https://github.com/OpenVoiceOS/raspbian-ovos/blob/dev/manual_user_install.sh). This is not recommended for most users, but may be useful for developers and advanced users.
 
 [OVOS also maintains an Ansible playbook for installing the assistant software](https://github.com/OpenVoiceOS/ovos-ansible). It currently supports Debian-based distros, but support for other distros is planned, and PRs are welcome.
+
+## Need Help?
+
+The OVOS community is always happy to help. If you have any questions, please feel free to ask in the [OVOS Support Matrix room](https://matrix.to/#/#OpenVoiceOS-Support:matrix.org).
