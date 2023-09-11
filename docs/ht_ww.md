@@ -16,8 +16,12 @@ Each hotword can do one or more of the following (with example configs):
    
   This example will start the date & time skill with the given utterance and not listen for a command.
 
-* emit a bus event directly to the messagebus, to for instance open a skill you developed yourself  (instead of listen / utterance)
-  *	`“bus_event” : “custom message that you use in your own skill”` 
+* emit a bus event directly to the messagebus, to for instance open a skill you developed yourself  (instead of listen / utterance), emit a message directly (microphone mute/unmute"
+  *	`“bus_event” : “custom message that you use in your own skill”`
+    
+     or
+   	
+  *	`“bus_event” : “mycroft.mic.mute"`
 
 * Use a hotkey; allows you to assign a keyboard shortcut (e.g., "ctrl+alt+h") for triggering the hotword manually. The ovos_ww_hotkeys module is         required forusing a hotkey.
   *	`“Hotkey”: “Control+shift+h”`
@@ -26,10 +30,22 @@ Each hotword can do one or more of the following (with example configs):
   * `Example?`
     
 * be a wakeup word (out of sleep mode); take ovos-core out of sleep mode, also called a wakeup_word or standup_word
-  * `Example?`
+  * Example:
+```
+  "listener": {
+    // Default wake_word and stand_up_word will be automatically set to active
+    // unless explicitly disabled under "hotwords" section with "active": false. This is usually not
+       desired unless you are looking to completely disable wake word usage
+    "wake_word": "hey mycroft",
+    "stand_up_word": "wake up"
+}
+```
+   See: [skill-ovos-naptime](https://github.com/OpenVoiceOS/skill-ovos-naptime)
+
     
-* take ovos-core out of recording mode, also called a stop_word
-  *	`Example?`
+* Take ovos-core out of recording mode, also called a `stop_word`
+   * A stop word is used when using a record skill like
+    [skill-audio-recordinge](https://github.com/NeonGeckoCom/skill-audio-recording)
 
 
 
