@@ -1,9 +1,54 @@
 # OVOS Listener - WakeWords / HotWords
-OVOS uses "wakewords" to activate the system.  This is what "hey Google" or "Alexa" is on proprietary devices.  By default, OVOS uses the WakeWord "hey Mycroft".
+OVOS uses "WakeWords" to activate the system. This is what "hey Google" or "Alexa" is on proprietary devices. By default, OVOS uses the WakeWord "hey Mycroft".
 
-OVOS "hotwords" is the configuration section to specify what the WakeWord do.  Multiple "hotwords" can be used to do a variety of things from putting OVOS into active listening mode, a WakeWord like "hey Mycroft", to issuing a command such as "stop" or "wake up"
+In OVOS, a WakeWord is configured in the hotwords section of the user's mycroft.conf configuration (defaults to `~/.config/mycroft/mycroft.conf`). Multiple "hotwords" can be configured at one time. They can trigger a variety of tasks, ranging from putting OVOS into active listening mode (the default for "hey Mycroft") to issuing a command such as "stop" or "wake up."
 
-As with everything else, this too can be changed, and several plugins are available.  Some work better than others.
+Each hotword can do one or more of the following (with example configs):
+* trigger listening, also called a wake_word (default option)
+  * `"listen" : true`
+
+* play a sound. You can set a specific sound per hotword.
+  * `"sound": "snd/start_listening.wav"`
+
+
+* emit an utterance to open a skill directly (instead of listen), useful to open skills from others.
+  * `"utterance” : "What’s the time"` 
+  * `"listen” : false`
+   
+  This example will start the date & time skill with the given utterance and not listen for a command.
+
+* emit a bus event directly to the messagebus, to for instance open a skill you developed yourself  (instead of listen / utterance), emit a message directly (microphone mute/unmute"
+  *	`"bus_event" : "custom.message.that.you.use.in.your.own.skill"`
+    
+     or
+   	
+  *	`"bus_event" : "mycroft.mic.mute"`
+
+* Use a hotkey. This allows you to assign a keyboard shortcut (e.g., "ctrl+alt+h") for triggering the hotword manually. The [ovos-ww-plugin-hotkeys](https://github.com/OpenVoiceOS/ovos-ww-plugin-hotkeys) is required for using a hotkey.
+  *	`"hotkey": "control+shift+h"`
+
+* assign a language for STT per wake word
+  * `"stt_lang": "pt-pt"` (at Speech To Text stage the language code, for example `pt-pt`, will be requested instead of the global language.
+    
+* be a wakeup word (out of sleep mode); take ovos-core out of sleep mode, also called a wakeup_word or standup_word
+  * Example:
+```
+  "listener": {
+    // Default wake_word and stand_up_word will be automatically set to active
+    // unless explicitly disabled under "hotwords" section with "active": false. This is usually not
+       desired unless you are looking to completely disable wake word usage
+    "wake_word": "hey mycroft",
+    "stand_up_word": "wake up"
+}
+```
+   See: [skill-ovos-naptime](https://github.com/OpenVoiceOS/skill-ovos-naptime)
+
+    
+* Take ovos-core out of recording mode, also called a `stop_word`
+   * A stop word is used when using a record skill like
+    [skill-audio-recordinge](https://github.com/NeonGeckoCom/skill-audio-recording)
+
+
 
 ## List of OVOS WakeWord Plugins
 | Plugin                                 | Type     | Description                           |
@@ -50,12 +95,31 @@ The most important section is `"wake_word": "hey_ziggy"` in the `"listener"` sec
 
 This tells OVOS what the default wakeword should be.
 
-In the `"hotwords"` section, `"active": true`, is only used if multiple wakewords are being used.  By default, what ever `wake_word` is set in the `listener` section is automatically set to `true`.
+In the `"hotwords"` section, `"active": true`, is only used if multiple wakewords are being used. By default, what ever `wake_word` is set in the `listener` section is automatically set to `true`.
 
 If you want to disable a wakeword, you can set this to `false`.
 
 If enabling a wakeword, be sure to also set `"listen": true`.
 
-Multiple hotwords can be configured at the same time, even the same word with different plugins.  This allows for more accurate ones to be used before the less accurate, but only if the plugin is installed.
+Multiple hotwords can be configured at the same time, even the same word with different plugins. This allows for more accurate ones to be used before the less accurate, but only if the plugin is installed.
+
+
+## Example hotword config (keyboard wakeword)
+In the following example an extra hotword is added, that uses the [ovos-ww-plugin-hotkeys](https://github.com/OpenVoiceOS/ovos-ww-plugin-hotkeys) to listen for keyboard press and start a skill based on an utterance (in this example to tell the time by just pressing space bar).  
+Install the [ovos-ww-plugin-hotkeys](https://github.com/OpenVoiceOS/ovos-ww-plugin-hotkeys) and add the following to your `~/.config/mycroft/mycroft.conf` file
+
+```
+ "hotwords": {
+    "hotkey": {
+        "module": "ovos_ww_hotkeys",
+        "listen": false,
+        "active": true,
+        "hotkey": "space",
+        "utterance": "what time is it?"
+      }
+  }
+```
+
+## Read more about WakeWords/HotWords
 
 [Advanced WakeWords/HotWords](https://openvoiceos.github.io/ovos-technical-manual/ww_plugins/)
