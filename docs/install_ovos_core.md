@@ -32,7 +32,7 @@ python -m venv .venv
 ```
 Update `pip` and install `wheel`
 
-`pip install -U pip wheel`
+`pip install -U pip wheel swig`
 
 ## From PyPi
 
