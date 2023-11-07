@@ -96,3 +96,35 @@ pulseaudio -k
 pulseaudio --start
 ```
 
+##### ERROR: All media play requests loop (silently) until ovos restart
+When running OVOS headless and trying to play media and seeing this in the logs over and over:
+```
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.457 - audio - ovos_utils.file_utils:resolve_resource_file:153 - WARNING - Deprecation version=0.1.0. Caller=ovos_utils.gui:812. Expected a dict config and got None.
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.465 - audio - ovos_utils.file_utils:resolve_resource_file:153 - WARNING - Deprecation version=0.1.0. Caller=ovos_utils.gui:813. Expected a dict config and got None.
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.477 - audio - ovos_utils.gui:_pages2uri:823 - ERROR - Unable to find page: PlayerLoader
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.481 - audio - ovos_utils.file_utils:resolve_resource_file:153 - WARNING - Deprecation version=0.1.0. Caller=ovos_utils.gui:812. Expected a dict config and got None.
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.491 - audio - ovos_utils.file_utils:resolve_resource_file:153 - WARNING - Deprecation version=0.1.0. Caller=ovos_utils.gui:813. Expected a dict config and got None.
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.500 - audio - ovos_utils.gui:_pages2uri:823 - ERROR - Unable to find page: SuggestionsView
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.619 - audio - ovos_plugin_common_play.ocp.media:handle_track_state_change:512 - INFO - TrackState changed: <TrackState.PLAYING_AUDIOSERVICE: 21>
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.751 - audio - ovos_plugin_common_play.ocp.media:handle_track_state_change:512 - INFO - TrackState changed: <TrackState.QUEUED_AUDIOSERVICE: 31>
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.823 - audio - ovos_audio.audio:_stop:257 - INFO - END Stop
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.970 - audio - ovos_plugin_common_play.ocp.media:extract_stream:461 - INFO - OCP plugins metadata: {'uri': 'https://yleradiolive.akamaized.net/hls/live/2027676/in-YleKlassinen/abr.smil/chunklist_b256000_ao.m3u8'}
+```
+
+One fix is to disable MPRIS by adding `"disable_mpris": true` to the config.
+The easiest way to do this is to find the config file in the ~/.config/mycroft/mycroft.conf and make sure the following section is present:
+
+```
+{
+  "Audio": {
+    "backends": {
+      "OCP": {
+        "type": "ovos_common_play",
+        "disable_mpris": true
+      }
+    }
+  }
+}
+```
+
+This does not fix the root cause, but it does stop the looping and allows the audio service to play media.
