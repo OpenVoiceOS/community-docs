@@ -117,7 +117,6 @@ The easiest way to do this is to find the config file in the ~/.config/mycroft/m
 ```
 {
   "Audio": {
-    "default-backend": "OCP",
     "backends": {
       "OCP": {
         "type": "ovos_common_play",
