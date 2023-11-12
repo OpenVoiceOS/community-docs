@@ -42,7 +42,7 @@ nav:
             - Introduction: 100-ht_listener_intro.md
             - Microphone: 101-ht_mic.md
             - STT: 102-ht_stt.md
-                - Configuring: 103-ht_stt_config.md
+            - Configuring: 103-ht_stt_config.md
             - WakeWord/HotWords: 104-ht_ww.md
             - VAD: 105-ht_vad.md
         - PHAL: 110-ht_phal.md
