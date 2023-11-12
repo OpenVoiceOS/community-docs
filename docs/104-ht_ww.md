@@ -5,6 +5,8 @@ OVOS "hotwords" is the configuration section to specify what the WakeWord do.  M
 
 As with everything else, this too can be changed, and several plugins are available.  Some work better than others.
 
+[Mike Grey](https://blog.graywind.org/) created a great [blog post](https://blog.graywind.org/posts/neon-change-wakeword/) about the WakeWords also.
+
 ## List of OVOS WakeWord Plugins
 | Plugin                                 | Type     | Description                           |
 |----------------------------------------|----------|----------------------------|
