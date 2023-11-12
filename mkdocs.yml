@@ -2,80 +2,81 @@ site_name: OVOS User Documentation
 site_url: https://openvoiceos.github.io/community-docs
 nav:
     - Home:
-        - Introduction: index.md
-        - About: about.md
-        - Supported Hardware: 
-            - Introduction: hardware.md
-            - Audio: hardware_audio.md
-            - Video: hardware_video.md
-        - OpenVoiceOS Architecture: architecture.md
+        - Introduction: 01-index.md
+        - About: 02-about.md
+        - Supported Hardware:
+            - Introduction: 03-hardware.md
+            - Audio: 04-hardware_audio.md
+            - Video: 05-hardware_video.md
+        - OpenVoiceOS Architecture: 06-architecture.md
     - Quick Start Guide:
-        - Introduction: qs_intro.md
-        - First Boot: qs_first_boot.md
-        - Next Steps: qs_next_steps.md
+        - Introduction: 07-qs_intro.md
+        - First Boot: 08-qs_first_boot.md
+        - Next Steps: 09-qs_next_steps.md
     - Installation Options:
-        - Introduction: install_intro.md
-        - Installing an Image: qs_intro.md
-        - Install as a Library: install_ovos_core.md
-        - Install with Docker: install_ovos_docker.md
-        - Install GUI: install_gui.md
+        - Introduction: 10-install_intro.md
+        - Installing an Image: 07-qs_intro.md
+        - Install as a Library: 11-install_ovos_core.md
+        - Install with Docker: 12-install_ovos_docker.md
+        - Install GUI: 13-install_gui.md
     - Starting OVOS:
-        - Introduction: starting_intro.md
-        - Starting Modules: starting_modules.md
-        - Starting Systemd: starting_systemd.md
-        - Starting Docker: starting_docker.md
+        - Introduction: 14-starting_intro.md
+        - Starting Modules: 15-starting_modules.md
+        - Starting Systemd: 16-starting_systemd.md
+        - Starting Docker: 17-starting_docker.md
     - Configuration:
-        - Introduction: config.md
-        - Using ovos-config: config_ovos_config.md
-        - Manualy Editing Files: config_manual_config.md
+        - Introduction: 18-config.md
+        - Using ovos-config: 19-config_ovos_config.md
+        - Manualy Editing Files: 20-config_manual_config.md
     - How To:
-        - Introduction: ht_intro.md
+        - Introduction: 21-ht_intro.md
         - Skills:
-            - Introduction: ht_skills.md
-            - Installing Skills: ht_skills_install.md
-            - Configuring: ht_skills_config.md
-        - TTS: 
-            - Introduction: ht_tts.md
-            - Configuring: ht_tts_config.md
-            - Change Your Assistant's Voice: ht_change_voice.md
-        - Listener: 
-            - Introduction: ht_listener_intro.md
-            - Microphone: ht_mic.md
-            - STT: ht_stt.md
-            - WakeWord/HotWords: ht_ww.md
-            - VAD: ht_vad.md
-        - PHAL: ht_phal.md
+            - Introduction: 22-ht_skills.md
+            - Installing Skills: 23-ht_skills_install.md
+            - Configuring: 24-ht_skills_config.md
+        - TTS:
+            - Introduction: 25-ht_tts.md
+            - Configuring: 26-ht_tts_config.md
+            - Change Your Assistant's Voice: 27-ht_change_voice.md
+        - Listener:
+            - Introduction: 28-ht_listener_intro.md
+            - Microphone: 29-ht_mic.md
+            - STT: 30-ht_stt.md
+                - Configuring: 31-ht_stt_config.md
+            - WakeWord/HotWords: 32-ht_ww.md
+            - VAD: 33-ht_vad.md
+        - PHAL: 34-ht_phal.md
         - Homescreen:
-            - Configuration: ht_config_homescreen.md
-        - OpenVoiceOS Security: ht_config_security.md
+            - Configuration: 35-ht_config_homescreen.md
+        - OpenVoiceOS Security: 36-ht_config_security.md
     - Additional Services:
-        - Selene Backend: selene_backend.md
-        - Personal Backend: personal_backend.md
-        - KDE Connect: kdeconnect.md
+        - Selene Backend: 37-selene_backend.md
+        - Personal Backend: 38-personal_backend.md
+        - KDE Connect: 39-kdeconnect.md
     - Images:
-        - Introduction: images_intro.md
-        - Buildroot: images_buildroot.md
-        - Raspbian: install_raspbian.md
+        - Introduction: 40-images_intro.md
+        - Buildroot: 41-images_buildroot.md
+        - Raspbian: 07-qs_intro.md
     - Other Builds:
-        - Mycroft: mycroft.md
-        - NeonOS: neonos.md
+        - Mycroft: 42-mycroft.md
+        - NeonOS: 43-neonos.md
     - Troubleshooting:
-          - Introduction to Troubleshooting: troubleshooting_intro.md
-          - Troubleshooting Audio: troubleshooting_audio.md
-          - Troubleshooting Installation: troubleshooting_installation.md
-          - Troubleshooting Network: troubleshooting_network.md
-          - Troubleshooting Wakeword: troubleshooting_wakeword.md
-          - Troubleshooting OVOS Core: troubleshooting_ovos_core.md
-          - Troubleshooting Backend: troubleshooting_backend.md
-          - Troubleshooting TTS: troubleshooting_tts.md
-          - Troubleshooting STT: troubleshooting_stt.md
-          - Troubleshooting Skills: troubleshooting_skills.md
-          - Troubleshooting Plugins: troubleshooting_plugins.md
+          - Introduction to Troubleshooting: 44-troubleshooting_intro.md
+          - Troubleshooting Audio: 45-troubleshooting_audio.md
+          - Troubleshooting Installation: 46-troubleshooting_installation.md
+          - Troubleshooting Network: 47-troubleshooting_network.md
+          - Troubleshooting Wakeword: 48-troubleshooting_wakeword.md
+          - Troubleshooting OVOS Core: 49-troubleshooting_ovos_core.md
+          - Troubleshooting Backend: 50-troubleshooting_backend.md
+          - Troubleshooting TTS: 51-troubleshooting_tts.md
+          - Troubleshooting STT: 52-troubleshooting_stt.md
+          - Troubleshooting Skills: 53-troubleshooting_skills.md
+          - Troubleshooting Plugins: 54-troubleshooting_plugins.md
     - Appendix:
-        - Glossary: glossary.md
-        - FAQ: faq.md
-        - Compatibility: compat.md
-        - License: license.md
-        - Friends: friends.md
-        - OVOS Members: members.md
+        - Glossary: 55-glossary.md
+        - FAQ: 56-faq.md
+        - Compatibility: 57-compat.md
+        - License: 58-license.md
+        - Friends: 59-friends.md
+        - OVOS Members: 60-members.md
 theme: readthedocs
