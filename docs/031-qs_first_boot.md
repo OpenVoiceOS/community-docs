@@ -20,7 +20,7 @@ When you first boot the Buildroot image, you will be greeted with an OVOS splash
 
 ![Splash Screen](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Buildroot%20bootsplash.png)
 
-As this is the first time you have booted your device, it might take a bit longer than normal as the system is preparing its local filesystem and extending it over the full size of the sdcard/USB device.  
+As this is the first time you have booted your device, it might take a bit longer than normal as the system is preparing its local filesystem and extending it over the full size of the sdcard/USB device.
 Eventually the progress bar will be filled up indicating the Operating System has been fully booted, after which the ovos-shell animated loading screen will be shown.
 
 ![Loading Spinner](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Spinner.png)
@@ -98,6 +98,6 @@ Thats it!! You should have a working OVOS device, **QUICK**!!
 
 While this is the fastest and easiest way to get OVOS, it is not the only way.
 
-[Installing OVOS with libraries](start-libraries.md)
+[Installing OVOS with modules](051-starting-modules.md)
 
-[Installing OVOS Docker](start-docker.md)
+[Installing OVOS Docker](053-starting-docker.md)

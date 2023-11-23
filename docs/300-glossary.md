@@ -1,10 +1,10 @@
 # Glossary
 
-**Editor's Note** 
+**Editor's Note**
 Some of the more detailed definitions will be moved to other pages, it's just here to keep track of the information for now.
 
 ## The Project
-### The OpenVoiceOS Project (OVOS) 
+### The OpenVoiceOS Project (OVOS)
 All the repositories under [OpenVoiceOS organization](https://github.com/OpenVoiceOS)
 ### The OpenVoiceOS Team
 [The team](https://github.com/orgs/OpenVoiceOS/people) behind OVOS
@@ -53,7 +53,7 @@ Primary configuration file for the voice assistant. Possible locations:
 - /home/ovos/.config/mycroft/mycroft.conf
 - /etc/xdg/mycroft/mycroft.conf
 - /home/ovos/.mycroft/mycroft.conf
-[More Information](config_ovos_core.md)
+[More Information](061-config_ovos_config.md)
 
 ### OCP
 
@@ -135,7 +135,7 @@ does not detect the sj201 hat. This makes plugins safe to install and bundle by 
 ### Phoneme
 The smallest phonetic unit in a language that is capable of conveying a distinction in meaning, as the m of mat and the b of bat in English.
 
-### Service 
+### Service
 
 ### Snapcast
 Snapcast is a multiroom client-server audio player, where all clients are time synchronized with the server to play perfectly synced audio. It's not a standalone player, but an extension that turns your existing audio player into a Sonos-like multiroom solution.

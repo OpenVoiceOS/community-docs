@@ -33,7 +33,6 @@ Add the following to your `~/.config/mycroft/mycroft.conf` file.
         "hey_ziggy": {
             "module": "ovos-ww-plugin-vosk",
             "listen": true,
-            "active": true,
             "sound": "snd/start_listening.wav",
             "debug": false
             "rule": "fuzzy",

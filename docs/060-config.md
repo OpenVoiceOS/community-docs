@@ -5,7 +5,7 @@ When you first start OVOS, there should not be any configuration needed to have 
 
 This password is **EXTREMELY** insecure and should be changed or use ssh keys for logging in.
 
-[Securing SSH](ht_config_security.md)
+[Securing SSH](118-ht_config_security.md)
 
 This section will explain how the configuration works, and how to do basic configuration changes.
 
@@ -36,4 +36,4 @@ OVOS provides a command line tool `ovos-config` for viewing and changing configu
 
 Values can also be set manually in config files instead of using the CLI tool.
 
-These methods will be used later in the [How To](ht_intro.md) section of these Docs.
+These methods will be used later in the [How To](070-ht_intro.md) section of these Docs.

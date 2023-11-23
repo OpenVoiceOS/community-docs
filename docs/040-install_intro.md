@@ -25,7 +25,7 @@ The easiest and fastest way to experience what OVOS has to offer is to use one o
 - [raspbian-ovos](https://ovosimages.ziggyai.online/raspbian/development)
   - The newest image from the OVOS team.  This is a "headless" image (NO GUI), but comes with a preinstalled set of skills also.  This image will provide you with an experience similar to the origional [picroft](https://github.com/MycroftAI/enclosure-picroft)
 
-[Get started with an image](qs_intro.md)
+[Get started with an image](030-qs_intro.md)
 
 ### From source as a library
 
@@ -33,10 +33,10 @@ Images are not the only way to use OVOS.  It can be installed on almost any syst
 
 This is an advanced setup and requires access to a command shell and can take more effort to get working.
 
-[Get started with OVOS libraries](install_ovos_core.md)
+[Get started with OVOS modules](042-install_ovos_core.md)
 
 ### Docker
 
 Docker images are also available and have been tested and working on Linux, Windows, and even Mac.
 
-[Get started with OVOS Docker](install_ovos_docker.md)
+[Get started with OVOS Docker](043-install_ovos_docker.md)

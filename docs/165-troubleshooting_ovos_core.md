@@ -1,5 +1,5 @@
 # Troubleshooting OVOS Core
-** Coming Soon **
+**Coming Soon**
 ## Architecture
 
 ## Troubleshooting Commands

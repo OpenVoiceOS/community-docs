@@ -13,8 +13,8 @@ Typical command to restart the OVOS stack
 
 The rest of this section will describe this method, and others in detail.
 
-[Starting as stand alone modules](starting_modules.md)
+[Starting as stand alone modules](051-starting_modules.md)
 
-[Starting with systemd service files](starting_systemd.md)
+[Starting with systemd service files](052-starting_systemd.md)
 
-[Starting Docker](starting_docker.md)
+[Starting Docker](053-starting_docker.md)

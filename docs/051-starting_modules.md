@@ -1,5 +1,5 @@
 # Starting OVOS - modules
-OVOS in its simplest form is just a python module, and can be invoked as one.  In fact, the [systemd service](starting_systemd.md) method of starting OVOS uses a glorified version of this.
+OVOS in its simplest form is just a python module, and can be invoked as one.  In fact, the [systemd service](052-starting_systemd.md) method of starting OVOS uses a glorified version of this.
 
 ## ovos-core
 ovos-core is the brains of the device.  Without it, you would have some cool software that does not work together.  It controls the `skills` service and directs `intents` to the right skill.
@@ -16,7 +16,7 @@ ovos-messagebus is the nervous system of OVOS.  This is what makes everything wo
 
 **NOTE**  The messagebus is an unsecured bus to your system and should **NOT** be exposed to the outside world.
 
-[firewall your messagebus](#) **WIP**
+[firewall your messagebus](999-not-implemented) **WIP**
 
 ### Invoking the messagebus
 With ovos-core running in one terminal shell, open another and type the command

@@ -81,4 +81,4 @@ The weather skill actually uses multiple pages indicated by the small dots at th
 
 ![Weather 2](https://raw.githubusercontent.com/OpenVoiceOS/ovos_assets/master/Images/Screenshot%20-%20Weather%202.png)
 
-There are more installed, just try.  If you don't get the response you expected, see the section on [installing new skills](ht_skills_install.md)
+There are more installed, just try.  If you don't get the response you expected, see the section on [installing new skills](081-ht_skills_install.md)

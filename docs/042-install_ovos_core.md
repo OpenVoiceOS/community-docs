@@ -3,7 +3,7 @@ The OVOS ecosystem is very modular, depending on where you are running `ovos-cor
 
 By default `ovos-core` only installs the minimum components common to all services, for the purposes of this document we will assume you want a full install with a GUI.
 
-**NOTE** The GUI requires separate packages in addition to what is required by `ovos-core`.  The [GUI installation](install_gui.md) is covered in its own section.
+**NOTE** The GUI requires separate packages in addition to what is required by `ovos-core`.  The [GUI installation](044-install_gui.md) is covered in its own section.
 
 ## Host system
 OVOS requires some system dependencies, how to do this will depend on your distro.
@@ -55,7 +55,7 @@ This should install everything needed for a basic OVOS software stack.
 
 There are additional `extras` options available other than `[mycroft]` and can be found in the [ovos-core setup.py](https://github.com/OpenVoiceOS/ovos-core/blob/dev/setup.py) file.
 
-[Starting OVOS](starting_intro.md)
+[Starting OVOS](050-starting_intro.md)
 
 ### Individual Modules
 Each module can be installed independently to only include the parts needed or wanted for a specific system.
@@ -64,31 +64,31 @@ Each module can be installed independently to only include the parts needed or w
 
 `pip install --pre ovos-core`
 
-[Starting Modules - core](starting_modules.md#core)
+[Starting Modules - core](051-starting_modules.md#core)
 
 **ovos-messagebus**
 
 `pip install --pre ovos-messagebus`
 
-[Starting Modules - messagebus](starting_modules.md#messagebus)
+[Starting Modules - messagebus](051-starting_modules.md#messagebus)
 
 **ovos-audio**
 
 `pip install --pre ovos-audio`
 
-[Starting Modules - audio](starting_modules.md#audio)
+[Starting Modules - audio](051-starting_modules.md#audio)
 
 **dinkum-listener**
 
 `pip install --pre ovos-dinkum-listener`
 
-[Starting Modules - listener](starting_modules.md#listener)
+[Starting Modules - listener](051-starting_modules.md#listener)
 
 **ovos-phal**
 
 `pip install --pre ovos-phal`
 
-[Starting Modules - phal](starting_modules.md#phal)
+[Starting Modules - phal](051-starting_modules.md#phal)
 
 ## From Source
 We will use git to clone the repositories to a local directory.  While not specifically necessary, we are assuming this to be the users `HOME` directory.
@@ -106,7 +106,7 @@ This should install everything needed to use the basic OVOS software stack.
 
 **NOTE** this also installs `lgpl` licenced software.
 
-[Starting OVOS](starting_intro.md)
+[Starting OVOS](050-starting_intro.md)
 
 ### Install individual modules
 
@@ -120,7 +120,7 @@ Some systems may not require a full install of OVOS.  Luckily, it can be install
 
 This is the minimal library needed as the brain of the system.  There are no skills, no messagebus, and no plugins installed yet.
 
-[Starting Core](starting_modules.md#core)
+[Starting Core](051-starting_modules.md#core)
 
 **messagebus**
 
@@ -130,7 +130,7 @@ This is the minimal library needed as the brain of the system.  There are no ski
 
 This is the nervous system of OVOS needed for modules to talk to each other.
 
-[Starting the Messagebus](starting_modules.md#messagebus)
+[Starting the Messagebus](051-starting_modules.md#messagebus)
 
 **listener**
 
@@ -142,7 +142,7 @@ OVOS has updated their listener to use `ovos-dinkum-listener` instead of `ovos-l
 
 You now have what is needed for OVOS to use a microphone and its associated services, WakeWords, HotWords, and STT
 
-[Starting the listener](starting_modules.md#listener)
+[Starting the listener](051-starting_modules.md#listener)
 
 **PHAL**
 
@@ -162,7 +162,7 @@ The PHAL system consists of two interfaces.
 
 This just installs the basic system that allows the plugins to work.
 
-[Starting PHAL](starting_modules.md#phal)
+[Starting PHAL](051-starting_modules.md#phal)
 
 **audio**
 
@@ -176,8 +176,8 @@ It also installs [OVOS Common Play](https://github.com/OpenVoiceOS/ovos-ocp-audi
 
 This will enable the default TTS (Text To Speech) engine for voice feedback from your OVOS device.  However, plenty of alternative TTS engines are available.
 
-[Starting Audio](starting_modules.md#audio)
+[Starting Audio](051-starting_modules.md#audio)
 
 You now should have all of the separate components needed to run a full OVOS software stack.
 
-[Starting the OVOS software stack](starting_intro.md)
+[Starting the OVOS software stack](050-starting_intro.md)

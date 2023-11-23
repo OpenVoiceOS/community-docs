@@ -71,6 +71,8 @@ Keep in mind any skill you install can [modify mycroft-core at runtime](https://
 
 ### Supported stores
 
+**WIP**
+
 - [OVOS](https://github.com/OpenVoiceOS/OVOS-skills-store) - this one is really a proof of concept for now, stay tuned!
 - [Mycroft Marketplace](https://market.mycroft.ai/skills) - the official mycroft skills store, all skills are reviewed by humans!
 - [Pling](https://store.kde.org/browse?cat=608&ord=latest/) - the official plasma bigscreen skills store, skills are accepted by default and only removed if flagged as malicious

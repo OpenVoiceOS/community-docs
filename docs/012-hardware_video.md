@@ -8,4 +8,4 @@ If your device supports video out, you can use a screen on your device. (RPI3/3b
 
 OVOS supports touchscreen interaction, but not all are created equally.  It has been noted that on some USB touchscreens, the touch matrix is not synced with the OVOS display and requires an x11 setup with a window manager to adjust the settings to work.
 
-[Troubleshooting Video](troubleshooting_video.md)
+[Troubleshooting Video](999-not-implemented)

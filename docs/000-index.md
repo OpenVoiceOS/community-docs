@@ -11,7 +11,7 @@ These documents are your starting point for installing and using OpenVoiceOS sof
 Please [open Issues](https://github.com/OpenVoiceOS/community-docs/issues) [and Pull Requests](https://github.com/OpenVoiceOS/community-docs/pulls)!
 
 ## Just want to get started with OVOS?
-Check out our [Quick Start Guide](qs_intro.md) for help with installing an image, your first boot, and basic configuration.
+Check out our [Quick Start Guide](030-qs_intro.md) for help with installing an image, your first boot, and basic configuration.
 
 ## Getting Involved
 If this is your first experience with OpenVoiceOS, or you're not sure where to get started,

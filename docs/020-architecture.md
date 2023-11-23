@@ -67,11 +67,11 @@ Two STT plugins may be loaded at once.  If the primary plugin fails, the second 
 
 Having a lower accuracy offline model as fallback will account for internet outages, which ensures your device never becomes fully unusable.
 
-Several different STT (Speech To Text) plugins are available for use.  OVOS provides a number of public services using the [ovos-stt-plugin-server](https://github.com/OpenVoiceOS/ovos-stt-plugin-server) plugin which are hosted by OVOS trusted members [(Members hosting services)](members.md#Members-hosting-services).  No additional configuration is required.
+Several different STT (Speech To Text) plugins are available for use.  OVOS provides a number of public services using the [ovos-stt-plugin-server](https://github.com/OpenVoiceOS/ovos-stt-plugin-server) plugin which are hosted by OVOS trusted members [(Members hosting services)](325-members.md#Members-hosting-services).  No additional configuration is required.
 
 [OVOS Supported STT Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-stt-plugin&type=all&language=&sort=)
 
-[Changing STT Plugin](ht_stt.md)
+[Changing STT Plugin](102-ht_stt.md)
 
 ### Hotwords
 
@@ -83,7 +83,7 @@ OVOS uses "Hotwords" to trigger any number of actions.  You can load any number 
   - take ovos-core out of sleep mode, also called a **wakeup_word** or **standup_word**
   - take ovos-core out of recording mode, also called a **stop_word**
 
-  [Setting and adding Hotwords](ht_ww.md)
+  [Setting and adding Hotwords](104-ht_ww.md)
 
 #### WakeWord Plugins
 
@@ -91,7 +91,7 @@ A Wake word is what OVOS uses to activate the device.  By default `Hey Mycroft` 
 
 [Wake word plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-ww-plugin&type=all&language=&sort=)
 
-[Changing the Wake word](ht-ww.md)
+[Changing the Wake word](104-ht-ww.md)
 
 
 ### VAD Plugins
@@ -101,24 +101,24 @@ Most of the time, this will not need changed.  If you are having trouble with yo
 
 [Supported VAD Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-vad-plugin&type=all&language=&sort=)
 
-[Changing VAD Plugin](ht_vad.md)
+[Changing VAD Plugin](105-ht_vad.md)
 
 ## Audio
 [ovos-audio](https://github.com/OpenVoiceOS/ovos-audio)
 
 The audio service handles the output of all audio. It is how you hear the voice responses, music, or any other sound from your OVOS device.
 
-[Configuring Audio](audio_conf.md)
+[Configuring Audio](999-not-implemented)
 
 ### TTS Plugins
 
 TTS (Text To Speech) is the verbal response from OVOS.  There are several plugins available that support different engines.  Multiple languages and voices are available to use.
 
-OVOS provides a set of public TTS servers hosted by OVOS trusted members [(Members hosting services)](members.md#Members-hosting-services).  It uses the [ovos-tts-server-plugin](https://github.com/OpenVoiceOS/ovos-tts-server-plugin), and no additional configuration is needed.
+OVOS provides a set of public TTS servers hosted by OVOS trusted members [(Members hosting services)](325-members.md#Members-hosting-services).  It uses the [ovos-tts-server-plugin](https://github.com/OpenVoiceOS/ovos-tts-server-plugin), and no additional configuration is needed.
 
 [Supported TTS Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-tts-plugin&type=all&language=&sort=)
 
-[Changing TTS Plugin](ht_tts.md)
+[Changing TTS Plugin](090-ht_tts.md)
 
 ## PHAL
 [ovos-PHAL](https://github.com/OpenVoiceOS/ovos-PHAL)
@@ -129,12 +129,12 @@ Any number of plugins providing functionality can be loaded and validated at run
 
 [Supported PHAL Plugins](https://github.com/orgs/OpenVoiceOS/repositories?q=ovos-phal-plugin&type=all&language=&sort=)
 
-[PHAL Plugins](ht_phal.md)
+[PHAL Plugins](110-ht_phal.md)
 
 ### Admin PHAL
 Similar to regular PHAL, but is used when `sudo` or `privlidged user` is needed
 **Be extremely careful when adding `admin-phal plugins`.  They give OVOS administrative privileges, or root privileges to your operating system**
-[Admin PHAL](ht_phal.md#adimn-phal)
+[Admin PHAL](110-ht_phal.md#adimn-phal)
 
 ## GUI
 OVOS uses the standard mycroft-gui framework, you can find the official documentation [here](https://mycroft-ai.gitbook.io/docs/skill-development/displaying-information/mycroft-gui)
@@ -154,3 +154,10 @@ OVOS provides a number of helper scripts to allow the user to control the device
 - `ovos-speak`  This takes your command and runs it through the TTS (Text To Speech) engine and speaks what was provided.
 - `ovos-speak "hello world"` will output `"hello world"` in the configured TTS voice
 - `ovos-config` is a command line interface that allows you to view and set configuration values.
+
+**Newest (> Nov 2023) raspOVOS images only**
+
+- docs-community    View the OVOS Community docs in the terminal
+- docs-techincal    View the OVOS Technical docs in the terminal
+- docs-hivemind     View the HiveMind docs in the terminal
+- docs-messages     View OVOS Message specs in the terminal

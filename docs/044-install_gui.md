@@ -30,7 +30,7 @@ That is all it takes to install the GUI for OVOS.  Invoke the GUI with the comma
 
 You can refer to the [README](https://github.com/OpenVoiceOS/mycroft-gui-qt5/blob/dev/README.md) in the mycroft-gui-qt5 repository for more information
 
-[Starting the GUI](starting_modules.md#gui)
+[Starting the GUI](051-starting_modules.md#gui)
 
 ### Footnotes
 
