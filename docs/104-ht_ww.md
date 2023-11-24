@@ -28,13 +28,13 @@ Add the following to your `~/.config/mycroft/mycroft.conf` file.
 {
     "listener": {
         "wake_word": "hey_ziggy"
-    }
+    },
     "hotwords": {
         "hey_ziggy": {
             "module": "ovos-ww-plugin-vosk",
             "listen": true,
             "sound": "snd/start_listening.wav",
-            "debug": false
+            "debug": false,
             "rule": "fuzzy",
             "lang": "en",
             "samples": [
