@@ -9,5 +9,5 @@ Note: It works fine with rootless podman, despite being named ovos-docker.
 
 
 Refer to the
-[ovos-docker/README](https://github.com/OpenVoiceOS/ovos-docker/blob/dev/README.md)
+[ovos-docker documentation](https://openvoiceos.github.io/ovos-docker/)
 for information on how to use it.
