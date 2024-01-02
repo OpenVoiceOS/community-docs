@@ -32,7 +32,6 @@ Add the following to your `~/.config/mycroft/mycroft.conf` file.
     "hotwords": {
         "hey_ziggy": {
             "module": "ovos-ww-plugin-vosk",
-            "listen": true,
             "sound": "snd/start_listening.wav",
             "debug": false,
             "rule": "fuzzy",
@@ -40,7 +39,8 @@ Add the following to your `~/.config/mycroft/mycroft.conf` file.
             "samples": [
                 "hey ziggy",
                 "hay ziggy"
-                ]
+                ],
+            "thresh": 80
         }
     }
 }
