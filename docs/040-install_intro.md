@@ -20,10 +20,25 @@ The easiest and fastest way to experience what OVOS has to offer is to use one o
 
 **NOTE** Images are currently only available for a RPi3b/b+/4.  More may be on the way.
 
-- [Buildroot-ovos](https://drive.google.com/drive/folders/113-zmx6ncoeLNsayseNxoaTlaAk1AfU2)
-  - The most complete and advanced image OVOS provides, complete with a default set of skills and a GUI.
-- [raspbian-ovos](https://ovosimages.ziggyai.online/raspbian/development)
-  - The newest image from the OVOS team.  This is a "headless" image (NO GUI), but comes with a preinstalled set of skills also.  This image will provide you with an experience similar to the origional [picroft](https://github.com/MycroftAI/enclosure-picroft)
+#### Features across all images
+
+- Out of the box support for most USB microphones and speakers.
+- Out of the box support for ReSpeaker style HAT's.
+- Out of the box support for the Mycroft SJ201 sound card.
+- More hardware support to come.
+- A small set of pre-installed skills so you may use your assistant right away
+
+- [OVOS - Buildroot Edition](https://drive.google.com/drive/folders/113-zmx6ncoeLNsayseNxoaTlaAk1AfU2)
+  - The most complete and advanced image OVOS provides.
+  - All packages are built from scratch, optimizing along the way.
+- [raspOVOS](https://ovosimages.ziggyai.online/raspbian/newest)
+  - raspOVOS provides the complete OVOS ecosystem on top of the official raspbian OS lite image.
+    - The "headless" image (NO GUI)
+      - Can be run on a RPi3b.
+      - This image will provide you with an experience similar to the origional [picroft](https://github.com/MycroftAI/enclosure-picroft)
+    - The "GUI" image
+      - Similar to the "headless" image, but has a GUI and specific packages installed for convenience.
+      - Only runs on a RPi4, the RPi3 does not have enough power to run the GUI.
 
 [Get started with an image](030-qs_intro.md)
 
@@ -40,3 +55,10 @@ This is an advanced setup and requires access to a command shell and can take mo
 Docker images are also available and have been tested and working on Linux, Windows, and even Mac.
 
 [Get started with OVOS Docker](043-install_ovos_docker.md)
+
+### OVOS Installer
+
+This is the newest way users can install OVOS on their system.
+You can choose to install Docker containers, or install OVOS to a virtual environment.
+
+[Get started with OVOS Installer](044-ovos_installer.md)
