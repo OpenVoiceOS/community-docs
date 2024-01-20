@@ -22,11 +22,11 @@ The easiest and fastest way to experience what OVOS has to offer is to use one o
 
 #### Features across all images
 
+- A small set of pre-installed skills so you may use your assistant right away
+- Out of the box support for the Mycroft Mark II.
 - Out of the box support for most USB microphones and speakers.
 - Out of the box support for ReSpeaker style HAT's.
-- Out of the box support for the Mycroft SJ201 sound card.
 - More hardware support to come.
-- A small set of pre-installed skills so you may use your assistant right away
 
 - [OVOS - Buildroot Edition](https://drive.google.com/drive/folders/113-zmx6ncoeLNsayseNxoaTlaAk1AfU2)
   - The most complete and advanced image OVOS provides.
@@ -35,7 +35,7 @@ The easiest and fastest way to experience what OVOS has to offer is to use one o
   - raspOVOS provides the complete OVOS ecosystem on top of the official raspbian OS lite image.
     - The "headless" image (NO GUI)
       - Can be run on a RPi3b.
-      - This image will provide you with an experience similar to the origional [picroft](https://github.com/MycroftAI/enclosure-picroft)
+      - This image will provide you with an experience similar to the original [picroft](https://github.com/MycroftAI/enclosure-picroft)
     - The "GUI" image
       - Similar to the "headless" image, but has a GUI and specific packages installed for convenience.
       - Only runs on a RPi4, the RPi3 does not have enough power to run the GUI.

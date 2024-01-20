@@ -18,25 +18,42 @@ If you want to build your own 32-bit image for OVOS, note that 32-bit operating 
 
 ### Download an OVOS image
 
-OVOS provides a couple of different images specifically for the Raspberry Pi: a [headless image built on Raspberry Pi OS (RaspOVOS)](#rasberry-pi-os-latest-images) and an older/work-in-progress [full GUI image (Buildroot)](#buildroot-latest-image).
+OVOS provides a couple of different types of pre-built images made specifically for the RPi.
 
-#### Raspberry Pi OS Latest Images
+- Headless
+These images do not utilize the GUI functionality of OVOS and provide a similar experience to the original [picroft](https://github.com/MycroftAI/enclosure-picroft) software from [MycroftAI](https://github.com/MycroftAI).
 
-OVOS provides "headless" images that is similar to the original `picroft` software from `MycroftAI`. It runs without a screen, is built on top of Raspberry Pi OS, and works with a RPi3b/b+.
+- GUI
+The GUI images allow you to interact with your assistant using a screen along with your voice.  There are even skills available specifically designed for use with the GUI.
 
-OVOS also provides a couple of full functioning images with a GUI.
+#### Buildroot Images
 
-- [raspOVOS images](https://ovosimages.ziggyai.online/raspbian/newest)
+[buildroot](https://github.com/OpenVoiceOS/ovos-buildroot) - An OS completely built from source so it is optimized for the Rpi.
+
+**Features**
+- A small set of skills so you can enjoy your assistant from the first boot.
+- Fully built from source packages.
+  - This allows the software to be optimized for the hardware being used.
+- Headless and GUI images
+- Compatible with RPi4/RPi3b *RPi3b headless only*
+- **New hardware is being added**
+
+- [OVOS Buildroot Images](https://drive.google.com/file/d/1PUtNXfZ5jMUlVAgyN-KXPdVdX6r51eBw/view?usp=share_link)
+
+#### RaspOVOS Images
+
+[raspOVOS](https://github.com/OpenVoiceOS/raspOVOS) - The full OVOS stack on top of the latest Raspberry Pi OS.
+
+**Features**
+- A small set of skills so you can enjoy your assistant from the first boot.
+- Built on top of the latest [Raspberry Pi OS](https://www.raspberrypi.com/software/) providing a full operating system.
+- Head and GUI images
+- Compatible with RPi4/RPi3b *RPi3b headless only*
+- **New hardware coming soon**
+
+- [raspOVOS Images](https://ovosimages.ziggyai.online/raspbian/newest)
   - These are **unstable** builds, and not always working.
   - Backup images of previous builds are [located here](https://ovosimages.ziggyai.online/raspbian/development)
-
-[Instructions on flashing the image can be found here](#flashing_an_image.md).
-
-#### Buildroot Latest Image
-
-The most advanced and featureful is the Buildroot image. It is specifically built for embeded hardware such as the RPi.  **New hardware is being added**
-
-- [RPi4-64](https://drive.google.com/file/d/1PUtNXfZ5jMUlVAgyN-KXPdVdX6r51eBw/view?usp=share_link)
 
 [Instructions on flashing the image can be found here](#flashing_an_image.md).
 
@@ -50,15 +67,15 @@ For most users, the easiest way to get started with OVOS is to use Docker. Docke
 
 The new OVOS buildroot image (under construction) uses Podman to manage the OVOS services, allowing for easy setup and upgrades.
 
-[https://github.com/OpenVoiceOS/ovos-docker](https://github.com/OpenVoiceOS/ovos-docker)
+OVOS Docker provides [its own documentation](https://openvoiceos.github.io/ovos-docker/) with details on how to use and configure for your situation.
 
-The README at the link above explains how to set up OVOS on Docker for multiple different architectures and operating systems. New images are built nightly.
+[OVOS Docker Github page](https://github.com/OpenVoiceOS/ovos-docker)
 
 To install Docker, [please see the official documentation](https://docs.docker.com/engine/install/).
 
 ## Manual Install
 
-OVOS provides an [official installer](https://github.com/OpenVoiceOS/ovos-installer) which should allow you to easily install OVOS to a variety of OS's including Windows and MacOS.  More information on using this tool can be found on the [ovos_installer](044-ovos_installer) page in these docs.
+OVOS provides an [official installer](https://github.com/OpenVoiceOS/ovos-installer) which should allow you to easily install OVOS to a variety of operating systems including Windows and MacOS.  More information on using this tool can be found on the [ovos_installer](044-ovos_installer) page in these docs.
 
 For Debian-based Linux distros, [you can install OVOS manually via a shell script](https://github.com/OpenVoiceOS/raspbian-ovos/blob/dev/manual_user_install.sh). This is not recommended for most users, but may be useful for developers and advanced users.
 
