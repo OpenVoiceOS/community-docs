@@ -3,7 +3,7 @@ The OVOS ecosystem is very modular, depending on where you are running `ovos-cor
 
 By default `ovos-core` only installs the minimum components common to all services, for the purposes of this document we will assume you want a full install with a GUI.
 
-**NOTE** The GUI requires separate packages in addition to what is required by `ovos-core`.  The [GUI installation](044-install_gui.md) is covered in its own section.
+**NOTE** The GUI requires separate packages in addition to what is required by `ovos-core`.  The [GUI installation](048-install_gui.md) is covered in its own section.
 
 ## Host system
 OVOS requires some system dependencies, how to do this will depend on your distro.

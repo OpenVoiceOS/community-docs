@@ -18,7 +18,8 @@ nav:
         - Installing an Image: 030-qs_intro.md
         - Install as a Library: 042-install_ovos_core.md
         - Install with Docker: 043-install_ovos_docker.md
-        - Install GUI: 044-install_gui.md
+        - OVOS Installer: 044-ovos_installer.md
+        - Install GUI: 048-install_gui.md
     - Starting OVOS:
         - Introduction: 050-starting_intro.md
         - Starting Modules: 051-starting_modules.md
