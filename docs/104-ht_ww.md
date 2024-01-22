@@ -40,7 +40,7 @@ Add the following to your `~/.config/mycroft/mycroft.conf` file.
                 "hey ziggy",
                 "hay ziggy"
                 ],
-            "threshold": 80
+            "threshold": 0.80
         }
     }
 }
