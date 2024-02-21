@@ -61,6 +61,9 @@ The following system packages are required to build the image:
 - curl
 - wget
 - qtdeclarative5-dev
+- skopeo
+- jq
+- podman
 
 #### The following firewall ports need to be allowed to the internet.
 In addition to the usual http/https ports (tcp 80, tcp 443) a couple of other ports need to be allowed to the internet :
