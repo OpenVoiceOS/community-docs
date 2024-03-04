@@ -48,7 +48,7 @@ Execute `systemctl --user restart ovos` to reload configuration.
 
 For avaliable voices please refer to [piper-voices section](#voices-avaliable-for-piper-plugin-)
 
-# Voices avaliable for [piper-plugin](https://github.com/OpenVoiceOS/ovos-tts-plugin-piper/) <a id="Voices"></a>
+# Voices avaliable for [piper-plugin](https://github.com/OpenVoiceOS/ovos-tts-plugin-piper/)
 List of avaliable voices can be found [here](https://github.com/OpenVoiceOS/ovos-tts-plugin-piper/blob/dev/ovos_tts_plugin_piper/__init__.py#L155C8-L242C109).
 
 You can listen for voice samples on the official piper site - https://rhasspy.github.io/piper-samples/
