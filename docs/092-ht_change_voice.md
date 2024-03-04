@@ -2,6 +2,11 @@
 
 ## Using TTS server plugin
 
+TTS server plugin is using services hosted by OVOS community:
+https://openvoiceos.github.io/community-docs/325-members/#members-hosting-services
+
+That reduces local resource consumption. Its recommended to use TTS server plugin for resource constraint hardware (eg. RPi 3)
+
 Open the file for editing.  `nano ~/.config/mycroft/mycroft.conf`.
 
 If your file is empty, or does not have a `"tts"` section, you need to create it.  Add this to your config
@@ -21,6 +26,8 @@ Execute `systemctl --user restart ovos` to reload configuration.
 For avaliable voices please refer to [piper-voices section](#voices-avaliable-for-piper-plugin-)
 
 ## Using local piper plugin
+
+Local piper plugin does all Text-To-Speech translation on your local device.
 
 Open the file for editing.  `nano ~/.config/mycroft/mycroft.conf`.
 
