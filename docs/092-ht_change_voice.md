@@ -56,7 +56,7 @@ For available voices please refer to [piper-voices section](#voices-available-fo
 > After a configuration change it's important to reload the audio service.
 > (an example used with systemd services `systemctl --user restart ovos`)
 >
-> If your system is not using systemd - please refer to relevant documentation
+> If your system is not using systemd - please refer to [relevant documentation](051-starting_modules.md)
 
 # Voices available for [piper-plugin](https://github.com/OpenVoiceOS/ovos-tts-plugin-piper/)
 List of available voices can be found [here](https://github.com/OpenVoiceOS/ovos-tts-plugin-piper/blob/dev/ovos_tts_plugin_piper/__init__.py#L155C8-L242C109).
