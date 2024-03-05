@@ -8,7 +8,9 @@ https://openvoiceos.github.io/community-docs/325-members/#members-hosting-servic
 
 That reduces local resource consumption. Its recommended to use TTS server plugin for resource constraint hardware (eg. RPi 3)
 
-You can host TTS server by yourself - check this [blog post for details](https://blog.graywind.org/posts/piper-tts-server-script/)
+> [!NOTE]
+> You can host TTS server by yourself - check this [blog post for details](https://blog.graywind.org/posts/piper-tts-server-script/)  
+> The post is specifically for running Piper TTS, but could also be adapted to run [other TTS plugins](https://github.com/orgs/OpenVoiceOS/repositories?language=&q=tts-plugin&sort=&type=all).
 
 ### Changes 
 Open the file for editing.  `nano ~/.config/mycroft/mycroft.conf`.
@@ -25,7 +27,7 @@ If your file is empty, or does not have a `"tts"` section, you need to create it
 }
 ```
 
-For avaliable voices please refer to [piper-voices section](#voices-avaliable-for-piper-plugin)
+For available voices please refer to [piper-voices section](#voices-available-for-piper-plugin)
 
 ## Using local piper plugin
 
@@ -48,13 +50,15 @@ If your file is empty, or does not have a `"tts"` section, you need to create it
 }
 ```
 
-For avaliable voices please refer to [piper-voices section](#voices-avaliable-for-piper-plugin)
+For available voices please refer to [piper-voices section](#voices-available-for-piper-plugin)
 
 > [!WARNING]  
-> After configuration change it's important to reload it
+> After a configuration change it's important to reload the audio service.
 > (an example used with systemd services `systemctl --user restart ovos`)
+>
+> If your system is not using systemd - please refer to relevant documentation
 
-# Voices avaliable for [piper-plugin](https://github.com/OpenVoiceOS/ovos-tts-plugin-piper/)
-List of avaliable voices can be found [here](https://github.com/OpenVoiceOS/ovos-tts-plugin-piper/blob/dev/ovos_tts_plugin_piper/__init__.py#L155C8-L242C109).
+# Voices available for [piper-plugin](https://github.com/OpenVoiceOS/ovos-tts-plugin-piper/)
+List of available voices can be found [here](https://github.com/OpenVoiceOS/ovos-tts-plugin-piper/blob/dev/ovos_tts_plugin_piper/__init__.py#L155C8-L242C109).
 
-You can listen for voice samples on the official piper site - https://rhasspy.github.io/piper-samples/
+You can listen to voice samples on the official piper site - https://rhasspy.github.io/piper-samples/
