@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/unused/config_ovos_audio/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Config ovos audio - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Config ovos audio";
+        var mkdocs_page_input_path = "unused/config_ovos_audio.md";
+        var mkdocs_page_url = "/community-docs/unused/config_ovos_audio/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../042-install_ovos_core/">Install as a Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Skills</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../081-ht_skills_install/">Installing Skills</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Homescreen</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../115-ht_config_homescreen/">Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../145-troubleshooting_audio/">Troubleshooting Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Config ovos audio</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="audio-service">Audio Service</h2>
+<p>The audio service is responsible for loading TTS and Audio plugins</p>
+<p>All audio playback is handled by this service</p>
+<h3 id="native-playback">Native playback</h3>
+<p>Usually playback is triggered by some originating bus message, eg <code>"recognizer_loop:utterance"</code>, this message contains metadata that is used to determine if playback should happen.</p>
+<p><code>message.context</code> may contain a source and destination, playback is only triggered if a message destination is a native_source or if missing (considered a broadcast).</p>
+<p>This separation of native sources allows remote clients such as an android app to interact with OVOS without the actual device where ovos-core is running repeating all TTS and music playback out loud</p>
+<p>You can learn more about message targeting <a href="https://jarbashivemind.github.io/HiveMind-community-docs/mycroft/">here</a></p>
+<p>By default, only utterances originating from the speech client and ovos cli are considered native</p>
+<p>for legacy reasons the names for ovos cli and speech client are <code>"debug_cli"</code> and <code>"audio"</code> respectively</p>
+<h3 id="tts">TTS</h3>
+<p>Two TTS plugins may be loaded at once, if the primary plugin fails for some reason the second plugin will be used.</p>
+<p>This allows you to have a lower quality offline voice as fallback to account for internet outages, this ensures your device can always give you feedback</p>
+<pre><code class="language-javascript">&quot;tts&quot;: {
+    &quot;pulse_duck&quot;: false,
+    &quot;module&quot;: &quot;ovos-tts-plugin-mimic2&quot;,
+    &quot;fallback_module&quot;: &quot;ovos-tts-plugin-mimic&quot;
+},
+</code></pre>
+<h3 id="audio">Audio</h3>
+<p>You can enable additional Audio plugins and define the native sources described above under the <code>"Audio"</code> section of <code>mycroft.conf</code></p>
+<p>ovos-core uses OCP natively for media playback, you can learn more about OCP <a href="https://openvoiceos.github.io/community-docs/OCP">here</a></p>
+<p>OCP will decide when to call the Audio service and what plugin to use, the main use case is for headless setups without a GUI</p>
+<p>NOTE: mycroft-core has a <code>"default-backend"</code> config option, in ovos-core this option has been deprecated and is always OCP.</p>
+<pre><code class="language-javascript">&quot;Audio&quot;: {
+    &quot;native_sources&quot;: [&quot;debug_cli&quot;, &quot;audio&quot;],
+
+    &quot;backends&quot;: {
+      &quot;OCP&quot;: {
+        &quot;type&quot;: &quot;ovos_common_play&quot;,
+        &quot;active&quot;: true
+      },
+      &quot;simple&quot;: {
+        &quot;type&quot;: &quot;ovos_audio_simple&quot;,
+        &quot;active&quot;: true
+      },
+      &quot;vlc&quot;: {
+        &quot;type&quot;: &quot;ovos_vlc&quot;,
+        &quot;active&quot;: true
+      }
+    }
+},
+</code></pre>
+<h1 id="configuration">Configuration</h1>
+<ul>
+<li><a href="#reading-configuration">Reading Configuration</a></li>
+<li><a href="#configuring-configuration">Configuring Configuration</a><ul>
+<li><a href="#protected-keys">protected_keys</a></li>
+<li><a href="#disable-user-config">disable_user_config</a></li>
+<li><a href="#disable-remote-config">disable_remote_config</a></li>
+</ul>
+</li>
+<li><a href="#meta-configuration">Meta Configuration</a><ul>
+<li><a href="#ovosconf">ovos.conf</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="reading-configuration">Reading Configuration</h2>
+<p><code>ovos_config.config.Configuration</code> is a singleton that loads a single config
+object. The configuration files loaded are determined by <code>ovos.conf</code> as described below and can be in either json or
+yaml format.</p>
+<p>if <code>Configuration()</code> is called the following configs would be loaded in this
+order:</p>
+<ul>
+<li><code>{core-path}</code>/configuration/mycroft.conf</li>
+<li><code>os.environ.get('MYCROFT_SYSTEM_CONFIG')</code> or /etc/mycroft/mycroft.conf</li>
+<li><code>os.environ.get('MYCROFT_WEB_CACHE')</code> or <code>XDG_CONFIG_PATH</code>/neon/web_cache.json</li>
+<li>~/.mycroft/mycroft.conf (Deprecated)</li>
+<li><code>XDG_CONFIG_DIRS</code> + /mycroft/mycroft.conf</li>
+<li>/etc/xdg/mycroft/mycroft.conf</li>
+<li><code>XDG_CONFIG_HOME</code> (default ~/.config) + /mycroft/mycroft.conf</li>
+</ul>
+<p>When the configuration loader starts, it looks in these locations in this order, and loads ALL configurations. Keys that
+exist in multiple configuration files will be overridden by the last file to contain the value. This process results in
+a minimal amount being written for a specific device and user, without modifying default distribution files.</p>
+<h2 id="configuring-configuration">Configuring Configuration</h2>
+<p>There are a couple of special configuration keys that change the way the configuration stack loads.</p>
+<ul>
+<li><code>Default</code> config refers to the config specified at <code>default_config_path</code> in
+  <code>ovos.conf</code> (#1 <code>{core-path}/configuration/mycroft.conf</code> in the stack above).</li>
+<li><code>System</code> config refers to the config at <code>/etc/{base_folder}/{config_filename}</code> (#2 <code>/etc/mycroft/mycroft.conf</code> in the stack
+  above).</li>
+</ul>
+<h3 id="protected_keys">protected_keys</h3>
+<p>A <code>"protected_keys"</code> configuration section may be added to a <code>Default</code> or <code>System</code> Config file
+(default <code>/etc/mycroft/mycroft.conf</code>). This configuration section specifies
+other configuration keys that may not be specified in <code>remote</code> or <code>user</code> configurations.
+Keys may specify nested parameters with <code>.</code> to exclude specific keys within nested dictionaries.
+An example config could be:</p>
+<pre><code class="language-json">{
+  &quot;protected_keys&quot;: {
+    &quot;remote&quot;: [
+      &quot;gui_websocket.host&quot;,
+      &quot;websocket.host&quot;
+    ],
+    &quot;user&quot;: [
+      &quot;gui_websocket.host&quot;
+    ]
+  }
+}
+</code></pre>
+<p>This example specifies that <code>config['gui_websocket']['host']</code> may be specified in user configuration, but not remote.
+<code>config['websocket']['host']</code> may not be specified in user or remote config, so it will only consider default
+and system configurations.</p>
+<h3 id="disable_user_config">disable_user_config</h3>
+<p>If this config parameter is set to True in <code>Default</code> or <code>System</code> configuration,
+no user configurations will be loaded (no XDG configuration paths).</p>
+<h3 id="disable_remote_config">disable_remote_config</h3>
+<p>If this config parameter is set to True in <code>Default</code> or <code>System</code> configuration,
+the remote configuration (<code>web_cache.json</code>) will not be loaded.</p>
+<h2 id="meta-configuration">Meta Configuration</h2>
+<p>while <code>mycroft.conf</code> configures the voice assistant, <code>ovos.conf</code> configures the library</p>
+<p>what this means is that <code>ovos.conf</code> decides what files are loaded by the <code>Configuration</code> class described above, as an end user or skill developer you should never have to worry about this</p>
+<p>all XDG paths across OpenVoiceOS packages build their paths taking <code>ovos.conf</code> into consideration</p>
+<p>this feature is what allows downstream voice assistants such as neon-core to change their config files to <code>neon.yaml</code></p>
+<p>Using the above example, if <code>Configuration()</code> is called from <code>neon-core</code>, the following configs would be loaded in this
+order:</p>
+<ul>
+<li><code>{core-path}</code>/configuration/neon.yaml</li>
+<li><code>os.environ.get('MYCROFT_SYSTEM_CONFIG')</code> or /etc/neon/neon.yaml</li>
+<li><code>os.environ.get('MYCROFT_WEB_CACHE')</code> or <code>XDG_CONFIG_PATH</code>/neon/web_cache.json</li>
+<li>~/.neon/neon.yaml (Deprecated)</li>
+<li><code>XDG_CONFIG_DIRS</code> + /neon/neon.yaml</li>
+<li>/etc/xdg/neon/neon.yaml</li>
+<li><code>XDG_CONFIG_HOME</code> (default ~/.config) + /neon/neon.yaml</li>
+</ul>
+<h3 id="ovosconf">ovos.conf</h3>
+<p>The <code>ovos_config</code> package determines which config files to load based on <code>ovos.conf</code>.
+<code>get_ovos_config</code> will return default values that load <code>mycroft.conf</code> unless otherwise configured.</p>
+<p><code>ovos.conf</code> files are loaded in the following order, with later files taking priority over earlier ones in the list:</p>
+<ul>
+<li>/etc/OpenVoiceOS/ovos.conf</li>
+<li>/etc/mycroft/ovos.conf (Deprecated)</li>
+<li><code>XDG_CONFIG_DIRS</code> + /OpenVoiceOS/ovos.conf</li>
+<li>/etc/xdg/OpenVoiceOS/ovos.conf</li>
+<li><code>XDG_CONFIG_HOME</code> (default ~/.config) + /OpenVoiceOS/ovos.conf</li>
+</ul>
+<p>A simple <code>ovos_config</code> should have a structure like:</p>
+<pre><code class="language-json">{
+  &quot;base_folder&quot;: &quot;mycroft&quot;,
+  &quot;config_filename&quot;: &quot;mycroft.conf&quot;,
+  &quot;default_config_path&quot;: &quot;&lt;Absolute Path to Installed Core&gt;/configuration/mycroft.conf&quot;,
+  &quot;module_overrides&quot;: {},
+  &quot;submodule_mappings&quot;: {}
+}
+</code></pre>
+<blockquote>
+<p><em>Note</em>: <code>default_config_path</code> should always be an absolute path. This is generally
+detected automatically, but any manual override must specify an absolute path to a json or yaml config file.</p>
+</blockquote>
+<p>Non-Mycroft modules may specify alternate config paths. A call to <code>get_ovos_config</code> from
+<code>neon_core</code> or <code>neon_messagebus</code> will return a configuration like:</p>
+<pre><code class="language-json">{
+  &quot;base_folder&quot;: &quot;neon&quot;,
+  &quot;config_filename&quot;: &quot;neon.yaml&quot;,
+  &quot;default_config_path&quot;: &quot;/etc/example/config/neon.yaml&quot;,
+  &quot;module_overrides&quot;: {
+    &quot;neon_core&quot;: {
+      &quot;base_folder&quot;: &quot;neon&quot;,
+      &quot;config_filename&quot;: &quot;neon.yaml&quot;,
+      &quot;default_config_path&quot;: &quot;/etc/example/config/neon.yaml&quot;
+    }
+  },
+  &quot;submodule_mappings&quot;: {
+    &quot;neon_messagebus&quot;: &quot;neon_core&quot;,
+    &quot;neon_speech&quot;: &quot;neon_core&quot;,
+    &quot;neon_audio&quot;: &quot;neon_core&quot;,
+    &quot;neon_gui&quot;: &quot;neon_core&quot;
+  }
+}
+</code></pre>
+<p>If <code>get_ovos_config</code> was called from <code>mycroft</code> with the same configuration file as the last example,
+the returned configuration would be:</p>
+<pre><code class="language-json">{
+  &quot;base_folder&quot;: &quot;mycroft&quot;,
+  &quot;config_filename&quot;: &quot;mycroft.conf&quot;,
+  &quot;default_config_path&quot;: &quot;&lt;Path to Installed Core&gt;/configuration/mycroft.conf&quot;,
+  &quot;module_overrides&quot;: {
+    &quot;neon_core&quot;: {
+      &quot;base_folder&quot;: &quot;neon&quot;,
+      &quot;config_filename&quot;: &quot;neon.yaml&quot;,
+      &quot;default_config_path&quot;: &quot;/etc/example/config/neon.yaml&quot;
+    }
+  },
+  &quot;submodule_mappings&quot;: {
+    &quot;neon_messagebus&quot;: &quot;neon_core&quot;,
+    &quot;neon_speech&quot;: &quot;neon_core&quot;,
+    &quot;neon_audio&quot;: &quot;neon_core&quot;,
+    &quot;neon_gui&quot;: &quot;neon_core&quot;
+  }
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

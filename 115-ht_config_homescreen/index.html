@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/115-ht_config_homescreen/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Configuration - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Configuration";
+        var mkdocs_page_input_path = "115-ht_config_homescreen.md";
+        var mkdocs_page_url = "/community-docs/115-ht_config_homescreen/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../042-install_ovos_core/">Install as a Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Skills</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../081-ht_skills_install/">Installing Skills</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Homescreen</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Configuration</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#features">Features</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#night-mode-feature">Night Mode Feature</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#quick-actions-dashboard">Quick Actions Dashboard</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#application-launcher">Application Launcher</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#wallpapers">Wallpapers</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#widgets">Widgets</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#notifications-widget">Notifications Widget</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#timer-widget">Timer Widget</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#alarm-widget">Alarm Widget</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#media-player-widget">Media Player Widget</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#settings">Settings</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../145-troubleshooting_audio/">Troubleshooting Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">How To</li>
+          <li class="breadcrumb-item">Homescreen</li>
+      <li class="breadcrumb-item active">Configuration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="openvoiceos-home-screen">OpenVoiceOS Home Screen</h1>
+<p>The home screen is the central place for all your tasks. It is the first thing you will see after completing the onboarding process. It supports a variety of pre-defined widgets which provide you with a quick overview of information you need to know like the current date, time and weather. The home screen contains various features and integrations which you can learn more about in the following sections.</p>
+<p><img alt="" src="https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/homescreen.png" /></p>
+<h2 id="features">Features</h2>
+<h3 id="night-mode-feature">Night Mode Feature</h3>
+<p>The Night Mode feature lets you quickly switch your home screen into a dark standby clock, reducing the amount of light emitted by your device. This is especially useful if you are using your device in a dark room or at night. You can enable the night mode feature by tapping on the left edge pill button on the home screen.</p>
+<p><img alt="" src="https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/homescreen-nightmode.gif" /></p>
+<h3 id="quick-actions-dashboard">Quick Actions Dashboard</h3>
+<p>The Quick Actions Dashboard provides you with a card-based interface to quickly access and add your most used action. The Quick Actions dashboard comes with a variety of pre-defined actions like the ability to quickly add a new alarm, start a new timer or add a new note. You can also add your own custom actions to the dashboard by tapping on the plus button in the top right corner of the dashboard. The Quick Actions dashboard is accessible by tapping on the right edge pill button on the home screen.</p>
+<p><img alt="" src="https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/homescreen-dashboard.gif" /></p>
+<h3 id="application-launcher">Application Launcher</h3>
+<p>OpenVoiceOS comes with support for dedicated voice applications. Voice Applications can be dedicated skills or PHAL plugins, providing their own dedicated user interface. The application launcher will show you a list of all available voice applications. You can access the application launcher by tapping on the center pill button on the bottom of the home screen.</p>
+<p><img alt="" src="https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/homescreen-app-drawer.png" /></p>
+<h3 id="wallpapers">Wallpapers</h3>
+<p>The home screen supports custom wallpapers and comes with a bunch of wallpapers to choose from. You can easily change your custom wallpaper by swiping from right to left on the home screen.</p>
+<p><img alt="" src="https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/homescreen_wallpapers.gif" /></p>
+<h2 id="widgets">Widgets</h2>
+<p><img alt="" src="https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/homescreen-widgets.png" /></p>
+<h3 id="notifications-widget">Notifications Widget</h3>
+<p>The notifications widget provides you with a quick overview of all your notifications. The notifications bell icon will be displayed in the top left corner of the home screen. You can access the notifications overview by tapping on the bell icon when it is displayed.</p>
+<h3 id="timer-widget">Timer Widget</h3>
+<p>The timer widget is displayed in top left corner after the notifications bell icon. It will show up when you have an active timer running. Clicking on the timer widget will open the timers overview.</p>
+<h3 id="alarm-widget">Alarm Widget</h3>
+<p>The alarm widget is displayed in top left corner after the timer widget. It will show up when you have an active alarm set. Clicking on the alarm widget will open the alarms overview.</p>
+<h3 id="media-player-widget">Media Player Widget</h3>
+<p>The media player widget is displayed in the bottom of the home screen, It replaces the examples widget when a media player is active. The media player widget will show you the currently playing media and provide you with a quick way to pause, resume or skip the current media. You can also quickly access the media player by tapping the quick display media player button on the right side of the media player widget.</p>
+<p><img alt="" src="https://github.com/OpenVoiceOS/ovos_assets/raw/master/Images/homescreen-mediawidget.gif" /></p>
+<h2 id="configuration">Configuration</h2>
+<h3 id="settings">Settings</h3>
+<p>The homescreen has several customizations available.  This is sample <code>settings.json</code> file with all of the options explained</p>
+<pre><code>{
+    &quot;__mycroft_skill_firstrun&quot;: false,
+    &quot;weather_skill&quot;: &quot;skill-weather.openvoiceos&quot;,
+    &quot;datetime_skill&quot;: &quot;skill-date-time.mycroftai&quot;,
+    &quot;examples_skill&quot;: &quot;ovos-skills-info.openvoiceos&quot;,
+    &quot;wallpaper&quot;: &quot;default.jpg&quot;,
+    &quot;persistent_menu_hint&quot;: false,
+    &quot;examples_enabled&quot;: true,
+    &quot;randomize_examples&quot;: true,
+    &quot;examples_prefix&quot;: true
+}
+</code></pre>
+<ul>
+<li>__mycroft_skill_firstrun:  This is automatically set on first load of skill</li>
+<li>weather_skill:  DEPRECATED and has no effect - <a href="https://github.com/OpenVoiceOS/skill-ovos-homescreen/pull/62">PR pending</a></li>
+<li>datetime_skill:  Allows you to use a custom skill to display the date and time.  Defaults to <code>skill-ovos-date-time.openvoiceos</code></li>
+<li>examples_skill:  Allows use of a custom skill for the displayed examples.  Defaults to <code>ovos_skills_manager.utils.get_skills_example()</code> function</li>
+<li>wallpaper:  Allows a custom wallpaper to be displayed.  Use a complete url without any tilde <code>~</code></li>
+<li>persistent_menu_hint:  When true, displayes a hint of the pull-down menu at the top of the page</li>
+<li>examples_enabled:  When false, the examples at the bottom of the screen will be hidden</li>
+<li>randomize_examples:  When false, the rotation of the examples will follow the way they are loaded</li>
+<li>examples_prefix:  When false, the prefix 'Ask Me' will NOT be displayed with the examples</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../110-ht_phal/" class="btn btn-neutral float-left" title="PHAL"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../118-ht_config_security/" class="btn btn-neutral float-right" title="OpenVoiceOS Security">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../110-ht_phal/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../118-ht_config_security/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

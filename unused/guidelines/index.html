@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/unused/guidelines/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Voice User Interface Design Guidelines - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Voice User Interface Design Guidelines";
+        var mkdocs_page_input_path = "unused/guidelines.md";
+        var mkdocs_page_url = "/community-docs/unused/guidelines/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../042-install_ovos_core/">Install as a Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Skills</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../081-ht_skills_install/">Installing Skills</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Homescreen</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../115-ht_config_homescreen/">Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../145-troubleshooting_audio/">Troubleshooting Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Voice User Interface Design Guidelines</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="voice-user-interface-design-guidelines">Voice User Interface Design Guidelines</h1>
+<p>Through these guidelines you will learn how to use principles of Voice User Interface Design to build more effective
+skills. These tools will help define and validate the features of the skill before diving deep into development.</p>
+<p>This guide will cover some methods to use that can help plan, prototype and test your skill during the early design stages.</p>
+<p>The full original guide can be found over at <a href="https://mycroft-ai.gitbook.io/docs/skill-development/voice-user-interface-design-guidelines">the mycroft documentation</a></p>
+<h2 id="interactions">Interactions</h2>
+<h3 id="intents">Intents</h3>
+<p>Let's start with an example. A user in Melbourne, Australia might want to know about the weather. To ask for this
+information, they might say:</p>
+<blockquote>
+<p>"Hey Mycroft, what's today's weather like?"</p>
+<p>"Hey Mycroft, what's the weather like in Melbourne?"</p>
+<p>"Hey Mycroft, weather"</p>
+</blockquote>
+<p>Even though these are three different expressions, for most of us they probably have roughly the same meaning. In each
+case we would assume the user expects OVOS to respond with today's weather for their current location.</p>
+<p>It is up us as Skill creators to teach OVOS the variety of ways that a user might express the same intent. This is a key
+part of the design process. It is the key difference between a Skill that kind of works if you know what to say, and a
+Skill that feels intuitive and natural to talk to.</p>
+<p>This is handled by an intent parser whose job it is to learn from your Skill what intents it can handle, and extract
+from the user's speech and key information that might be useful for your Skill. In this case it might include the
+specified date and location.</p>
+<h3 id="statements-and-prompts">Statements and Prompts</h3>
+<p>You can think of <strong>Prompts</strong> as questions and <strong>Statements</strong> as providing information to the user that does not need a
+follow-up response. For example a weather forecast like this would be considered a statement:</p>
+<blockquote>
+<p>Today’s forecast is sunny with a high of 60 and a low of 45.</p>
+</blockquote>
+<h4 id="statements">Statements</h4>
+<p>For a lot of skills the conversation might end with a simple statement from OVOS, and no further action is necessary.
+Try to imagine what the user is trying to accomplish, if a simple statement gets the job done there is no reason to keep
+the conversation rolling, and in fact a follow-up might annoy the user with unnecessary interaction.</p>
+<h4 id="prompts">Prompts</h4>
+<p>It may be tempting to always give users specific instructions like traditional automated phones systems (Interactive
+Voice Response). Many phone systems are notorious for being too verbose and difficult to follow.</p>
+<p>With OVOS we’re trying to break that mold and make the interaction natural. If you follow the phone system method you
+may be giving the user the exact phrasing to say, but you’re also taking up valuable time and training them to think the
+system is very narrow in capability. In the event that the user does give a response that your skill can not handle,
+create follow-up prompts that steer the user back on track.</p>
+<p>Remember, there are no errors in a cooperative conversation.</p>
+<p><strong>Avoid</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>How many people are playing? For example, you can say 2 players.</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Better</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>How many players?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>My Brother and Myself</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>I’m sorry, what was the number of players?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Two</em></td>
+</tr>
+</tbody>
+</table>
+<p>In the first example the user is told explicitly what they can say, but the prompt is unnatural, we don’t typically
+suggest responses to a conversation partner in real life. These long-winded prompts can become tiresome if they are used
+repeatedly throughout the skill. Remember the phone system example, typically poorly designed automated phone systems
+inundate the user with many options and additional instructions at every step of the interaction.</p>
+<p>In the second example we see a better prompt, although the user gives a response that is easy for a human to understand
+it is more difficult to design a skill to understand. Instead, the skill designer can apply a re-prompt strategy that
+steers the user back on track and doesn't require them to start the interaction over. In this case the re-prompt changes
+the wording slightly to make it clear that the user needs to say a number. The next time the user interacts with this
+Skill, they will likely say a number in their first interaction.</p>
+<p>Determining whether to respond to the user with a statement or a prompt can be a bit tricky. When the user is
+somewhat vague it is tempting to assume the user’s intent in order to speed along the interaction. Sometimes this is the
+right approach and sometimes it is not. If you are very confident in the user’s input then it is alright to assume, and
+respond with a statement. For example in the Wikipedia Skill the Wikipedia API is used to confidently select the best response.</p>
+<p><strong>Wikipedia Skill</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Tell me about Abraham Lincoln</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>Abraham Lincoln was an American statesman and lawyer who served as the 16th president of the UnitedStates from 1861 to 1865. Lincoln led the nation through its greatest moral, constitutional, and political crisis in the American Civil War</em>.</td>
+</tr>
+</tbody>
+</table>
+<p>In contrast, let’s look at an example of where a follow-up prompt is a better approach. You’re working on a skill that
+gives important information about birds, such as wingspan, laden and unladen airspeed, etc..</p>
+<p><strong>Avoid</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;">****</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>what is the airspeed velocity of an unladen swallow?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>The unladen airspeed of the european swallow is 20.1 miles per hour.</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Better</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>What is the airspeed velocity of an unladen Swallow?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>What do you mean, African or European Swallow?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;">European Swallow.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>The unladen airspeed of the European Swallow is 20.1 miles per hour.</em></td>
+</tr>
+</tbody>
+</table>
+<p>In the first example Mycroft assumes the user is referring to the European Swallow, however there is nothing to give
+confidence to that assumption. In this case it’s dangerous to assume the User meant the European Swallow since it is
+just as likely they meant the African Swallow. When there is no confidence in one answer versus another, OVOS should
+follow up with a prompt as demonstrated in the second example.</p>
+<p>Another approach to solving this problem is to offer the most likely answer and inform the user that there are other
+answers available with a statement.</p>
+<h3 id="confirmations">Confirmations</h3>
+<p>Confirmation approaches can also be defined by Statements or Prompts , but when we talk about them in the context of
+confirmations we call them Implicit and Explicit.</p>
+<h4 id="implicit-confirmation">Implicit Confirmation</h4>
+<p>This type of confirmation is also a statement. The idea is to parrot the information back to the user to confirm that it
+was correct, but not require additional input from the user. The implicit confirmation can be used in a majority of
+situations. For example Mycroft’s Timer Skill uses implicit confirmation when creating new timers.</p>
+<p><strong>Timer Skill</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Hey Mycroft set a timer for 5 minutes</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>Alright, I’m starting a 5 minute timer</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Avoid</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Hey Mycroft, add bananas to my shopping list</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>done</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Better</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Hey Mycroft, add bananas to my shopping list</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>Adding bananas</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="explicit-confirmation">Explicit Confirmation</h4>
+<p>This type of confirmation requires an input from the user to verify everything is correct. Only use explicit
+confirmation when needed as it can be tedious for the user to always confirm their input. This strategy is best when
+there are multiple steps, and it would be difficult to fix a misstep without starting over, or when deleting or
+modifying an existing multistep input.</p>
+<p><strong>Avoid</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Speaker</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Hey Mycroft, set an alarm for 9:00 am tomorrow</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>Ok, I’ve set an alarm for 9:00 am tomorrow, is that correct?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Yes</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>9:00 am alarm set</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Better</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Hey Mycroft, set an alarm for 9:00 am tomorrow</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;">I've set an alarm for tomorrow at 9:00 am, 16 hours from now</td>
+</tr>
+</tbody>
+</table>
+<p>The first example requires the user to confirm the alarm. Since the interaction is quite short it isn’t necessary to use
+explicit confirmation.</p>
+<p><strong>Avoid</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Speaker</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Hey Mycroft, set a calendar event for a meeting with Chris Stevens</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>When is the event?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Tomorrow at 11:00 am</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>should I send an invite to Chris Stevens?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Yes</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>Alright, I've created a meeting for Tomorrow</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>Alright, I’ve created a meeting for Tomorrow at 11:00 am with Chris Stevens</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Cancel my 11:00 am meeting tomorrow</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>Done</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Better</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Hey Mycroft, set a calendar event for a meeting with Chris Stevens</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>When is the event?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Tomorrow at 11:00 am</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>should I send an invite to Chris Stevens?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>Alright, I’ve created a meeting for Tomorrow at 11:00 am with Chris Stevens</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Cancel my 11:00 am meeting tomorrow</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>Are you sure you want to delete your meeting tomorrow at 11:00 am?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Yes</em></td>
+</tr>
+</tbody>
+</table>
+<p>Both examples use explicit and implicit confirmation correctly until the end of the interaction when the user wants to
+cancel the event. Unlike setting a simple timer or an alarm creating this calendar event requires multiple steps and
+would require reasonable effort to recreate. There may also be significant consequences if the request was
+misinterpreted and the meeting was cancelled unintentionally.</p>
+<h2 id="conversations">Conversations</h2>
+<p>Any time the user needs to input a lot of information or the user needs to sort through a variety of options a conversation will be needed.
+Users may be used to systems that require them to separate input into different chunks. 
+For example, many personal navigation devices (GPS units) require users to input the street number, street name, city, and state separately, like this:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Navigation Device</strong></td>
+<td style="text-align: left;"><em>What is the street number</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>123</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Navigation Device</strong></td>
+<td style="text-align: left;"><em>What is the street name</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Main Street</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Navigation Device</strong></td>
+<td style="text-align: left;"><em>What is the city</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Springfield</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Navigation Device</strong></td>
+<td style="text-align: left;"><em>Oregon</em></td>
+</tr>
+</tbody>
+</table>
+<p>This was a limitation of the technology, both the STT and intent parser were not capable of handling an entire address. 
+With OVOS you do not need to separate the address into multiple inputs. 
+It’s also easy to think like a traditional GUI and translate what are typically separate fields into prompts for the user,
+but that will only slow down the interaction. </p>
+<p>The best solution is to allow the user to input information both ways, all at once, or in pieces. 
+For example the Alarm skill allows the user to set a complicated alarm all in one go, or in steps.</p>
+<p><strong>In Steps:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Hey Mycroft, set a recurring alarm</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>For what day?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>weekdays</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>For what time?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>7 am</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;">I've set a recurring Alarm for 7 am on weekdays</td>
+</tr>
+</tbody>
+</table>
+<p><strong>All at once:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;">Hey Mycroft, set a recurring alarm for weekdays at 7 am</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mycroft</td>
+<td style="text-align: left;">I've set a recurring Alarm for 7 am on weekdays</td>
+</tr>
+</tbody>
+</table>
+<h3 id="context">Context</h3>
+<p>Conversational context is a given when speaking to another person, but not always when interacting with a computer based system. Many skills are designed with only a quick back and forth interaction in mind, and can operate well without conversational context, but conversational context can be a powerful addition to a skill and can make the interaction much more life like. Here are some examples of how to use context in conversation. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Who is Shaquille O'Neal</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>Shaquille O'Neal is an American former professional basketball player who is a sports analyst on the television program Inside the NBA on TNT. He is considered one of the greatest players in National Basketball Association history</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>How tall is he?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>seven foot 1 inches tall</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>when did he retire</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>2011</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="error-handling">Error Handling</h2>
+<p>Inevitably, the user will say something that your skill can’t handle. It’s best not to think of these as errors on the part of the user, remember there aren’t really errors in conversations. Conversations are naturally cooperative with both parties seeking to continue to a successful outcome. Keeping that in mind you should do your best to avoid Error Handling that is a dead-end.</p>
+<p><strong>Avoid</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>Timer</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>I'm sorry I can't help you with that</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Better</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Speaker</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Use</strong>r</td>
+<td style="text-align: left;"><em>Timer</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mycroft</strong></td>
+<td style="text-align: left;"><em>A timer for how long?</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User</strong></td>
+<td style="text-align: left;"><em>5 minutes</em></td>
+</tr>
+</tbody>
+</table>
+<p>In the first example OVOS does not give the user any options to finish the job they set out to do. Try to avoid situations where the user has to start the conversation over.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

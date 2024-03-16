@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/081-ht_skills_install/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Installing Skills - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installing Skills";
+        var mkdocs_page_input_path = "081-ht_skills_install.md";
+        var mkdocs_page_url = "/community-docs/081-ht_skills_install/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../042-install_ovos_core/">Install as a Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Skills</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Installing Skills</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#finding-skills">Finding Skills</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installing-a-found-skill">Installing a found skill</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pip-install">pip install</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deprecated">Deprecated</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#ovos-skills-manager">OVOS skills manager</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#supported-stores">Supported stores</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#openvoiceos-skill-manager">OpenVoiceOS Skill Manager</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Homescreen</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../115-ht_config_homescreen/">Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../145-troubleshooting_audio/">Troubleshooting Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">How To</li>
+          <li class="breadcrumb-item">Skills</li>
+      <li class="breadcrumb-item active">Installing Skills</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="how-do-i-installing-skills">How do I - Installing Skills</h1>
+<p>This section will help you to understand what a skill is and how to install and use skills with OVOS.</p>
+<h2 id="finding-skills">Finding Skills</h2>
+<p>OVOS official skills can be found on <a href="https://pypi.org/search/?q=ovos+skill">PyPi</a> and the latest stable version can be installed with a <code>pip install</code> command.</p>
+<p><code>pip install ovos-skill-naptime</code></p>
+<p>If you have issues installing with this command, you may need to use the <code>alpha</code> versions.  Pip has a command line flag for this <code>--pre</code>.</p>
+<p><code>pip install --pre ovos-skill-naptime</code></p>
+<p>will install the latest <code>alpha</code> version.  This should fix dependency issues with the stable versions.</p>
+<p>Most skills are found throughout github.  The official skills can be found with a simple search in the <a href="https://github.com/orgs/OpenVoiceOS/repositories?q=skill&amp;type=all&amp;language=&amp;sort=">OVOS GitHub page</a>.  There are a few other places they can be found. <a href="https://github.com/NeonGeckoCom">Neon AI</a> has several skills, and a search through GitHub will surley find more.</p>
+<h2 id="installing-a-found-skill">Installing a found skill</h2>
+<p>There are a few ways to install skills in ovos.  The preferred way is with <code>pip</code> and a <code>setup.py</code> file.</p>
+<h3 id="pip-install">pip install</h3>
+<p>The preferred method is with <code>pip</code>. If a skill has a <code>setup.py</code> file, it can be installed this way.</p>
+<p>The syntax is <code>pip install git+&lt;github/repository.git&gt;</code>.</p>
+<p>ex. <code>pip install git+https://github.com/OpenVoiceOS/skill-ovos-date-time.git</code> should install the ovos-date-time skill.</p>
+<p>Skills can be installed from a local file also.</p>
+<p>Clone the repository.</p>
+<p><code>git clone https://github.com/OpenVoiceOS/skill-ovos-date-time</code></p>
+<p><code>pip install ./skill-ovos-date-time</code></p>
+<p>After installing skills this way, ovos skills service needs to be restarted.</p>
+<p><code>systemctl --user restart ovos-skills</code></p>
+<h4 id="git-install">git install</h4>
+<p>This is NOT the preferred method and is here for backward compatibility with the original <code>mycroft-core</code> skills.</p>
+<p>Skills can also be directly cloned to the skill directory, usually located at <code>~/.local/share/mycroft/skills/</code>.</p>
+<p>enter the skill directory.</p>
+<p><code>cd ~/.local/share/mycroft/skills</code></p>
+<p>and clone the found skill here with git.</p>
+<p><code>git clone &lt;github/repository.git&gt;</code></p>
+<p>ex. <code>git clone https://github.com/OpenVoiceOS/skill-ovos-date-time.git</code> will install the ovos-date-time skill.</p>
+<p>A restart of the ovos-skills service is not required when installing this way.</p>
+<h2 id="deprecated">Deprecated</h2>
+<p>The OVOS skills manager is in need of some love, and when official skill stores are created, this will be updated to use the new methods.  Until then, this method is <strong>NOT</strong> recommended, and <strong>NOT</strong> supported.  The following is included just as reference.</p>
+<h3 id="ovos-skills-manager">OVOS skills manager</h3>
+<p>Install skills from any appstore!</p>
+<p>The <a href="https://github.com/MycroftAI/mycroft-skills-manager">mycroft-skills-manager</a> alternative that is <a href="https://github.com/MycroftAI/mycroft-skills-manager/pull/75">not vendor locked</a>, this means you must use it responsibly!</p>
+<p>Do not install random skills, different appstores have different policies!</p>
+<p>Keep in mind any skill you install can <a href="https://github.com/JarbasSkills/skill-monkey-patcher">modify mycroft-core at runtime</a>, and very likely has root access if you are running on a Raspberry Pi.</p>
+<h3 id="supported-stores">Supported stores</h3>
+<p><strong>WIP</strong></p>
+<ul>
+<li><a href="https://github.com/OpenVoiceOS/OVOS-skills-store">OVOS</a> - this one is really a proof of concept for now, stay tuned!</li>
+<li><a href="https://market.mycroft.ai/skills">Mycroft Marketplace</a> - the official mycroft skills store, all skills are reviewed by humans!</li>
+<li><a href="https://store.kde.org/browse?cat=608&amp;ord=latest/">Pling</a> - the official plasma bigscreen skills store, skills are accepted by default and only removed if flagged as malicious</li>
+<li>[Andlo's skill list]https://github.com/andlo/mycroft-skills-list-gitbook/tree/master/skills) - not a real appstore, this is a web scrapped automatically generated list of 900+ skills from all over GitHub, there is no review at all, it will catch <a href="https://github.com/JarbasAl/skill-XPLOIT-hijack-speech">malicious skills</a></li>
+</ul>
+<h3 id="openvoiceos-skill-manager">OpenVoiceOS Skill Manager</h3>
+<pre><code class="language-bash">pip install ovos-skills-manager
+</code></pre>
+<p>Enable a skill store</p>
+<pre><code class="language-bash">osm enable --appstore [ovos|mycroft|pling|andlo|all]
+</code></pre>
+<p>Search for a skill and install it</p>
+<pre><code class="language-bash">osm install --search
+</code></pre>
+<p>See more osm commands</p>
+<pre><code class="language-bash">osm --help
+osm install --help
+</code></pre>
+<p><a href="https://github.com/travellingtechie/ovos_skill_manager#readme">More Information</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../080-ht_skills/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../082-ht_skills_config/" class="btn btn-neutral float-right" title="Configuring">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../080-ht_skills/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../082-ht_skills_config/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

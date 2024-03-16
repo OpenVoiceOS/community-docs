@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/042-install_ovos_core/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Install as a Library - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Install as a Library";
+        var mkdocs_page_input_path = "042-install_ovos_core.md";
+        var mkdocs_page_url = "/community-docs/042-install_ovos_core/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Install as a Library</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#host-system">Host system</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-started">Get started</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#from-pypi">From PyPi</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ovos-core">ovos-core</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#individual-modules">Individual Modules</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#from-source">From Source</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ovos-core_1">ovos-core</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#install-individual-modules">Install individual modules</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Skills</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../081-ht_skills_install/">Installing Skills</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Homescreen</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../115-ht_config_homescreen/">Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../145-troubleshooting_audio/">Troubleshooting Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Installation Options</li>
+      <li class="breadcrumb-item active">Install as a Library</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installing-ovos">Installing OVOS</h1>
+<p>The OVOS ecosystem is very modular, depending on where you are running <code>ovos-core</code> you may want to run only a subset of the services.</p>
+<p>By default <code>ovos-core</code> only installs the minimum components common to all services, for the purposes of this document we will assume you want a full install with a GUI.</p>
+<p><strong>NOTE</strong> The GUI requires separate packages in addition to what is required by <code>ovos-core</code>.  The <a href="../048-install_gui/">GUI installation</a> is covered in its own section.</p>
+<h2 id="host-system">Host system</h2>
+<p>OVOS requires some system dependencies, how to do this will depend on your distro.</p>
+<p>Ubuntu/Debian based images.</p>
+<pre><code>sudo apt install build-essential python3-dev python3-pip swig libssl-dev libfann-dev portaudio19-dev libpulse-dev
+</code></pre>
+<p>A few packages are not necessary, but are needed to install from source and may be required for some plugins.  To add these packages run this command.</p>
+<pre><code>sudo apt install git libpulse-dev cmake libncurses-dev pulseaudio-utils pulseaudio
+</code></pre>
+<p><strong>NOTE</strong>: MycroftAI's <code>dev_setup.sh</code> does not exist in OVOS-core.  See the community provided, <strong>WIP</strong>, <a href="https://github.com/OpenVoiceOS/raspbian-ovos/blob/dev/manual_user_install.sh">manual_user_install</a> for a minimal, almost, replacement.</p>
+<h2 id="get-started">Get started</h2>
+<p>We suggest you do this in a virtualenv.</p>
+<p>Create and activate the virtual environment.</p>
+<pre><code>python -m venv .venv
+. .venv/bin/activate
+</code></pre>
+<p>Update <code>pip</code> and install <code>wheel</code></p>
+<p><code>pip install -U pip wheel</code></p>
+<h2 id="from-pypi">From PyPi</h2>
+<h3 id="ovos-core"><code>ovos-core</code></h3>
+<p>To install a full OVOS software stack with enough skills and plugins to have a working system, the OVOS team includes a subset of packages that can be installed automatically with pip.</p>
+<p>It is recommended to use the latest alpha versions until the <code>0.1.0</code> release as it contains all of the latest bug fixes and improvements.</p>
+<p><strong>latest stable</strong></p>
+<p><code>ovos-core</code> 0.0.7 does not include the new <code>extras [mycroft]</code> so we use <code>[all]</code>.</p>
+<p><code>pip install ovos-core[all]</code></p>
+<p><strong>alpha version</strong></p>
+<p><code>pip install --pre ovos-core[mycroft]</code></p>
+<p>This should install everything needed for a basic OVOS software stack.</p>
+<p>There are additional <code>extras</code> options available other than <code>[mycroft]</code> and can be found in the <a href="https://github.com/OpenVoiceOS/ovos-core/blob/dev/setup.py">ovos-core setup.py</a> file.</p>
+<p><a href="../050-starting_intro/">Starting OVOS</a></p>
+<h3 id="individual-modules">Individual Modules</h3>
+<p>Each module can be installed independently to only include the parts needed or wanted for a specific system.</p>
+<p><strong>ovos-core</strong></p>
+<p><code>pip install --pre ovos-core</code></p>
+<p><a href="../051-starting_modules/#core">Starting Modules - core</a></p>
+<p><strong>ovos-messagebus</strong></p>
+<p><code>pip install --pre ovos-messagebus</code></p>
+<p><a href="../051-starting_modules/#messagebus">Starting Modules - messagebus</a></p>
+<p><strong>ovos-audio</strong></p>
+<p><code>pip install --pre ovos-audio</code></p>
+<p><a href="../051-starting_modules/#audio">Starting Modules - audio</a></p>
+<p><strong>dinkum-listener</strong></p>
+<p><code>pip install --pre ovos-dinkum-listener</code></p>
+<p><a href="../051-starting_modules/#listener">Starting Modules - listener</a></p>
+<p><strong>ovos-phal</strong></p>
+<p><code>pip install --pre ovos-phal</code></p>
+<p><a href="../051-starting_modules/#phal">Starting Modules - phal</a></p>
+<h2 id="from-source">From Source</h2>
+<p>We will use git to clone the repositories to a local directory.  While not specifically necessary, we are assuming this to be the users <code>HOME</code> directory.</p>
+<h3 id="ovos-core_1">ovos-core</h3>
+<p>Install <code>ovos-core</code> from github source files.</p>
+<p><code>git clone https://github.com/OpenVoiceOS/ovos-core</code></p>
+<p>The <code>ovos-core</code> repository provides <code>extra</code> requirements files.  For the complete stack, we will use the <code>mycroft.txt</code> file.</p>
+<p><code>pip install ~/</code>ovos-core<code>[mycroft]</code></p>
+<p>This should install everything needed to use the basic OVOS software stack.</p>
+<p><strong>NOTE</strong> this also installs <code>lgpl</code> licenced software.</p>
+<p><a href="../050-starting_intro/">Starting OVOS</a></p>
+<h3 id="install-individual-modules">Install individual modules</h3>
+<p>Some systems may not require a full install of OVOS.  Luckily, it can be installed as individual modules.</p>
+<p><strong>core library</strong></p>
+<p><code>git clone https://github.com/OpenVoiceOS/ovos-core</code></p>
+<p><code>pip install ~/ovos-core</code></p>
+<p>This is the minimal library needed as the brain of the system.  There are no skills, no messagebus, and no plugins installed yet.</p>
+<p><a href="../051-starting_modules/#core">Starting Core</a></p>
+<p><strong>messagebus</strong></p>
+<p><code>git clone https://github.com/OpenVoiceOS/ovos-messagebus</code></p>
+<p><code>pip install ~/ovos-messagebus</code></p>
+<p>This is the nervous system of OVOS needed for modules to talk to each other.</p>
+<p><a href="../051-starting_modules/#messagebus">Starting the Messagebus</a></p>
+<p><strong>listener</strong></p>
+<p>OVOS has updated their listener to use <code>ovos-dinkum-listener</code> instead of <code>ovos-listener</code>.  It is code from <a href="https://github.com/MycroftAI/mycroft-dinkum">mycroft-dinkum</a> adopted for use with the OVOS ecosystem.  Previous listeners are still available, but not recommended.</p>
+<p><code>git clone https://github.com/OpenVoiceOS/ovos-dinkum-listener</code></p>
+<p><code>pip install ~/ovos-dinkum-listener</code></p>
+<p>You now have what is needed for OVOS to use a microphone and its associated services, WakeWords, HotWords, and STT</p>
+<p><a href="../051-starting_modules/#listener">Starting the listener</a></p>
+<p><strong>PHAL</strong></p>
+<p>The OVOS Plugin based Hardware Abstraction Layer is what is used to allow the OVOS software to communicate with hardware devices such as the <a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-system">operating system</a> or interacting with the <a href="https://github.com/OpenVoiceOS/ovos-PHAL-plugin-mk1">Mycroft Mark 1 device</a>.</p>
+<p>The PHAL system consists of two interfaces.</p>
+<p><code>ovos-phal</code> is the basic interface that normal plugins would use.</p>
+<p><code>ovos-admin-phal</code> is used where superuser privileges are needed.</p>
+<p><strong>Be extremely careful when installing <code>admin-phal</code> plugins as they provide full control over the host system.</strong></p>
+<p><code>git clone https://github.com/OpenVoiceOS/ovos-PHAL</code></p>
+<p><code>pip install ~/ovos-PHAL</code></p>
+<p>This just installs the basic system that allows the plugins to work.</p>
+<p><a href="../051-starting_modules/#phal">Starting PHAL</a></p>
+<p><strong>audio</strong></p>
+<p>This is the service that is used by OVOS to play all of the audio.  It can be a voice response, or a stream from somewhere such as music, or a podcast.</p>
+<p>It also installs <a href="https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin">OVOS Common Play</a> which can be used as a standalone media player and is required for OVOS audio playback.</p>
+<p><code>git clone https://github.com/OpenVoiceOS/ovos-audio</code></p>
+<p><code>pip install ~/ovos-audio</code></p>
+<p>This will enable the default TTS (Text To Speech) engine for voice feedback from your OVOS device.  However, plenty of alternative TTS engines are available.</p>
+<p><a href="../051-starting_modules/#audio">Starting Audio</a></p>
+<p>You now should have all of the separate components needed to run a full OVOS software stack.</p>
+<p><a href="../050-starting_intro/">Starting the OVOS software stack</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../030-qs_intro/" class="btn btn-neutral float-left" title="Installing an Image"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../043-install_ovos_docker/" class="btn btn-neutral float-right" title="Install with Docker">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../030-qs_intro/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../043-install_ovos_docker/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

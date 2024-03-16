@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/unused/g2p_plugins/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Grapheme to Phoneme Plugins - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Grapheme to Phoneme Plugins";
+        var mkdocs_page_input_path = "unused/g2p_plugins.md";
+        var mkdocs_page_url = "/community-docs/unused/g2p_plugins/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../042-install_ovos_core/">Install as a Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Skills</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../081-ht_skills_install/">Installing Skills</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Homescreen</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../115-ht_config_homescreen/">Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../145-troubleshooting_audio/">Troubleshooting Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Grapheme to Phoneme Plugins</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="grapheme-to-phoneme-plugins">Grapheme to Phoneme Plugins</h1>
+<p>Grapheme to Phoneme is the process of converting text into a set of "sound units" called phonemes</p>
+<p>These plugins are used to auto generate mouth movements / visemes in the TTS stage, they can also be used to help
+configuring wake words or to facilitate training of TTS systems</p>
+<p>These plugins can provide phonemes either in ARPA or IPA alphabets, an automatic conversion will happen behind the scenes when needed</p>
+<p>Mouth movements are generated via a mapping of ARPA to VISEMES, </p>
+<p>Visemes are predefined mouth positions, timing per phonemes will default to 0.4 seconds if the plugin does not report a duration</p>
+<p><img alt="visemes" src="http://www.web3.lu/wp-content/uploads/2014/09/visemes.jpg" /></p>
+<p>Mapping based on <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.221.6377&amp;rep=rep1&amp;type=pdf">Jeffers phoneme to viseme map, seen in table 1</a>, partially based on the "12 mouth shapes visuals seen <a href="https://wolfpaulus.com/journal/software/lipsynchronization/">here</a></p>
+<h2 id="list-of-g2p-plugins">List of G2P plugins</h2>
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/g2p-cmudict-plugin">neon-g2p-cmudict-plugin</a></td>
+<td>ARPA</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/g2p-phoneme-guesser-plugin">neon-g2p-phoneme-guesser-plugin</a></td>
+<td>ARPA</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonJarbas/g2p-mimic-plugin">neon-g2p-mimic-plugin</a></td>
+<td>ARPA</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonJarbas/g2p-mimic2-plugin">neon-g2p-mimic2-plugin</a></td>
+<td>ARPA</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonJarbas/g2p-espeak-plugin">neon-g2p-espeak-plugin</a></td>
+<td>IPA</td>
+</tr>
+<tr>
+<td><a href="https://github.com/NeonGeckoCom/g2p-gruut-plugin">neon-g2p-gruut-plugin</a></td>
+<td>IPA</td>
+</tr>
+</tbody>
+</table>
+<h2 id="standalone-usage">Standalone Usage</h2>
+<p>All G2P plugins can be used as follows</p>
+<pre><code class="language-python">
+utterance = &quot;hello world&quot;
+word = &quot;hello&quot;
+lang=&quot;en-us&quot;
+
+plug = G2pPlugin()
+
+# convert a word into a list of phonemes
+phones = plug.get_ipa(word, lang)
+assert phones == ['h', 'ʌ', 'l', 'oʊ']
+
+phones = plug.get_arpa(word, lang)
+assert phones == ['HH', 'AH', 'L', 'OW']
+
+# convert a utterance into a list of phonemes
+phones = plug.utterance2arpa(utterance, lang)
+assert phones == ['HH', 'AH', 'L', 'OW', '.', 'W', 'ER', 'L', 'D']
+
+phones = plug.utterance2ipa(utterance, lang)
+assert phones == ['h', 'ʌ', 'l', 'oʊ', '.', 'w', 'ɝ', 'l', 'd']
+
+# convert a utterance into a list of viseme, duration pairs
+visemes = plug.utterance2visemes(utterance, lang)
+assert visemes == [('0', 0.0775), ('0', 0.155), ('3', 0.2325), ('2', 0.31), ('2', 0.434), ('2', 0.558), ('3', 0.682), ('3', 0.806)]
+</code></pre>
+<h2 id="plugin-template">Plugin Template</h2>
+<pre><code class="language-python">from ovos_plugin_manager.templates.g2p import Grapheme2PhonemePlugin
+from ovos_utils.lang.visimes import VISIMES
+
+# base plugin class
+class MyARPAG2PPlugin(Grapheme2PhonemePlugin):
+    def __init__(self, config=None):
+        self.config = config or {}
+
+    def get_arpa(self, word, lang, ignore_oov=False):
+        phones = []  # TODO implement
+        return phones
+
+    def get_durations(self, utterance, lang=&quot;en&quot;, default_dur=0.4):
+        words = utterance.split()
+        phones = [self.get_arpa(w, lang) for w in utterance.split()]
+        dur = default_dur  # TODO this is plugin specific
+        return [(pho, dur) for pho in phones]
+
+    def utterance2visemes(self, utterance, lang=&quot;en&quot;, default_dur=0.4):
+        phonemes = self.get_durations(utterance, lang, default_dur)
+        return [(VISIMES.get(pho[0].lower(), '4'), float(pho[1]))
+                for pho in phonemes]
+
+</code></pre>
+<p>If your plugin uses IPA instead of ARPA simply replace <code>get_arpa</code> with <code>get_ipa</code></p>
+<pre><code class="language-python">from ovos_plugin_manager.templates.g2p import Grapheme2PhonemePlugin
+from ovos_utils.lang.visimes import VISIMES
+
+# base plugin class
+class MyIPAG2PPlugin(Grapheme2PhonemePlugin):
+    def __init__(self, config=None):
+        self.config = config or {}
+
+    def get_ipa(self, word, lang, ignore_oov=False):
+        phones = []  # TODO implement
+        return phones
+
+    def get_durations(self, utterance, lang=&quot;en&quot;, default_dur=0.4):
+        # auto converted to arpa if ipa is implemented
+        phones = [self.get_arpa(w, lang) for w in utterance.split()]
+        dur = default_dur  # TODO this is plugin specific
+        return [(pho, dur) for pho in phones]
+
+    def utterance2visemes(self, utterance, lang=&quot;en&quot;, default_dur=0.4):
+        phonemes = self.get_durations(utterance, lang, default_dur)
+        return [(VISIMES.get(pho[0].lower(), '4'), float(pho[1]))
+                for pho in phonemes]
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

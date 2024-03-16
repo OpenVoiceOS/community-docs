@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/unused/manjaro/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>ovos-image-arch-recipe - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ovos-image-arch-recipe";
+        var mkdocs_page_input_path = "unused/manjaro.md";
+        var mkdocs_page_url = "/community-docs/unused/manjaro/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../042-install_ovos_core/">Install as a Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Skills</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../081-ht_skills_install/">Installing Skills</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Homescreen</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../115-ht_config_homescreen/">Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../145-troubleshooting_audio/">Troubleshooting Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">ovos-image-arch-recipe</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ovos-image-arch-recipe">ovos-image-arch-recipe</h1>
+<p>Make a manjaro based OpenVoiceOS image</p>
+<p>source code: https://github.com/OpenVoiceOS/ovos-image-arch-recipe/</p>
+<h2 id="building">Building</h2>
+<h3 id="docker-automated-image-building">Docker Automated Image Building</h3>
+<p>The included Dockerfile can be used to build a default image in a Docker environment.</p>
+<p>The following dependencies must be installed on the build system before running the
+container:</p>
+<ul>
+<li><a href="https://wiki.debian.org/chroot">chroot</a></li>
+<li><a href="https://wiki.debian.org/QemuUserEmulation">qemu-user-static</a></li>
+</ul>
+<p>First, create the Docker container:</p>
+<pre><code class="language-shell">docker build . -t ovos-image-builder
+</code></pre>
+<p>Then, run the container to create a OVOS Image. Set <code>CORE_REF</code> to the branch of
+<code>ovos-core</code> that you want to build and <code>RECIPE_REF</code> to the branch of <code>ovos-image-recipe</code>
+you want to use. Set <code>MAKE_THREADS</code> to the number of threads to use for <code>make</code> processes.</p>
+<pre><code class="language-shell">docker run \
+-v /home/${USER}/output:/output:rw \
+-v /run/systemd/resolve:/run/systemd/resolve \
+-e CORE_REF=${CORE_REF:-dev} \
+-e RECIPE_REF=${RECIPE_REF:-master} \
+-e MAKE_THREADS=${MAKE_THREADS:-4} \
+--privileged \
+--network=host \
+--name=ovos-image-builder \
+ovos-image-builder
+</code></pre>
+<p>The entire build process will generally take several hours; it takes 1-2 hours
+on a build server with 2x Xeon Gold 5118 CPUs (48T Total).</p>
+<h3 id="interactive-image-building">Interactive Image Building</h3>
+<p>The scripts in the <code>automation</code> directory are available to help automate building a default image.
+For building an image interactively:</p>
+<pre><code class="language-shell">bash automation/prepare.sh
+bash /tmp/run_scripts.sh
+</code></pre>
+<p>The below documentation describes how to manually build an image using the individual scripts in this repository.</p>
+<h2 id="steps">Steps</h2>
+<h3 id="getting-started">Getting Started</h3>
+<p>The scripts and overlay files in this repository are designed to be applied to a base image
+as the <code>root</code> user. It is recommended to apply these scripts to a clean base image. 
+Instructions are available <a href="https://opensource.com/article/20/5/disk-image-raspberry-pi">at opensource.com</a>.</p>
+<blockquote>
+<p><strong>Note</strong>: The GUI shell is not installable under some base images</p>
+</blockquote>
+<p>For each step except <a href="#boot_overlay">boot_overlay</a>, the directory corresponding
+to the step should be copied to the mounted image and the script run from a terminal
+<code>chroot</code>-ed to the image. If running scripts from a booted image, they should be
+run as <code>root</code>.</p>
+<h3 id="preparation">Preparation</h3>
+<p>From the host system where this repository is cloned, running <code>prepare.sh &lt;base_image&gt;</code>
+will copy boot overlay files, mount the image, mount DNS resolver config from the host system,
+copy all other image overlay files to <code>/tmp</code>, and <code>chroot</code> into the image. From here, you can
+run any/all of the following scripts to prepare the image before <a href="#Clean-Up">cleaning up</a></p>
+<h3 id="core_configuration">core_configuration</h3>
+<p>Configures user accounts and base functionality for RPi. <code>ovos</code> user is created with proper permissions here.</p>
+<p>At this stage, a booted image should resize its file system to fill the drive it is flashed to. Local login and 
+ssh connections should use <code>ovos</code>/<code>ovos</code> to authenticate and be prompted to change password on login.</p>
+<h3 id="network_manager">network_manager</h3>
+<p>Adds Balena wifi-connect to enable a portal for connecting the Pi device to a Wi-Fi network.</p>
+<p>A booted image will now be ready to connect to a network via SSID <code>OVOS</code>.</p>
+<h3 id="sj201">sj201</h3>
+<p>For SJ201 board support, the included script will build/install drivers, add required overlays, install required system 
+packages, and add a systemd service to flash the SJ201 chip on boot. This will modify pulseaudio and potentially overwrite 
+any previous settings.</p>
+<blockquote>
+<p><em>Note:</em> Running this scripts grants GPIO permissions to the <code>gpio</code> group. Any user that interfaces with the SJ201 board
+should be a member of the <code>gpio</code> group. Group permissions are not modified by this script</p>
+</blockquote>
+<p>Audio devices should now show up with <code>pactl list</code>.
+Audio devices can be tested in the image by recording a short audio clip and playing it back.</p>
+<pre><code class="language-shell">parecord test.wav
+paplay test.wav
+</code></pre>
+<h3 id="embedded_shell">embedded_shell</h3>
+<p>Installs ovos-shell and mycroft-gui-app. Adds and enables ovos-gui.service to start the shell
+on system boot.</p>
+<p>The image should now boot to the GUI shell.</p>
+<h3 id="ovos_core">ovos_core</h3>
+<p>Installs <code>ovos-core</code> and dependencies. Configures services for core modules.</p>
+<p>At this stage, the image is complete and when booted should start OVOS.</p>
+<h3 id="dashboard">dashboard</h3>
+<p>Installs the <a href="https://github.com/openvoiceos/ovos-dashboard">OVOS Dashboard</a> and service
+to start the dashboard from the GUI.</p>
+<p>From the GUI <code>Settings</code> -&gt; <code>Developer Settings</code> menu, <code>Enable Dashboard</code> will now start
+the dashboard for remote access to device diagnostics.</p>
+<h3 id="camera">camera</h3>
+<p>Installs <code>libcamera</code> and other dependencies for using a CSI camera.</p>
+<p>The default camera skill can be used to take a photo; <code>libcamera-apps</code> are also
+installed for testing via CLI.</p>
+<h3 id="splash_screen">splash_screen</h3>
+<p>Enables a custom splash screen and disables on-device TTY at boot.</p>
+<p>On boot, a static image should be shown until the GUI Shell starts.</p>
+<h3 id="clean-up">Clean Up</h3>
+<p><code>cleanup.sh</code> removes any temporary files from the mounted image before unmounting it.
+After running <code>cleanup.sh</code>, the image is ready to burn to a drive and boot.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

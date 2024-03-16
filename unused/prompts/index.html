@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/unused/prompts/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Prompts - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Prompts";
+        var mkdocs_page_input_path = "unused/prompts.md";
+        var mkdocs_page_url = "/community-docs/unused/prompts/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../042-install_ovos_core/">Install as a Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Skills</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../081-ht_skills_install/">Installing Skills</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Homescreen</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../115-ht_config_homescreen/">Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../145-troubleshooting_audio/">Troubleshooting Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Prompts</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="prompts">Prompts</h1>
+<p>Here we look at how to implement the most common types of prompts. For more information on conversation design see the <a href="https://mycroft-ai.gitbook.io/docs/skill-development/voice-user-interface-design-guidelines/interactions-and-guidelines/statements-and-prompts">Voice User Interface Design Guidelines</a>.</p>
+<h2 id="get-response">Get Response</h2>
+<p>Any Skill can request a response from the user - making a statement or asking a question before the microphone is activated to record the User's response.</p>
+<p>The base implementation of this is the <a href="https://mycroft-core.readthedocs.io/en/latest/source/mycroft.html#mycroft.MycroftSkill.get_response"><code>get_response()</code> method</a>.</p>
+<p>To see it in action, let's create a simple Skill that asks the User what their favorite flavor of ice cream is.</p>
+<pre><code class="language-python">from mycroft import MycroftSkill, intent_handler
+
+
+class IceCreamSkill(MycroftSkill):
+    @intent_handler('set.favorite.intent')
+    def handle_set_favorite(self):
+        favorite_flavor = self.get_response('what.is.your.favorite.flavor')
+        self.speak_dialog('confirm.favorite.flavor', {'flavor': favorite_flavor})
+
+
+def create_skill():
+    return IceCreamSkill()
+</code></pre>
+<p>In this Skill we have used <code>get_response()</code> and passed it the name of our dialog file <code>'what.is.your.favorite.flavor.dialog'</code>. This is the simplest form of this method. It will speak dialog from the given file, then activate the microphone for 3-10 seconds allowing the User to respond. The transcript of their response will then be assigned to our variable <code>favorite_flavor</code>. To confirm that we have heard the User correctly we then speak a confirmation dialog passing the value of <code>favorite_flavor</code> to be spoken as part of that dialog.</p>
+<h3 id="optional-arguments">Optional Arguments</h3>
+<p>The <code>get_response()</code> method also takes the following optional arguments:</p>
+<ul>
+<li><code>data</code> (dict) - used to populate the dialog file, just like <code>speak_dialog()</code></li>
+<li><code>validator</code> (function) - returns a boolean to define whether the response meets some criteria for success</li>
+<li><code>on_fail</code> (function) - returns a string that will be spoken if the validator returns False</li>
+<li><code>num_retries</code> (int) - number of times the system should repeat the question to get a successful result</li>
+</ul>
+<h2 id="yes-no-questions">Yes / No Questions</h2>
+<p><a href="https://mycroft-core.readthedocs.io/en/latest/source/mycroft.html#mycroft.MycroftSkill.ask_yesno"><code>ask_yesno()</code></a> checks if the response contains "yes" or "no" like phrases.</p>
+<p>The vocab for this check is sourced from the Skills <code>yes.voc</code> and <code>no.voc</code> files (if they exist), as well as mycroft-cores defaults (contained within <code>mycroft-core/res/text/en-us/yes.voc</code>). A longer phrase containing the required vocab is considered successful e.g. both "yes" and "yeah that would be great thanks" would be considered a successful "yes".</p>
+<p>If "yes" or "no" responses are detected, then the method will return the string "yes" or "no". If the response does not contain "yes" or "no" vocabulary then the entire utterance will be returned. If no speech was detected indicating the User did not respond, then the method will return <code>None</code>.</p>
+<p>Let's add a new intent to our <code>IceCreamSkill</code> to see how this works.</p>
+<pre><code class="language-python">from mycroft import MycroftSkill, intent_handler
+
+
+class IceCreamSkill(MycroftSkill):
+    @intent_handler('do.you.like.intent')
+    def handle_do_you_like(self):
+        likes_ice_cream = self.ask_yesno('do.you.like.ice.cream')
+        if likes_ice_cream == 'yes':
+            self.speak_dialog('does.like')
+        elif likes_ice_cream == 'no':
+            self.speak_dialog('does.not.like')
+        else:
+            self.speak_dialog('could.not.understand')
+
+
+def create_skill():
+    return IceCreamSkill()
+</code></pre>
+<p>In this example we have asked the User if they like ice cream. We then speak different dialog whether they respond yes or no. We also speak some error dialog if neither yes nor no are returned.</p>
+<h2 id="providing-a-list-of-options">Providing a list of options</h2>
+<p><a href="https://mycroft-core.readthedocs.io/en/latest/source/mycroft.html#mycroft.MycroftSkill.ask_selection"><code>ask_selection()</code></a> provides a list of options to the User for them to select from. The User can respond with either the name of one of these options or select with a numbered ordinal eg "the third".</p>
+<p>This method automatically manages fuzzy matching the users response against the list of options provided.</p>
+<p>Let's jump back into our <code>IceCreamSkill</code> to give the User a list of options to choose from.</p>
+<pre><code class="language-python">from mycroft import MycroftSkill, intent_handler
+
+
+class IceCreamSkill(MycroftSkill):
+    def __init__(self):
+        MycroftSkill.__init__(self)
+        self.flavors = ['vanilla', 'chocolate', 'mint']
+
+    @intent_handler('request.icecream.intent')
+    def handle_request_icecream(self):
+        self.speak_dialog('welcome')
+        selection = self.ask_selection(self.flavors, 'what.flavor')
+        self.speak_dialog('coming.right.up', {'flavor': selection})
+
+
+def create_skill():
+    return IceCreamSkill()
+</code></pre>
+<p>In this example we first speak some <code>welcome.dialog</code>. The list of flavors is then spoken, followed by the <code>what.flavor.dialog</code>. Finally, we confirm the Users selection by speaking <code>coming.right.up.dialog</code></p>
+<h3 id="optional-arguments_1">Optional arguments</h3>
+<p>There are two optional arguments for this method.</p>
+<p><code>min_conf</code> (float) defines the minimum confidence level for fuzzy matching the Users response against the list of options. <code>numeric</code> (bool) if set to True will speak the options as a numbered list eg "One, vanilla. Two, chocolate. Or three, mint"</p>
+<h2 id="returning-responses-to-the-intent-parser">Returning responses to the intent parser</h2>
+<p>So far we have looked at ways to prompt the User, and return their response directly to our Skill. It is also possible to speak some dialog, and activate the listener, directing the response back to the standard intent parsing engine. We may do this to let the user trigger another Skill, or because we want to make use of our own intents to handle the response.</p>
+<p>To do this, we use the <code>expect_response</code> parameter of the <code>speak_dialog()</code> method.</p>
+<pre><code class="language-python">from mycroft import MycroftSkill, intent_handler
+
+
+class IceCreamSkill(MycroftSkill):
+    def __init__(self):
+        MycroftSkill.__init__(self)
+        self.flavors = ['vanilla', 'chocolate', 'mint']
+
+    @intent_handler('request.icecream.intent')
+    def handle_request_icecream(self):
+        self.speak_dialog('welcome')
+        selection = self.ask_selection(self.flavors, 'what.flavor')
+        self.speak_dialog('coming.right.up', {'flavor': selection})
+        self.speak_dialog('now.what', expect_response=True)
+
+
+def create_skill():
+    return IceCreamSkill()
+</code></pre>
+<p>Here we have added a new dialog after confirming the Users selection. We may use it to tell the User other things they can do with their OVOS device while they enjoy their delicious ice cream.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

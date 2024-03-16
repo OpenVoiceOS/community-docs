@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/145-troubleshooting_audio/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Troubleshooting Audio - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Troubleshooting Audio";
+        var mkdocs_page_input_path = "145-troubleshooting_audio.md";
+        var mkdocs_page_url = "/community-docs/145-troubleshooting_audio/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../042-install_ovos_core/">Install as a Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Skills</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../081-ht_skills_install/">Installing Skills</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Homescreen</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../115-ht_config_homescreen/">Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Troubleshooting Audio</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#architecture">Architecture</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#alsa">ALSA</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pulse-audio">Pulse Audio</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting-commands">Troubleshooting Commands</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#pulseaudio">PulseAudio</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gather-data">Gather Data</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#additional-resources">Additional Resources</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#problemfix">Problem/fix</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#error-pulseaudio-sink-always-suspended">ERROR: pulseaudio sink always suspended</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#error-all-media-play-requests-loop-silently-until-ovos-restart">ERROR: All media play requests loop (silently) until ovos restart</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Troubleshooting</li>
+      <li class="breadcrumb-item active">Troubleshooting Audio</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="troubleshooting-operating-system-audio">Troubleshooting operating system audio</h1>
+<p>If audio isn't working for OpenVoiceOS, it's useful to verify that the operating system audio is working.</p>
+<h2 id="architecture">Architecture</h2>
+<h3 id="alsa">ALSA</h3>
+<p>ALSA is the kernel level sound mixer, it manages your sound card directly. ALSA is crap (seriously) and it can handle a few (sometimes just one) channel. We don't generally have to deal with ALSA directly.</p>
+<p>ALSA can be configured to use PulseAudio as it's default device, that way ALSA applications that are not PulseAudio aware will still use PulseAudio via an indirection layer.</p>
+<h3 id="pulse-audio">Pulse Audio</h3>
+<p>PulseAudio is a software mixer, running in user space. When it runs, it uses Alsa's channel and manages everything. mixing, devices, network devices, etc.</p>
+<p>PulseAudio always uses ALSA as backend, and on startup opens all ALSA devices. Since most ALSA devices can't be opened multiple times, this will cause all ALSA applications that try to use an ALSA device directly when PulseAudio is running to fail.  If you have a legacy application that for some reason doesn't work, you can use <code>pasuspender</code> to temporary suspend PulseAudio to run this particular application.</p>
+<p><a href="https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/">Pulse Audio Modules</a></p>
+<h2 id="troubleshooting-commands">Troubleshooting Commands</h2>
+<p>List hardware cards <code>cat /proc/asound/cards</code>
+List Playback and capture devices visible to ALSA (note the Card Number)</p>
+<pre><code>aplay -l
+arecord -l
+</code></pre>
+<p>This will list the cards, which can then be referenced in arecord using -D hw:<card number>,0:</p>
+<pre><code>arecord -f dat -r 16000 -D hw:4,0 -c 4 -d 10 test2.wav
+</code></pre>
+<p>You can then play the file back to test your speakers</p>
+<pre><code>aplay -D hw:2,0 test2.wav
+</code></pre>
+<p>** If PulseAudio is installed, Alsa should be configured to use PulseAudio as it's default, and we don't change anything in Alsa, we configure our default sources and sinks in Pulse Audio**</p>
+<p>Verify that pulseaudio is installed</p>
+<pre><code>apt list pulseaudio
+</code></pre>
+<p>Verify that Alsa is using Pulse Audio as the default</p>
+<pre><code>$ aplay -L | head -n9
+null
+    Discard all samples (playback) or generate zero samples (capture)
+default
+    Playback/recording through the PulseAudio sound server
+</code></pre>
+<h3 id="pulseaudio">PulseAudio</h3>
+<p>List sinks (speakers) and sources (microphones) visible to PulseAudio</p>
+<pre><code>pactl list sinks
+pactl list sources
+</code></pre>
+<p>This will list the sources that can be used to set the default source for pulseaudio below.</p>
+<pre><code>pacmd set-default-source
+</code></pre>
+<p>e.g.</p>
+<pre><code>pacmd set-default-source alsa_input.usb-OmniVision_Technologies__Inc._USB_Camera-B4.09.24.1-01.multichannel-input
+</code></pre>
+<h3 id="gather-data">Gather Data</h3>
+<p>Before submitting an issue or asking a question on Element, please gather the following data.</p>
+<p>For Microphone issues:</p>
+<pre><code>arecord -l
+arecord -L | head -n9
+pactl list sources
+pacmd dump
+</code></pre>
+<p>For Speaker issues:</p>
+<pre><code>aplay -l
+aplay -L | head -n9
+pactl list sinks
+pacmd dump
+</code></pre>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/PulseAudio/Troubleshooting">PulseAudio Troubleshooting</a></li>
+</ul>
+<h2 id="problemfix">Problem/fix</h2>
+<h5 id="error-pulseaudio-sink-always-suspended">ERROR: pulseaudio sink always suspended</h5>
+<p>Try disabling suspend-on-idle in /etc/pulse/default.pa</p>
+<p>Change this:</p>
+<pre><code>### Automatically suspend sinks/sources that become idle for too long
+load-module module-suspend-on-idle
+</code></pre>
+<p>to this:</p>
+<pre><code>### Automatically suspend sinks/sources that become idle for too long
+#load-module module-suspend-on-idle
+</code></pre>
+<p>and restart pulseaudio</p>
+<pre><code>pulseaudio -k
+pulseaudio --start
+</code></pre>
+<h5 id="error-all-media-play-requests-loop-silently-until-ovos-restart">ERROR: All media play requests loop (silently) until ovos restart</h5>
+<p>When running OVOS headless and trying to play media and seeing this in the logs over and over:</p>
+<pre><code>Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.457 - audio - ovos_utils.file_utils:resolve_resource_file:153 - WARNING - Deprecation version=0.1.0. Caller=ovos_utils.gui:812. Expected a dict config and got None.
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.465 - audio - ovos_utils.file_utils:resolve_resource_file:153 - WARNING - Deprecation version=0.1.0. Caller=ovos_utils.gui:813. Expected a dict config and got None.
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.477 - audio - ovos_utils.gui:_pages2uri:823 - ERROR - Unable to find page: PlayerLoader
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.481 - audio - ovos_utils.file_utils:resolve_resource_file:153 - WARNING - Deprecation version=0.1.0. Caller=ovos_utils.gui:812. Expected a dict config and got None.
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.491 - audio - ovos_utils.file_utils:resolve_resource_file:153 - WARNING - Deprecation version=0.1.0. Caller=ovos_utils.gui:813. Expected a dict config and got None.
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.500 - audio - ovos_utils.gui:_pages2uri:823 - ERROR - Unable to find page: SuggestionsView
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.619 - audio - ovos_plugin_common_play.ocp.media:handle_track_state_change:512 - INFO - TrackState changed: &lt;TrackState.PLAYING_AUDIOSERVICE: 21&gt;
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.751 - audio - ovos_plugin_common_play.ocp.media:handle_track_state_change:512 - INFO - TrackState changed: &lt;TrackState.QUEUED_AUDIOSERVICE: 31&gt;
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.823 - audio - ovos_audio.audio:_stop:257 - INFO - END Stop
+Nov 05 19:00:15 mycroft ovos-audio.sh[1614]: 2023-11-05 19:00:15.970 - audio - ovos_plugin_common_play.ocp.media:extract_stream:461 - INFO - OCP plugins metadata: {'uri': 'https://yleradiolive.akamaized.net/hls/live/2027676/in-YleKlassinen/abr.smil/chunklist_b256000_ao.m3u8'}
+</code></pre>
+<p>One fix is to disable MPRIS by adding <code>"disable_mpris": true</code> to the config.
+The easiest way to do this is to find the config file in the ~/.config/mycroft/mycroft.conf and make sure the following section is present:</p>
+<pre><code>{
+  &quot;Audio&quot;: {
+    &quot;backends&quot;: {
+      &quot;OCP&quot;: {
+        &quot;type&quot;: &quot;ovos_common_play&quot;,
+        &quot;disable_mpris&quot;: true
+      }
+    }
+  }
+}
+</code></pre>
+<p>This does not fix the root cause, but it does stop the looping and allows the audio service to play media.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../140-troubleshooting_intro/" class="btn btn-neutral float-left" title="Introduction to Troubleshooting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../150-troubleshooting_installation/" class="btn btn-neutral float-right" title="Troubleshooting Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../140-troubleshooting_intro/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../150-troubleshooting_installation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

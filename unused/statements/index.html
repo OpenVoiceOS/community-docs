@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/unused/statements/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Statements - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Statements";
+        var mkdocs_page_input_path = "unused/statements.md";
+        var mkdocs_page_url = "/community-docs/unused/statements/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../042-install_ovos_core/">Install as a Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Skills</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../081-ht_skills_install/">Installing Skills</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Homescreen</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../115-ht_config_homescreen/">Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../145-troubleshooting_audio/">Troubleshooting Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Statements</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="statements">Statements</h1>
+<p><strong>Editors Note</strong> This will probably move</p>
+<h2 id="speaking-a-statement">Speaking a statement</h2>
+<p>One of OVOS's most important core capabilities is to convert text to speech, that is, to speak a statement.</p>
+<p>Within a Skill's Intent handler, you may pass a string of text to OVOS and OVOS will speak it.  For example: <a href="https://mycroft-core.readthedocs.io/en/latest/source/mycroft.html#mycroft.MycroftSkill.speak"><code>self.speak('this is my statement')</code></a>   That's cool and fun to experiment with, but passing strings of text to Mycroft doesn't help to make Mycroft a multilingual product. Rather than hard-coded strings of text, OVOS has a design pattern for multilingualism.</p>
+<h3 id="multilingualism">Multilingualism</h3>
+<p>To support multilingualism, the text that OVOS speaks must come from a file. That file is called a dialog file. The dialog file contains statements (lines of text) that a listener in a particular language would consider to be equivalent.  For instance, in USA English, the statements "I am okay" and "I am fine" are equivalent, and both of these statements might appear in a dialog file used for responding to the USA English question: "How are you?".</p>
+<p>By convention, the dialog filename is formed by <em>dot connected</em> <em>words</em> and must end with ".dialog".  The dialog filename should be descriptive of the contents as a whole.  Sometimes, the filename describes the question being answered, and other times, the filename describes the answer itself.  For the example above, the dialog filename might be: <strong>how.are.you.dialog</strong> or <strong>i.am.fine.dialog</strong>.</p>
+<p>Multilingualism is accomplished by translating the dialog files into other languages, and storing them in their own directory named for the country and language. The filenames remain the same.  Using the same filenames in separate language dependent directories allows the Skills to be language agnostic; no hard-coded text strings.  Adjust the language setting for your Device **** and OVOS uses the corresponding set of dialog files.  If the desired file does not exist in the directory for that language, Mycroft will use the file from the USA English directory.</p>
+<p>As an example of the concept, the contents of <strong>how.are.you.dialog</strong> in the directory for the French language in France (fr-fr) might include the statement: "Je vais bien".</p>
+<h3 id="the-tomato-skill-revisited">The Tomato Skill Revisited</h3>
+<p>To demonstrate the multilingualism design pattern, we examine the usage of the <a href="https://mycroft-core.readthedocs.io/en/latest/source/mycroft.html#mycroft.MycroftSkill.speak_dialog"><code>speak_dialog()</code></a> method in the <a href="intents/padatious-intents.md">Tomato Skill</a> . &#x20;</p>
+<p>The Tomato Skill has two Intents: one demonstrates simple, straightforward statements, and the other demonstrates the use of variables within a statement.</p>
+<h3 id="simple-statement">Simple statement</h3>
+<p>The first Intent within the Tomato Skill, <strong>what.is.a.tomato.intent</strong>, handles inquiries about tomatoes, and the dialog file, <strong>tomato.description.dialog</strong>, provides the statements for OVOS to speak in reply to that inquiry.</p>
+<p>Sample contents of the Intent and dialog files:</p>
+<p><code>what.is.a.tomato.intent</code></p>
+<pre><code>what is a tomato
+what would you say a tomato is
+describe a tomato
+what defines a tomato
+</code></pre>
+<p><code>tomato.description.dialog</code></p>
+<pre><code>The tomato is a fruit of the nightshade family
+A tomato is an edible berry of the plant Solanum lycopersicum
+A tomato is a fruit but nutrionists consider it a vegetable
+</code></pre>
+<p>Observe the statements in the tomato.description.dialog file. They are all acceptable answers to the question: "What is a tomato?"  Providing more than one statement in a dialog file is one way to make OVOS to seem less robotic, more natural. 
+OVOS will randomly select one of the statements.</p>
+<p>The Tomato Skill code snippet:</p>
+<pre><code class="language-python">@intent_handler('what.is.a.tomato.intent')
+def handle_what_is(self, message):
+    &quot;&quot;&quot;Speaks a statement from the dialog file.&quot;&quot;&quot;
+    self.speak_dialog('tomato.description')
+</code></pre>
+<p>With the Tomato Skill installed, if the User utters **** "Hey Mycroft, what is a tomato?", the Intent handler method <code>handle_what_is()</code> will be called.</p>
+<p>Inside <code>handle_what_is()</code>, we find: <code>self.speak_dialog('tomato.description')</code> &#x20;</p>
+<p>As you can probably guess, the parameter <code>'tomato.description'</code> is the dialog filename without the ".dialog" extension. Calling this method opens the dialog file, selects one of the statements, and converts that text to speech. OVOS will speak a statement from the dialog file.  In this example, OVOS might say "The tomato is a fruit of the nightshade family". &#x20;</p>
+<p>Remember, OVOS has a language setting that determines from which directory to find the dialog file.</p>
+<h4 id="file-locations">File locations</h4>
+<p>The <a href="../skill-structure/">Skill Structure</a> section describes where to place the Intent file and dialog file.  Basically, there are two choices:</p>
+<ol>
+<li>Put both files in <code>locale/en-us</code></li>
+<li>Put the dialog file in <code>dialog/en-us</code> , and put the Intent file in <code>vocab/en-us</code></li>
+</ol>
+<h3 id="statements-with-variables">Statements with variables</h3>
+<p>The second Padatious Intent, <strong>do.you.like.intent</strong>, demonstrates the use of variables in the Intent file and in one of the dialog files:</p>
+<p><code>do.you.like.intent</code></p>
+<pre><code>do you like tomatoes
+do you like {type} tomatoes
+</code></pre>
+<p><code>like.tomato.type.dialog</code></p>
+<pre><code>I do like {type} tomatoes
+{type} tomatoes are my favorite
+</code></pre>
+<p><code>like.tomato.generic.dialog</code></p>
+<pre><code>I do like tomatoes
+tomatoes are my favorite
+</code></pre>
+<p>Compare these two dialog files. The <strong>like.tomato.generic.dialog</strong> file contains only simple statements. The statements in the <strong>like.tomato.type.dialog</strong> file include a variable named <code>type</code>.  The variable is a placeholder in the statement specifying where text may be inserted. The <code>speak_dialog()</code> method accepts a dictionary as an optional parameter. If that dictionary contains an entry for a variable named in the statement, then the value from the dictionary will be inserted at the placeholder's location.</p>
+<p>Dialog file variables are formed by surrounding the variable's name with curly braces. 
+In OVOS parlance, curly braces are known as a <em>mustache</em>.</p>
+<p>For multi-line dialog files, be sure to include the <strong>same</strong> variable on <strong>all</strong> lines.</p>
+<p>The Tomato Skill code snippet:</p>
+<pre><code class="language-python"> @intent_handler('do.you.like.intent')
+    def handle_do_you_like(self, message):
+        tomato_type = message.data.get('type')
+        if tomato_type is not None:
+            self.speak_dialog('like.tomato.type',
+                              {'type': tomato_type})
+        else:
+            self.speak_dialog('like.tomato.generic')
+</code></pre>
+<p>When the User utters "Hey Mycroft, do you like RED tomatoes?", the second of the two Intent lines "do you like {type} tomatoes" is recognized by Mycroft, and the value 'RED' is returned in the message dictionary assigned to the 'type' entry when <code>handle_do_you_like()</code> is called. &#x20;</p>
+<p>The line <code>tomato_type = message.data.get('type')</code> extracts the value from the dictionary for the entry 'type'.  In this case,  the variable <code>tomato_type</code> will receive the value 'RED', and <code>speak_dialog()</code>will be called with the 'like.tomato.type' dialog file, and a dictionary with 'RED' assigned to 'type'.   The statement "I do like {type} tomatoes" might be randomly selected, and after insertion of the value 'RED' for the placeholder variable {type}, OVOS would say: "I do like RED tomatoes".</p>
+<p>Should the User utter "Hey Mycroft, do you like tomatoes?", the first line in the Intent file "do you like tomatoes" is recognized. There is no variable in this line, and when <code>handle_do_you_like()</code> is called, the dictionary in the message is empty. This means <code>tomato_type</code> is <code>None</code>,<code>speak_dialog('like.tomato.generic')</code> would be called, and Mycroft might reply with "Yes, I do like tomatoes".</p>
+<h2 id="waiting-for-speech">Waiting for speech</h2>
+<p>By default, the <code>speak_dialog()</code> method is non-blocking. That is any code following the call to <code>speak_dialog()</code> will execute whilst OVOS is talking. This is useful to allow your Skill to perform actions while it is speaking.&#x20;</p>
+<p>Rather than telling the User that we are fetching some data, then going out to fetch it, we can do the two things simultaneously providing a better experience.&#x20;</p>
+<p>However, there are times when we need to wait until the statement has been spoken before doing something else. We have two options for this.</p>
+<h3 id="wait-parameter">Wait Parameter</h3>
+<p>We can pass a <code>wait=True</code> parameter to our <code>speak_dialog()</code> method. This makes the method blocking and no other code will execute until the statement has been spoken.</p>
+<pre><code class="language-python">@intent_handler('what.is.a.tomato.intent')
+def handle_what_is(self, message):
+    &quot;&quot;&quot;Speaks a statement from the dialog file.
+       Waits (i.e. blocks) within speak_dialog() until
+       the speaking has completed. &quot;&quot;&quot;
+    self.speak_dialog('tomato.description', wait=True)
+    self.log.info(&quot;I waited for you&quot;)
+</code></pre>
+<h3 id="wait_while_speaking">wait_while_speaking</h3>
+<p>The <a href="https://mycroft-core.readthedocs.io/en/latest/source/mycroft.audio.html#mycroft.audio.wait_while_speaking"><code>mycroft.audio.wait_while_speaking()</code></a> method allows us to execute some code, then wait for OVOS to finish speaking.</p>
+<pre><code class="language-python">@intent_handler('what.is.a.tomato.intent')
+def handle_what_is(self, message):
+    &quot;&quot;&quot;Speaks a statement from the dialog file.
+       Returns from speak_dialog() before the
+       speaking has completed, and logs some info.
+       Then it, waits for the speech to complete. &quot;&quot;&quot;
+    self.speak_dialog('tomato.description')
+    self.log.info(&quot;I am executed immediately&quot;)
+    wait_while_speaking()
+    self.log.info(&quot;But I waited for you&quot;) 
+</code></pre>
+<p>Here we have executed one line of code immediately. Our Skill will then wait for the statement from <code>i.do.like.dialog</code> to be spoken before executing the final line of code.</p>
+<h2 id="using-translatable-resources">Using translatable resources</h2>
+<p>There may be a situation where the dialog file and the <code>speak_dialog()</code> method do not give the Skill enough flexibility. For instance, there may be a need to manipulate the statement from the dialog file before having it spoken by OVOS.</p>
+<p>The MycroftSkill class provides four multilingual methods to address these needs.  Each method uses a file, and multilingualism is accomplished using the country/language directory system.</p>
+<p>The <a href="https://mycroft-core.readthedocs.io/en/latest/source/mycroft.html#mycroft.MycroftSkill.translate"><code>translate()</code></a> method returns a random string from a ".dialog" file (modified by a data dictionary). &#x20;</p>
+<p>The <a href="https://mycroft-core.readthedocs.io/en/latest/source/mycroft.html#mycroft.MycroftSkill.translate_list"><code>translate_list()</code></a> method returns a list of strings from a ".list" file (each modified by the data dictionary). Same as translate_template() just with a different file extension.</p>
+<p>The <a href="https://mycroft-core.readthedocs.io/en/latest/source/mycroft.html#mycroft.MycroftSkill.translate_namedvalue"><code>translate_namedvalue()</code></a> method returns a dictionary formed from CSV entries in a ".value" file.</p>
+<p>The <a href="https://mycroft-core.readthedocs.io/en/latest/source/mycroft.html#mycroft.MycroftSkill.translate_template"><code>translate_template()</code></a> method returns a list of strings from a ".template" file (each modified by the data dictionary). Same as translate_list() just with a different file extension.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

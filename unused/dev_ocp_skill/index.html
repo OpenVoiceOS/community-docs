@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/unused/dev_ocp_skill/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Developing OCP Skills - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Developing OCP Skills";
+        var mkdocs_page_input_path = "unused/dev_ocp_skill.md";
+        var mkdocs_page_url = "/community-docs/unused/dev_ocp_skill/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../042-install_ovos_core/">Install as a Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Skills</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../081-ht_skills_install/">Installing Skills</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Homescreen</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../115-ht_config_homescreen/">Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../145-troubleshooting_audio/">Troubleshooting Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Developing OCP Skills</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="developing-ocp-skills">Developing OCP Skills</h1>
+<p><a href="glossary.md#ocp">OVOS Common Play (OCP)</a> is a full-fledged media player, compatible with the <a href="glossary.md#mpris">MPRIS standard</a>. Developing a skill for OCP is similar to writing any other OVOS-compatible skill except basic intents and playing media are handled for the developer. This documentation is a quick start guide for developers hoping to write an OCP skill.</p>
+<h2 id="general-steps">General Steps</h2>
+<ul>
+<li>Create a skill class extending the OCP base class</li>
+<li>In the __init__ method indicate <a href="https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/blob/31701ded43a4f7ff6c02833d6aaf1bc0740257fc/ovos_plugin_common_play/ocp/status.py#L95">the media types you want to handle</a></li>
+<li><code>self.voc_match(phrase, "skill_name")</code> to handle specific requests for your skill</li>
+<li><code>self.remove_voc(phrase, "skill_name")</code> to remove matched phrases from the search request</li>
+<li>Implement the <code>ocp_search</code> decorator, as many as you want (they run in parallel)</li>
+<li>The decorated method can return a list or be an iterator of <code>result_dict</code> (track or playlist)</li>
+<li>The search function can be entirely inline or call another Python library, like <a href="https://github.com/OpenJarbas/pandorinha">pandorinha</a> or <a href="https://github.com/pkkid/python-plexapi">plexapi</a></li>
+<li><code>self.extend_timeout()</code> to not let OCP call for a Generic search too soon</li>
+<li>Place one in each search function so it's extended every time the skill is called</li>
+<li>Implement a confidence score formula</li>
+<li><a href="https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/blob/31701ded43a4f7ff6c02833d6aaf1bc0740257fc/ovos_plugin_common_play/ocp/status.py#L4">Values are between 0 and 100</a></li>
+<li>High confidence scores cancel other OCP skill searches</li>
+<li><code>ocp_featured_media</code>, return a playlist for the OCP menu if selected from GUI</li>
+<li>Create a <code>requirements.txt</code> file with third-party package requirements</li>
+<li>Create a <code>skills.json</code> file for skill metadata</li>
+</ul>
+<p>The general interface that OCP expects to receive looks something like the following:</p>
+<pre><code class="language-python">class OVOSAudioTrack(TypedDict):
+    uri: str  # URL/URI of media, OCP will handle formatting and file handling
+    title: str
+    media_type: ovos_plugin_common_play.MediaType
+    playback: ovos_plugin_common_play.PlaybackType
+    match_confidence: int  # 0-100
+    album: str | None  # Parsed even for movies and TV shows
+    artist: str | None  # Parsed even for movies and TV shows
+    length: int | str | None  # in milliseconds, if present
+    image: str | None
+    bg_image: str | None
+    skill_icon: str | None  # Optional filename for skill icon
+    skill_id: str | None  # Optional ID of skill to distinguish where results came from
+</code></pre>
+<h2 id="ocp-skill-template">OCP Skill Template</h2>
+<pre><code class="language-python">from os.path import join, dirname
+
+from ovos_plugin_common_play.ocp import MediaType, PlaybackType
+from ovos_utils.parse import fuzzy_match
+from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill, \
+    ocp_search
+
+
+class MySkill(OVOSCommonPlaybackSkill):
+    def __init__(...):
+        super(....)
+        self.supported_media = [MediaType.GENERIC,
+                                MediaType.MUSIC]   # &lt;- these are the only media_types that will be sent to your skill
+        self.skill_icon = join(dirname(__file__), &quot;ui&quot;, &quot;pandora.jpeg&quot;)
+
+    # score
+    @staticmethod
+    def calc_score(phrase, match, base_score=0, exact=False):
+         # implement your own logic here, assing a val from 0 - 100 per result
+        if exact:
+            # this requires that the result is related
+            if phrase.lower() in match[&quot;title&quot;].lower():
+                match[&quot;match_confidence&quot;] = max(match[&quot;match_confidence&quot;], 80)
+            elif phrase.lower() in match[&quot;artist&quot;].lower():
+                match[&quot;match_confidence&quot;] = max(match[&quot;match_confidence&quot;], 85)
+            elif phrase.lower() == match[&quot;station&quot;].lower():
+                match[&quot;match_confidence&quot;] = max(match[&quot;match_confidence&quot;], 70)
+            else:
+                return 0
+
+        title_score = 100 * fuzzy_match(phrase.lower(),
+                                        match[&quot;title&quot;].lower())
+        artist_score = 100 * fuzzy_match(phrase.lower(),
+                                         match[&quot;artist&quot;].lower())
+        if artist_score &gt; 85:
+            score += artist_score * 0.85 + title_score * 0.15
+        elif artist_score &gt; 70:
+            score += artist_score * 0.6 + title_score * 0.4
+        elif artist_score &gt; 50:
+            score += title_score * 0.5 + artist_score * 0.5
+        else:
+            score += title_score * 0.8 + artist_score * 0.2
+        score = min((100, score))
+        return score
+
+    @ocp_search()
+    def search_my_skill(self, phrase, media_type=MediaType.GENERIC):
+        # match the request media_type
+        base_score = 0
+        if media_type == MediaType.MUSIC:
+            base_score += 10
+        else:
+            base_score -= 15  # some penalty for proof of concept
+
+        explicit_request = False
+        if self.voc_match(phrase, &quot;mySkillNameVoc&quot;):
+            # explicitly requested our skill
+            base_score += 50
+            phrase = self.remove_voc(phrase, &quot;mySkillNameVoc&quot;)  # clean up search str
+            explicit_request = True
+            self.extend_timeout(1)  # we know our skill is slow, ask OCP for more time
+
+        for r in self.search_my_results(phrase):
+            yield {
+                &quot;match_confidence&quot;: self.calc_score(phrase, r, base_score,
+                                                    exact=not explicit_request),
+                &quot;media_type&quot;: MediaType.MUSIC,
+                &quot;length&quot;: r[&quot;duration&quot;] * 1000,  # seconds to milliseconds
+                &quot;uri&quot;: r[&quot;uri&quot;],
+                &quot;playback&quot;: PlaybackType.AUDIO,
+                &quot;image&quot;: r[&quot;image&quot;],
+                &quot;bg_image&quot;: r[&quot;bg_image&quot;],
+                &quot;skill_icon&quot;: self.skill_icon,
+                &quot;title&quot;: r[&quot;title&quot;],
+                &quot;artist&quot;: r[&quot;artist&quot;],
+                &quot;album&quot;: r[&quot;album&quot;],
+                &quot;skill_id&quot;: self.skill_id
+            }
+
+</code></pre>
+<h2 id="skilljson-template">skill.json template</h2>
+<pre><code class="language-json">{
+  &quot;title&quot;: &quot;Plex OCP Skill&quot;,
+  &quot;url&quot;: &quot;https://github.com/d-mcknight/skill-plex&quot;,
+  &quot;summary&quot;: &quot;[OCP](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin) skill to play media from [Plex](https://plex.tv).&quot;,
+  &quot;short_description&quot;: &quot;[OCP](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin) skill to play media from [Plex](https://plex.tv).&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;examples&quot;: [
+    &quot;Play Charles Mingus&quot;,
+    &quot;Play Jamie Cullum on Plex&quot;,
+    &quot;Play the movie Ghostbusters&quot;,
+    &quot;Play the movie Ghostbusters on Plex&quot;,
+    &quot;Play Star Trek the Next Generation on Plex&quot;,
+    &quot;Play the tv show Star Trek the Next Generation on Plex&quot;
+  ],
+  &quot;desktopFile&quot;: false,
+  &quot;warning&quot;: &quot;&quot;,
+  &quot;systemDeps&quot;: false,
+  &quot;requirements&quot;: {
+    &quot;python&quot;: [&quot;plexapi~=4.13&quot;, &quot;ovos-workshop~=0.0.11&quot;],
+    &quot;system&quot;: {},
+    &quot;skill&quot;: []
+  },
+  &quot;incompatible_skills&quot;: [],
+  &quot;platforms&quot;: [&quot;i386&quot;, &quot;x86_64&quot;, &quot;ia64&quot;, &quot;arm64&quot;, &quot;arm&quot;],
+  &quot;branch&quot;: &quot;master&quot;,
+  &quot;license&quot;: &quot;BSD-3-Clause&quot;,
+  &quot;icon&quot;: &quot;https://freemusicarchive.org/legacy/fma-smaller.jpg&quot;,
+  &quot;category&quot;: &quot;Music&quot;,
+  &quot;categories&quot;: [&quot;Music&quot;, &quot;Daily&quot;],
+  &quot;tags&quot;: [&quot;music&quot;, &quot;NeonAI&quot;, &quot;NeonGecko Original&quot;, &quot;OCP&quot;, &quot;Common Play&quot;],
+  &quot;credits&quot;: [&quot;NeonGeckoCom&quot;, &quot;NeonDaniel&quot;],
+  &quot;skillname&quot;: &quot;skill-plex&quot;,
+  &quot;authorname&quot;: &quot;d-mcknight&quot;,
+  &quot;foldername&quot;: null
+}
+</code></pre>
+<h2 id="installing-an-ocp-skill">Installing an OCP Skill</h2>
+<p><a href="../install_skills/">OCP Skills are installed like any other OVOS skill</a>. The preferred pattern is to release a <a href="https://pypi.org">pip</a> package for your OCP skill and install it directly, but skills may also be installed directly from any <a href="https://peps.python.org/pep-0508/">pip-supported source</a> such as <code>git+https://github.com/OpenVoiceOS/skill-ovos-youtube-music</code>.</p>
+<p>Once a skill has been installed a restart of the <code>mycroft-skills</code>, <code>ovos-skills</code>, or <code>neon-skills</code> service will be required.</p>
+<h2 id="need-help">Need Help?</h2>
+<p>Say hi in <a href="https://matrix.to/#/!XFpdtmgyCoPDxOMPpH:matrix.org?via=matrix.org">OpenVoiceOS Chat</a> and a team member would be happy to assist you.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

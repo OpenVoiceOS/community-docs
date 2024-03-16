@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://openvoiceos.github.io/community-docs/unused/install_raspbian/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>raspbian-ovos (headless) - OVOS User Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "raspbian-ovos (headless)";
+        var mkdocs_page_input_path = "unused/install_raspbian.md";
+        var mkdocs_page_url = "/community-docs/unused/install_raspbian/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> OVOS User Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../000-index/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../001-about/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Supported Hardware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../010-hardware/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../011-hardware_audio/">Audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../012-hardware_video/">Video</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../020-architecture/">OpenVoiceOS Architecture</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../031-qs_first_boot/">First Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../032-qs_next_steps/">Next Steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation Options</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../040-install_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Installing an Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../042-install_ovos_core/">Install as a Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../043-install_ovos_docker/">Install with Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../044-ovos_installer/">OVOS Installer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../048-install_gui/">Install GUI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Starting OVOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../050-starting_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../051-starting_modules/">Starting Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../052-starting_systemd/">Starting Systemd</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../053-starting_docker/">Starting Docker</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../060-config/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../061-config_ovos_config/">Using ovos-config</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../062-config_manual_config/">Manualy Editing Files</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../070-ht_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Skills</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../080-ht_skills/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../081-ht_skills_install/">Installing Skills</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../082-ht_skills_config/">Configuring</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">TTS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../090-ht_tts/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../091-ht_tts_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../092-ht_change_voice/">Change Your Assistant's Voice</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Listener</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../100-ht_listener_intro/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../101-ht_mic/">Microphone</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../102-ht_stt/">STT</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../103-ht_stt_config/">Configuring</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../104-ht_ww/">WakeWord/HotWords</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../105-ht_vad/">VAD</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../110-ht_phal/">PHAL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Homescreen</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../115-ht_config_homescreen/">Configuration</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../118-ht_config_security/">OpenVoiceOS Security</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../120-selene_backend/">Selene Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../121-personal_backend/">Personal Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../122-kdeconnect/">KDE Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Images</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../130-images_intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../131-images_buildroot/">Buildroot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../030-qs_intro/">Raspbian</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other Builds</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../135-mycroft/">Mycroft</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../136-neonos/">NeonOS</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../140-troubleshooting_intro/">Introduction to Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../145-troubleshooting_audio/">Troubleshooting Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../150-troubleshooting_installation/">Troubleshooting Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../155-troubleshooting_network/">Troubleshooting Network</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../160-troubleshooting_wakeword/">Troubleshooting Wakeword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../165-troubleshooting_ovos_core/">Troubleshooting OVOS Core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../170-troubleshooting_backend/">Troubleshooting Backend</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../175-troubleshooting_tts/">Troubleshooting TTS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../180-troubleshooting_stt/">Troubleshooting STT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../185-troubleshooting_skills/">Troubleshooting Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../190-troubleshooting_plugins/">Troubleshooting Plugins</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../300-glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../305-faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../310-compat/">Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../315-license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../320-friends/">Friends</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../325-members/">OVOS Members</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">OVOS User Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">raspbian-ovos (headless)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="raspbian-ovos-headless">raspbian-ovos (headless)</h1>
+<h2 id="purpose-of-this-guide">Purpose of this guide</h2>
+<p>This guide describes two ways to create a headless OVOS system suitable for running on a Raspberry Pi 3 or 4. You can either download and burn a prebuilt image to an installation medium like an SD card, or you can use your own installation of the Raspberry PI OS and run an OVOS install script.</p>
+<p>The RPi3 does not have the processing power to reliably run <a href="https://github.com/OpenVoiceOS/ovos-shell">ovos-shell</a>, the GUI system for OVOS, but has plenty to run the rest of the stack.</p>
+<p>By the end of the guide, you should have a running OVOS stack, (messagebus, phal, skills, listener, and audio), along with a "lite" version of RaspberryPiOS.  Which means you also have a package manager (apt) available to you.</p>
+<p>OVOS source files used by this guide can be found at <a href="https://github.com/OpenVoiceOS/raspbian-ovos">raspbian-ovos</a>.  Any issues or pull requests should be made in this repository.</p>
+<p>Raspberry Pi Imager is available <a href="https://www.raspberrypi.com/software/">here</a>. There have been issues when using Raspberry Pi Imager to burn pre-built images. From Linux we have had success starting the imager with the command <code>sudo raspi-imager</code>.</p>
+<h2 id="use-a-pre-built-ovospi-environment-image-saved-to-an-sd-card">Use a pre-built OVOS/PI Environment image saved to an SD card</h2>
+<p>Download a pre-built OVOS/PI image from our <a href="https://ovosimages.ziggyai.online/raspbian">raspbian-ovos download site</a>.</p>
+<p>Here are two methods to install your OVOS/PI image file onto your SD card.</p>
+<h3 id="method-1-write-the-pre-built-ovospi-environment-image-using-raspberry-pi-imager">Method 1: Write the pre-built OVOS/PI Environment image using Raspberry Pi Imager</h3>
+<ul>
+<li>Start up the Raspberry Pi Imager.  On Linux, start Raspberry Pi Imager with "<strong>sudo</strong> raspi-imager".</li>
+<li>For "Choose OS", select "Use custom" and select the OVOS/PI image file downloaded from the OpenVoiceOS Downloads Site.</li>
+<li>For "Choose Storage", select your removable boot media, probably something like "Internal SD Card Reader".</li>
+<li>Then select "Write". Do not click the cog. Do not change the username. Username is ovos and is built in. Do not enter WiFi credentials, you will add them at first boot.</li>
+</ul>
+<p>Upon completion, you should have a bootable SD card or USB drive.</p>
+<h3 id="method-2-write-the-ovospi-environment-image-using-the-linux-dd-command">Method 2: Write the OVOS/PI Environment image using the Linux dd command</h3>
+<p><strong>Be careful with the dd command, you can easily render your computer useless</strong> </p>
+<ul>
+<li>If your downloaded image is zipped, unzip the image to the directory of your choice <code>unzip &lt;path-to-zipped-image&gt;</code></li>
+<li>Check where your sd card or usb drive is located using the <code>lsusb</code> command.</li>
+<li>It should be visible as <code>sdxx</code></li>
+<li>Write the unzipped image to the disk <code>sudo dd if=&lt;path-to-unzipped-image&gt; of=&lt;path-to-sd-card&gt; bs=4M status=progress</code></li>
+</ul>
+<p>Upon completion, you should have a bootable SD card or USB drive.</p>
+<h3 id="first-boot-and-login-to-the-pre-built-ovovpi-environment-image">First Boot and Login to the pre-built OVOV/PI Environment image</h3>
+<p>Insert the SD card, hook up your audio, and turn on your OVOS Pi.</p>
+<p>This image comes with a predefined user, <code>ovos</code> with password <code>ovos</code>.  It is recommended that you change your password on first login.</p>
+<p><code>sudo passwd ovos</code></p>
+<p>Enter your new password twice.</p>
+<p>On first boot, you will be voice-prompted to connect to <code>SSID OVOS</code> and go to the website <code>start.openvoiceos.com</code>.  This is <strong>not the official OVOS website</strong> but a local hotspot that the image has created on your Raspberry Pi.</p>
+<p>Then from a computer that supports wireless networking, connect to the SSID 'OVOS' and go to the website 'start.openvoiceos.com'. There you can enter the credentials of your WiFi network.  If your sound isn't working, no worries, you can keep scanning your computer's list of nearby SSIDs until you see OVOS, and then connect to the network without hearing the verbal prompt.</p>
+<p>This image on a RPi3B takes several minutes to boot before you hear the audio prompt, and several more minutes to finish booting.  If you don't think it's working, please wait up to 3 minutes each time before thinking something went wrong. You can also follow progress in the OVOS log files found in ~/.local/state/mycroft/*.log.</p>
+<p>If for some reason this method does not work, <code>sudo raspi-config</code> and <code>nmtui</code> are also available.</p>
+<h1 id="the-section-below-is-for-advanced-usage-and-is-not-currently-recommended">The section below is for advanced usage and is NOT currently recommended</h1>
+<h2 id="use-an-ovospi-environment-created-by-cloning-a-git-repository-into-your-own-raspberry-pi-os-environment">Use an OVOS/PI environment created by cloning a git repository into your own Raspberry Pi OS environment</h2>
+<h3 id="step-1-two-ways-to-create-a-raspberry-pi-os-lite-64-bit-boot-sd-card">Step 1: Two ways to create a Raspberry Pi OS Lite (64 bit) boot SD card</h3>
+<p>There are lots of guides, but <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html">this one is the official guide</a>
+Our experience with Linux is to invoke the raspi-imager with <code>sudo raspi-imager</code>.</p>
+<ul>
+<li>Insert your boot media into your PC.</li>
+<li>Start up the Raspberry Pi Imager. On Linux, start Raspberry Pi Imager with "<strong>sudo</strong> raspi-imager".</li>
+<li>For "Choose OS", select "Raspberry Pi OS Other" and then "Raspberry Pi OS Lite (64 bit)".</li>
+<li>For "Choose Storage", select your removable boot media, probably something like "Internal SD Card Reader" or "USB Flash Disk".</li>
+</ul>
+<p>From here you must choose one of two methods:</p>
+<h4 id="method-1-tried-tested-and-reliable-pi-needs-a-monitor-to-complete-the-install">Method 1: Tried, tested, and reliable, Pi needs a monitor to complete the install</h4>
+<p>Here we use the Raspberry Pi Imager to write your media <strong>without selecting any Advanced Options</strong>.</p>
+<ul>
+<li>Click "Write".</li>
+<li>After the write completes, insert your SD card in your Pi and boot your newly created medium.</li>
+<li>Create user <code>ovos</code> with a password of your choosing.</li>
+<li>The system will reboot and ask you to log in.  Log in as ovos.</li>
+</ul>
+<p>Run the command <code>sudo raspi-config</code> to enter the Pi setup utility.</p>
+<p>We will be running the OVOS environment as a regular user, and we want OVOS to start at boot time, so we want to autologin.</p>
+<p>Enter the <code>System Options</code> page.</p>
+<p>Enter the <code>Boot / Autologin</code> page.
+- Use the second option in the menu, <code>Console Autologin</code>.
+  - This enables OVOS to start up automatically at boot time.</p>
+<p>Now we will enable a few interface options.  This will allow us to access our device from a <code>ssh shell</code> and prep the PI for other devices that may be used.  Some microphone hats require SPI, or I2C (Respeaker, AIY-Voicebonnet, etc).</p>
+<p>Go back to the main menu and enter the <code>Interface Options</code> page.
+- Enable SSH, SPI, and I2C.
+  - After SSH is enabled, the rest of the guide can be done from a remote computer.</p>
+<p>Go back to the main menu and enter the <code>Localisation Options</code> page.
+- Configure Locale, Timezone, WLAN Country.</p>
+<p><strong><strong><em> You will need an internet connection to complete the rest of the guide </em></strong></strong></p>
+<p>** Optional: Setup WIFI **</p>
+<ul>
+<li>Return to the main menu and enter <code>System Options</code> again.</li>
+<li>Enter the <code>Wireless LAN</code> section and follow the prompts.</li>
+<li>Further down from <code>Wireless Lan</code> is <code>Hostname</code>.  Choose a name for your OVOS device and enter it there. </li>
+<li>Exit out of the <code>raspi-config</code> tool. Next find your IP address.  The command is the same if you used the WiFi setup or have a LAN connected.</li>
+<li>Enter the command <code>ip addr</code>.</li>
+</ul>
+<p>In the output, if things were configured correctly, there will be one or more lines that are relevant.  Find the device that you used to connect, WiFi will start with something like <code>wlan</code> and a LAN connection should begin with <code>eth</code> or <code>enp</code> or something similar.  In the device section, there is an <code>inet</code> entry.  The number located there is your local IP address.  It should be in the format <code>192.168.x.xxx</code> or something similar.  Write this down, or remember it.  You will be using it to log in with an <code>SSH shell</code>.</p>
+<p>Now the device setup is done. Exit raspi-config and reboot.</p>
+<p><code>sudo reboot now</code></p>
+<h4 id="method-2-use-raspberry-pi-imager-advanced-options-to-install-without-a-monitor">Method 2: Use Raspberry Pi Imager advanced options to install without a monitor</h4>
+<p>Here we use the Raspberry Pi Imager to write your media <strong>and let the Imager handle your network and SSH setup</strong>.</p>
+<p>If your network cannot locate computers by their hostnames, this method will not easily work for you.  In other words, if you cannot ping a network connection with a host name, and you need to use an IP address to ping other network computers, use Method 1 described above. If you are comfortable looking up the OVOS computer's IP address using your router or other network software, Method 2 will still work.</p>
+<p>Instead of selecting "Write", click on the cog in the lower right of the Imager panel to open Raspberry Pi Imager advanced options.</p>
+<p>In this new panel, check the boxes for:</p>
+<ul>
+<li>"Set hostname" - hostname for your OVOS device goes here.</li>
+<li>"Enable SSH" - this is how you will log into your headless Raspberry Pi.  Use password authentication.</li>
+<li>"Enter a username and password".  For this installation we are using ovos as the username.</li>
+<li>"Configure wireless LAN" (if you're using a wireless connection).  Enter your SSID and wireless password.</li>
+</ul>
+<p>Click "Save", then click "Write". Once writing is complete, move the SD card to your OVOS device and boot up.</p>
+<p>After logging in as ovos, run the command <code>sudo raspi-config</code> to enter the Pi setup utility.</p>
+<p>We will be running the OVOS environment as a regular user, and we want OVOS to start at boot time, so we want to autologin.</p>
+<p>Enter the <code>System Options</code> page.</p>
+<p>Enter the <code>Boot / Autologin</code> page.</p>
+<ul>
+<li>Use the second option in the menu, <code>Console Autologin</code>.</li>
+<li>This enables OVOS to start up automatically at boot time.</li>
+</ul>
+<p>Now we will enable a few interface options.  This will allow us to access our device from a <code>ssh shell</code> and prep the PI for other devices that may be used.  Some microphone hats require SPI, or I2C (Respeaker, AIY-Voicebonnet, etc).</p>
+<p>Go back to the main menu and enter the <code>Interface Options</code> page.</p>
+<ul>
+<li>Enable SPI, and I2C.</li>
+</ul>
+<p>Go back to the main menu and enter the <code>Localisation Options</code> page.</p>
+<ul>
+<li>Configure Locale, Timezone, WLAN Country.</li>
+</ul>
+<p>Now the device setup is done.  Exit raspi-config and reboot.</p>
+<p><code>sudo reboot now</code></p>
+<h3 id="step-2-ssh-to-your-ovos-device">Step 2: ssh to your OVOS device</h3>
+<p><strong>*** From this point on, you should be able to access your device from any SSH terminal. *** </strong></p>
+<p>For guide for how to do this, see <a href="https://www.raspberrypi.com/documentation/computers/remote-access.html">raspberrypi documentation remote-access</a></p>
+<p>From a linux machine, open a terminal and enter the command <code>ssh ovos@&lt;your-remembered-IP-address&gt;</code> or <code>ssh ovos@&lt;your-hostname&gt;</code>.  There will be a warning making sure you want to connect to this device.  Enter yes, and when asked, enter the password for ovos that you made earlier in the setup.
+<code>ovos</code></p>
+<p>As a final configuration step, make sure your system is up to date.</p>
+<p><code>sudo apt -y update &amp;&amp; sudo apt -y upgrade</code></p>
+<p>We should be done with the basic setup now.  You should have a running RaspberryPiOS device with the user <code>ovos</code></p>
+<h3 id="step-3-install-ovos-core">Step 3: Install ovos-core</h3>
+<p>There are some recommendations to use a venv for OVOS. This guide DOES NOT do that.  The OVOS headless stack on a RPi3 is about all it can handle.  It is assumed that this is a dedicated OVOS device, therefore no venv is required.</p>
+<p>We will be cloning code from a git repository, so before starting we need to install git.</p>
+<p><code>sudo apt install git</code></p>
+<p>We will also be installing everything to the user environment instead of system wide.  As ovos is the only user, this should be fine.</p>
+<p>Although not strictly necessary, we assume that we're starting in the ovos home directory.</p>
+<p><code>cd ~</code></p>
+<p>Clone the repository</p>
+<p><code>git clone https://github.com/OpenVoiceOS/raspbian-ovos.git</code></p>
+<p><code>cd raspbian-ovos</code></p>
+<p>Run the install script and follow the prompts. It's fine to say yes "Y" to everything.</p>
+<p><code>./manual_user_install.sh</code></p>
+<p><strong>You should now have a running OVOS device!!</strong></p>
+<p>Check your installation with</p>
+<p><code>systemctl --user status ovos-*</code></p>
+<p>The full OVOS can take a few minutes to load (especially on a Pi 3), but the processes should all eventually say <code>active (running)</code>, except for <code>ovos.service</code> which should say <code>active (exited)</code></p>
+<p>You can also track progress by watching the files in ~/.local/state/mycroft/*.log.  Once things slow down you can try saying "Hey Mycroft". In a few seconds (the first time is slow) you should hear a 'ding' from the system. Then say "What day is it".  After a delay you should hear information about today's date.</p>
+<h2 id="final-thoughts">Final thoughts</h2>
+<p>Often the audio can take some tuning, and in general is not covered here.  Pulseaudio should be running, check with <code>systemctl --user status pulseaudio</code>. Each piece of hardware is different to set up.  I am sure there is a guide somewhere for your hardware.  One thing to mention, this is a full raspbian install, so installing drivers should work also.</p>
+<p>Once the OVOS processes are running, if you don't hear a 'ding' after two or three times saying "Hey Mycroft", start up alsamixer and make sure your microphone is recognized and the volume is turned up.  At least one USB microphone (mine) defaults to "Auto Gain Control" which needs to be turned off and replaced by turning up the microphone volume. You may also need to turn up the speaker volume.</p>
+<p>This installation of ovos-core only has a few default skills shipped with it.  Check <a href="https://openvoiceos.github.io/community-docs/skills/">this page</a> for more information on skills.</p>
+<p>Please enter suggestions and support requests on our <a href="https://github.com/OpenVoiceOS/raspbian-ovos">raspbian-ovos</a> github page. Thank you!</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
