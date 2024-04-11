@@ -12,7 +12,7 @@ In short, OVOS has found ourselves in the position of having to take a large amo
 2. Localization. We strive to be an international private and open source voice assistant, and it's a huge contribution to translate our skills to your language! No, really! #goodfirstissue
 3. Writing tests. Nobody loves it, everybody needs it, and we love if you do it!
 4. Documentation. Both our [technical manual](https://openvoiceos.github.io/ovos-technical-manual/) and our [community docs](https://openvoiceos.github.io/community-docs/) are community-managed and could use PRs ranging from grammatical fixes, fixing broken links, and clarifying/expanding on existing information. #goodfirstissue
-5. Testing out skills and looking for flaws/ways to improve. Many of our skills have been released and in the wild for years, but could use some loving attention.
+5. Testing out skills and looking for flaws/ways to improve. Many of our skills have been released and in the wild for years, but could use some loving attention. You can find actively supported skills in the `OpenVoiceOS` org, or skills in need of some care in the `OVOSHatchery` org.
 
 ## How do you get started?
 
