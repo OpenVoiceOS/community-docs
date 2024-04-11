@@ -22,7 +22,7 @@ OVOS has a [reference setup for Docker](https://github.com/OpenVoiceOS/ovos-dock
 
 If you have a spare Raspberry Pi with a microphone/speaker available, OVOS maintains [a ready-to-use image](https://openvoiceos.github.io/community-docs/qs_intro/#rasberry-pi-os-latest-images) for that platform. It doesn't run the GUI, but it does everything else.
 
-It's not quite ready for Hacktoberfest 2023, but there's also a [full Buildroot image](https://openvoiceos.github.io/community-docs/qs_intro/#buildroot-latest-image) that will be available for any architecture.
+The easiest way to get OVOS running on any given Linux system is to use [ovos-installer](https://github.com/openvoiceos/ovos-installer).
 
 The most up-to-date information on running OVOS can be found [in our community docs](https://openvoiceos.github.io/community-docs/qs_intro/).
 
