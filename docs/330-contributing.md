@@ -20,7 +20,9 @@ First of all, if you're just starting out and want to contribute documentation o
 
 OVOS has a [reference setup for Docker](https://github.com/OpenVoiceOS/ovos-docker) that will run on any platform and architecture that uses Docker - Linux, Mac OS, and Windows with WSL2. If you're comfortable with Docker, this is the fastest and easiest way to get OVOS running locally to contribute back. (Yes, it also works with Podman!)
 
-If you have a spare Raspberry Pi with a microphone/speaker available, OVOS maintains [a ready-to-use image](https://openvoiceos.github.io/community-docs/qs_intro/#rasberry-pi-os-latest-images) for that platform. It doesn't run the GUI, but it does everything else.
+If you have a spare Raspberry Pi with a microphone/speaker available, OVOS maintains [a ready-to-use image](https://openvoiceos.github.io/community-docs/qs_intro/#rasberry-pi-os-latest-images) for that platform. It is currently not fully tested on the Pi 5.
+
+Raspberry Pi also supports GUI skills (that means if you have a screen attached to your Pi, you can run skills that have a graphical interface), which are written in Qt. If you're a Qt developer, we'd love to have your help!
 
 The easiest way to get OVOS running on any given Linux system is to use [ovos-installer](https://github.com/openvoiceos/ovos-installer).
 
