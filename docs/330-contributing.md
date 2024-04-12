@@ -22,7 +22,7 @@ In short, OVOS has found ourselves in the position of having to take a large amo
 
 First of all, if you're just starting out and want to contribute documentation or localization PRs, don't sweat it if you don't have OVOS running. We're happy to help with testing those. If you'd like to run it yourself and confirm things work as you expect, read on.
 
-The easiest way to get OVOS running on any given Linux or Windows with WSL2 system. is to use [ovos-installer.](https://github.com/openvoiceos/ovos-installer)
+The easiest way to get OVOS running on any given Linux or Windows with WSL2 system is to use [ovos-installer.](https://github.com/openvoiceos/ovos-installer)
 
 OVOS also has a [reference setup for Docker](https://github.com/OpenVoiceOS/ovos-docker) that will run on any platform and architecture that uses Docker - Linux, Mac OS, and Windows with WSL2. (and yes it works with Podman too!)
 
