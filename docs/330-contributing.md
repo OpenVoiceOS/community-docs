@@ -22,7 +22,7 @@ In short, OVOS has found ourselves in the position of having to take a large amo
 
 First of all, if you're just starting out and want to contribute documentation or localization PRs, don't sweat it if you don't have OVOS running. We're happy to help with testing those. If you'd like to run it yourself and confirm things work as you expect, read on.
 
-The easiest way to get OVOS running on any given Linux system is to use [ovos-installer.](https://github.com/openvoiceos/ovos-installer)
+The easiest way to get OVOS running on any given Linux or Windows with WSL2 system. is to use [ovos-installer.](https://github.com/openvoiceos/ovos-installer)
 
 OVOS also has a [reference setup for Docker](https://github.com/OpenVoiceOS/ovos-docker) that will run on any platform and architecture that uses Docker - Linux, Mac OS, and Windows with WSL2. (and yes it works with Podman too!)
 
@@ -36,6 +36,6 @@ The most up-to-date information on running OVOS can be found [in our community d
 
 The docs above are meant for a broad set of users. For the details you're looking for on how all these different pieces of OVOS interact, [please check out our technical manual](https://openvoiceos.github.io/ovos-technical-manual/). 
 
-for more details about the skills and plugins, you can check the technical documentation here [OVOS Technical Manual](hhttps://openvoiceos.github.io/ovos-technical-manual/) It is inspired by [Neon.AI](https://neon.ai) and Mycroft documentation and covers diverse topics such as design philosophy, available helper methods, writing GUIs (Qt devs wanted!), how to get a skill to converse back and forth with a user, and more.
+For more details about the skills and plugins, you can check the technical documentation here [OVOS Technical Manual](hhttps://openvoiceos.github.io/ovos-technical-manual/) It is inspired by [Neon.AI](https://neon.ai) and Mycroft documentation and covers diverse topics such as design philosophy, available helper methods, writing GUIs (Qt devs wanted!), how to get a skill to converse back and forth with a user, and more.
 
 If you're stuck or have any questions, please come chat with us on [Matrix](https://matrix.to/#/#OpenVoiceOS-Support:matrix.org). We're grateful for your assistance and will do everything we can to help you.
