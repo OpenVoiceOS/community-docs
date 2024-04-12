@@ -33,7 +33,7 @@ We've been positioned to do this, in part, because the team consists of well-kno
 In the early 2020s, Mycroft's first-party codebase began to stale, as its developers became increasingly focused on a bespoke implementation for their Mark II smart speaker. Other Mycroft implementations - some commercial, some run by open-source communities - began to struggle with Mycroft's stale codebase, and several turned to us for an actively-maintained alternative. With their employers' consent, those of us paid to work on relevant projects migrated to OVOS, which enabled those members to spend company time on our open-source projects. In this roundabout fashion, the OVOS assistant, which will receive a name of its own in the coming weeks, became an accidental fork of Mycroft. We've been operating in this manner for over two years, without giving the arrangement much thought.
 
 
-# Vision & Goals of Organization
+## Vision & Goals of Organization
 
 At OpenVoiceOS, we envision a world where technology empowers individuals to navigate their daily lives with privacy, security, and ease.
 
