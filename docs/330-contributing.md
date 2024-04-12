@@ -1,6 +1,10 @@
+# Contributing to OVOS
 Welcome to OVOS! First off, thanks for taking the time to contribute! ❤️
 
-If you're not familiar with us, [our GoFundMe page has a brief history of what we do and how we got here](https://www.gofundme.com/f/openvoiceos). (Please don't feel obligated to contribute to the GoFundMe unless you really want to though - we're okay right now and you're here to help code!)
+If you're not familiar with us, OVOS is a voice assistant project that is open source and privacy-focused. We're building a platform that can run on a variety of devices, from a Raspberry Pi to a desktop computer, and we're always looking for help to make it better.
+
+If you want to know more about us, you can check out about [About OVOS](https://openvoiceos.github.io/community-docs/001-about/) section in our community docs.
+
 
 We're a very friendly and open community and most responsive on [Matrix](https://matrix.to/#/#OpenVoiceOS-Support:matrix.org). Please come say hi and feel free to ask any questions.
 
@@ -18,13 +22,13 @@ In short, OVOS has found ourselves in the position of having to take a large amo
 
 First of all, if you're just starting out and want to contribute documentation or localization PRs, don't sweat it if you don't have OVOS running. We're happy to help with testing those. If you'd like to run it yourself and confirm things work as you expect, read on.
 
-OVOS has a [reference setup for Docker](https://github.com/OpenVoiceOS/ovos-docker) that will run on any platform and architecture that uses Docker - Linux, Mac OS, and Windows with WSL2. If you're comfortable with Docker, this is the fastest and easiest way to get OVOS running locally to contribute back. (Yes, it also works with Podman!)
+The easiest way to get OVOS running on any given Linux system is to use [ovos-installer.](https://github.com/openvoiceos/ovos-installer)
+
+OVOS also has a [reference setup for Docker](https://github.com/OpenVoiceOS/ovos-docker) that will run on any platform and architecture that uses Docker - Linux, Mac OS, and Windows with WSL2. (and yes it works with Podman too!)
 
 If you have a spare Raspberry Pi with a microphone/speaker available, OVOS maintains [a ready-to-use image](https://openvoiceos.github.io/community-docs/qs_intro/#rasberry-pi-os-latest-images) for that platform. It is currently not fully tested on the Pi 5.
 
 Raspberry Pi also supports GUI skills (that means if you have a screen attached to your Pi, you can run skills that have a graphical interface), which are written in Qt. If you're a Qt developer, we'd love to have your help!
-
-The easiest way to get OVOS running on any given Linux system is to use [ovos-installer](https://github.com/openvoiceos/ovos-installer).
 
 The most up-to-date information on running OVOS can be found [in our community docs](https://openvoiceos.github.io/community-docs/qs_intro/).
 
@@ -32,6 +36,6 @@ The most up-to-date information on running OVOS can be found [in our community d
 
 The docs above are meant for a broad set of users. For the details you're looking for on how all these different pieces of OVOS interact, [please check out our technical manual](https://openvoiceos.github.io/ovos-technical-manual/). 
 
-A friend-of-OVOS, [Neon.AI](https://neon.ai), has a comprehensive set of [documentation for skill development](https://neongeckocom.github.io/neon-docs/skill_development/voice-user-interface-design-guidelines/what-can-a-skill-do/) specifically. Much of this was forked from the (excellent) Mycroft skill documentation and covers diverse topics such as design philosophy, available helper methods, writing GUIs (Qt devs wanted!), how to get a skill to converse back and forth with a user, and more.
+for more details about the skills and plugins, you can check the technical documentation here [OVOS Technical Manual](hhttps://openvoiceos.github.io/ovos-technical-manual/) It is inspired by [Neon.AI](https://neon.ai) and Mycroft documentation and covers diverse topics such as design philosophy, available helper methods, writing GUIs (Qt devs wanted!), how to get a skill to converse back and forth with a user, and more.
 
 If you're stuck or have any questions, please come chat with us on [Matrix](https://matrix.to/#/#OpenVoiceOS-Support:matrix.org). We're grateful for your assistance and will do everything we can to help you.
