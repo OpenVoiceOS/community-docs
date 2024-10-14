@@ -4,11 +4,11 @@ Raccomandazioni e note sugli altoparlanti e sui microfoni
 
 La maggior parte dei dispositivi audio può essere utilizzata tramite plugin e nella maggior parte dei casi dovrebbe funzionare senza problemi.
 
-If your device does not work, pop in to our [Matrix support channel](https://app.element.io/#/room/#openvoiceos-support:matrix.org), please create an [issue](https://github.com/OpenVoiceOS/ovos-dinkum-listener/issues) or start a [discussion](https://github.com/orgs/OpenVoiceOS/discussions) about your device.
+Se il tuo dispositivo non funziona, accedi al nostro [canale Matrix di supporto](https://app.element.io/#/room/#openvoiceos-support:matrix.org), segnala un [problema](https://github.com/OpenVoiceOS/ovos-dinkum-listener/issues) o avvia una [discussione](https://github.com/orgs/OpenVoiceOS/discussions) a proposito del tuo dispositivo.
 
 ## USB
 
-Most USB devices should work without any issues.  But, not all devices are created equally.
+La maggior parte dei dispositivi USB dovrebbe funzionare senza problemi. Tuttavia non tutti i dispositivi sono supportati allo stesso modo.
 
 #### Dispositivi USB testati
 
