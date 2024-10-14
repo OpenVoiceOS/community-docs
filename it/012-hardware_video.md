@@ -6,6 +6,6 @@ Se il tuo dispositivo supporta l'uscita video, puoi utilizzare uno schermo sul t
 
 ## Schermi touch
 
-OVOS supports touchscreen interaction, but not all are created equally.  It has been noted that on some USB touchscreens, the touch matrix is not synced with the OVOS display and requires an x11 setup with a window manager to adjust the settings to work.
+OVOS supporta l'interazione touch ma non tutti gli schermi touch sono supportati allo stesso modo. È stato notato che su alcuni schermi touch USB, la matrice touch non è sincronizzata con il display OVOS e richiede una configurazione x11 con un gestore di finestre per regolare le impostazioni affinché l'interazione touch funzioni.
 
 [Risoluzione dei problemi video](999-not-implemented)
